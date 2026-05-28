@@ -1,5 +1,15 @@
 {% liquid
   assign max_items = section.settings.post_limit
+  assign has_manual_resource = false
+
+  if section.settings.manual_resource_title != blank and section.settings.manual_resource_link != blank
+    assign has_manual_resource = true
+  endif
+
+  assign blog_items_limit = max_items
+  if has_manual_resource
+    assign blog_items_limit = max_items | minus: 1
+  endif
 %}
 
 <div class="section-background color-{{ section.settings.color_scheme }}"></div>
@@ -21,19 +31,61 @@
   {% content_for 'block', id: 'static-blog-title', type: '_featured-blog-posts-title' %}
 
   {% if section.settings.blog != blank and section.settings.blog.articles_count > 0 %}
-    {% paginate section.settings.blog.articles by max_items %}
+    {% paginate section.settings.blog.articles by blog_items_limit %}
       {% assign section_articles = section.settings.blog.articles %}
     {% endpaginate %}
   {% else %}
     {% assign section_articles = '' %}
-    {% for i in (1..max_items) %}
+    {% for i in (1..blog_items_limit) %}
       {% assign section_articles = section_articles | append: ', ' %}
     {% endfor %}
     {% assign section_articles = section_articles | split: ',' %}
   {% endif %}
 
   {% capture list_items %}
-    {% for article in section_articles limit: max_items %}
+    {% if has_manual_resource %}
+      <div class="resource-list__item">
+        <div
+          class="featured-blog-posts-card featured-blog-posts-card--manual spacing-style border-style"
+          data-block-id="manual-resource-{{ section.id }}"
+          data-testid="featured-blog-posts-card"
+          style="
+            --text-align: center;
+            --horizontal-alignment: center;
+            --gap: 18px;
+          "
+        >
+          <a class="featured-blog-posts-card__link" href="{{ section.settings.manual_resource_link }}">
+            <span class="visually-hidden">{{ section.settings.manual_resource_title }}</span>
+          </a>
+
+          <div class="featured-blog-posts-card__inner">
+            {% if section.settings.manual_resource_image != blank %}
+              <div class="image-block resource-image featured-blog-posts-card__image featured-blog-posts-card__manual-image">
+                {{
+                  section.settings.manual_resource_image
+                  | image_url: width: 1600
+                  | image_tag:
+                    widths: '240, 352, 832, 1200, 1600',
+                    class: 'image-block__image',
+                    sizes: '(min-width: 750px) 33vw, 60vw',
+                    loading: 'eager'
+                }}
+              </div>
+            {% endif %}
+
+            <div class="featured-blog-posts-card__content layout-panel-flex--column">
+              <h4>{{ section.settings.manual_resource_title }}</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% if blog_items_limit > 0 %}
+        <!--@list/split-->
+      {% endif %}
+    {% endif %}
+
+    {% for article in section_articles limit: blog_items_limit %}
       <div class="resource-list__item">
         {% content_for 'block', id: 'static-blog-post-card', type: '_featured-blog-posts-card', article: article, closest.article: article %}
       </div>
@@ -57,6 +109,19 @@
     test_id: 'featured-blog-posts'
   %}
 </div>
+
+{% stylesheet %}
+  .featured-blog-posts-card__manual-image {
+    --ratio: 16 / 9;
+    border-radius: 20px;
+  }
+
+  .featured-blog-posts-card__manual-image .image-block__image {
+    object-position: center top;
+    transform: scale(0.97);
+    transform-origin: center top;
+  }
+{% endstylesheet %}
 
 {% schema %}
 {
@@ -122,6 +187,25 @@
       "max": 10,
       "step": 1,
       "default": 3
+    },
+    {
+      "type": "header",
+      "content": "Manual resource"
+    },
+    {
+      "type": "text",
+      "id": "manual_resource_title",
+      "label": "Title"
+    },
+    {
+      "type": "url",
+      "id": "manual_resource_link",
+      "label": "Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "manual_resource_image",
+      "label": "Image"
     },
     {
       "type": "range",
