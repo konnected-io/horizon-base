@@ -5414,8 +5414,11 @@
         "section_width": "page-width",
         "gap": 12,
         "color_scheme": "",
-        "padding-block-start": 72,
-        "padding-block-end": 72
+        "padding-block-start": 24,
+        "padding-block-end": 72,
+        "manual_resource_title": "myQ stopped working with Home Assistant?",
+        "manual_resource_link": "/pages/myq-home-assistant-alternative",
+        "manual_resource_image": "shopify://shop_images/Meta_Square_-_GDO_Combined_2_1.png"
       }
     },
     "grid_section_WVTq43": {
