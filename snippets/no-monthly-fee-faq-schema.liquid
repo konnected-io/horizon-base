@@ -1,0 +1,60 @@
+{% doc %}
+  Renders FAQPage JSON-LD for the no-monthly-fee smart security page.
+{% enddoc %}
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I have a security system without a monthly fee?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You can use smart alarm hardware for smart home control, alerts, dashboards, automations, and self-monitoring workflows without a required monthly subscription. Optional professional monitoring, value-added cloud services, or third-party services may still cost extra if selected."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Konnected require a subscription?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Konnected has no monthly subscription for basic smart-home integration with compatible platforms. Smart home control, alerts, dashboards, automations, and self-monitoring workflows work without monthly fees through compatible smart home apps. Optional professional monitoring, value-added cloud services, or third-party services may still cost extra if selected."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I reuse old wired alarm sensors?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, for the most common wired alarm sensors. Door and window contact sensors and many wired motion sensors are the clearest reuse candidates. Sirens, glass-break sensors, powered sensors, keypads, smoke and CO devices, and specialty devices need more installation-specific review before you assume they can be reused."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I replace my old alarm panel or keep it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Replace the old panel if you want to retire the legacy panel and make Konnected the main smart alarm setup. Keep the old panel if you still rely on existing keypads, monitoring, or legacy panel behavior and want Konnected to work alongside it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Konnected work with Home Assistant?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Konnected turns wired alarm sensors into Home Assistant inputs for dashboards, notifications, and automations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use Konnected without Home Assistant?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Home Assistant is a strong option, but Konnected also supports other smart home platforms, including SmartThings, Alexa, Hubitat, and Google Home. The right platform depends on how much local control, automation depth, and setup flexibility you want."
+        }
+      }
+    ]
+  }
+</script>

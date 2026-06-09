@@ -32,6 +32,9 @@
     {%- render 'scripts' -%}
     {%- render 'theme-styles-variables' -%}
     {%- render 'color-schemes' -%}
+    {%- if request.page_type == 'page' and page.handle == 'smart-home-security-system-no-monthly-fee' -%}
+      {%- render 'no-monthly-fee-faq-schema' -%}
+    {%- endif -%}
 
     {% if request.design_mode %}
       {%- render 'theme-editor' -%}
