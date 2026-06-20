@@ -13,16 +13,15 @@
   "sections": {
     "hero_BzLcdE": {
       "type": "hero",
-      "disabled": true,
       "name": "Promotional Banner",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/Spring_Sale_2026_-_Banner.jpg",
+        "image_1": "shopify://shop_images/summer_sale_2026_banner.jpg",
         "media_type_2": "image",
         "stack_media_on_mobile": false,
-        "custom_mobile_media": true,
+        "custom_mobile_media": false,
         "media_type_1_mobile": "image",
-        "image_1_mobile": "shopify://shop_images/Spring_Sale_2026_-_Banner_Mobile_2.jpg",
+        "image_1_mobile": "shopify://shop_images/summer_sale_2026_banner.jpg",
         "media_type_2_mobile": "image",
         "link": "shopify://collections/shop-now",
         "open_in_new_tab": false,
@@ -53,6 +52,7 @@
       "blocks": {
         "announcement_BxgCk9": {
           "type": "_announcement",
+          "disabled": true,
           "settings": {
             "text": "Join the Konnected Community here",
             "link": "https://community.konnected.io/",
@@ -68,6 +68,7 @@
         },
         "announcement_CnmdUR": {
           "type": "_announcement",
+          "disabled": true,
           "settings": {
             "text": "Sign up for our Newsletter and get 10% Off",
             "link": "",
@@ -83,9 +84,8 @@
         },
         "announcement_N8PCk4": {
           "type": "_announcement",
-          "disabled": true,
           "settings": {
-            "text": "WINTER SALE IS LIVE! - SAVE 2O%",
+            "text": "SUMMER SALE IS LIVE! SAVE 20%",
             "link": "shopify://collections/shop-now",
             "use_klaviyo_trigger": false,
             "klaviyo_id": "",
