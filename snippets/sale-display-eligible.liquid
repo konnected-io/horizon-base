@@ -16,12 +16,16 @@
     endif
 
     unless customer_is_b2b
-      for product_collection in product_resource.collections
-        if product_collection.handle == sale_collection_handle
-          assign sale_display_eligible = true
-          break
-        endif
-      endfor
+      if collection.handle == sale_collection_handle or template.name == 'product'
+        assign sale_display_eligible = true
+      else
+        for product_collection in product_resource.collections
+          if product_collection.handle == sale_collection_handle
+            assign sale_display_eligible = true
+            break
+          endif
+        endfor
+      endif
     endunless
   endif
 
