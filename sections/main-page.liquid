@@ -17,6 +17,49 @@
   </div>
 </div>
 
+{% if page.handle == 'reuse-old-wired-alarm-sensors-smart-home' %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I reuse old wired alarm sensors?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Door/window contacts and wired motion sensors are often reusable with a Konnected Alarm Panel when they are truly wired and in usable condition."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can old alarm sensors work with Home Assistant?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. With compatible Konnected hardware, wired alarm sensors can report activity to smart-home platforms including Home Assistant."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I reuse wireless alarm sensors?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Existing wireless sensors from a legacy alarm company are not compatible with Konnected alarm panel products. Konnected is built for wired sensor networks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What alarm devices need extra caution?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Smoke, CO, fire, monitored, powered, keypad, glass-break, unknown, or other life-safety wiring deserves extra caution before moving wires or connecting devices to a smart-home system."
+          }
+        }
+      ]
+    }
+  </script>
+{% endif %}
+
 {% schema %}
 {
   "name": "t:names.page",
