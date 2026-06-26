@@ -1,0 +1,84 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "name": "Title",
+          "settings": {
+            "text": "<h1>{{ closest.page.title }}</h1>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h2",
+            "font": "var(--font-primary--family)",
+            "font_size": "",
+            "enable_mobile_size": true,
+            "mobile_font_size": "1.92rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "custom_mobile_padding": false,
+            "mobile-padding-block-start": 0,
+            "mobile-padding-block-end": 0,
+            "mobile-padding-inline-start": 0,
+            "mobile-padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "page-content": {
+          "type": "page-content",
+          "settings": {},
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading",
+        "page-content"
+      ],
+      "custom_css": [
+        ".page-width-content {--full-page-grid-central-column-width: min(46rem - var(--page-margin) * 2, calc(100% - var(--page-margin) * 2)) !important;}"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "gap": 32,
+        "color_scheme": "",
+        "padding-block-start": 72,
+        "padding-block-end": 24
+      }
+    },
+    "decision_support": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"alarm-decision-guide\" aria-labelledby=\"alarm-decision-guide-title\"><div class=\"alarm-decision-guide__quick-answer\"><p class=\"alarm-decision-guide__kicker\">Quick answer</p><h2 id=\"alarm-decision-guide-title\">Replace the old panel if it is ready to retire. Keep it if it still has a job.</h2><p>If the old alarm board, keypads, and monitoring are no longer needed, a Konnected replacement or conversion setup is usually the simpler path. If the old system still runs keypads, monitoring, sirens, or behavior you depend on, an interface setup lets Konnected work alongside it.</p></div><div class=\"alarm-decision-guide__grid\"><div class=\"alarm-decision-guide__card\"><h3>Choose replacement / conversion when...</h3><ul><li>You want to stop using the old alarm panel and keypads.</li><li>You want Home Assistant, SmartThings, Hubitat, Alexa, or another smart-home platform to become the main control layer.</li><li>You want compatible wired sensors available for alerts, dashboards, and automations without keeping the legacy system active.</li><li>You prefer one modern system instead of two systems running at once.</li></ul><a href=\"/products/konnected-alarm-panel-pro-12-zone-kit\">View the Alarm Panel Pro Conversion Kit</a></div><div class=\"alarm-decision-guide__card\"><h3>Choose interface / parallel when...</h3><ul><li>You still use the old keypads.</li><li>Professional monitoring is still active through the old panel.</li><li>The legacy panel still controls sirens, strobes, or behavior you want to keep.</li><li>You want smart-home visibility without redesigning the whole alarm setup.</li></ul><a href=\"/products/konnected-alarm-panel-pro-12-zone-interface-kit\">View the Alarm Panel Pro Interface Kit</a></div></div><div class=\"alarm-decision-guide__section\"><h2>The fast way to decide</h2><p>Start by asking what the old alarm panel still does. If it is only sitting there because the wired sensors land inside it, you may be ready to replace it. If it still provides keypad control, monitoring, siren behavior, or other functions your household depends on, keep it in the plan and review interface-style options first.</p><div class=\"alarm-decision-guide__table-wrap\"><table class=\"alarm-decision-guide__table\"><thead><tr><th scope=\"col\">Your situation</th><th scope=\"col\">Better starting point</th></tr></thead><tbody><tr><td>You want to stop using the old panel and keypads</td><td>Replacement / conversion setup</td></tr><tr><td>You want a smart-home platform to be the main control layer</td><td>Replacement / conversion setup</td></tr><tr><td>You still use old keypads</td><td>Interface / parallel setup</td></tr><tr><td>You still have monitoring through the old panel</td><td>Interface / parallel setup</td></tr><tr><td>You want smart-home visibility without redesigning the alarm system</td><td>Interface / parallel setup</td></tr><tr><td>You do not have an active panel, but your sensors are wired</td><td>Replacement / conversion setup</td></tr></tbody></table></div></div><div class=\"alarm-decision-guide__section\"><h2>Check these before you pick a kit</h2><p>Pause and review the system first if active professional monitoring, old keypads, sirens, strobes, smoke, CO, fire, powered motion sensors, glass-break sensors, unknown zone wiring, installer-code requirements, key-switch setup, programmable outputs, or extra zones are involved. These do not automatically rule out a Konnected upgrade, but they do mean the product choice and wiring plan deserve more care.</p><p>Door and window contacts are often the easiest wired devices to reuse. Many wired motion sensors are also common retrofit candidates. Existing wireless alarm sensors from a legacy alarm company are not compatible with Konnected alarm panel products.</p></div><div class=\"alarm-decision-guide__section alarm-decision-guide__related\"><h2>Helpful starting points</h2><ul><li><a href=\"/collections/smart-alarm-panels\">Compare Konnected smart alarm panel options</a></li><li><a href=\"/products/konnected-alarm-panel-pro-12-zone-kit\">Konnected Alarm Panel Pro 12-Zone Kit</a></li><li><a href=\"/products/konnected-alarm-panel-pro-12-zone-interface-kit\">Konnected Alarm Panel Pro Interface Kit</a></li><li><a href=\"/pages/home-assistant\">Konnected for Home Assistant</a></li><li><a href=\"/pages/smart-home-security-system-no-monthly-fee\">No monthly fee smart home security</a></li><li><a href=\"/pages/reuse-old-wired-alarm-sensors-smart-home\">Wired alarm retrofit guide</a></li></ul></div><div class=\"alarm-decision-guide__section\"><h2>Common questions</h2><h3>Should I replace my old alarm panel?</h3><p>Replace it if you want to retire the legacy panel and make Konnected the main smart-home connection for compatible wired sensors.</p><h3>Can I keep my old alarm panel?</h3><p>Yes. Keeping it can make sense when you still rely on old keypads, monitoring, or legacy alarm behavior and want Konnected to work alongside the existing system.</p><h3>What is the difference between a conversion setup and an interface setup?</h3><p>A conversion setup is for retiring the old panel. An interface setup is for keeping the old panel active while adding smart-home visibility through Konnected.</p><h3>Which Konnected alarm kit should I buy?</h3><p>Start by deciding what happens to the old panel. If the old panel is retired, review conversion-style kits. If the old panel stays active, review interface-style kits.</p><h3>Does this work with Home Assistant?</h3><p>Yes. Konnected is a strong fit for Home Assistant users. The right product choice still depends on whether the old panel is retired or kept in service.</p></div></div><script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Should I replace my old alarm panel?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Replace it if you want to retire the legacy alarm panel and make Konnected the main smart-home connection for compatible wired sensors.\"}},{\"@type\":\"Question\",\"name\":\"Can I keep my old alarm panel?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. Keeping an old alarm panel can make sense when you still rely on old keypads, professional monitoring, sirens, or legacy alarm behavior and want Konnected to work alongside the existing system.\"}},{\"@type\":\"Question\",\"name\":\"What is the difference between a conversion setup and an interface setup?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"A conversion setup is for retiring the old alarm panel. An interface setup is for keeping the old panel active while adding smart-home visibility through Konnected.\"}},{\"@type\":\"Question\",\"name\":\"Which Konnected alarm kit should I buy?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Start by deciding what happens to the old panel. If the old panel is retired, review conversion-style kits. If the old panel stays active, review interface-style kits.\"}},{\"@type\":\"Question\",\"name\":\"Does Konnected work with Home Assistant?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. Konnected works well for Home Assistant users. The right product choice still depends on whether the old alarm panel is retired or kept in service.\"}}]}</script>",
+        "color_scheme": "",
+        "section_width": "page-width",
+        "padding-block-start": 0,
+        "padding-block-end": 80
+      }
+    }
+  },
+  "order": [
+    "main",
+    "decision_support"
+  ]
+}

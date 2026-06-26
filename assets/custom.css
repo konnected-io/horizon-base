@@ -220,6 +220,120 @@ video-media video {
     padding-inline-end: calc(var(--gap-xs) / 2) !important;
 }
 
+.alarm-decision-guide {
+    max-width: 58rem;
+    margin-inline: auto;
+}
+
+.alarm-decision-guide :is(h2, h3, p, ul) {
+    margin-block-start: 0;
+}
+
+.alarm-decision-guide__quick-answer {
+    border: 1px solid rgb(var(--color-border-rgb) / var(--opacity-20));
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    background: rgb(var(--color-foreground-rgb) / var(--opacity-5));
+}
+
+.alarm-decision-guide__kicker {
+    font-size: var(--font-size--sm);
+    font-weight: 700;
+    letter-spacing: .04em;
+    margin-block-end: .75rem;
+    text-transform: uppercase;
+}
+
+.alarm-decision-guide__quick-answer h2 {
+    margin-block-end: 1rem;
+}
+
+.alarm-decision-guide__quick-answer p {
+    margin-block-end: 0;
+}
+
+.alarm-decision-guide__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-block-start: 1rem;
+}
+
+.alarm-decision-guide__card {
+    border: 1px solid rgb(var(--color-border-rgb) / var(--opacity-20));
+    padding: 1.25rem;
+}
+
+.alarm-decision-guide__card h3 {
+    margin-block-end: .75rem;
+}
+
+.alarm-decision-guide__card ul {
+    padding-inline-start: 1.25rem;
+    margin-block-end: 1rem;
+}
+
+.alarm-decision-guide__card li + li {
+    margin-block-start: .5rem;
+}
+
+.alarm-decision-guide__card a {
+    font-weight: 700;
+}
+
+.alarm-decision-guide__section {
+    margin-block-start: clamp(2rem, 5vw, 3.5rem);
+}
+
+.alarm-decision-guide__section h2 {
+    margin-block-end: 1rem;
+}
+
+.alarm-decision-guide__section p + p {
+    margin-block-start: 1rem;
+}
+
+.alarm-decision-guide__table-wrap {
+    overflow-x: auto;
+    margin-block-start: 1.25rem;
+}
+
+.alarm-decision-guide__table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 38rem;
+}
+
+.alarm-decision-guide__table th,
+.alarm-decision-guide__table td {
+    border-block-end: 1px solid rgb(var(--color-border-rgb) / var(--opacity-20));
+    padding: .875rem;
+    text-align: left;
+    vertical-align: top;
+}
+
+.alarm-decision-guide__table th {
+    font-weight: 700;
+}
+
+.alarm-decision-guide__related ul {
+    columns: 2;
+    padding-inline-start: 1.25rem;
+}
+
+.alarm-decision-guide__section h3 {
+    margin-block: 1.25rem .5rem;
+}
+
+@media screen and (max-width: 749px) {
+    .alarm-decision-guide__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .alarm-decision-guide__related ul {
+        columns: 1;
+    }
+}
+
 .compare-at-price {
     opacity: .6;
     font-size: var(--font-size--sm);
