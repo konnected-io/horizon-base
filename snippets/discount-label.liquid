@@ -21,5 +21,18 @@
             endif
         endfor
     endif
+
+    if discount_label == blank
+        capture sale_display_eligible
+            render 'sale-display-eligible', product_resource: product
+        endcapture
+
+        assign sale_display_eligible = sale_display_eligible | strip
+
+        if sale_display_eligible == 'true'
+            assign discount_label = 'content.product_badge_20_off' | t
+        endif
+    endif
+
     echo discount_label
 %}

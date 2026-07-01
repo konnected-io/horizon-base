@@ -53,6 +53,7 @@
       "blocks": {
         "announcement_BxgCk9": {
           "type": "_announcement",
+          "disabled": true,
           "settings": {
             "text": "Join the Konnected Community here",
             "link": "https://community.konnected.io/",
@@ -68,6 +69,7 @@
         },
         "announcement_CnmdUR": {
           "type": "_announcement",
+          "disabled": true,
           "settings": {
             "text": "Sign up for our Newsletter and get 10% Off",
             "link": "",
@@ -83,9 +85,8 @@
         },
         "announcement_N8PCk4": {
           "type": "_announcement",
-          "disabled": true,
           "settings": {
-            "text": "WINTER SALE IS LIVE! - SAVE 2O%",
+            "text": "SUMMER SALE IS LIVE! SAVE 20%",
             "link": "shopify://collections/shop-now",
             "use_klaviyo_trigger": false,
             "klaviyo_id": "",
