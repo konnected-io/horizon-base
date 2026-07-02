@@ -239,3 +239,18 @@ document.querySelectorAll('[data-klaviyo]').forEach(e=> {
     window._klOnsite.push(['openForm', e.dataset.klaviyo]);
   })
 })
+
+document.addEventListener('click', function(event) {
+  const link = event.target.closest('a[data-content-cta]');
+  if (!link || typeof window.gtag !== 'function') return;
+
+  window.gtag('event', 'content_cta_click', {
+    content_url: window.location.pathname,
+    content_slug: link.dataset.contentSlug || '',
+    content_cluster: link.dataset.contentCluster || '',
+    destination_url: link.href || link.getAttribute('href') || '',
+    destination_type: link.dataset.destinationType || 'other',
+    cta_label: link.textContent.trim().slice(0, 100),
+    cta_location: link.dataset.ctaLocation || 'other',
+  });
+});
