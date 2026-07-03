@@ -19,6 +19,14 @@ shopify theme pull       # download store state (settings_data.json, template ed
 
 There are no unit tests. Validation = `shopify theme check` + visual verification in the dev server / theme editor.
 
+### Opening a pull request
+
+This repo is a fork: `origin` is `konnected-io/horizon-base` and `upstream` is `Shopify/horizon`. Because of the `upstream` remote, a bare `gh pr create` defaults to opening the PR against **Shopify/horizon** — which is wrong. Always target this repo explicitly:
+
+```bash
+gh pr create --repo konnected-io/horizon-base --base main --head <branch> --title "..." --body "..."
+```
+
 ## Architecture
 
 ### Liquid rendering model
