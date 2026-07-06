@@ -264,13 +264,22 @@ document.addEventListener('click', function(event) {
   const link = event.target.closest('a[data-content-cta]');
   if (!link || typeof window.gtag !== 'function') return;
 
+  const destinationUrl = link.href || link.getAttribute('href') || '';
+  const destinationPath = [link.pathname, link.search, link.hash].join('');
+  const contentSlug = link.dataset.contentSlug || '';
+  const destinationType = link.dataset.destinationType || 'other';
+  const ctaLocation = link.dataset.ctaLocation || 'other';
+  const ctaLabel = link.textContent.trim().slice(0, 100);
+
   window.gtag('event', 'content_cta_click', {
     content_url: window.location.pathname,
-    content_slug: link.dataset.contentSlug || '',
+    content_slug: contentSlug,
     content_cluster: link.dataset.contentCluster || '',
-    destination_url: link.href || link.getAttribute('href') || '',
-    destination_type: link.dataset.destinationType || 'other',
-    cta_label: link.textContent.trim().slice(0, 100),
-    cta_location: link.dataset.ctaLocation || 'other',
+    destination_url: destinationUrl,
+    destination_type: destinationType,
+    cta_label: ctaLabel,
+    cta_location: ctaLocation,
+    event_category: 'content_cta',
+    event_label: [contentSlug, destinationType, ctaLocation, destinationPath || destinationUrl].join('|').slice(0, 100),
   });
 });
