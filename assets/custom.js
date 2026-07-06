@@ -240,6 +240,26 @@ document.querySelectorAll('[data-klaviyo]').forEach(e=> {
   })
 })
 
+function tagContentCtaLinks() {
+  if (window.location.pathname !== '/pages/home-assistant') return;
+
+  document
+    .querySelectorAll('a[href="/pages/replace-old-alarm-panel-or-keep-it"]')
+    .forEach(function(link) {
+      link.setAttribute('data-content-cta', '');
+      link.setAttribute('data-content-slug', 'home-assistant');
+      link.setAttribute('data-content-cluster', 'alarm_panel');
+      link.setAttribute('data-destination-type', 'guide');
+      link.setAttribute('data-cta-location', 'intro_text');
+    });
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', tagContentCtaLinks);
+} else {
+  tagContentCtaLinks();
+}
+
 document.addEventListener('click', function(event) {
   const link = event.target.closest('a[data-content-cta]');
   if (!link || typeof window.gtag !== 'function') return;
