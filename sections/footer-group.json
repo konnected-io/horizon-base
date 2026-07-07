@@ -252,7 +252,7 @@
         "color_scheme": "scheme-1bd53c40-f638-4748-aa4a-fe86731d77b5",
         "padding-block-start": 36,
         "padding-block-end": 72,
-        "background_color": "#3f75ff"
+        "background_color": "{{ settings.color_palette.brand }}"
       }
     },
     "utilities": {
@@ -304,7 +304,7 @@
         "color_scheme": "scheme-1bd53c40-f638-4748-aa4a-fe86731d77b5",
         "padding-block-start": 12,
         "padding-block-end": 16,
-        "background_color": "#3f75ff"
+        "background_color": "{{ settings.color_palette.brand }}"
       }
     }
   },

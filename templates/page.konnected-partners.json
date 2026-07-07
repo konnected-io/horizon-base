@@ -93,7 +93,7 @@
             "padding-block-end": 48,
             "padding-inline-start": 48,
             "padding-inline-end": 48,
-            "background_color": "#ffffff"
+            "background_color": "{{ settings.color_palette.background }}"
           },
           "blocks": {
             "group_XniLkC": {
@@ -2318,7 +2318,7 @@
         "reflection_opacity": 75,
         "padding-block-start": 0,
         "padding-block-end": 0,
-        "background_color": "#ffffff"
+        "background_color": "{{ settings.color_palette.background }}"
       }
     },
     "hero_BGKNi6": {
@@ -2899,7 +2899,7 @@
         "reflection_opacity": 75,
         "padding-block-start": 0,
         "padding-block-end": 0,
-        "background_color": "#000000"
+        "background_color": "{{ settings.color_palette.dark }}"
       }
     },
     "section_pJGqti": {
@@ -4146,7 +4146,7 @@
         "css_class": "",
         "add_section_id": false,
         "section_id": "",
-        "background_color": "#eef4f9"
+        "background_color": "{{ settings.color_palette.brand_tint }}"
       }
     },
     "grid_section_GcLBbE": {
@@ -4332,7 +4332,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
                 "css_class": "hidden--mobile",
-                "background_color": "#22beff"
+                "background_color": "{{ settings.color_palette.cyan }}"
               },
               "blocks": {
                 "icon_i6QHPi": {
@@ -4647,7 +4647,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
                 "css_class": "hidden--mobile",
-                "background_color": "#3f75ff"
+                "background_color": "{{ settings.color_palette.brand }}"
               },
               "blocks": {
                 "icon_yrCqCf": {
@@ -4962,7 +4962,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
                 "css_class": "hidden--mobile",
-                "background_color": "#22beff"
+                "background_color": "{{ settings.color_palette.cyan }}"
               },
               "blocks": {
                 "icon_Qpwe8G": {
@@ -5277,7 +5277,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
                 "css_class": "hidden--mobile",
-                "background_color": "#3f75ff"
+                "background_color": "{{ settings.color_palette.brand }}"
               },
               "blocks": {
                 "icon_TKELK3": {
@@ -5592,7 +5592,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
                 "css_class": "hidden--mobile",
-                "background_color": "#22beff"
+                "background_color": "{{ settings.color_palette.cyan }}"
               },
               "blocks": {
                 "icon_Be6dxA": {
@@ -6142,7 +6142,7 @@
         "css_class": "",
         "add_section_id": false,
         "section_id": "",
-        "background_color": "#eef4f9"
+        "background_color": "{{ settings.color_palette.brand_tint }}"
       }
     },
     "grid_section_8DjUxw": {
@@ -6999,7 +6999,7 @@
         "css_class": "",
         "add_section_id": false,
         "section_id": "",
-        "background_color": "#f9fafb"
+        "background_color": "{{ settings.color_palette.surface }}"
       }
     }
   },

@@ -171,7 +171,7 @@
         "css_class": "",
         "add_section_id": false,
         "section_id": "",
-        "background_color": "#ffffff"
+        "background_color": "{{ settings.color_palette.background }}"
       }
     }
   },

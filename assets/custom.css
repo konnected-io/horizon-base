@@ -2,24 +2,11 @@
     --font-heading--family: basic-sans, sans-serif !important;
     --font-heading--weight: 600 !important;
     --font-paragraph--line-height: var(--line-height--body-loose) !important;
-
-    /* Brand accent. Horizon v4 dropped the per-scheme `primary` color that used
-       to define these; custom blocks (grid-section headings, text-icon, timeline,
-       tables, reseller/installer items, header buttons) still consume them. */
-    --color-primary: #3f75ff;
-    --color-primary-rgb: 63 117 255;
-    --color-primary-hover: #3f75ff;
-    --color-primary-active: #3f75ff;
 }
 
-/* v4 dropped the per-scheme `--color-foreground-heading`, but ~46 content
-   `color` settings still reference it. In v3 it tracked the body foreground in
-   almost every scheme (dark text on light bg, white on dark), so fall it back to
-   v4's contextual --color-foreground — this keeps headings readable on every
-   section background (incl. dark ones) instead of defaulting to invisible dark. */
-:root {
-    --color-foreground-heading: var(--color-foreground);
-}
+/* Brand accent custom properties (--color-primary, --color-foreground-heading)
+   are defined in snippets/custom-palette-vars.liquid, sourced from the theme
+   color palette so they stay a single source of truth. */
 
 body, .paragraph:not(.button), .paragraph>*, .text-block.paragraph :is(h1,h2,h3,h4,h5,h6) {
     letter-spacing: var(--letter-spacing--body-loose);

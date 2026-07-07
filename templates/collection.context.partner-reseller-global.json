@@ -65,7 +65,7 @@
         "css_class": "",
         "add_section_id": true,
         "section_id": "partner-banner",
-        "background_color": "#eef4f9"
+        "background_color": "{{ settings.color_palette.brand_tint }}"
       },
       "blocks": {
         "group_DPQUxG": {

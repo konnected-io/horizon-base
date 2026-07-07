@@ -1,0 +1,22 @@
+{% comment %}
+  Konnected accent CSS custom properties, sourced from the theme color palette.
+
+  Horizon v4 replaced the per-scheme color model with a single `color_palette`
+  and dropped the `--color-primary` / `--color-foreground-heading` custom
+  properties that v3 emitted per scheme. Konnected content and custom blocks
+  (text-icon, timeline, tables, reseller/installer items, header buttons,
+  grid-section headings) still consume them, so we define them here from the
+  palette's `brand` entry — a single source of truth the merchant edits in the
+  theme editor's color palette.
+{% endcomment %}
+{% style %}
+  :root {
+    --color-primary: {{ settings.color_palette.brand }};
+    --color-primary-rgb: {{ settings.color_palette.brand.rgb }};
+    --color-primary-hover: {{ settings.color_palette.brand }};
+    --color-primary-active: {{ settings.color_palette.brand }};
+    /* Headings track the section's contextual foreground (dark on light,
+       light on dark) rather than a fixed color. */
+    --color-foreground-heading: var(--color-foreground);
+  }
+{% endstyle %}

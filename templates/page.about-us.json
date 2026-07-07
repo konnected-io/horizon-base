@@ -1116,7 +1116,7 @@
         "css_class": "",
         "add_section_id": true,
         "section_id": "mission",
-        "background_color": "#3f75ff"
+        "background_color": "{{ settings.color_palette.brand }}"
       }
     },
     "section_rJUbeg": {
@@ -1940,7 +1940,7 @@
         "css_class": "",
         "add_section_id": true,
         "section_id": "#present",
-        "background_color": "#eef4f9"
+        "background_color": "{{ settings.color_palette.brand_tint }}"
       }
     },
     "grid_section_QF4eh8": {
@@ -3822,7 +3822,7 @@
         "css_class": "",
         "add_section_id": false,
         "section_id": "",
-        "background_color": "#eef4f9"
+        "background_color": "{{ settings.color_palette.brand_tint }}"
       }
     },
     "grid_section_jg4GNC": {
@@ -3946,7 +3946,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
                 "css_class": "top-offset",
-                "background_color": "#3f75ff"
+                "background_color": "{{ settings.color_palette.brand }}"
               },
               "blocks": {
                 "group_Ptxr8R": {
@@ -4216,7 +4216,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
                 "css_class": "top-offset",
-                "background_color": "#3f75ff"
+                "background_color": "{{ settings.color_palette.brand }}"
               },
               "blocks": {
                 "group_UppyJi": {
@@ -4486,7 +4486,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
                 "css_class": "top-offset",
-                "background_color": "#3f75ff"
+                "background_color": "{{ settings.color_palette.brand }}"
               },
               "blocks": {
                 "group_G7exKq": {
@@ -4756,7 +4756,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
                 "css_class": "top-offset",
-                "background_color": "#3f75ff"
+                "background_color": "{{ settings.color_palette.brand }}"
               },
               "blocks": {
                 "group_L7atGd": {
@@ -5026,7 +5026,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
                 "css_class": "top-offset",
-                "background_color": "#3f75ff"
+                "background_color": "{{ settings.color_palette.brand }}"
               },
               "blocks": {
                 "group_dVRqKf": {
@@ -5296,7 +5296,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
                 "css_class": "top-offset",
-                "background_color": "#3f75ff"
+                "background_color": "{{ settings.color_palette.brand }}"
               },
               "blocks": {
                 "group_XJ9RtC": {
@@ -5837,7 +5837,7 @@
         "css_class": "",
         "add_section_id": true,
         "section_id": "team",
-        "background_color": "#ffffff"
+        "background_color": "{{ settings.color_palette.background }}"
       }
     },
     "section_JQgVzt": {

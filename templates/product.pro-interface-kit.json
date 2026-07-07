@@ -1916,7 +1916,7 @@
         "css_class": "",
         "add_section_id": false,
         "section_id": "",
-        "background_color": "#ffffff"
+        "background_color": "{{ settings.color_palette.background }}"
       }
     },
     "section_TfDwPf": {
@@ -2652,7 +2652,7 @@
         "css_class": "",
         "add_section_id": false,
         "section_id": "",
-        "background_color": "#ffffff"
+        "background_color": "{{ settings.color_palette.background }}"
       }
     },
     "carousel_wRazhD": {
@@ -3109,7 +3109,7 @@
         "icons_shape": "circle",
         "padding-block-start": 48,
         "padding-block-end": 48,
-        "background_color": "#eef4f9"
+        "background_color": "{{ settings.color_palette.brand_tint }}"
       }
     },
     "section_WGwGDN": {
@@ -4458,7 +4458,7 @@
         "css_class": "",
         "add_section_id": false,
         "section_id": "",
-        "background_color": "#eef4f9"
+        "background_color": "{{ settings.color_palette.brand_tint }}"
       }
     },
     "section_jjdETw": {
@@ -6826,7 +6826,7 @@
             "mobile-padding-inline-start": 0,
             "mobile-padding-inline-end": 0,
             "css_class": "",
-            "background_color": "#f9fafb"
+            "background_color": "{{ settings.color_palette.surface }}"
           },
           "blocks": {
             "custom_liquid_dFJ6Ue": {
@@ -7225,7 +7225,7 @@
         "css_class": "",
         "add_section_id": false,
         "section_id": "",
-        "background_color": "#eef4f9"
+        "background_color": "{{ settings.color_palette.brand_tint }}"
       }
     },
     "section_4hgwHD": {
@@ -8048,7 +8048,7 @@
         "css_class": "",
         "add_section_id": false,
         "section_id": "",
-        "background_color": "#ffffff"
+        "background_color": "{{ settings.color_palette.background }}"
       }
     },
     "grid_section_JHCzGV": {
@@ -10296,7 +10296,7 @@
         "css_class": "",
         "add_section_id": false,
         "section_id": "",
-        "background_color": "#eef4f9"
+        "background_color": "{{ settings.color_palette.brand_tint }}"
       }
     },
     "grid_section_kh8eBy": {
@@ -10940,7 +10940,7 @@
         "css_class": "",
         "add_section_id": false,
         "section_id": "",
-        "background_color": "#eef4f9"
+        "background_color": "{{ settings.color_palette.brand_tint }}"
       }
     },
     "blocks_kTyqGK": {
@@ -11198,7 +11198,7 @@
         "color_scheme": "scheme-3c7fcc31-b421-4b24-9c6c-034c3a74a9e2",
         "padding-block-start": 48,
         "padding-block-end": 48,
-        "background_color": "#ffffff"
+        "background_color": "{{ settings.color_palette.background }}"
       }
     }
   },

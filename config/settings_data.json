@@ -136,9 +136,13 @@
     "color_palette": {
       "background": "#ffffff",
       "foreground": "#121212",
-      "color1": "#333333",
-      "color2": "#EEF1EA",
-      "color3": "#DFDFDF"
+      "brand": "#3f75ff",
+      "brand_tint": "#eef4f9",
+      "surface": "#f9fafb",
+      "neutral": "#dadada",
+      "dark": "#000000",
+      "charcoal": "#3b3b3b",
+      "cyan": "#22beff"
     },
     "color_schemes": {
       "scheme-1": {

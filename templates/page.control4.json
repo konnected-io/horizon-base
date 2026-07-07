@@ -130,7 +130,7 @@
         "reflection_opacity": 75,
         "padding-block-start": 40,
         "padding-block-end": 40,
-        "background_color": "#000000"
+        "background_color": "{{ settings.color_palette.dark }}"
       }
     },
     "section_ARtcp4": {
@@ -716,7 +716,7 @@
         "css_class": "",
         "add_section_id": false,
         "section_id": "",
-        "background_color": "#eef4f9"
+        "background_color": "{{ settings.color_palette.brand_tint }}"
       }
     },
     "section_bV7z6q": {
@@ -989,7 +989,7 @@
         "css_class": "",
         "add_section_id": false,
         "section_id": "",
-        "background_color": "#eef4f9"
+        "background_color": "{{ settings.color_palette.brand_tint }}"
       }
     },
     "grid_section_R6EMTP": {
@@ -1874,7 +1874,7 @@
         "css_class": "",
         "add_section_id": false,
         "section_id": "",
-        "background_color": "#ffffff"
+        "background_color": "{{ settings.color_palette.background }}"
       }
     },
     "featured_blog_posts_CFpR44": {
@@ -2192,7 +2192,7 @@
         "css_class": "",
         "add_section_id": false,
         "section_id": "",
-        "background_color": "#000000"
+        "background_color": "{{ settings.color_palette.dark }}"
       }
     }
   },

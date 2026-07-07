@@ -64,7 +64,14 @@
         "id": "color_palette",
         "default": {
           "background": "#ffffff",
-          "foreground": "#000000"
+          "foreground": "#121212",
+          "brand": "#3f75ff",
+          "brand_tint": "#eef4f9",
+          "surface": "#f9fafb",
+          "neutral": "#dadada",
+          "dark": "#000000",
+          "charcoal": "#3b3b3b",
+          "cyan": "#22beff"
         }
       }
     ]
