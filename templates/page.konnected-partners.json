@@ -92,7 +92,8 @@
             "padding-block-start": 48,
             "padding-block-end": 48,
             "padding-inline-start": 48,
-            "padding-inline-end": 48
+            "padding-inline-end": 48,
+            "background_color": "#ffffff"
           },
           "blocks": {
             "group_XniLkC": {
@@ -344,7 +345,8 @@
             "padding-block-start": 48,
             "padding-block-end": 48,
             "padding-inline-start": 48,
-            "padding-inline-end": 48
+            "padding-inline-end": 48,
+            "background_color": "rgba(0,0,0,0)"
           },
           "blocks": {
             "group_7kzrCj": {
@@ -2315,7 +2317,8 @@
         "blurred_reflection": false,
         "reflection_opacity": 75,
         "padding-block-start": 0,
-        "padding-block-end": 0
+        "padding-block-end": 0,
+        "background_color": "#ffffff"
       }
     },
     "hero_BGKNi6": {
@@ -2895,7 +2898,8 @@
         "blurred_reflection": false,
         "reflection_opacity": 75,
         "padding-block-start": 0,
-        "padding-block-end": 0
+        "padding-block-end": 0,
+        "background_color": "#000000"
       }
     },
     "section_pJGqti": {
@@ -4326,7 +4330,8 @@
                 "mobile-padding-block-end": 0,
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
-                "css_class": "hidden--mobile"
+                "css_class": "hidden--mobile",
+                "background_color": "#22beff"
               },
               "blocks": {
                 "icon_i6QHPi": {
@@ -4640,7 +4645,8 @@
                 "mobile-padding-block-end": 0,
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
-                "css_class": "hidden--mobile"
+                "css_class": "hidden--mobile",
+                "background_color": "{{ shop.brand.colors.primary[0].background }}"
               },
               "blocks": {
                 "icon_yrCqCf": {
@@ -4954,7 +4960,8 @@
                 "mobile-padding-block-end": 0,
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
-                "css_class": "hidden--mobile"
+                "css_class": "hidden--mobile",
+                "background_color": "#22beff"
               },
               "blocks": {
                 "icon_Qpwe8G": {
@@ -5268,7 +5275,8 @@
                 "mobile-padding-block-end": 0,
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
-                "css_class": "hidden--mobile"
+                "css_class": "hidden--mobile",
+                "background_color": "{{ shop.brand.colors.primary[0].background }}"
               },
               "blocks": {
                 "icon_TKELK3": {
@@ -5582,7 +5590,8 @@
                 "mobile-padding-block-end": 0,
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
-                "css_class": "hidden--mobile"
+                "css_class": "hidden--mobile",
+                "background_color": "#22beff"
               },
               "blocks": {
                 "icon_Be6dxA": {
@@ -6131,7 +6140,8 @@
         "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": false,
-        "section_id": ""
+        "section_id": "",
+        "background_color": "#eef4f9"
       }
     },
     "grid_section_8DjUxw": {

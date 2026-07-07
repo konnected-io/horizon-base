@@ -1080,7 +1080,8 @@
             "mobile-padding-block-end": 0,
             "mobile-padding-inline-start": 0,
             "mobile-padding-inline-end": 0,
-            "css_class": ""
+            "css_class": "",
+            "background_color": "#f9fafb"
           },
           "blocks": {
             "text_R4EdKd": {
@@ -2956,7 +2957,8 @@
         "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": false,
-        "section_id": ""
+        "section_id": "",
+        "background_color": "#ffffff"
       }
     },
     "section_k39f97": {
@@ -3573,7 +3575,8 @@
         "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": false,
-        "section_id": ""
+        "section_id": "",
+        "background_color": "#fafafa"
       }
     },
     "section_aQ9qqr": {
@@ -6074,7 +6077,8 @@
         "icons_style": "chevron",
         "icons_shape": "circle",
         "padding-block-start": 48,
-        "padding-block-end": 48
+        "padding-block-end": 48,
+        "background_color": "#fafafa"
       }
     },
     "section_jKwVTK": {
@@ -6183,7 +6187,8 @@
         "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": false,
-        "section_id": ""
+        "section_id": "",
+        "background_color": "#eef4f9"
       }
     },
     "section_WGwGDN": {
@@ -6862,7 +6867,8 @@
         "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": false,
-        "section_id": ""
+        "section_id": "",
+        "background_color": "{{ shop.brand.colors.primary[0].background }}"
       }
     },
     "section_GdbGKz": {
@@ -6951,7 +6957,8 @@
             "mobile-padding-block-end": 0,
             "mobile-padding-inline-start": 0,
             "mobile-padding-inline-end": 0,
-            "css_class": ""
+            "css_class": "",
+            "background_color": "#f9fafb"
           },
           "blocks": {
             "image_iM9xM6": {
@@ -7364,7 +7371,8 @@
         "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": false,
-        "section_id": ""
+        "section_id": "",
+        "background_color": "#ffffff"
       }
     },
     "blocks_kTyqGK": {
@@ -7621,7 +7629,8 @@
         "gap": 28,
         "color_scheme": "scheme-3c7fcc31-b421-4b24-9c6c-034c3a74a9e2",
         "padding-block-start": 48,
-        "padding-block-end": 48
+        "padding-block-end": 48,
+        "background_color": "#ffffff"
       }
     }
   },

@@ -624,7 +624,8 @@
         "gap": 28,
         "color_scheme": "scheme-3c7fcc31-b421-4b24-9c6c-034c3a74a9e2",
         "padding-block-start": 48,
-        "padding-block-end": 48
+        "padding-block-end": 48,
+        "background_color": "#ffffff"
       }
     }
   },

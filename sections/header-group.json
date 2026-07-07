@@ -45,7 +45,8 @@
         "blurred_reflection": false,
         "reflection_opacity": 75,
         "padding-block-start": 0,
-        "padding-block-end": 0
+        "padding-block-end": 0,
+        "background_color": "#000000"
       }
     },
     "header_announcements_9jGBFp": {
@@ -104,7 +105,8 @@
         "color_scheme": "scheme-5",
         "divider_width": 1,
         "padding-block-start": 12,
-        "padding-block-end": 12
+        "padding-block-end": 12,
+        "background_color": "#000000"
       }
     },
     "header_section": {

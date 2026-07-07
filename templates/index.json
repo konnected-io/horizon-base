@@ -61,7 +61,8 @@
             "mobile-padding-block-end": 0,
             "mobile-padding-inline-start": 0,
             "mobile-padding-inline-end": 0,
-            "css_class": ""
+            "css_class": "",
+            "background_color": "#dadada"
           },
           "blocks": {
             "text_BYYMBd": {
@@ -302,7 +303,8 @@
             "mobile-padding-block-end": 0,
             "mobile-padding-inline-start": 0,
             "mobile-padding-inline-end": 0,
-            "css_class": ""
+            "css_class": "",
+            "background_color": "#dadada"
           },
           "blocks": {
             "text_4RGtDm": {
@@ -1134,7 +1136,8 @@
                 "mobile-padding-block-end": 0,
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
-                "css_class": ""
+                "css_class": "",
+                "background_color": "#ffffff"
               },
               "blocks": {
                 "text_PcUnPV": {
@@ -1563,7 +1566,8 @@
                 "mobile-padding-block-end": 0,
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
-                "css_class": ""
+                "css_class": "",
+                "background_color": "#ffffff"
               },
               "blocks": {
                 "text_NWPnpN": {
@@ -3033,7 +3037,8 @@
                 "mobile-padding-block-end": 24,
                 "mobile-padding-inline-start": 10,
                 "mobile-padding-inline-end": 10,
-                "css_class": ""
+                "css_class": "",
+                "background_color": "#fafafa"
               },
               "blocks": {
                 "video_rezCte": {
@@ -3255,7 +3260,8 @@
                 "mobile-padding-block-end": 24,
                 "mobile-padding-inline-start": 10,
                 "mobile-padding-inline-end": 10,
-                "css_class": ""
+                "css_class": "",
+                "background_color": "#fafafa"
               },
               "blocks": {
                 "video_DKbRz7": {
@@ -4743,7 +4749,8 @@
         "blurred_reflection": false,
         "reflection_opacity": 75,
         "padding-block-start": 40,
-        "padding-block-end": 40
+        "padding-block-end": 40,
+        "background_color": "#ffffff"
       }
     },
     "grid_section_yYbgJF": {
@@ -4842,7 +4849,8 @@
                 "mobile-padding-block-end": 0,
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
-                "css_class": ""
+                "css_class": "",
+                "background_color": "#22beff33"
               },
               "blocks": {
                 "icon_wt3UYn": {
@@ -5090,7 +5098,8 @@
                 "mobile-padding-block-end": 0,
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
-                "css_class": ""
+                "css_class": "",
+                "background_color": "#22beff33"
               },
               "blocks": {
                 "icon_87h4xV": {
@@ -5338,7 +5347,8 @@
                 "mobile-padding-block-end": 0,
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
-                "css_class": ""
+                "css_class": "",
+                "background_color": "#22beff33"
               },
               "blocks": {
                 "icon_BWAKxf": {
@@ -5586,7 +5596,8 @@
                 "mobile-padding-block-end": 0,
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
-                "css_class": ""
+                "css_class": "",
+                "background_color": "#22beff33"
               },
               "blocks": {
                 "icon_E8mW3b": {
@@ -5834,7 +5845,8 @@
                 "mobile-padding-block-end": 0,
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
-                "css_class": ""
+                "css_class": "",
+                "background_color": "#22beff33"
               },
               "blocks": {
                 "icon_NYRk8M": {
@@ -9153,7 +9165,8 @@
         "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": false,
-        "section_id": ""
+        "section_id": "",
+        "background_color": "#eef4f9"
       }
     }
   },

@@ -3106,7 +3106,8 @@
         "icons_style": "chevron",
         "icons_shape": "circle",
         "padding-block-start": 48,
-        "padding-block-end": 48
+        "padding-block-end": 48,
+        "background_color": "#eef4f9"
       }
     },
     "section_WGwGDN": {
@@ -4454,7 +4455,8 @@
         "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": false,
-        "section_id": ""
+        "section_id": "",
+        "background_color": "#eef4f9"
       }
     },
     "section_jjdETw": {
@@ -6821,7 +6823,8 @@
             "mobile-padding-block-end": 0,
             "mobile-padding-inline-start": 0,
             "mobile-padding-inline-end": 0,
-            "css_class": ""
+            "css_class": "",
+            "background_color": "#f9fafb"
           },
           "blocks": {
             "custom_liquid_dFJ6Ue": {
@@ -7219,7 +7222,8 @@
         "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": false,
-        "section_id": ""
+        "section_id": "",
+        "background_color": "#eef4f9"
       }
     },
     "section_4hgwHD": {
@@ -8041,7 +8045,8 @@
         "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": false,
-        "section_id": ""
+        "section_id": "",
+        "background_color": "#ffffff"
       }
     },
     "grid_section_JHCzGV": {
@@ -10931,7 +10936,8 @@
         "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": false,
-        "section_id": ""
+        "section_id": "",
+        "background_color": "#eef4f9"
       }
     },
     "blocks_kTyqGK": {
@@ -11188,7 +11194,8 @@
         "gap": 28,
         "color_scheme": "scheme-3c7fcc31-b421-4b24-9c6c-034c3a74a9e2",
         "padding-block-start": 48,
-        "padding-block-end": 48
+        "padding-block-end": 48,
+        "background_color": "#ffffff"
       }
     }
   },

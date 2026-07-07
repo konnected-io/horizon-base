@@ -128,7 +128,8 @@
         "blurred_reflection": false,
         "reflection_opacity": 75,
         "padding-block-start": 40,
-        "padding-block-end": 40
+        "padding-block-end": 40,
+        "background_color": "#000000"
       }
     },
     "grid_section_R6EMTP": {
@@ -1191,7 +1192,8 @@
         "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": false,
-        "section_id": ""
+        "section_id": "",
+        "background_color": "#eef4f9"
       }
     },
     "section_NteVin": {
@@ -1378,7 +1380,8 @@
         "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": false,
-        "section_id": ""
+        "section_id": "",
+        "background_color": "#eef4f9"
       }
     },
     "section_UenpeG": {
@@ -1858,7 +1861,8 @@
                 "mobile-padding-block-end": 0,
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
-                "css_class": ""
+                "css_class": "",
+                "background_color": "#ffffff"
               },
               "blocks": {
                 "text_AcBUBq": {
@@ -2287,7 +2291,8 @@
                 "mobile-padding-block-end": 0,
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
-                "css_class": ""
+                "css_class": "",
+                "background_color": "#ffffff"
               },
               "blocks": {
                 "text_tMdEwY": {
@@ -2716,7 +2721,8 @@
                 "mobile-padding-block-end": 0,
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
-                "css_class": ""
+                "css_class": "",
+                "background_color": "#ffffff"
               },
               "blocks": {
                 "text_RTVyXa": {
@@ -3273,7 +3279,8 @@
                 "mobile-padding-block-end": 0,
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
-                "css_class": ""
+                "css_class": "",
+                "background_color": "#ffffff"
               },
               "blocks": {
                 "text_JBR7kJ": {
@@ -4189,7 +4196,8 @@
         "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": false,
-        "section_id": ""
+        "section_id": "",
+        "background_color": "#eef4f9"
       }
     },
     "section_DFYaA3": {
@@ -4304,7 +4312,8 @@
         "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": false,
-        "section_id": ""
+        "section_id": "",
+        "background_color": "#ffffff"
       }
     },
     "section_bV7z6q": {
@@ -4575,7 +4584,8 @@
         "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": false,
-        "section_id": ""
+        "section_id": "",
+        "background_color": "#ffffff"
       }
     },
     "grid_section_MYP4bp": {

@@ -64,7 +64,8 @@
         "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": true,
-        "section_id": "partner-banner"
+        "section_id": "partner-banner",
+        "background_color": "#eef4f9"
       },
       "blocks": {
         "group_DPQUxG": {

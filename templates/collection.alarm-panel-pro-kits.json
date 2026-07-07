@@ -125,7 +125,8 @@
         "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": true,
-        "section_id": "collection-heading"
+        "section_id": "collection-heading",
+        "background_color": "#ffffff"
       }
     },
     "section_mifQ7e": {
@@ -180,7 +181,8 @@
             "mobile-padding-block-end": 0,
             "mobile-padding-inline-start": 0,
             "mobile-padding-inline-end": 0,
-            "css_class": ""
+            "css_class": "",
+            "background_color": "#dadada"
           },
           "blocks": {
             "group_PxRDGU": {
@@ -479,7 +481,8 @@
             "mobile-padding-block-end": 0,
             "mobile-padding-inline-start": 0,
             "mobile-padding-inline-end": 0,
-            "css_class": ""
+            "css_class": "",
+            "background_color": "#dadada"
           },
           "blocks": {
             "group_HJhxCp": {
@@ -1347,7 +1350,8 @@
                 "mobile-padding-block-end": 0,
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
-                "css_class": ""
+                "css_class": "",
+                "background_color": "#ffffff"
               },
               "blocks": {
                 "text_YEeCtr": {
@@ -1755,7 +1759,8 @@
                 "mobile-padding-block-end": 0,
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
-                "css_class": ""
+                "css_class": "",
+                "background_color": "#ffffff"
               },
               "blocks": {
                 "text_mTqPhX": {
@@ -3714,7 +3719,8 @@
         "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": false,
-        "section_id": ""
+        "section_id": "",
+        "background_color": "#ffffff"
       }
     },
     "section_fMPXnB": {
@@ -4178,7 +4184,8 @@
         "padding-inline-end": 0,
         "color_scheme": "scheme-3c7fcc31-b421-4b24-9c6c-034c3a74a9e2",
         "padding-block-start": 32,
-        "padding-block-end": 72
+        "padding-block-end": 72,
+        "background_color": "#ffffff"
       }
     },
     "section_B7nYQ8": {
@@ -4480,7 +4487,8 @@
             "mobile-padding-block-end": 0,
             "mobile-padding-inline-start": 0,
             "mobile-padding-inline-end": 0,
-            "css_class": ""
+            "css_class": "",
+            "background_color": "#eef4f9"
           },
           "blocks": {
             "text_TRiniJ": {
@@ -5664,7 +5672,8 @@
             "mobile-padding-block-end": 0,
             "mobile-padding-inline-start": 0,
             "mobile-padding-inline-end": 0,
-            "css_class": ""
+            "css_class": "",
+            "background_color": "#f9fafb"
           },
           "blocks": {
             "custom_liquid_i3Nytz": {
@@ -6128,7 +6137,8 @@
         "blurred_reflection": false,
         "reflection_opacity": 75,
         "padding-block-start": 40,
-        "padding-block-end": 40
+        "padding-block-end": 40,
+        "background_color": "#ffffff"
       }
     },
     "grid_section_iBXACP": {
