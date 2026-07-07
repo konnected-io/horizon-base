@@ -29,7 +29,6 @@
             "letter_spacing": "normal",
             "case": "none",
             "wrap": "pretty",
-            "color": "",
             "background": false,
             "background_color": "#00000026",
             "corner_radius": 0,
@@ -76,7 +75,6 @@
                 "letter_spacing": "normal",
                 "case": "none",
                 "wrap": "pretty",
-                "color": "",
                 "text": "",
                 "read_only": true,
                 "alignment": "left",
@@ -128,7 +126,6 @@
         "title"
       ],
       "settings": {
-        "color_scheme": "",
         "padding-block-start": 0,
         "padding-block-end": 48
       }
