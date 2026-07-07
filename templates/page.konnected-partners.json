@@ -4646,7 +4646,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
                 "css_class": "hidden--mobile",
-                "background_color": "{{ shop.brand.colors.primary[0].background }}"
+                "background_color": "#3f75ff"
               },
               "blocks": {
                 "icon_yrCqCf": {
@@ -5276,7 +5276,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
                 "css_class": "hidden--mobile",
-                "background_color": "{{ shop.brand.colors.primary[0].background }}"
+                "background_color": "#3f75ff"
               },
               "blocks": {
                 "icon_TKELK3": {

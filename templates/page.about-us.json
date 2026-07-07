@@ -1116,7 +1116,7 @@
         "css_class": "",
         "add_section_id": true,
         "section_id": "mission",
-        "background_color": "{{ shop.brand.colors.primary[0].background }}"
+        "background_color": "#3f75ff"
       }
     },
     "section_rJUbeg": {
@@ -3945,7 +3945,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
                 "css_class": "top-offset",
-                "background_color": "{{ shop.brand.colors.primary[0].background }}"
+                "background_color": "#3f75ff"
               },
               "blocks": {
                 "group_Ptxr8R": {
@@ -4215,7 +4215,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
                 "css_class": "top-offset",
-                "background_color": "{{ shop.brand.colors.primary[0].background }}"
+                "background_color": "#3f75ff"
               },
               "blocks": {
                 "group_UppyJi": {
@@ -4485,7 +4485,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
                 "css_class": "top-offset",
-                "background_color": "{{ shop.brand.colors.primary[0].background }}"
+                "background_color": "#3f75ff"
               },
               "blocks": {
                 "group_G7exKq": {
@@ -4755,7 +4755,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
                 "css_class": "top-offset",
-                "background_color": "{{ shop.brand.colors.primary[0].background }}"
+                "background_color": "#3f75ff"
               },
               "blocks": {
                 "group_L7atGd": {
@@ -5025,7 +5025,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
                 "css_class": "top-offset",
-                "background_color": "{{ shop.brand.colors.primary[0].background }}"
+                "background_color": "#3f75ff"
               },
               "blocks": {
                 "group_dVRqKf": {
@@ -5295,7 +5295,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
                 "css_class": "top-offset",
-                "background_color": "{{ shop.brand.colors.primary[0].background }}"
+                "background_color": "#3f75ff"
               },
               "blocks": {
                 "group_XJ9RtC": {
