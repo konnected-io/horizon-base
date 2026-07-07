@@ -142,7 +142,8 @@
       "neutral": "#dadada",
       "dark": "#000000",
       "charcoal": "#3b3b3b",
-      "cyan": "#22beff"
+      "cyan": "#22beff",
+      "border": "#e5e7eb"
     },
     "color_schemes": {
       "scheme-1": {

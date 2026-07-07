@@ -112,7 +112,6 @@
                 "letter_spacing": "normal",
                 "case": "none",
                 "wrap": "pretty",
-                "color": "var(--color-foreground)",
                 "padding-block-start": 16,
                 "padding-block-end": 0
               },

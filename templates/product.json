@@ -138,7 +138,6 @@
                     "letter_spacing": "normal",
                     "case": "none",
                     "wrap": "pretty",
-                    "color": "var(--color-foreground)",
                     "background": false,
                     "background_color": "#00000026",
                     "corner_radius": 0,
@@ -175,11 +174,11 @@
                     "line_height": "normal",
                     "letter_spacing": "normal",
                     "case": "none",
-                    "color": "var(--color-primary)",
                     "padding-block-start": 4,
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
-                    "padding-inline-end": 0
+                    "padding-inline-end": 0,
+                    "text_color": "{{ settings.color_palette.brand }}"
                   },
                   "blocks": {}
                 }
@@ -256,7 +255,6 @@
                 "letter_spacing": "normal",
                 "case": "none",
                 "wrap": "pretty",
-                "color": "",
                 "background": false,
                 "background_color": "#00000026",
                 "corner_radius": 0,
@@ -439,7 +437,6 @@
             "letter_spacing": "normal",
             "case": "none",
             "wrap": "pretty",
-            "color": "",
             "background": false,
             "background_color": "#00000026",
             "corner_radius": 0,
@@ -542,7 +539,6 @@
                     "letter_spacing": "loose",
                     "case": "none",
                     "wrap": "pretty",
-                    "color": "var(--color-foreground)",
                     "background": false,
                     "background_color": "#00000026",
                     "corner_radius": 0,
@@ -568,11 +564,11 @@
                     "line_height": "normal",
                     "letter_spacing": "normal",
                     "case": "none",
-                    "color": "var(--color-foreground-heading)",
                     "padding-block-start": 0,
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
-                    "padding-inline-end": 0
+                    "padding-inline-end": 0,
+                    "text_color": "{{ settings.color_palette.brand }}"
                   },
                   "blocks": {}
                 },

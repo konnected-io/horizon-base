@@ -1,6 +1,6 @@
 {% liquid
   if section.settings.background_color != blank
-    render 'contrast-override', background_color: section.settings.background_color, section_id: section.id
+    render 'contrast-override', background_color: section.settings.background_color, text_color: section.settings.text_color, section_id: section.id
   endif
 %}
 
@@ -167,6 +167,11 @@
       "id": "background_color",
       "label": "t:settings.background_color",
       "default": "{{ settings.color_palette.foreground }}"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:settings.text_color"
     },
     {
       "type": "range",

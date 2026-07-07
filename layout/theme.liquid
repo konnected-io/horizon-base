@@ -33,6 +33,8 @@
     {%- render 'scripts' -%}
     {%- render 'theme-styles-variables' -%}
     {%- render 'color-palette' -%}
+    {%- comment -%} Konnected accent/border overrides — must come after color-palette to win the cascade {%- endcomment -%}
+    {%- render 'custom-palette-vars' -%}
 
     {% if request.design_mode %}
       {%- render 'theme-editor' -%}
