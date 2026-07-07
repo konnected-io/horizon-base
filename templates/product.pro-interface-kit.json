@@ -4491,7 +4491,7 @@
             "video_position": "cover",
             "background_image_position": "cover",
             "border": "solid",
-            "border_width": 1.5,
+            "border_width": 2,
             "border_opacity": 100,
             "border_radius": 26,
             "enable_mobile_radius": false,

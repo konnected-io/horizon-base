@@ -133,6 +133,13 @@
         "settings": {}
       }
     },
+    "color_palette": {
+      "background": "#ffffff",
+      "foreground": "#121212",
+      "color1": "#333333",
+      "color2": "#EEF1EA",
+      "color3": "#DFDFDF"
+    },
     "color_schemes": {
       "scheme-1": {
         "settings": {
