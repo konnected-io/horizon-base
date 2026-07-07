@@ -1556,7 +1556,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Works with all non-Chamberlain brands (including Genie, Linear, Overhead Door) and Chamberlain/LiftMaster brands with green, gray, white, yellow (square) 🟨 learn button.</p><p>Got a Chamberlain/LiftMaster garage door opener with a yellow (circular), red, orange, blue, purple, or brown learn button, including those with myQ built-in? Get the <a href=\"https://konnected.io/products/smart-garage-door-opener-blaq-myq-alternative\" title=\"Smart Garage Door Opener blaQ\">GDO blaQ instead</a>.</p>",
+                        "text": "<p>For nearly all other garage door opener brands, including Genie, Linear, Overhead Door, and older Chamberlain/LiftMaster models with green, gray, white, or yellow square learn buttons.</p><p>Got a Chamberlain/LiftMaster garage door opener with a yellow circular, red, orange, blue, purple, or brown learn button, including those with myQ built-in? Get the <a href=\"https://konnected.io/products/smart-garage-door-opener-blaq-myq-alternative\" title=\"Smart Garage Door Opener blaQ\">GDO blaQ instead</a>.</p>",
                         "width": "100%",
                         "max_width": "none",
                         "alignment": "left",
