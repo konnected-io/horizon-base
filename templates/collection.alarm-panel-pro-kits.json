@@ -1251,7 +1251,8 @@
         "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": false,
-        "section_id": ""
+        "section_id": "",
+        "background_color": "#ffffff"
       }
     },
     "grid_section_AfzNBp": {
@@ -3610,7 +3611,8 @@
         "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": false,
-        "section_id": ""
+        "section_id": "",
+        "background_color": "#ffffff"
       }
     },
     "section_i93pxL": {
@@ -6889,7 +6891,8 @@
         "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": false,
-        "section_id": ""
+        "section_id": "",
+        "background_color": "#eef4f9"
       }
     }
   },

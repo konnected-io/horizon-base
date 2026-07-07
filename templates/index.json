@@ -3505,7 +3505,8 @@
         "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": false,
-        "section_id": ""
+        "section_id": "",
+        "background_color": "#eef4f9"
       }
     },
     "grid_section_YpMKx9": {
@@ -4450,7 +4451,8 @@
         "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": false,
-        "section_id": ""
+        "section_id": "",
+        "background_color": "#f9fafb"
       }
     },
     "hero_kBLdRW": {
@@ -6123,7 +6125,8 @@
         "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": false,
-        "section_id": ""
+        "section_id": "",
+        "background_color": "#eef4f9"
       }
     },
     "grid_section_PWRXb3": {
@@ -8988,7 +8991,8 @@
         "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": false,
-        "section_id": ""
+        "section_id": "",
+        "background_color": "#ffffff"
       }
     },
     "section_QTBNL6": {

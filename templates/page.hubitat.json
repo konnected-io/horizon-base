@@ -939,7 +939,8 @@
         "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": false,
-        "section_id": ""
+        "section_id": "",
+        "background_color": "#f9fafb"
       }
     },
     "section_ARtcp4": {

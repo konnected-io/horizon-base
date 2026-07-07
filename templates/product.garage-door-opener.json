@@ -1024,7 +1024,8 @@
         "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": false,
-        "section_id": ""
+        "section_id": "",
+        "background_color": "#ffffff"
       }
     },
     "section_LawdhD": {
@@ -2235,7 +2236,8 @@
         "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": false,
-        "section_id": ""
+        "section_id": "",
+        "background_color": "#eef4f9"
       }
     },
     "section_ipzgLY": {
@@ -4460,7 +4462,8 @@
         "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": false,
-        "section_id": ""
+        "section_id": "",
+        "background_color": "#eef4f9"
       }
     },
     "section_PjQUkG": {
@@ -5563,7 +5566,8 @@
         "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": false,
-        "section_id": ""
+        "section_id": "",
+        "background_color": "#eef4f9"
       }
     },
     "carousel_wRazhD": {
