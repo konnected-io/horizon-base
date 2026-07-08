@@ -613,6 +613,7 @@
               "name": "t:names.heading",
               "settings": {
                 "text": "<h2>Works where<br/>myQ doesnt</h2>",
+                "text_color": "#ffffff",
                 "width": "100%",
                 "max_width": "none",
                 "alignment": "left",
@@ -644,6 +645,7 @@
               "type": "text",
               "settings": {
                 "text": "<p>We use the same Security+ protocol as myQ to talk to your garage door opener — without the myQ app or cloud service! <strong>Konnected lets you directly control your Security+ garage door with the smart home apps that Chamberlain doesn’t want you to. </strong>Local & private, cloud-optional, and no required fees.<br/><br/>Security+ and myQ are registered trademark of The Chamberlain Group, Inc.</p>",
+                "text_color": "#ffffff",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
