@@ -9,8 +9,45 @@
  */
 {
   "sections": {
+    "hero_summer_sale_2026": {
+      "type": "hero",
+      "name": "Summer Sale Hero",
+      "settings": {
+        "media_type_1": "image",
+        "image_1": "shopify://shop_images/summer_sale_2026_banner_desktop.jpg",
+        "media_type_2": "image",
+        "stack_media_on_mobile": false,
+        "custom_mobile_media": true,
+        "media_type_1_mobile": "image",
+        "image_1_mobile": "shopify://shop_images/summer_sale_2026_banner.jpg",
+        "media_type_2_mobile": "image",
+        "link": "shopify://collections/shop-now",
+        "open_in_new_tab": false,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 0,
+        "section_width": "page-width",
+        "section_height": "auto",
+        "section_height_custom": 50,
+        "color_scheme": "scheme-5",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "gradient",
+        "gradient_direction": "to top",
+        "blurred_reflection": false,
+        "reflection_opacity": 75,
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
     "section_ddjKWX": {
       "type": "section",
+      "disabled": true,
       "blocks": {
         "group_WNt3Dr": {
           "type": "group",
@@ -9111,6 +9148,7 @@
     }
   },
   "order": [
+    "hero_summer_sale_2026",
     "section_ddjKWX",
     "grid_section_GaMb3H",
     "grid_section_iU94tc",
