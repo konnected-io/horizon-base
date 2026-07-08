@@ -178,7 +178,7 @@
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
                     "padding-inline-end": 0,
-                    "text_color": "{{ settings.color_palette.brand }}"
+                    "text_color": "{{ settings.color_palette.konnected_blue }}"
                   },
                   "blocks": {}
                 }
@@ -5640,7 +5640,7 @@
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0,
-                "text_color": "{{ settings.color_palette.brand }}"
+                "text_color": "{{ settings.color_palette.konnected_blue }}"
               },
               "blocks": {}
             }
@@ -6500,7 +6500,7 @@
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0,
-                "text_color": "{{ settings.color_palette.brand }}"
+                "text_color": "{{ settings.color_palette.konnected_blue }}"
               },
               "blocks": {}
             }
@@ -7552,7 +7552,7 @@
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
                     "padding-inline-end": 0,
-                    "text_color": "{{ settings.color_palette.brand }}"
+                    "text_color": "{{ settings.color_palette.konnected_blue }}"
                   },
                   "blocks": {}
                 },

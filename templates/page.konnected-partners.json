@@ -4060,7 +4060,7 @@
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0,
-                "text_color": "{{ settings.color_palette.brand }}"
+                "text_color": "{{ settings.color_palette.konnected_blue }}"
               },
               "blocks": {}
             }
@@ -4302,7 +4302,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
                 "css_class": "hidden--mobile",
-                "background_color": "{{ settings.color_palette.cyan }}"
+                "background_color": "{{ settings.color_palette.electric_cyan }}"
               },
               "blocks": {
                 "icon_i6QHPi": {
@@ -4613,7 +4613,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
                 "css_class": "hidden--mobile",
-                "background_color": "{{ settings.color_palette.brand }}"
+                "background_color": "{{ settings.color_palette.konnected_blue }}"
               },
               "blocks": {
                 "icon_yrCqCf": {
@@ -4924,7 +4924,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
                 "css_class": "hidden--mobile",
-                "background_color": "{{ settings.color_palette.cyan }}"
+                "background_color": "{{ settings.color_palette.electric_cyan }}"
               },
               "blocks": {
                 "icon_Qpwe8G": {
@@ -5235,7 +5235,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
                 "css_class": "hidden--mobile",
-                "background_color": "{{ settings.color_palette.brand }}"
+                "background_color": "{{ settings.color_palette.konnected_blue }}"
               },
               "blocks": {
                 "icon_TKELK3": {
@@ -5546,7 +5546,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
                 "css_class": "hidden--mobile",
-                "background_color": "{{ settings.color_palette.cyan }}"
+                "background_color": "{{ settings.color_palette.electric_cyan }}"
               },
               "blocks": {
                 "icon_Be6dxA": {
@@ -6871,7 +6871,7 @@
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0,
-                "text_color": "{{ settings.color_palette.brand }}"
+                "text_color": "{{ settings.color_palette.konnected_blue }}"
               },
               "blocks": {}
             },
