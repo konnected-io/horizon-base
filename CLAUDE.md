@@ -23,6 +23,8 @@ There are no unit tests. Validation = `shopify theme check` + visual verificatio
 
 Theme check is configured by [`.theme-check.yml`](.theme-check.yml) and gates on **errors** (warnings don't fail the exit code). A clean run — `0 errors, exit 0` — is the pre-commit/CI signal, so **any new error is a real regression you introduced.** Don't reintroduce noise by working around the config.
 
+Run it locally when you can. **But running it locally is not a hard gate** — if you're in a sandboxed environment without the Shopify CLI (or can't otherwise run `shopify theme check`), do not block on it. The same check runs in CI on every PR via [`.github/workflows/theme-check.yml`](.github/workflows/theme-check.yml) (using the same `.theme-check.yml`), so it's safe to open a PR and rely on the GitHub Action to report any errors. Say so explicitly in the PR ("theme check not run locally — relying on CI") so the run is reviewed before merge.
+
 The config disables four checks that produce structural false positives for *this* theme (each is commented in the file with its rationale):
 - **`MatchingTranslations`** — English-only store; custom keys added to `en.default.json` don't need backfilling into the 30 stock locale files (which Shopify's GitHub sync overwrites anyway).
 - **`JSONMissingBlock`** — app blocks (`shopify://apps/okendo/…`, `…/collabs/…`) resolve at runtime; theme-check can't see them.
