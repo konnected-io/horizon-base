@@ -8,6 +8,18 @@
    are defined in snippets/custom-palette-vars.liquid, sourced from the theme
    color palette so they stay a single source of truth. */
 
+/* Content/RTE hyperlinks are brand-colored (matches the live theme). v4 base.css
+   sets these to currentcolor; we scope to the same paragraph/rte link selector so
+   navigation, footer, and button links keep inheriting their own color. */
+#MainContent p:not(.h1, .h2, .h3, .h4, .h5, .h6) a:where(:not(.button, .button-secondary)),
+#MainContent .rte :is(p, ul, ol, table):not(.h1, .h2, .h3, .h4, .h5, .h6) a:where(:not(.button, .button-secondary)) {
+    color: var(--color-primary);
+
+    &:hover {
+        color: rgb(var(--color-primary-rgb) / 0.7);
+    }
+}
+
 body, .paragraph:not(.button), .paragraph>*, .text-block.paragraph :is(h1,h2,h3,h4,h5,h6) {
     letter-spacing: var(--letter-spacing--body-loose);
 }
