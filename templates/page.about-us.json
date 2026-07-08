@@ -150,7 +150,7 @@
                 "mobile-padding-block-end": 0,
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
-                "text_color": "{{ settings.color_palette.brand }}"
+                "text_color": "{{ settings.color_palette.konnected_blue }}"
               },
               "blocks": {}
             },
@@ -496,7 +496,7 @@
             "mobile-padding-block-end": 0,
             "mobile-padding-inline-start": 0,
             "mobile-padding-inline-end": 0,
-            "text_color": "{{ settings.color_palette.brand }}"
+            "text_color": "{{ settings.color_palette.konnected_blue }}"
           },
           "blocks": {}
         },
@@ -1113,7 +1113,7 @@
         "css_class": "",
         "add_section_id": true,
         "section_id": "mission",
-        "background_color": "{{ settings.color_palette.brand }}"
+        "background_color": "{{ settings.color_palette.konnected_blue }}"
       }
     },
     "section_rJUbeg": {
@@ -3234,7 +3234,7 @@
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0,
-                "text_color": "{{ settings.color_palette.brand }}"
+                "text_color": "{{ settings.color_palette.konnected_blue }}"
               },
               "blocks": {}
             }
@@ -3745,7 +3745,7 @@
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0,
-                "text_color": "{{ settings.color_palette.brand }}"
+                "text_color": "{{ settings.color_palette.konnected_blue }}"
               },
               "blocks": {}
             }
@@ -3929,7 +3929,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
                 "css_class": "top-offset",
-                "background_color": "{{ settings.color_palette.brand }}"
+                "background_color": "{{ settings.color_palette.konnected_blue }}"
               },
               "blocks": {
                 "group_Ptxr8R": {
@@ -4197,7 +4197,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
                 "css_class": "top-offset",
-                "background_color": "{{ settings.color_palette.brand }}"
+                "background_color": "{{ settings.color_palette.konnected_blue }}"
               },
               "blocks": {
                 "group_UppyJi": {
@@ -4465,7 +4465,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
                 "css_class": "top-offset",
-                "background_color": "{{ settings.color_palette.brand }}"
+                "background_color": "{{ settings.color_palette.konnected_blue }}"
               },
               "blocks": {
                 "group_G7exKq": {
@@ -4733,7 +4733,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
                 "css_class": "top-offset",
-                "background_color": "{{ settings.color_palette.brand }}"
+                "background_color": "{{ settings.color_palette.konnected_blue }}"
               },
               "blocks": {
                 "group_L7atGd": {
@@ -5001,7 +5001,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
                 "css_class": "top-offset",
-                "background_color": "{{ settings.color_palette.brand }}"
+                "background_color": "{{ settings.color_palette.konnected_blue }}"
               },
               "blocks": {
                 "group_dVRqKf": {
@@ -5269,7 +5269,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
                 "css_class": "top-offset",
-                "background_color": "{{ settings.color_palette.brand }}"
+                "background_color": "{{ settings.color_palette.konnected_blue }}"
               },
               "blocks": {
                 "group_XJ9RtC": {
@@ -5622,7 +5622,7 @@
                     "mobile-padding-block-end": 0,
                     "mobile-padding-inline-start": 0,
                     "mobile-padding-inline-end": 0,
-                    "text_color": "{{ settings.color_palette.brand }}"
+                    "text_color": "{{ settings.color_palette.konnected_blue }}"
                   },
                   "blocks": {}
                 },

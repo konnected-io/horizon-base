@@ -134,15 +134,16 @@
     "color_palette": {
       "background": "#ffffff",
       "foreground": "#121212",
-      "brand": "#3f75ff",
+      "konnected_blue": "#3f75ff",
       "brand_tint": "#eef4f9",
       "surface": "#f9fafb",
       "neutral": "#dadada",
       "dark": "#000000",
       "charcoal": "#3b3b3b",
-      "cyan": "#22beff",
+      "electric_cyan": "#22beff",
       "border": "#e5e7eb",
-      "electric_green": "#47f5a3"
+      "circuit_green": "#47f5a3",
+      "midnight_blue": "#203074"
     }
   },
   "presets": {
