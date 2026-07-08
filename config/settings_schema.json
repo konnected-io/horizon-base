@@ -72,7 +72,8 @@
           "dark": "#000000",
           "charcoal": "#3b3b3b",
           "cyan": "#22beff",
-          "border": "#e5e7eb"
+          "border": "#e5e7eb",
+          "electric_green": "#47f5a3"
         }
       }
     ]
@@ -1225,7 +1226,7 @@
         "type": "color",
         "id": "badge_sale_background_color",
         "label": "t:settings.badge_sale_background_color",
-        "default": "{{ settings.color_palette.foreground }}"
+        "default": "{{ settings.color_palette.electric_green }}"
       },
       {
         "type": "color",
