@@ -3825,7 +3825,7 @@
                   "type": "text",
                   "name": "Path title",
                   "settings": {
-                    "text": "<p><strong>Replacing myQ cloud control?</strong></p>",
+                    "text": "<p><strong>Replacing myQ?</strong></p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3857,7 +3857,7 @@
                   "type": "text",
                   "name": "Path body",
                   "settings": {
-                    "text": "<p>Route from broken myQ/Home Assistant setups to local control.</p>",
+                    "text": "<p>Start with compatibility before choosing a garage controller.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -4234,7 +4234,7 @@
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
               "settings": {
-                "heading": "myQ stopped working with Home Assistant?",
+                "heading": "Replacing myQ?",
                 "open_by_default": true,
                 "icon": "none",
                 "width": 20
@@ -4244,7 +4244,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>If myQ cloud control broke your Home Assistant setup, start with the <a href=\"/pages/myq-home-assistant-alternative\">myQ Home Assistant replacement guide</a>. It explains the local-control path and helps route most Chamberlain and LiftMaster users toward GDO blaQ instead of another cloud workaround.</p>",
+                    "text": "<p>If you are replacing myQ, start with the <a href=\"/pages/myq-home-assistant-alternative\">myQ alternative guide</a> before choosing a garage controller. It explains the local-control path and helps route most Chamberlain and LiftMaster users toward GDO blaQ instead of another cloud workaround.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
