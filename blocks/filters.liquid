@@ -162,7 +162,7 @@
           2 / var(--facets-vertical-col-width)
         {%- endif -%};
       {{ facets_margin_style }}
-      --facets-inner-padding-block: {{ block_settings.padding-block-start }}px {{ block_settings.padding-block-end }}px;
+      --facets-inner-padding-block: {{ block_settings['padding-block-start'] }}px {{ block_settings['padding-block-end'] }}px;
       --facets-inner-padding-inline: var(--padding-lg);
     "
     {{ block.shopify_attributes }}
@@ -322,7 +322,7 @@
       {%- if block_settings.filter_style == 'horizontal' and has_custom_color %} color-custom-{{ block.id }}{% endif %}
     "
     style="
-      --facets-inner-padding-block: {{ block_settings.padding-block-start }}px {{ block_settings.padding-block-end }}px; --facets-inner-padding-inline: var(--padding-lg);
+      --facets-inner-padding-block: {{ block_settings['padding-block-start'] }}px {{ block_settings['padding-block-end'] }}px; --facets-inner-padding-inline: var(--padding-lg);
       {{ facets_margin_style }}
     "
   >
