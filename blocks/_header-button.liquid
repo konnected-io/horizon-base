@@ -12,7 +12,9 @@
   {% endif %}
   class="
     size-style header-button
-    {{ visibility_class }}
+    {%- # theme-check-disable UndefinedObject -%}
+    {{ visibility_class }}{%- # visibility_class is passed in via content_for 'block' in sections/header.liquid; theme-check can't see content_for args -%}
+    {%- # theme-check-enable UndefinedObject -%}
     {{ block_settings.style_class }}
     {{ block_settings.style_class }}--{{ block.id }}
   "
