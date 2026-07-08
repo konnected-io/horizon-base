@@ -168,8 +168,7 @@
         "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": false,
-        "section_id": "",
-        "background_color": "{{ settings.color_palette.background }}"
+        "section_id": ""
       }
     }
   },

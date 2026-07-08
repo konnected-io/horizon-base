@@ -123,8 +123,7 @@
         "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": true,
-        "section_id": "collection-heading",
-        "background_color": "{{ settings.color_palette.background }}"
+        "section_id": "collection-heading"
       }
     },
     "section_mifQ7e": {
@@ -1243,8 +1242,7 @@
         "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": false,
-        "section_id": "",
-        "background_color": "{{ settings.color_palette.background }}"
+        "section_id": ""
       }
     },
     "grid_section_AfzNBp": {
@@ -1343,8 +1341,7 @@
                 "mobile-padding-block-end": 0,
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
-                "css_class": "",
-                "background_color": "{{ settings.color_palette.background }}"
+                "css_class": ""
               },
               "blocks": {
                 "text_YEeCtr": {
@@ -1752,8 +1749,7 @@
                 "mobile-padding-block-end": 0,
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
-                "css_class": "",
-                "background_color": "{{ settings.color_palette.background }}"
+                "css_class": ""
               },
               "blocks": {
                 "text_mTqPhX": {
@@ -3593,8 +3589,7 @@
         "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": false,
-        "section_id": "",
-        "background_color": "{{ settings.color_palette.background }}"
+        "section_id": ""
       }
     },
     "section_i93pxL": {
@@ -3702,8 +3697,7 @@
         "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": false,
-        "section_id": "",
-        "background_color": "{{ settings.color_palette.background }}"
+        "section_id": ""
       }
     },
     "section_fMPXnB": {
@@ -4164,8 +4158,7 @@
         "padding-inline-end": 0,
         "color_scheme": "scheme-3c7fcc31-b421-4b24-9c6c-034c3a74a9e2",
         "padding-block-start": 32,
-        "padding-block-end": 72,
-        "background_color": "{{ settings.color_palette.background }}"
+        "padding-block-end": 72
       }
     },
     "section_B7nYQ8": {
@@ -6101,8 +6094,7 @@
         "blurred_reflection": false,
         "reflection_opacity": 75,
         "padding-block-start": 40,
-        "padding-block-end": 40,
-        "background_color": "{{ settings.color_palette.background }}"
+        "padding-block-end": 40
       }
     },
     "grid_section_iBXACP": {

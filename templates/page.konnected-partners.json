@@ -91,8 +91,7 @@
             "padding-block-start": 48,
             "padding-block-end": 48,
             "padding-inline-start": 48,
-            "padding-inline-end": 48,
-            "background_color": "{{ settings.color_palette.background }}"
+            "padding-inline-end": 48
           },
           "blocks": {
             "group_XniLkC": {
@@ -2296,8 +2295,7 @@
         "blurred_reflection": false,
         "reflection_opacity": 75,
         "padding-block-start": 0,
-        "padding-block-end": 0,
-        "background_color": "{{ settings.color_palette.background }}"
+        "padding-block-end": 0
       }
     },
     "hero_BGKNi6": {

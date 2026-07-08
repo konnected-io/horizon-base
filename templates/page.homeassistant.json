@@ -1849,8 +1849,7 @@
                 "mobile-padding-block-end": 0,
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
-                "css_class": "",
-                "background_color": "{{ settings.color_palette.background }}"
+                "css_class": ""
               },
               "blocks": {
                 "text_AcBUBq": {
@@ -2278,8 +2277,7 @@
                 "mobile-padding-block-end": 0,
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
-                "css_class": "",
-                "background_color": "{{ settings.color_palette.background }}"
+                "css_class": ""
               },
               "blocks": {
                 "text_tMdEwY": {
@@ -2707,8 +2705,7 @@
                 "mobile-padding-block-end": 0,
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
-                "css_class": "",
-                "background_color": "{{ settings.color_palette.background }}"
+                "css_class": ""
               },
               "blocks": {
                 "text_RTVyXa": {
@@ -3264,8 +3261,7 @@
                 "mobile-padding-block-end": 0,
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
-                "css_class": "",
-                "background_color": "{{ settings.color_palette.background }}"
+                "css_class": ""
               },
               "blocks": {
                 "text_JBR7kJ": {
@@ -4290,8 +4286,7 @@
         "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": false,
-        "section_id": "",
-        "background_color": "{{ settings.color_palette.background }}"
+        "section_id": ""
       }
     },
     "section_bV7z6q": {
@@ -4561,8 +4556,7 @@
         "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": false,
-        "section_id": "",
-        "background_color": "{{ settings.color_palette.background }}"
+        "section_id": ""
       }
     },
     "grid_section_MYP4bp": {

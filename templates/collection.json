@@ -120,8 +120,7 @@
         "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": true,
-        "section_id": "collection-heading",
-        "background_color": "{{ settings.color_palette.background }}"
+        "section_id": "collection-heading"
       }
     },
     "hero_BxTY4Q": {
@@ -418,8 +417,7 @@
         "blurred_reflection": false,
         "reflection_opacity": 75,
         "padding-block-start": 40,
-        "padding-block-end": 40,
-        "background_color": "{{ settings.color_palette.background }}"
+        "padding-block-end": 40
       }
     },
     "main": {
@@ -616,8 +614,7 @@
         "padding-inline-end": 0,
         "color_scheme": "scheme-3c7fcc31-b421-4b24-9c6c-034c3a74a9e2",
         "padding-block-start": 32,
-        "padding-block-end": 72,
-        "background_color": "{{ settings.color_palette.background }}"
+        "padding-block-end": 72
       }
     }
   },
