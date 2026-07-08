@@ -136,7 +136,7 @@
                     <div
                       class="
                         product-badges__badge product-badges__badge--rectangle
-                        color-{{ settings.badge_sale_color_scheme }}
+                        color-custom-badge-sale
                       "
                     >
                       {%- assign partner_savings = saved_base_price | minus: variant.price | times: 100 | divided_by: saved_base_price -%}
@@ -165,7 +165,7 @@
                       <div
                         class="
                           product-badges__badge product-badges__badge--rectangle
-                          color-{{ settings.badge_sale_color_scheme }}
+                          color-custom-badge-sale
                         "
                       >
                         {%- assign savings = saved_base_price | minus: price_break.price | times: 100 | divided_by: saved_base_price | round -%}
@@ -218,7 +218,7 @@
                         <div
                           class="
                             product-badges__badge product-badges__badge--rectangle
-                            color-{{ settings.badge_sale_color_scheme }}
+                            color-custom-badge-sale
                           "
                         >
                           {%- assign partner_savings = saved_base_price | minus: variant.price | times: 100 | divided_by: saved_base_price -%}
@@ -252,7 +252,7 @@
                             <div
                               class="
                                 product-badges__badge product-badges__badge--rectangle
-                                color-{{ settings.badge_sale_color_scheme }}
+                                color-custom-badge-sale
                               "
                             >
                               {%- assign savings = saved_base_price | minus: cell_price | times: 100 | divided_by: saved_base_price | round -%}
