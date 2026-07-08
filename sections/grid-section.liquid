@@ -145,6 +145,15 @@
   </div>
 </div>
 
+{% comment %}
+  v4 moved the .resource-list / .resource-list--grid layout CSS into the
+  resource-list-styles snippet, which only bundles when rendered. Stock v4
+  sections (resource-list, product-recommendations) render it explicitly; this
+  custom section uses the same classes and must do the same or the grid
+  collapses to display:block (all items stack in one column).
+{% endcomment %}
+{% render 'resource-list-styles' %}
+
 {% stylesheet %}
   /* .carousel-container {
     width: 100%;
