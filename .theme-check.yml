@@ -1,0 +1,39 @@
+# Theme Check configuration for konnected-io/horizon-base
+#
+# Goal: make `shopify theme check` a reliable pre-commit signal. Every check
+# disabled below produces structural false positives for THIS theme (Horizon's
+# shared-CSS architecture, app blocks resolved at runtime, an English-only
+# store, and intentional third-party assets) rather than real defects.
+#
+# Errors gate the exit code (fail_level defaults to `error`), so with the two
+# error-level checks below disabled a clean run means "no new problems."
+# `OrphanedSnippet` is intentionally kept ON as an advisory warning — it flags
+# genuinely dead Konnected snippets worth cleaning up and never fails the build.
+
+extends: theme-check:recommended
+
+# 270 "missing translation" errors, all 9 custom Konnected keys (partner/retail
+# pricing, accessibility labels) that live in en.default.json but not in the 30
+# other locale files. Konnected is an English-only store and Shopify's GitHub
+# integration overwrites locale files, so backfilling them is both pointless and
+# unstable. Disable cross-locale key matching.
+MatchingTranslations:
+  enabled: false
+
+# 20 "theme block does not exist" errors, all app blocks referenced by
+# shopify://apps/okendo/... and shopify://apps/collabs/... in template JSON.
+# These resolve at runtime from installed apps; theme-check can't see them.
+JSONMissingBlock:
+  enabled: false
+
+# 180 "CSS class may be defined outside the scope of this file" warnings across
+# core Horizon commerce snippets (buy-buttons, predictive-search, gift-card
+# form, etc.). Horizon defines CSS in shared stylesheets and uses those classes
+# across snippets by design — this check assumes per-block scoped CSS.
+ValidScopedCSSClass:
+  enabled: false
+
+# The Adobe Typekit font stylesheet in layout/theme.liquid is intentionally
+# loaded from use.typekit.net and cannot be served from the Shopify CDN.
+RemoteAsset:
+  enabled: false

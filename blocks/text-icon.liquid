@@ -2,10 +2,6 @@
 {% assign block_settings = block.settings %}
 {% assign icon_block_class = 'icon-block__media icon-block-' | append: block.id %}
 
-{% capture children %}
-  {% content_for 'blocks' %}
-{% endcapture %}
-
 {% if block_settings.background_color != blank %}
   {% render 'contrast-override', background_color: block_settings.background_color, section_id: block.id %}
 {% endif %}

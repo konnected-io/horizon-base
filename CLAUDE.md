@@ -19,6 +19,18 @@ shopify theme pull       # download store state (settings_data.json, template ed
 
 There are no unit tests. Validation = `shopify theme check` + visual verification in the dev server / theme editor.
 
+### `shopify theme check` must be clean before committing
+
+Theme check is configured by [`.theme-check.yml`](.theme-check.yml) and gates on **errors** (warnings don't fail the exit code). A clean run — `0 errors, exit 0` — is the pre-commit/CI signal, so **any new error is a real regression you introduced.** Don't reintroduce noise by working around the config.
+
+The config disables four checks that produce structural false positives for *this* theme (each is commented in the file with its rationale):
+- **`MatchingTranslations`** — English-only store; custom keys added to `en.default.json` don't need backfilling into the 30 stock locale files (which Shopify's GitHub sync overwrites anyway).
+- **`JSONMissingBlock`** — app blocks (`shopify://apps/okendo/…`, `…/collabs/…`) resolve at runtime; theme-check can't see them.
+- **`ValidScopedCSSClass`** — Horizon defines CSS in shared stylesheets, not per-block scoped CSS.
+- **`RemoteAsset`** — the Adobe Typekit font `<link>` in `layout/theme.liquid` is intentional.
+
+`OrphanedSnippet` is intentionally **kept on** as an advisory warning (flags dead snippets worth cleaning up). For a genuine one-off false positive, prefer a scoped inline `{%- # theme-check-disable <Check> -%}` … `{%- # theme-check-enable <Check> -%}` with a comment (see `blocks/_header-button.liquid`) over disabling a check globally.
+
 ### Opening a pull request
 
 This repo is a fork: `origin` is `konnected-io/horizon-base` and `upstream` is `Shopify/horizon`. Because of the `upstream` remote, a bare `gh pr create` defaults to opening the PR against **Shopify/horizon** — which is wrong. Always target this repo explicitly:
