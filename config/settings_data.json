@@ -52,7 +52,6 @@
     "card_hover_effect": "none",
     "badge_position": "bottom-left",
     "badge_corner_radius": 0,
-    "badge_sale_color_scheme": "scheme-c3ddf2ee-de52-47ab-8bd0-71aa79c9b3d3",
     "badge_sold_out_color_scheme": "scheme-3",
     "badge_text_transform": "none",
     "primary_button_border_width": 0,
@@ -143,7 +142,8 @@
       "dark": "#000000",
       "charcoal": "#3b3b3b",
       "cyan": "#22beff",
-      "border": "#e5e7eb"
+      "border": "#e5e7eb",
+      "electric_green": "#47f5a3"
     },
     "color_schemes": {
       "scheme-1": {
