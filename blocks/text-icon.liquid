@@ -2,83 +2,66 @@
 {% assign block_settings = block.settings %}
 {% assign icon_block_class = 'icon-block__media icon-block-' | append: block.id %}
 
-{% if block_settings.background_color != blank %}
-  {% render 'contrast-override', background_color: block_settings.background_color, section_id: block.id %}
-{% endif %}
+{% capture group_class %}
+  text-icon-block
+  text-icon-{{ block.id }}
+  group-block--height-fit
+  group-block--width-fill
+{% endcapture %}
 
-<div
-  class="
-    group-block
-    group-block--height-fit
-    group-block--width-fill
-    spacing-style
-    size-style
-    text-icon-block
-    {% if block_settings.reverse_on_mobile == true %}mobile-group-column-reverse{% endif %}
-    {% if block_settings.background_color != blank %} color-custom-{{ block.id }}{% endif %}
-  "
-  style="
-    {% render 'spacing-style', settings: block_settings %}
-    --size-style-width: 100%;
-    --size-style-height: auto;
-    --size-style-width-mobile: 100%;
-  "
-  {{ block.shopify_attributes }}
-  data-testid="group-block"
->
-  {%- if block_settings.link != blank -%}
-    <a
-      href="{{ block_settings.link }}"
-      class="group-block__link"
-      {% if block_settings.open_in_new_tab %}
-        target="_blank" rel="noopener"
-      {% endif %}
-    ></a>
-  {%- endif -%}
+{% capture group_style %}
+  --size-style-width: 100%;
+  --size-style-height: auto;
+  --size-style-width-mobile: 100%;
+{% endcapture %}
 
-  <div
-    class="
-      group-block-content
-      {% if request.design_mode %}group-block-content--design-mode{% endif %}
-      layout-panel-flex
-      layout-panel-flex--{{ block_settings.content_direction | default: 'column' }}
-      {% if block_settings.vertical_on_mobile %} mobile-column{% endif %}
-    "
-    style="{% render 'layout-panel-style', settings: block_settings %}
-    {% unless block_settings.vertical_on_mobile == true %}
-    --flex-wrap-mobile: nowrap;
-    {% endunless %}
-    "
-  >
-    {% capture icon %}
-      {% if block_settings.use_height != blank %}
-          <div class="use-height-icon" style="--height: {{ block_settings.height }}px;{% if block_settings.custom_mobile_height == true %}--mobile-height: {{ block_settings['mobile-height'] }}px;{% endif %}">
-      {% endif %}
-          {% render 'icon-or-image',
-              icon: block_settings.icon,
-              image_upload: block_settings.image_upload,
-              width: block_settings.icon_width,
-              class_name: icon_block_class,
-              attributes: block.shopify_attributes
-          %}
-      {% if block_settings.use_height != blank %}
-          </div>
-      {% endif %}
-    {% endcapture %}
-
-    {% if block_settings.icon_position == 'left' %}
-      {{ icon }}
+{% capture children %}
+  {% capture icon %}
+    {% if block_settings.use_height != blank %}
+        <div class="use-height-icon" style="--height: {{ block_settings.height }}px;{% if block_settings.custom_mobile_height == true %}--mobile-height: {{ block_settings['mobile-height'] }}px;{% endif %}">
     {% endif %}
-
-    {% if block_settings.text != blank %}
-        {% render 'text', block: block, fallback_text: block_settings.text, width: block_settings.text_width %}
+        {% render 'icon-or-image',
+            icon: block_settings.icon,
+            image_upload: block_settings.image_upload,
+            width: block_settings.icon_width,
+            class_name: icon_block_class,
+            attributes: block.shopify_attributes
+        %}
+    {% if block_settings.use_height != blank %}
+        </div>
     {% endif %}
+  {% endcapture %}
 
-    {% if block_settings.icon_position == 'right' %}
-      {{ icon }}
-    {% endif %}
-  </div>
-</div>
+  {% if block_settings.icon_position == 'left' %}
+    {{ icon }}
+  {% endif %}
+
+  {% if block_settings.text != blank %}
+      {% render 'text', block: block, fallback_text: block_settings.text, width: block_settings.text_width %}
+  {% endif %}
+
+  {% if block_settings.icon_position == 'right' %}
+    {{ icon }}
+  {% endif %}
+{% endcapture %}
+
+{% render 'group',
+  children: children,
+  settings: block_settings,
+  shopify_attributes: block.shopify_attributes,
+  background_color: block_settings.background_color,
+  block_id: block.id,
+  class: group_class,
+  style: group_style
+%}
+
+{% unless block_settings.vertical_on_mobile == true %}
+  {% style %}
+    .text-icon-{{ block.id }} .group-block-content {
+      --flex-wrap-mobile: nowrap !important;
+    }
+  {% endstyle %}
+{% endunless %}
 
 {% stylesheet %}
   .icon-block {
@@ -1042,10 +1025,6 @@
     },
     {
       "type": "header",
-      "content": "t:content.size"
-    },
-    {
-      "type": "header",
       "content": "t:content.appearance"
     },
     {
@@ -1053,125 +1032,6 @@
       "id": "background_color",
       "label": "t:settings.background_color",
       "alpha": true
-    },
-    {
-      "type": "select",
-      "id": "background_media",
-      "label": "t:settings.background_media",
-      "options": [
-        {
-          "value": "none",
-          "label": "t:options.none"
-        },
-        {
-          "value": "image",
-          "label": "t:options.image"
-        },
-        {
-          "value": "video",
-          "label": "t:options.video"
-        }
-      ],
-      "default": "none"
-    },
-    {
-      "type": "video",
-      "id": "video",
-      "label": "t:settings.video",
-      "visible_if": "{{ block.settings.background_media == 'video' }}"
-    },
-    {
-      "type": "select",
-      "id": "video_position",
-      "label": "t:settings.video_position",
-      "options": [
-        {
-          "value": "cover",
-          "label": "t:options.cover"
-        },
-        {
-          "value": "contain",
-          "label": "t:options.contain"
-        }
-      ],
-      "default": "cover",
-      "visible_if": "{{ block.settings.background_media == 'video' }}"
-    },
-    {
-      "type": "image_picker",
-      "id": "background_image",
-      "label": "t:settings.image",
-      "visible_if": "{{ block.settings.background_media == 'image' }}"
-    },
-    {
-      "type": "select",
-      "id": "background_image_position",
-      "label": "t:settings.image_position",
-      "options": [
-        {
-          "value": "cover",
-          "label": "t:options.cover"
-        },
-        {
-          "value": "fit",
-          "label": "t:options.fit"
-        }
-      ],
-      "default": "cover",
-      "visible_if": "{{ block.settings.background_media == 'image' }}"
-    },
-    {
-      "type": "text",
-      "id": "placeholder",
-      "label": "t:settings.image",
-      "visible_if": "{{ false }}"
-    },
-    {
-      "type": "checkbox",
-      "id": "toggle_overlay",
-      "label": "t:settings.background_overlay"
-    },
-    {
-      "type": "color",
-      "id": "overlay_color",
-      "label": "t:settings.overlay_color",
-      "alpha": true,
-      "default": "#00000026",
-      "visible_if": "{{ block.settings.toggle_overlay }}"
-    },
-    {
-      "type": "select",
-      "id": "overlay_style",
-      "label": "t:settings.overlay_style",
-      "options": [
-        {
-          "value": "solid",
-          "label": "t:options.solid"
-        },
-        {
-          "value": "gradient",
-          "label": "t:options.gradient"
-        }
-      ],
-      "default": "solid",
-      "visible_if": "{{ block.settings.toggle_overlay }}"
-    },
-    {
-      "type": "select",
-      "id": "gradient_direction",
-      "label": "t:settings.gradient_direction",
-      "options": [
-        {
-          "value": "to top",
-          "label": "t:options.up"
-        },
-        {
-          "value": "to bottom",
-          "label": "t:options.down"
-        }
-      ],
-      "default": "to top",
-      "visible_if": "{{ block.settings.toggle_overlay and block.settings.overlay_style == 'gradient' }}"
     },
     {
       "type": "header",
