@@ -38,8 +38,13 @@ slideshow-controls .icon-play {
     display: none !important;
 }
 
+/* Brand page width: 75rem, narrower than Horizon's "narrow" preset (90rem).
+   No !important — custom.css loads after base.css, so this wins on source order
+   alone. Keeping it non-important lets section-scoped `custom_css` (which Shopify
+   emits as `#shopify-section-… .selector`) override it on specificity, without
+   every caller having to escalate to !important too. */
 .section {
-    --full-page-grid-central-column-width: min(75rem - var(--page-margin) * 2, calc(100% - var(--page-margin) * 2)) !important;
+    --full-page-grid-central-column-width: min(75rem - var(--page-margin) * 2, calc(100% - var(--page-margin) * 2));
 }
 
 slideshow-component:not(.slideshow--content-on-media) .slideshow-controls__dots button {

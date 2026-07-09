@@ -56,7 +56,7 @@
       ],
       "disabled": true,
       "custom_css": [
-        ".page-width-content {--full-page-grid-central-column-width: min( 46rem - var(--page-margin) * 2, calc(100% - var(--page-margin) * 2) ) !important;}"
+        ".page-width-content {--full-page-grid-central-column-width: min( 46rem - var(--page-margin) * 2, calc(100% - var(--page-margin) * 2) );}"
       ],
       "settings": {
         "content_direction": "column",

@@ -41,6 +41,56 @@ This repo is a fork: `origin` is `konnected-io/horizon-base` and `upstream` is `
 gh pr create --repo konnected-io/horizon-base --base main --head <branch> --title "..." --body "..."
 ```
 
+## Keep Shopify's upstream files pristine (the overriding rule)
+
+**Do not modify files that Shopify owns.** This theme is a fork of [Shopify/horizon](https://github.com/Shopify/horizon) and we pull upstream changes into it. Every line we edit in an upstream file is a merge conflict we pay for on every future `git pull upstream main`, and a place where our theme silently diverges from the one Shopify documents and supports.
+
+Do things **the Shopify Way**: embrace the theme's conventions rather than fight them. Scope customizations to **CSS and config**, and leave Shopify's Liquid alone.
+
+### Who owns what
+
+| Ours — edit freely | Shopify's — treat as read-only |
+| --- | --- |
+| `assets/custom.css`, `assets/custom.js` | `sections/`, `blocks/`, `snippets/`, `layout/` |
+| `assets/accordion-custom.js`, `assets/product-custom-property.js` | `assets/base.css`, `assets/*.js` (stock components) |
+| `templates/*.json` (incl. `custom_css`) | `config/settings_schema.json` |
+| `config/settings_data.json` | `locales/*.json` (except new keys in `en.default*.json`) |
+| Net-new files (`snippets/custom-*.liquid`, custom templates) | |
+
+Custom templates listed under "Konnected-specific customizations" are ours even though they live in `templates/`. Net-new files in an upstream directory are fine — it's *editing* stock files that hurts.
+
+To check before you commit:
+
+```bash
+git fetch upstream main
+git diff upstream/main --stat -- sections/ blocks/ snippets/ layout/ assets/base.css
+```
+
+Anything listed is a divergence. It needs a deliberate, documented reason — not "it was the easiest place to put it."
+
+### Escalation ladder — always take the highest rung that works
+
+1. **Theme settings / config.** A native setting in `settings_data.json` or a section/block setting already in the stock schema.
+2. **Section-scoped `custom_css` in a template JSON.** This is a **first-party Shopify feature**, not a hack — it's exposed in the theme editor at theme and section level, and Shopify stores it in the JSON template's `custom_css` section attribute ([docs](https://shopify.dev/docs/storefronts/themes/architecture/settings)). Shopify auto-scopes it to `#shopify-section-<id> <your selector>`, so it beats a bare class rule on specificity. Reach for this for one-off, page-specific styling.
+3. **`assets/custom.css`.** Theme-wide overrides. It loads *after* `base.css`, so an equal-specificity rule already wins on source order — see the `!important` note below.
+4. **A net-new file** (`snippets/custom-*.liquid`, a custom template, a new asset) rendered from config or `custom.css`.
+5. **A custom section/template that copies the stock one**, if you truly need different Liquid. Copy `sections/foo.liquid` → `sections/custom-foo.liquid` and point the template at it. The stock file stays pristine and keeps merging cleanly.
+6. **Editing an upstream file.** Last resort. Requires a comment explaining why no rung above worked, and a callout in the PR description.
+
+### `!important` is a smell, and it's contagious
+
+`custom.css` loads after `base.css`, so **you almost never need `!important` to beat stock Horizon** — equal specificity plus later source order already wins.
+
+Worse, an `!important` in `custom.css` forces *every* downstream override to escalate to `!important` too, since a scoped `custom_css` rule can't beat it on specificity alone. That's how one global rule metastasizes into dozens. Before adding `!important`, check whether plain source order or the `#shopify-section-…` scoping already gets you there.
+
+### Guardrails for future PRs
+
+- **Adding a setting to a stock section's `{% schema %}` is editing an upstream file.** It's tempting because it feels "native," but it mutates Shopify's Liquid *and* its schema. Prefer `custom_css` or a `custom-*` copy of the section.
+- **Don't invent a theme setting to encode a single page's styling.** If exactly one or two templates need a value, that's `custom_css`, not a new schema control every merchant-facing editor screen has to carry.
+- **Don't add keys to `locales/*.schema.json` for settings that shouldn't exist.** A new locale key is a signal you're adding schema to a stock section — re-read the ladder.
+- **Verify a premise before acting on it.** Check the actual behavior (`git diff upstream/main`, the Shopify docs, the real cascade) rather than trusting an issue's framing. Issue #21 asserted `custom_css` was "invisible to the theme editor" and "fragile across upstream merges"; both were false, and the fix built on that premise made upstream merges strictly *worse*. It's fine — expected, even — to close an issue as *not done* and explain why the premise was wrong.
+- **A change that can't be visually verified here needs a visual check before merge.** Say so explicitly in the PR.
+
 ## Architecture
 
 ### Liquid rendering model

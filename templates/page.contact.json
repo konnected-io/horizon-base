@@ -81,12 +81,13 @@
         "title",
         "content"
       ],
+      "custom_css": [
+        ".page-width-content {--full-page-grid-central-column-width: min( 48rem - var(--page-margin) * 2, calc(100% - var(--page-margin) * 2) );}"
+      ],
       "settings": {
         "content_direction": "column",
         "gap": 32,
         "color_scheme": "",
-        "narrow_content_width": true,
-        "content_width": 48,
         "padding-block-start": 40,
         "padding-block-end": 0
       }
