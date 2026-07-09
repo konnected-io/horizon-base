@@ -54,13 +54,12 @@
         "heading",
         "page-content"
       ],
-      "custom_css": [
-        ".page-width-content {--full-page-grid-central-column-width: min( 46rem - var(--page-margin) * 2, calc(100% - var(--page-margin) * 2) ) !important;}"
-      ],
       "settings": {
         "content_direction": "column",
         "gap": 32,
         "color_scheme": "",
+        "narrow_content_width": true,
+        "content_width": 46,
         "padding-block-start": 72,
         "padding-block-end": 80
       }
