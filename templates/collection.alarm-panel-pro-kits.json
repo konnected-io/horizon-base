@@ -614,7 +614,7 @@
                     "mobile-padding-block-end": 0,
                     "mobile-padding-inline-start": 0,
                     "mobile-padding-inline-end": 0,
-                    "text_color": "{{ settings.color_palette.konnected_blue }}"
+                    "text_color": "{{ settings.color_palette.foreground }}"
                   },
                   "blocks": {}
                 },
@@ -1022,7 +1022,7 @@
                     "mobile-padding-block-end": 0,
                     "mobile-padding-inline-start": 0,
                     "mobile-padding-inline-end": 0,
-                    "text_color": "{{ settings.color_palette.konnected_blue }}"
+                    "text_color": "{{ settings.color_palette.foreground }}"
                   },
                   "blocks": {}
                 },
@@ -1348,7 +1348,7 @@
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<h2>Perfect For Every Project</h2>",
+                "text": "<h2>Perfect for every project</h2>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -2767,7 +2767,7 @@
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0,
-                "text_color": "{{ settings.color_palette.konnected_blue }}"
+                "text_color": "{{ settings.color_palette.foreground }}"
               },
               "blocks": {}
             }
@@ -2788,20 +2788,18 @@
         "carousel_card_HG8Ncp"
       ],
       "custom_css": [
-        ".shadow-blue {box-shadow: 0px 3px 12px 0px rgba(37, 99, 235, 0.2); -webkit-box-shadow: 0px 3px 12px 0px rgba(37, 99, 235, 0.2);}",
-        "@media (min-width: 750px) {{--peek-next-slide-size: 0rem; }}",
-        "@media (min-width: 990px) {.section--page-width {--full-page-grid-central-column-width: min( 100% - var(--page-margin) * 2, calc(100% - var(--page-margin) * 2) ) !important; }}"
+        ".shadow-blue {box-shadow: 0 14px 30px rgba(32,48,116,.08); -webkit-box-shadow: 0 14px 30px rgba(32,48,116,.08);}"
       ],
       "name": "Grid Section",
       "settings": {
         "alignment": "left",
-        "layout_type": "carousel",
+        "layout_type": "grid",
         "carousel_on_mobile": true,
-        "enable_dots": true,
+        "enable_dots": false,
         "hide_arrows": false,
         "autoplay": false,
         "autoplay_speed": 4,
-        "columns": 5,
+        "columns": 4,
         "peek_desktop": false,
         "mobile_columns": "2",
         "mobile_card_size": "60cqw",
@@ -2840,7 +2838,7 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<h2>Upgrade or Build Smart: Konnected Alarm Panel Pro Overview</h2>",
+            "text": "<h2>Upgrade or build smart: the Alarm Panel Pro overview</h2>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -3001,7 +2999,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h2>Why Konnected Stands Out</h2>",
+                "text": "<h2>Why Konnected stands out</h2>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "center",
@@ -3852,7 +3850,7 @@
       "type": "custom-liquid",
       "name": "Alarm retrofit chooser",
       "settings": {
-        "custom_liquid": "<div class=\"alarm-retrofit-chooser\"><div class=\"alarm-retrofit-chooser__intro\"><p class=\"alarm-retrofit-chooser__kicker\">Already have wired alarm sensors in your walls?</p><h2>Start with the right alarm upgrade path</h2><p>Use this quick guide path to reuse existing sensors, decide whether the old panel stays, compare no-monthly-fee security options, or go straight to the Konnected alarm panel family.</p></div><div class=\"alarm-retrofit-chooser__grid\"><a class=\"alarm-retrofit-chooser__card\" href=\"/pages/reuse-old-wired-alarm-sensors-smart-home\"><span>Want to reuse sensors?</span><strong>Read the wired alarm retrofit guide</strong></a><a class=\"alarm-retrofit-chooser__card\" href=\"/pages/replace-old-alarm-panel-or-keep-it\"><span>Deciding replace vs keep?</span><strong>Choose the right old-panel path</strong></a><a class=\"alarm-retrofit-chooser__card\" href=\"/pages/smart-home-security-system-no-monthly-fee\"><span>Want no monthly fee security?</span><strong>Compare self-monitoring options</strong></a><a class=\"alarm-retrofit-chooser__card\" href=\"/collections/smart-alarm-panels\"><span>Ready to buy?</span><strong>Shop smart alarm panel options</strong></a></div></div>",
+        "custom_liquid": "<div class=\"alarm-retrofit-chooser\"><div class=\"alarm-retrofit-chooser__intro\"><p class=\"alarm-retrofit-chooser__kicker\">Already have wired alarm sensors in your walls?</p><h2>Start with the right alarm upgrade path</h2><p>Pick the path that matches your project. Each guide is a quick read.</p></div><div class=\"alarm-retrofit-chooser__grid\"><a class=\"alarm-retrofit-chooser__card\" href=\"/pages/reuse-old-wired-alarm-sensors-smart-home\"><span>Want to reuse sensors?</span><strong>Read the wired alarm retrofit guide</strong></a><a class=\"alarm-retrofit-chooser__card\" href=\"/pages/replace-old-alarm-panel-or-keep-it\"><span>Deciding replace vs keep?</span><strong>Choose the right old-panel path</strong></a><a class=\"alarm-retrofit-chooser__card\" href=\"/pages/smart-home-security-system-no-monthly-fee\"><span>Want no monthly fee security?</span><strong>Compare self-monitoring options</strong></a><a class=\"alarm-retrofit-chooser__card\" href=\"/collections/smart-alarm-panels\"><span>Ready to buy?</span><strong>Shop smart alarm panel options</strong></a></div></div>",
         "color_scheme": "",
         "section_width": "page-width",
         "padding-block-start": 28,
@@ -4795,7 +4793,7 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<h2>Alarm Panel Pro Features</h2>",
+            "text": "<h2>Alarm Panel Pro features</h2>",
             "width": "100%",
             "max_width": "none",
             "alignment": "center",
@@ -5038,304 +5036,6 @@
         "gradient_direction": "to top",
         "padding-block-start": 32,
         "padding-block-end": 52
-      }
-    },
-    "hero_ExpPtM": {
-      "type": "hero",
-      "blocks": {
-        "group_6kaVej": {
-          "type": "group",
-          "settings": {
-            "link": "",
-            "open_in_new_tab": false,
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "reverse_on_mobile": false,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "custom_mobile_alignment": true,
-            "mobile_vertical_alignment": "center",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 32,
-            "enable_mobile_gap": false,
-            "mobile_gap": 12,
-            "width": "custom",
-            "custom_width": 50,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "enable_mobile_radius": false,
-            "mobile_border_radius": 0,
-            "placeholder": "",
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0,
-            "custom_mobile_padding": false,
-            "mobile-padding-block-start": 0,
-            "mobile-padding-block-end": 0,
-            "mobile-padding-inline-start": 0,
-            "mobile-padding-inline-end": 0,
-            "css_class": ""
-          },
-          "blocks": {
-            "group_GQpweJ": {
-              "type": "group",
-              "name": "t:names.group",
-              "settings": {
-                "link": "",
-                "open_in_new_tab": false,
-                "content_direction": "column",
-                "vertical_on_mobile": true,
-                "reverse_on_mobile": false,
-                "horizontal_alignment": "flex-start",
-                "vertical_alignment": "center",
-                "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "flex-start",
-                "custom_mobile_alignment": false,
-                "mobile_vertical_alignment": "flex-start",
-                "vertical_alignment_flex_direction_column": "center",
-                "gap": 12,
-                "enable_mobile_gap": false,
-                "mobile_gap": 12,
-                "width": "fill",
-                "custom_width": 100,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "custom_height": 100,
-                "inherit_color_scheme": true,
-                "color_scheme": "",
-                "background_media": "none",
-                "video_position": "cover",
-                "background_image_position": "cover",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "enable_mobile_radius": false,
-                "mobile_border_radius": 0,
-                "placeholder": "",
-                "toggle_overlay": false,
-                "overlay_color": "#00000026",
-                "overlay_style": "solid",
-                "gradient_direction": "to top",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0,
-                "custom_mobile_padding": false,
-                "mobile-padding-block-start": 0,
-                "mobile-padding-block-end": 0,
-                "mobile-padding-inline-start": 0,
-                "mobile-padding-inline-end": 0,
-                "css_class": ""
-              },
-              "blocks": {
-                "text_64QCtk": {
-                  "type": "text",
-                  "name": "t:names.heading",
-                  "settings": {
-                    "text": "<p>Find the right Konnected device for you!</p>",
-                    "width": "100%",
-                    "max_width": "none",
-                    "alignment": "left",
-                    "type_preset": "h2",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "enable_mobile_size": true,
-                    "mobile_font_size": "1.92rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0,
-                    "custom_mobile_padding": false,
-                    "mobile-padding-block-start": 0,
-                    "mobile-padding-block-end": 0,
-                    "mobile-padding-inline-start": 0,
-                    "mobile-padding-inline-end": 0
-                  },
-                  "blocks": {}
-                },
-                "text_Kac3e3": {
-                  "type": "text",
-                  "name": "t:names.text",
-                  "settings": {
-                    "text": "<p>Take our simple <strong>product quiz </strong>to determine which kit is best for you.</p>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "enable_mobile_size": false,
-                    "mobile_font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0,
-                    "custom_mobile_padding": false,
-                    "mobile-padding-block-start": 0,
-                    "mobile-padding-block-end": 0,
-                    "mobile-padding-inline-start": 0,
-                    "mobile-padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "text_64QCtk",
-                "text_Kac3e3"
-              ]
-            },
-            "group_cV3teB": {
-              "type": "group",
-              "name": "t:names.group",
-              "settings": {
-                "link": "",
-                "open_in_new_tab": false,
-                "content_direction": "row",
-                "vertical_on_mobile": true,
-                "reverse_on_mobile": false,
-                "horizontal_alignment": "flex-start",
-                "vertical_alignment": "center",
-                "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "flex-start",
-                "custom_mobile_alignment": false,
-                "mobile_vertical_alignment": "flex-start",
-                "vertical_alignment_flex_direction_column": "center",
-                "gap": 12,
-                "enable_mobile_gap": false,
-                "mobile_gap": 12,
-                "width": "fill",
-                "custom_width": 100,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "custom_height": 100,
-                "inherit_color_scheme": true,
-                "color_scheme": "",
-                "background_media": "none",
-                "video_position": "cover",
-                "background_image_position": "cover",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "enable_mobile_radius": false,
-                "mobile_border_radius": 0,
-                "placeholder": "",
-                "toggle_overlay": false,
-                "overlay_color": "#00000026",
-                "overlay_style": "solid",
-                "gradient_direction": "to top",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0,
-                "custom_mobile_padding": false,
-                "mobile-padding-block-start": 0,
-                "mobile-padding-block-end": 0,
-                "mobile-padding-inline-start": 0,
-                "mobile-padding-inline-end": 0,
-                "css_class": ""
-              },
-              "blocks": {
-                "custom_liquid_RxYkwy": {
-                  "type": "custom-liquid",
-                  "name": "t:names.custom_liquid",
-                  "disabled": true,
-                  "settings": {
-                    "custom_liquid": "<div class=\"okeQuizModalButton\" style=\"display:flex;\"><a href=\"javascript:void(0)\" onclick=\"okeConnectApi.showQuiz('b946b895-0e54-4cfb-800b-883a36e1aa89', '1d0a586e-45b1-4a7e-b30d-539e2e1abc0e', { fullScreen: true })\" class=\"button full-width-mobile\">Garage Door Openers</a></div>"
-                  },
-                  "blocks": {}
-                },
-                "custom_liquid_BMUb8p": {
-                  "type": "custom-liquid",
-                  "name": "t:names.custom_liquid",
-                  "settings": {
-                    "custom_liquid": "<div class=\"okeQuizModalButton\" style=\"display:flex;\"><a href=\"#\" onclick=\"okeConnectApi.showQuiz('7f8f415c-2756-4637-8119-aa24df66b6b7', '1d0a586e-45b1-4a7e-b30d-539e2e1abc0e')\" class=\"button\">Take The Quiz </a></div>"
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "custom_liquid_RxYkwy",
-                "custom_liquid_BMUb8p"
-              ]
-            }
-          },
-          "block_order": [
-            "group_GQpweJ",
-            "group_cV3teB"
-          ]
-        }
-      },
-      "block_order": [
-        "group_6kaVej"
-      ],
-      "name": "t:names.hero",
-      "settings": {
-        "media_type_1": "image",
-        "image_1": "shopify://shop_images/Quiz-Banner---4-_1.jpg",
-        "media_type_2": "image",
-        "stack_media_on_mobile": false,
-        "custom_mobile_media": true,
-        "media_type_1_mobile": "image",
-        "image_1_mobile": "shopify://shop_images/Quiz-Banner---4-_1.png",
-        "media_type_2_mobile": "image",
-        "link": "",
-        "open_in_new_tab": false,
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 16,
-        "section_width": "page-width",
-        "section_height": "medium",
-        "section_height_custom": 50,
-        "color_scheme": "scheme-1",
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "gradient",
-        "gradient_direction": "to top",
-        "blurred_reflection": false,
-        "reflection_opacity": 75,
-        "padding-block-start": 40,
-        "padding-block-end": 40
       }
     },
     "grid_section_iBXACP": {
@@ -6024,7 +5724,7 @@
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0,
-                "text_color": "{{ settings.color_palette.konnected_blue }}"
+                "text_color": "{{ settings.color_palette.foreground }}"
               },
               "blocks": {}
             }
@@ -6041,7 +5741,7 @@
         "carousel_card_FQDGEX"
       ],
       "custom_css": [
-        ".shadow-blue {box-shadow: 0px 3px 12px 0px rgba(37, 99, 235, 0.2); -webkit-box-shadow: 0px 3px 12px 0px rgba(37, 99, 235, 0.2);}",
+        ".shadow-blue {box-shadow: 0 14px 30px rgba(32,48,116,.08); -webkit-box-shadow: 0 14px 30px rgba(32,48,116,.08);}",
         ".white-bg {background: #fff;}"
       ],
       "name": "Grid Section",
@@ -6098,6 +5798,16 @@
         "padding-block-start": 0,
         "padding-block-end": 0
       }
+    },
+    "custom_quiz": {
+      "type": "custom-liquid",
+      "name": "Quiz CTA",
+      "settings": {
+        "custom_liquid": "<div class=\"k-quiz k-reveal\"><h2 class=\"k-quiz__title\">Find the right kit for your home.</h2><p class=\"k-quiz__sub\">A few quick questions and we&rsquo;ll match you with the right alarm panel setup.</p><div class=\"k-quiz__actions\"><div class=\"okeQuizModalButton\" style=\"display:flex;\"><a href=\"#\" onclick=\"okeConnectApi.showQuiz('7f8f415c-2756-4637-8119-aa24df66b6b7', '1d0a586e-45b1-4a7e-b30d-539e2e1abc0e')\" class=\"button\">Take the alarm panel quiz</a></div><div class=\"okeQuizModalButton okeQuizModalButton--ghost\" style=\"display:flex;\"><a href=\"javascript:void(0)\" onclick=\"okeConnectApi.showQuiz('b946b895-0e54-4cfb-800b-883a36e1aa89', '1d0a586e-45b1-4a7e-b30d-539e2e1abc0e', { fullScreen: true })\" class=\"button\">Garage opener quiz</a></div></div></div>",
+        "section_width": "page-width",
+        "padding-block-start": 24,
+        "padding-block-end": 48
+      }
     }
   },
   "order": [
@@ -6113,7 +5823,7 @@
     "grid_section_8Rgxip",
     "section_N4fReV",
     "17719574768816ab28",
-    "hero_ExpPtM",
+    "custom_quiz",
     "grid_section_iBXACP"
   ]
 }
