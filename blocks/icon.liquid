@@ -9,6 +9,7 @@
   {% endstyle %}
 {% endif %}
 
+{% comment %} Mobile icon-height override: intentionally custom — stock Horizon's icon block has no fixed-height/mobile-height concept. {% endcomment %}
 {% if block_settings.use_height != blank %}
   <div class="use-height-icon" style="--height: {{ block_settings.height }}px;{% if block_settings.custom_mobile_height == true %}--mobile-height: {{ block_settings['mobile-height'] }}px;{% endif %}">
 {% endif %}
