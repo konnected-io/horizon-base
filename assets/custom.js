@@ -283,3 +283,62 @@ document.addEventListener('click', function(event) {
     event_label: [contentSlug, destinationType, ctaLocation, destinationPath || destinationUrl].join('|').slice(0, 100),
   });
 });
+
+// ============================================================
+// 2026 visual refresh: hero quote rotator + reveal-on-scroll
+// Companion styles live in custom.css (.k-quote, .k-willreveal).
+// ============================================================
+
+function initQuoteRotators() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  document.querySelectorAll('.k-quote-rotator').forEach((rotator) => {
+    const quotes = rotator.querySelectorAll('.k-quote');
+    if (quotes.length < 2) return;
+
+    let index = Math.max(0, [...quotes].findIndex((q) => q.classList.contains('is-active')));
+    setInterval(() => {
+      quotes[index].classList.remove('is-active');
+      index = (index + 1) % quotes.length;
+      quotes[index].classList.add('is-active');
+    }, 5000);
+  });
+}
+
+function initRevealOnScroll() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+
+  const targets = [...document.querySelectorAll('.k-reveal')].filter(
+    // Only animate elements that start below the fold; anything already
+    // visible on load stays put (no flash, no CLS).
+    (el) => el.getBoundingClientRect().top > window.innerHeight
+  );
+  if (!targets.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('k-inview');
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  targets.forEach((el) => {
+    el.classList.add('k-willreveal');
+    observer.observe(el);
+  });
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    initQuoteRotators();
+    initRevealOnScroll();
+  });
+} else {
+  initQuoteRotators();
+  initRevealOnScroll();
+}

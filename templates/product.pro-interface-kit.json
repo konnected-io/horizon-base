@@ -654,7 +654,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Wifi or Ethernet connecitvity</p>",
+                    "text": "<p>Wifi or Ethernet connectivity</p>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "left",

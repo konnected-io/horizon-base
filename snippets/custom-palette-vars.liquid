@@ -24,5 +24,14 @@
        on colored backgrounds. */
     --color-border: {{ settings.color_palette.border }};
     --color-border-rgb: {{ settings.color_palette.border.rgb }};
+
+    /* 2026 refresh: additional palette entries consumed by the k-* components
+       in custom.css (hero, stats, reveal). Same single-source-of-truth rule. */
+    --color-brand-tint: {{ settings.color_palette.brand_tint }};
+    --color-midnight: {{ settings.color_palette.midnight_blue }};
+    --color-midnight-rgb: {{ settings.color_palette.midnight_blue.rgb }};
+    --color-electric-cyan: {{ settings.color_palette.electric_cyan }};
+    --color-electric-cyan-rgb: {{ settings.color_palette.electric_cyan.rgb }};
+    --color-circuit-green: {{ settings.color_palette.circuit_green }};
   }
 {% endstyle %}
