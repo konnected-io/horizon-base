@@ -12,6 +12,7 @@
   rgb(var(--color-border-rgb) / {{ settings.border_opacity | divided_by: 100.0 }})
 {%- endif -%}
 ; --border-radius: {{ settings.border_radius }}px; {% if settings.border_radius > 0 %} overflow: hidden; {% endif %}
+{% comment %} Mobile border-radius override: intentionally custom — stock Horizon's border-style has no responsive/mobile radius mechanism. {% endcomment %}
 {% if block_settings.enable_mobile_radius == true %}
   --mobile-border-radius: {{ block_settings.mobile_border_radius }}px;
 {% endif %}
