@@ -5725,12 +5725,22 @@
     },
     "custom_what_lines": {
       "type": "custom-liquid",
-      "name": "Two upgrades, one app",
+      "name": "Intro: smart home in your walls",
       "settings": {
-        "custom_liquid": "<div class=\"k-duo-detail k-reveal\"><h2 class=\"k-duo-detail__title\">Two upgrades, one app</h2><div class=\"k-duo-detail__grid\"><div class=\"k-duo-detail__panel\"><h3>Smart Alarm Panels</h3><p>The wired sensors from your old alarm system become smart sensors. Arm, watch, and automate them from the app you already use.</p><div class=\"k-duo-detail__chips\"><span class=\"k-chip\">12 zones per board</span><span class=\"k-chip\">Wi-Fi &amp; Ethernet</span><span class=\"k-chip\">PoE ready</span><span class=\"k-chip\">Broad platform support</span></div></div><div class=\"k-duo-detail__panel\"><h3>Smart Garage Openers</h3><p>The opener you already own gets app and voice control, plus live open and closed status, in the platform you already use.</p><div class=\"k-duo-detail__chips\"><span class=\"k-chip\">Options for any opener</span><span class=\"k-chip\">Built-in open/close sensing</span><span class=\"k-chip\">U.S. safety standard 16 CFR &sect;1211.14</span><span class=\"k-chip\">Broad platform support</span></div></div></div></div>",
+        "custom_liquid": "<div class=\"k-intro\"><div class=\"k-intro__head k-reveal\"><h2 class=\"k-intro__title\">There&rsquo;s a smart home hiding in your walls.</h2><p class=\"k-intro__lede\">That alarm panel in the closet already wires to every door, window, and motion sensor in the house. A Konnected board plugs in and hands every sensor to Home Assistant, SmartThings, Alexa, or whichever platform runs your home. <strong>No monthly fees</strong>, no rewiring, and most installs take <strong>about an hour</strong>.</p></div><div class=\"k-intro__media k-reveal\"><img class=\"k-intro__img\" src=\"{{ '02166205cdfec617ba45c6979d68e164.png' | file_img_url: '1200x' }}\" alt=\"Cutaway view of a home with wired sensors marked at every door and window, the garage door, and a Konnected board installed in the existing alarm panel\" width=\"1200\" height=\"1010\" loading=\"lazy\"><p class=\"k-intro__caption\">Every blue dot is a wired sensor most homes already have. One Konnected board brings them all online.</p></div><ul class=\"k-intro__fits\" role=\"list\"><li class=\"k-intro__fit k-reveal\"><h3 class=\"k-intro__q\">Just moved into a house with an old alarm system?</h3><p class=\"k-intro__a\">Those wired sensors are faster and more reliable than anything in a retail kit. One board in the panel closet wakes up every one of them.</p></li><li class=\"k-intro__fit k-reveal\"><h3 class=\"k-intro__q\">Paying monthly for a keypad you never touch?</h3><p class=\"k-intro__a\">Keep the sensors, drop the contract. Arm, disarm, and get instant alerts from your phone, wherever you are.</p></li><li class=\"k-intro__fit k-reveal\"><h3 class=\"k-intro__q\">Building on Home Assistant, SmartThings, or Hubitat?</h3><p class=\"k-intro__a\">Konnected is a first-class citizen: official integrations, local APIs, and ESPHome inside. Automations keep running even when the internet is out.</p></li></ul></div>",
         "section_width": "page-width",
         "padding-block-start": 64,
-        "padding-block-end": 40
+        "padding-block-end": 32
+      }
+    },
+    "custom_intro_gdo": {
+      "type": "custom-liquid",
+      "name": "Intro: garage door opener",
+      "settings": {
+        "custom_liquid": "<div class=\"k-intro k-intro--flip\"><div class=\"k-intro__head k-reveal\"><h2 class=\"k-intro__title\">The biggest door in your house shouldn&rsquo;t be the dumbest.</h2><p class=\"k-intro__lede\">A Konnected GDO snaps onto the garage door opener you already own and gives it live open and closed status, voice control, and automations in the same app as the rest of your home. GDO blaQ is <strong>the myQ alternative</strong>; GDO White is <strong>the universal option</strong>. Neither asks for a subscription.</p></div><div class=\"k-intro__media k-reveal\"><img class=\"k-intro__img k-intro__img--photo\" src=\"{{ 'Rectangle_585_2.jpg' | file_img_url: '1200x' }}\" alt=\"A Konnected garage door opener controller held between a thumb and forefinger\" width=\"1280\" height=\"720\" loading=\"lazy\"><p class=\"k-intro__caption\">The whole retrofit fits in one hand. Your app finally knows whether the door is open or closed.</p></div><ul class=\"k-intro__fits\" role=\"list\"><li class=\"k-intro__fit k-reveal\"><h3 class=\"k-intro__q\">Ever driven off wondering if the door closed?</h3><p class=\"k-intro__a\">Live status in your app, an alert the moment it opens, and a goodnight routine that closes it behind you.</p></li><li class=\"k-intro__fit k-reveal\"><h3 class=\"k-intro__q\">Done fighting myQ and its disappearing features?</h3><p class=\"k-intro__a\">GDO blaQ talks to your platform directly, with local control that no firmware update can take away.</p></li><li class=\"k-intro__fit k-reveal\"><h3 class=\"k-intro__q\">Opener older than your smart home?</h3><p class=\"k-intro__a\">GDO White wires to nearly any opener with a wall button, whatever the brand, whatever the decade.</p></li></ul></div>",
+        "section_width": "page-width",
+        "padding-block-start": 32,
+        "padding-block-end": 64
       }
     }
   },
@@ -5738,6 +5748,7 @@
     "custom_hero_duo",
     "grid_section_GaMb3H",
     "custom_what_lines",
+    "custom_intro_gdo",
     "grid_section_KgzV8G",
     "grid_section_8QXyM9",
     "grid_section_YpMKx9",

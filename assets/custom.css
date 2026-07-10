@@ -1042,65 +1042,147 @@ back-to-top svg {
     }
 }
 
-/* "Two upgrades, one app" section (homepage) */
-.k-duo-detail__title {
-    margin: 0 0 1.75rem;
-    text-align: center;
-    color: var(--color-foreground);
-}
-
-.k-duo-detail__grid {
+/* homepage intro: "There's a smart home hiding in your walls"
+   x-ray split: house-cutaway art left; headline, lede, and
+   who-is-this-for rows (blue fit questions) right */
+.k-intro {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
+    grid-template-columns: 1.05fr 1fr;
+    grid-template-areas:
+        "media head"
+        "media fits";
+    column-gap: clamp(2.5rem, 5vw, 4.75rem);
+    align-items: center;
 }
 
-.k-duo-detail__panel {
-    background: linear-gradient(180deg, rgba(238, 244, 249, 0.45) 0%, var(--color-brand-tint) 100%);
-    border: 1px solid rgb(var(--color-border-rgb) / 0.7);
+/* mirrored variant: text left, media right (GDO intro) */
+@media (min-width: 900px) {
+    .k-intro--flip {
+        grid-template-columns: 1fr 1.05fr;
+        grid-template-areas:
+            "head media"
+            "fits media";
+    }
+}
+
+.k-intro__head {
+    grid-area: head;
+    align-self: end;
+}
+
+.k-intro__media {
+    grid-area: media;
+}
+
+.k-intro__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 18px 30px rgb(var(--color-midnight-rgb) / 0.1));
+}
+
+/* photographic media gets the 20px photo-chip treatment; illustrated
+   cutouts (the house) stay boxless */
+.k-intro__img--photo {
     border-radius: 20px;
-    padding: 1.9rem 2rem;
+    border: 1px solid rgb(var(--color-border-rgb) / 0.9);
+    filter: none;
+    box-shadow: 0 20px 44px rgb(var(--color-midnight-rgb) / 0.07);
 }
 
-.k-duo-detail__panel h3 {
+.k-intro__caption {
+    margin: 1.1rem auto 0;
+    max-width: 46ch;
+    text-align: center;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: rgb(var(--color-foreground-rgb) / 0.62);
+}
+
+.k-intro__title {
     margin: 0;
-    font-size: 1.35rem;
+    font-size: clamp(1.7rem, 1.05rem + 1.75vw, 2.3rem);
+    line-height: 1.15;
+    letter-spacing: -0.015em;
     color: var(--color-foreground);
+    text-wrap: balance;
 }
 
-.k-duo-detail__panel p {
-    margin: 0.55rem 0 0;
-    font-size: 0.98rem;
+.k-intro__lede {
+    margin: 0.9rem 0 0;
+    font-size: 1.02rem;
     line-height: 1.6;
     color: rgb(var(--color-foreground-rgb) / 0.75);
-    max-width: 46ch;
+    max-width: 54ch;
+    text-wrap: pretty;
 }
 
-.k-duo-detail__chips {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 1.1rem;
+.k-intro__lede strong {
+    color: var(--color-foreground);
+    font-weight: 600;
 }
 
-.k-chip {
-    display: inline-block;
-    background: var(--color-background);
-    border: 1px solid rgb(var(--color-border-rgb) / 0.9);
-    border-radius: 999px;
-    padding: 0.36rem 0.85rem;
-    font-size: 0.85rem;
-    line-height: 1.3;
-    color: rgb(var(--color-foreground-rgb) / 0.78);
+.k-intro__fits {
+    grid-area: fits;
+    align-self: start;
+    list-style: none;
+    margin: 1.7rem 0 0;
+    padding: 0;
+}
+
+.k-intro__fit {
+    border-top: 1px solid rgb(var(--color-midnight-rgb) / 0.14);
+    padding-block: 1.05rem;
+}
+
+.k-intro__fit:last-child {
+    padding-block-end: 0;
+}
+
+.k-intro__q {
+    margin: 0;
+    font-family: var(--font-body--family);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: var(--color-midnight);
+}
+
+.k-intro__a {
+    margin: 0.35rem 0 0;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: rgb(var(--color-foreground-rgb) / 0.72);
+    max-width: 52ch;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .k-intro__fit:nth-child(2).k-inview {
+        transition-delay: 0.1s;
+    }
+
+    .k-intro__fit:nth-child(3).k-inview {
+        transition-delay: 0.2s;
+    }
 }
 
 @media (max-width: 899px) {
-    .k-duo-detail__grid {
+    .k-intro {
         grid-template-columns: 1fr;
-        gap: 1rem;
+        grid-template-areas:
+            "head"
+            "media"
+            "fits";
+        row-gap: 1.9rem;
     }
 
-    .k-duo-detail__panel {
-        padding: 1.4rem 1.3rem;
+    .k-intro__media {
+        max-width: 33rem;
+        width: 100%;
+        justify-self: center;
+    }
+
+    .k-intro__fits {
+        margin-top: 0;
     }
 }

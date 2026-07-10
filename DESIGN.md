@@ -105,7 +105,13 @@ Border-top 3px blue, midnight numeral (basic-sans 600), muted label. Replaces ou
 ### 3.6 Header Shop Now
 Circuit green pill via the existing `_header-button` block settings (`#47f5a3` bg / `#121212` text). The block's class-concatenation bug that hid this styling was fixed in `b3f151b`. Green appears nowhere else.
 
-### 3.7 Compare tables
+### 3.7 `k-intro` — homepage intro pair (what / who / why per product line)
+Replaced the "Two upgrades, one app" chip panels (`k-duo-detail`/`k-chip`, retired 2026-07-10). Two mirrored sections, one per product line, each an x-ray split: media on one side, h2 + what-it-does lede + three who-is-this-for rows on the other. Rows are boxless with midnight hairline tops; each is a blue fit *question* (h3, body family 600) + plain answer. No CTA by design (hero above and quiz below carry the clicks).
+- **`custom_what_lines`** — alarm/sensors angle ("There's a smart home hiding in your walls."): house-cutaway art (`02166205cdfec617ba45c6979d68e164.png`, 1200×1010, Shopify Files) left, text right. Illustrated cutouts stay boxless.
+- **`custom_intro_gdo`** — garage angle ("The biggest door in your house shouldn't be the dumbest."): `k-intro--flip` mirrors the grid (text left, media right, desktop-only via `min-width: 900px`); media is `Rectangle_585_2.jpg` (device pinched in a hand) with the `k-intro__img--photo` chip treatment (20px radius, hairline, midnight shadow) — photographs get the chip, illustrations don't.
+Grid areas `media/head/fits` collapse to `head → media → fits` under 900px. Fit rows stagger 0.1s/0.2s via `k-reveal`, gated on reduced motion. Adjacent padding between the pair is 32/32.
+
+### 3.8 Compare tables
 Stock AI-gen table block restyled **via its own settings** (template JSON): midnight header, white text, blue ✓, slate ✗.
 
 ---
