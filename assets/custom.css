@@ -301,6 +301,17 @@ product-price [ref="priceContainer"]:has(.product-badges__badge) .product-badges
 .text-icon-block .group-block-content[style*="--horizontal-alignment: flex-start;"] .use-height-icon {
     margin-top: var(--gap-2xs);
 }
+
+/* Shared by the three blocks that render an icon + text row: text-icon,
+   _online-reseller-item and _installer-item. Shopify concatenates each block's
+   {% stylesheet %} verbatim into compiled_assets/styles.css without deduping,
+   so a copy per block ships on every page. */
+@media screen and (max-width: 749px) {
+    .text-icon-block .text-block {
+        flex: 0 auto !important;
+    }
+}
+
 /* back-to-top.css */
 back-to-top {
   position: fixed;
