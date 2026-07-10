@@ -50,19 +50,12 @@
       "
     >
       {% capture icon %}
-        {% if block_settings.use_height != blank %}
-            <div class="use-height-icon" style="--height: {{ block_settings.height }}px;{% if block_settings.custom_mobile_height == true %}--mobile-height: {{ block_settings['mobile-height'] }}px;{% endif %}">
-        {% endif %}
-            {% render 'icon-or-image',
-                icon: block_settings.icon,
-                image_upload: item.logo,
-                width: block_settings.icon_width,
-                class_name: icon_block_class,
-                attributes: block.shopify_attributes
-            %}
-        {% if block_settings.use_height != blank %}
-            </div>
-        {% endif %}
+        {% render 'custom-icon-media',
+            settings: block_settings,
+            image: item.logo,
+            class_name: icon_block_class,
+            attributes: block.shopify_attributes
+        %}
       {% endcapture %}
 
       {% if block_settings.icon_position == 'left' %}
@@ -160,12 +153,6 @@
 </accordion-custom>
 
 {% stylesheet %}
-  .icon-block {
-    display: flex;
-    fill: currentcolor;
-    flex-shrink: 0;
-  }
-
   .hubspot-form-wrapper:not(:has(iframe)) {
     display: none;
   }
@@ -275,16 +262,6 @@
 
   .installer-item-block summary {
     padding: 0;
-  }
-
-  .icon-block__media {
-    height: auto;
-  }
-
-  @media screen and (max-width: 749px) {
-    .text-icon-block .text-block {
-      flex: 0 auto !important;
-    }
   }
 {% endstylesheet %}
 

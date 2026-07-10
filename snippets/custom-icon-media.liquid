@@ -1,0 +1,41 @@
+{%- doc -%}
+  Renders a block's icon or uploaded image, optionally wrapped in a fixed-height
+  box driven by the block's `use_height` / `height` / `custom_mobile_height` /
+  `mobile-height` settings.
+
+  Shared by the three blocks that render an icon + text row:
+  blocks/text-icon.liquid, blocks/_online-reseller-item.liquid and
+  blocks/_installer-item.liquid.
+
+  `image` is required rather than defaulted from `settings.image_upload`: the
+  reseller and installer blocks source their image from a metaobject field, and
+  a nil metaobject logo must fall through to the icon, not to the block's own
+  image_upload setting.
+
+  @param {object} settings - The block's settings.
+  @param {object} image - The image to render instead of an icon. May be nil.
+  @param {string} class_name - CSS classes for the rendered icon or image.
+  @param {string} [attributes] - Extra HTML attributes for the rendered icon or image.
+
+  @example
+  {% render 'custom-icon-media',
+    settings: block.settings,
+    image: item.logo,
+    class_name: icon_block_class,
+    attributes: block.shopify_attributes
+  %}
+{%- enddoc -%}
+
+{% if settings.use_height != blank %}
+  <div class="use-height-icon" style="--height: {{ settings.height }}px;{% if settings.custom_mobile_height == true %}--mobile-height: {{ settings['mobile-height'] }}px;{% endif %}">
+{% endif %}
+    {% render 'icon-or-image',
+        icon: settings.icon,
+        image_upload: image,
+        width: settings.icon_width,
+        class_name: class_name,
+        attributes: attributes
+    %}
+{% if settings.use_height != blank %}
+  </div>
+{% endif %}
