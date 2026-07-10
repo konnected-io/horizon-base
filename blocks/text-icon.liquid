@@ -4,7 +4,7 @@
 
 {% capture group_class %}
   text-icon-block
-  text-icon-{{ block.id }}
+  {% unless block_settings.vertical_on_mobile == true %}text-icon-block--mobile-nowrap{% endunless %}
   group-block--height-fit
   group-block--width-fill
 {% endcapture %}
@@ -55,14 +55,6 @@
   style: group_style
 %}
 
-{% unless block_settings.vertical_on_mobile == true %}
-  {% style %}
-    .text-icon-{{ block.id }} .group-block-content {
-      --flex-wrap-mobile: nowrap !important;
-    }
-  {% endstyle %}
-{% endunless %}
-
 {% stylesheet %}
   .icon-block {
     display: flex;
@@ -73,6 +65,14 @@
   .icon-block__media {
     height: auto;
   }
+
+  /* layout-panel-style.liquid unconditionally writes `--flex-wrap-mobile: wrap`
+     into group-block-content's own style attribute and offers no override hook,
+     so !important is the only way to win the cascade from a stylesheet rule. */
+  .text-icon-block--mobile-nowrap .group-block-content {
+    --flex-wrap-mobile: nowrap !important;
+  }
+
   @media screen and (max-width: 749px) {
     .text-icon-block .text-block {
       flex: 0 auto !important;
