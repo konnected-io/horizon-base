@@ -591,7 +591,7 @@
               "type": "group",
               "name": "t:names.group",
               "settings": {
-                "link": "shopify://pages/josh-ai-konnected-garage-door-control",
+                "link": "shopify://pages/joshai",
                 "open_in_new_tab": false,
                 "content_direction": "column",
                 "vertical_on_mobile": true,
@@ -651,7 +651,7 @@
                     "height": 56,
                     "custom_mobile_height": false,
                     "mobile-height": 24,
-                    "link": "shopify://pages/josh-ai-konnected-garage-door-control",
+                    "link": "shopify://pages/joshai",
                     "open_in_new_tab": false
                   },
                   "blocks": {}
