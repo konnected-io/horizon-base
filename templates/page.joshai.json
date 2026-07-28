@@ -66,58 +66,11 @@
     "hero_j8N6E6": {
       "type": "hero",
       "blocks": {
-        "hero_copy": {
-          "type": "text",
-          "name": "t:names.text",
-          "settings": {
-            "text": "<p>Control your Konnected garage door by voice - locally, with Josh.ai.</p>",
-            "width": "100%",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "custom",
-            "font": "var(--font-body--family)",
-            "font_size": "1.25rem",
-            "enable_mobile_size": false,
-            "mobile_font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0,
-            "custom_mobile_padding": false,
-            "mobile-padding-block-start": 0,
-            "mobile-padding-block-end": 0,
-            "mobile-padding-inline-start": 0,
-            "mobile-padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "hero_button": {
-          "type": "button",
-          "name": "t:names.button",
-          "settings": {
-            "label": "Shop smart garage door openers",
-            "link": "shopify://collections/smart-garage-door-openers",
-            "open_in_new_tab": false,
-            "style_class": "button",
-            "width": "fit-content",
-            "custom_width": 100,
-            "width_mobile": "fit-content",
-            "custom_width_mobile": 100
-          },
-          "blocks": {}
-        },
         "hero_style": {
           "type": "custom-liquid",
           "name": "t:names.custom_liquid",
           "settings": {
-            "custom_liquid": "{% style %}\n#shopify-section-{{ section.id }} .hero {\n  background-image: linear-gradient(90deg, rgba(8, 13, 18, 0.84) 0%, rgba(8, 13, 18, 0.58) 44%, rgba(8, 13, 18, 0.18) 100%), url({{ 'josh-ai-hero-dashboard.png' | asset_url }});\n  background-size: cover;\n  background-position: center;\n  background-repeat: no-repeat;\n}\n#shopify-section-{{ section.id }} .hero__media {\n  display: none;\n}\n#shopify-section-{{ section.id }} .josh-ai-hero-lockup {\n  display: inline-flex;\n  flex-direction: column;\n  align-items: flex-start;\n  gap: 14px;\n  margin-bottom: 4px;\n}\n#shopify-section-{{ section.id }} .josh-ai-hero-lockup__konnected {\n  width: min(380px, 78vw);\n  height: auto;\n}\n#shopify-section-{{ section.id }} .josh-ai-hero-lockup__plus {\n  color: #ffffff;\n  font-size: clamp(1.75rem, 4vw, 3rem);\n  font-weight: 700;\n  line-height: 1;\n  margin-left: 0.15em;\n  text-shadow: 0 2px 14px rgba(0,0,0,0.45);\n}\n#shopify-section-{{ section.id }} .josh-ai-hero-lockup__josh {\n  width: min(300px, 70vw);\n  height: auto;\n  filter: invert(1) brightness(2) drop-shadow(0 2px 12px rgba(0,0,0,0.35));\n}\n#shopify-section-{{ section.id }} .text-block,\n#shopify-section-{{ section.id }} .text-block * {\n  color: #ffffff;\n  text-shadow: 0 2px 12px rgba(0,0,0,0.45);\n}\n#shopify-section-{{ section.id }} .hero .button {\n  box-shadow: 0 10px 24px rgba(0,0,0,0.22);\n}\n@media (max-width: 749px) {\n  #shopify-section-{{ section.id }} .hero {\n    background-position: center;\n  }\n  #shopify-section-{{ section.id }} .josh-ai-hero-lockup {\n    gap: 10px;\n  }\n}\n{% endstyle %}"
+            "custom_liquid": "{% style %}\n#shopify-section-{{ section.id }} .hero {\n  background-image: linear-gradient(rgba(235, 239, 244, 0.34), rgba(20, 24, 30, 0.42)), url({{ 'josh-ai-hero-dashboard.png' | asset_url }});\n  background-size: cover;\n  background-position: center;\n  background-repeat: no-repeat;\n}\n#shopify-section-{{ section.id }} .hero__media {\n  display: none;\n}\n#shopify-section-{{ section.id }} .josh-ai-hero-lockup {\n  display: inline-flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  gap: 20px;\n  width: min(620px, 88vw);\n  margin-inline: auto;\n  text-align: center;\n}\n#shopify-section-{{ section.id }} .josh-ai-hero-lockup__konnected {\n  width: min(520px, 84vw);\n  height: auto;\n}\n#shopify-section-{{ section.id }} .josh-ai-hero-lockup__plus {\n  color: rgba(0, 0, 0, 0.72);\n  font-size: clamp(2.5rem, 5vw, 4.25rem);\n  font-weight: 700;\n  line-height: 0.8;\n}\n#shopify-section-{{ section.id }} .josh-ai-hero-lockup__josh {\n  width: min(360px, 70vw);\n  height: auto;\n  opacity: 0.78;\n}\n@media (max-width: 749px) {\n  #shopify-section-{{ section.id }} .josh-ai-hero-lockup {\n    gap: 16px;\n    width: min(350px, 88vw);\n  }\n  #shopify-section-{{ section.id }} .josh-ai-hero-lockup__konnected {\n    width: min(340px, 84vw);\n  }\n  #shopify-section-{{ section.id }} .josh-ai-hero-lockup__josh {\n    width: min(250px, 68vw);\n  }\n}\n{% endstyle %}"
           },
           "blocks": {}
         },
@@ -125,16 +78,14 @@
           "type": "custom-liquid",
           "name": "t:names.custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"josh-ai-hero-lockup\" role=\"img\" aria-label=\"Konnected plus Josh.ai\">\n  <img class=\"josh-ai-hero-lockup__konnected\" src=\"{{ 'konnected-logo-white.png' | asset_url }}\" alt=\"Konnected\" width=\"351\" height=\"68\">\n  <span class=\"josh-ai-hero-lockup__plus\" aria-hidden=\"true\">+</span>\n  <img class=\"josh-ai-hero-lockup__josh\" src=\"{{ 'josh-ai-logo.png' | asset_url }}\" alt=\"Josh.ai\" width=\"3000\" height=\"1058\">\n</div>\n<h1 class=\"visually-hidden\">Konnected + Josh.ai</h1>"
+            "custom_liquid": "<div class=\"josh-ai-hero-lockup\" role=\"img\" aria-label=\"Konnected plus Josh.ai\">\n  <img class=\"josh-ai-hero-lockup__konnected\" src=\"{{ 'konnected-logo-blue.png' | asset_url }}\" alt=\"Konnected\" width=\"908\" height=\"164\">\n  <span class=\"josh-ai-hero-lockup__plus\" aria-hidden=\"true\">+</span>\n  <img class=\"josh-ai-hero-lockup__josh\" src=\"{{ 'josh-ai-logo.png' | asset_url }}\" alt=\"Josh.ai\" width=\"3000\" height=\"1058\">\n</div>\n<h1 class=\"visually-hidden\">Konnected + Josh.ai</h1>"
           },
           "blocks": {}
         }
       },
       "block_order": [
         "hero_style",
-        "hero_logo_lockup",
-        "hero_copy",
-        "hero_button"
+        "hero_logo_lockup"
       ],
       "custom_css": [
         "@media (max-width: 749px) {.hero {--hero-min-height: 76svh !important; }}"
@@ -151,12 +102,12 @@
         "open_in_new_tab": false,
         "content_direction": "column",
         "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
+        "horizontal_alignment": "center",
         "vertical_alignment": "center",
         "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
+        "horizontal_alignment_flex_direction_column": "center",
         "vertical_alignment_flex_direction_column": "center",
-        "gap": 16,
+        "gap": 0,
         "section_width": "page-width",
         "section_height": "full-screen",
         "section_height_custom": 90,
