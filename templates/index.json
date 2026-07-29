@@ -727,7 +727,7 @@
               "type": "image",
               "settings": {
                 "image": "shopify://shop_images/image_-_2026-02-16T160530.498.png",
-                "link": "shopify://pages/smartthings",
+                "link": "shopify://pages/hubitat",
                 "open_in_new_tab": true,
                 "image_ratio": "adapt",
                 "width": "fill",
