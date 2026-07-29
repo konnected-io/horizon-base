@@ -1520,6 +1520,68 @@
             "icon_tHRDMQ"
           ]
         },
+        "carousel_card_joshAi": {
+          "type": "_carousel-card",
+          "name": "Carousel Item",
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "reverse_on_mobile": false,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "center",
+            "custom_mobile_alignment": false,
+            "mobile_vertical_alignment": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "enable_mobile_gap": false,
+            "mobile_gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "enable_mobile_radius": false,
+            "mobile_border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "custom_mobile_padding": false,
+            "mobile-padding-block-start": 0,
+            "mobile-padding-block-end": 0,
+            "mobile-padding-inline-start": 0,
+            "mobile-padding-inline-end": 0,
+            "css_class": "gdo-blaq-josh-ai-logo"
+          },
+          "blocks": {
+            "icon_joshAi": {
+              "type": "icon",
+              "name": "t:names.icon",
+              "settings": {
+                "icon": "price_tag",
+                "image_upload": "shopify://shop_images/josh-ai-logo.png",
+                "width": 24,
+                "use_height": true,
+                "height": 52,
+                "custom_mobile_height": false,
+                "mobile-height": 24,
+                "link": "shopify://pages/joshai",
+                "open_in_new_tab": false
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "icon_joshAi"
+          ]
+        },
         "static-header": {
           "type": "_product-list-content",
           "name": "t:names.header",
@@ -1613,7 +1675,8 @@
         "carousel_card_UYy3tQ",
         "carousel_card_WLGbAJ",
         "carousel_card_JCQApB",
-        "carousel_card_M9qFFc"
+        "carousel_card_M9qFFc",
+        "carousel_card_joshAi"
       ],
       "name": "Grid Section",
       "settings": {
@@ -1624,7 +1687,7 @@
         "hide_arrows": true,
         "autoplay": true,
         "autoplay_speed": 6,
-        "columns": 6,
+        "columns": 7,
         "peek_desktop": false,
         "mobile_columns": "1",
         "mobile_card_size": "44cqw",
