@@ -646,3 +646,7 @@ back-to-top svg {
         padding-inline-start: 0;
     }
 }
+
+.gdo-blaq-josh-ai-logo img[alt="Josh.ai logo"] {
+    filter: invert(1);
+}
