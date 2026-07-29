@@ -73,7 +73,7 @@
           "type": "custom-liquid",
           "name": "t:names.custom_liquid",
           "settings": {
-            "custom_liquid": "{% style %}\n#shopify-section-{{ section.id }} .hero {\n  background-image: linear-gradient(rgba(235, 239, 244, 0.34), rgba(20, 24, 30, 0.42)), url({{ 'josh-ai-hero-garage-dashboard.jpg' | asset_url }});\n  background-size: cover;\n  background-position: center;\n  background-repeat: no-repeat;\n}\n#shopify-section-{{ section.id }} .hero__media {\n  display: none;\n}\n#shopify-section-{{ section.id }} .josh-ai-hero-lockup {\n  display: inline-flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  gap: 12px;\n  width: min(430px, 78vw);\n  margin-inline: auto;\n  text-align: center;\n  transform: translate(-3vw, -18vh);\n}\n#shopify-section-{{ section.id }} .josh-ai-hero-lockup__konnected {\n  width: min(350px, 70vw);\n  height: auto;\n}\n#shopify-section-{{ section.id }} .josh-ai-hero-lockup__plus {\n  color: rgba(0, 0, 0, 0.72);\n  font-size: clamp(1.55rem, 3vw, 2.35rem);\n  font-weight: 700;\n  line-height: 0.8;\n}\n#shopify-section-{{ section.id }} .josh-ai-works-badge {\n  display: inline-flex;\n  align-items: center;\n  gap: 12px;\n  padding: 13px 20px;\n  border-radius: 9px;\n  background: rgba(255, 255, 255, 0.92);\n  color: #2f343a;\n  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);\n  font-family: var(--font-body--family);\n  font-size: clamp(1.15rem, 1.75vw, 1.55rem);\n  font-weight: 500;\n  line-height: 1;\n}\n#shopify-section-{{ section.id }} .josh-ai-works-badge__mark {\n  flex: 0 0 auto;\n  display: block;\n  width: 42px;\n  height: auto;\n  max-height: 31px;\n}\n#shopify-section-{{ section.id }} .josh-ai-works-badge strong {\n  font-weight: 600;\n}\n@media (max-width: 749px) {\n  #shopify-section-{{ section.id }} .josh-ai-hero-lockup {\n    gap: 15px;\n    width: min(260px, 76vw);\n    transform: translate(-4vw, -4vh);\n  }\n  #shopify-section-{{ section.id }} .josh-ai-hero-lockup__konnected {\n    width: min(235px, 70vw);\n  }\n  #shopify-section-{{ section.id }} .josh-ai-works-badge {\n    gap: 9px;\n    padding: 11px 15px;\n    font-size: 1.05rem;\n  }\n  #shopify-section-{{ section.id }} .josh-ai-works-badge__mark {\n    width: 34px;\n    max-height: 31px;\n  }\n}\n{% endstyle %}"
+            "custom_liquid": "{% style %}\n#shopify-section-{{ section.id }} .hero {\n  background-image: linear-gradient(rgba(235, 239, 244, 0.34), rgba(20, 24, 30, 0.42)), url(https://cdn.shopify.com/s/files/1/2085/3145/files/josh-ai-hero-garage-dashboard.jpg?v=1785339213);\n  background-size: cover;\n  background-position: center;\n  background-repeat: no-repeat;\n}\n#shopify-section-{{ section.id }} .hero__media {\n  display: none;\n}\n#shopify-section-{{ section.id }} .josh-ai-hero-lockup {\n  display: inline-flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  gap: 12px;\n  width: min(430px, 78vw);\n  margin-inline: auto;\n  text-align: center;\n  transform: translate(-3vw, -18vh);\n}\n#shopify-section-{{ section.id }} .josh-ai-hero-lockup__konnected {\n  width: min(350px, 70vw);\n  height: auto;\n}\n#shopify-section-{{ section.id }} .josh-ai-hero-lockup__plus {\n  color: rgba(0, 0, 0, 0.72);\n  font-size: clamp(1.55rem, 3vw, 2.35rem);\n  font-weight: 700;\n  line-height: 0.8;\n}\n#shopify-section-{{ section.id }} .josh-ai-works-badge {\n  display: inline-flex;\n  align-items: center;\n  gap: 12px;\n  padding: 13px 20px;\n  border-radius: 9px;\n  background: rgba(255, 255, 255, 0.92);\n  color: #2f343a;\n  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);\n  font-family: var(--font-body--family);\n  font-size: clamp(1.15rem, 1.75vw, 1.55rem);\n  font-weight: 500;\n  line-height: 1;\n}\n#shopify-section-{{ section.id }} .josh-ai-works-badge__mark {\n  flex: 0 0 auto;\n  display: block;\n  width: 42px;\n  height: auto;\n  max-height: 31px;\n}\n#shopify-section-{{ section.id }} .josh-ai-works-badge strong {\n  font-weight: 600;\n}\n@media (max-width: 749px) {\n  #shopify-section-{{ section.id }} .josh-ai-hero-lockup {\n    gap: 15px;\n    width: min(260px, 76vw);\n    transform: translate(-4vw, -4vh);\n  }\n  #shopify-section-{{ section.id }} .josh-ai-hero-lockup__konnected {\n    width: min(235px, 70vw);\n  }\n  #shopify-section-{{ section.id }} .josh-ai-works-badge {\n    gap: 9px;\n    padding: 11px 15px;\n    font-size: 1.05rem;\n  }\n  #shopify-section-{{ section.id }} .josh-ai-works-badge__mark {\n    width: 34px;\n    max-height: 31px;\n  }\n}\n{% endstyle %}"
           },
           "blocks": {}
         },
@@ -81,7 +81,7 @@
           "type": "custom-liquid",
           "name": "t:names.custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"josh-ai-hero-lockup\" role=\"img\" aria-label=\"Konnected plus Works with Josh\">\n  <img class=\"josh-ai-hero-lockup__konnected\" src=\"{{ 'konnected-logo-blue.png' | asset_url }}\" alt=\"Konnected\" width=\"908\" height=\"164\">\n  <span class=\"josh-ai-hero-lockup__plus\" aria-hidden=\"true\">+</span>\n  <div class=\"josh-ai-works-badge\" aria-label=\"Works with Josh\">\n    <img class=\"josh-ai-works-badge__mark\" src=\"{{ 'josh-ai-dog-mark.png' | asset_url }}\" alt=\"\" width=\"1210\" height=\"1058\">\n    <span>Works with <strong>Josh</strong></span>\n  </div>\n</div>\n<h1 class=\"visually-hidden\">Konnected + Works with Josh</h1>"
+            "custom_liquid": "<div class=\"josh-ai-hero-lockup\" role=\"img\" aria-label=\"Konnected plus Works with Josh\">\n  <img class=\"josh-ai-hero-lockup__konnected\" src=\"https://cdn.shopify.com/s/files/1/2085/3145/files/konnected-logo-blue.png?v=1785339213\" alt=\"Konnected\" width=\"908\" height=\"164\">\n  <span class=\"josh-ai-hero-lockup__plus\" aria-hidden=\"true\">+</span>\n  <div class=\"josh-ai-works-badge\" aria-label=\"Works with Josh\">\n    <img class=\"josh-ai-works-badge__mark\" src=\"https://cdn.shopify.com/s/files/1/2085/3145/files/josh-ai-dog-mark.png?v=1785339213\" alt=\"\" width=\"1210\" height=\"1058\">\n    <span>Works with <strong>Josh</strong></span>\n  </div>\n</div>\n<h1 class=\"visually-hidden\">Konnected + Works with Josh</h1>"
           },
           "blocks": {}
         }
@@ -1032,7 +1032,7 @@
           "type": "custom-liquid",
           "name": "t:names.custom_liquid",
           "settings": {
-            "custom_liquid": "<div style=\"display:flex;justify-content:center;\"><img src=\"{{ 'josh-ai-phone-open.png' | asset_url }}\" alt=\"Josh.ai mobile app showing garage door open controls\" width=\"1080\" height=\"1920\" loading=\"lazy\" style=\"width:min(100%,240px);height:auto;display:block;border-radius:20px;\"></div>"
+            "custom_liquid": "<div style=\"display:flex;justify-content:center;\"><img src=\"https://cdn.shopify.com/s/files/1/2085/3145/files/josh-ai-phone-open.png?v=1785339213\" alt=\"Josh.ai mobile app showing garage door open controls\" width=\"1080\" height=\"1920\" loading=\"lazy\" style=\"width:min(100%,240px);height:auto;display:block;border-radius:20px;\"></div>"
           },
           "blocks": {}
         },
@@ -1040,7 +1040,7 @@
           "type": "custom-liquid",
           "name": "t:names.custom_liquid",
           "settings": {
-            "custom_liquid": "<div style=\"display:flex;justify-content:center;\"><img src=\"{{ 'josh-ai-phone-stop.png' | asset_url }}\" alt=\"Josh.ai mobile app showing open, close, and stop controls\" width=\"1080\" height=\"1920\" loading=\"lazy\" style=\"width:min(100%,240px);height:auto;display:block;border-radius:20px;\"></div>"
+            "custom_liquid": "<div style=\"display:flex;justify-content:center;\"><img src=\"https://cdn.shopify.com/s/files/1/2085/3145/files/josh-ai-phone-stop.png?v=1785339213\" alt=\"Josh.ai mobile app showing open, close, and stop controls\" width=\"1080\" height=\"1920\" loading=\"lazy\" style=\"width:min(100%,240px);height:auto;display:block;border-radius:20px;\"></div>"
           },
           "blocks": {}
         },
@@ -1610,7 +1610,7 @@
           "type": "custom-liquid",
           "name": "t:names.custom_liquid",
           "settings": {
-            "custom_liquid": "<div style=\"max-width:980px;margin:0 auto;\"><img src=\"{{ 'josh-ai-tablet-open-room-alt.png' | asset_url }}\" alt=\"Josh.ai garage screen with Konnected garage controls\" width=\"1920\" height=\"1200\" loading=\"lazy\" style=\"width:100%;height:auto;display:block;border-radius:20px;\"></div>"
+            "custom_liquid": "<div style=\"max-width:980px;margin:0 auto;\"><img src=\"https://cdn.shopify.com/s/files/1/2085/3145/files/josh-ai-tablet-open-room-alt.png?v=1785339213\" alt=\"Josh.ai garage screen with Konnected garage controls\" width=\"1920\" height=\"1200\" loading=\"lazy\" style=\"width:100%;height:auto;display:block;border-radius:20px;\"></div>"
           },
           "blocks": {}
         },
@@ -1908,7 +1908,7 @@
           "type": "custom-liquid",
           "name": "t:names.custom_liquid",
           "settings": {
-            "custom_liquid": "<div style=\"display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start;max-width:720px;margin:0 auto;\"><img src=\"{{ 'josh-ai-tablet-open-room.png' | asset_url }}\" alt=\"Josh.ai tablet showing garage door open status\" width=\"1920\" height=\"1200\" loading=\"lazy\" style=\"width:100%;height:auto;display:block;border-radius:20px;\"><img src=\"{{ 'josh-ai-tablet-closed-room.png' | asset_url }}\" alt=\"Josh.ai tablet showing garage door closed status\" width=\"1920\" height=\"1200\" loading=\"lazy\" style=\"width:100%;height:auto;display:block;border-radius:20px;\"></div>"
+            "custom_liquid": "<div style=\"display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start;max-width:720px;margin:0 auto;\"><img src=\"https://cdn.shopify.com/s/files/1/2085/3145/files/josh-ai-tablet-open-room.png?v=1785339214\" alt=\"Josh.ai tablet showing garage door open status\" width=\"1920\" height=\"1200\" loading=\"lazy\" style=\"width:100%;height:auto;display:block;border-radius:20px;\"><img src=\"https://cdn.shopify.com/s/files/1/2085/3145/files/josh-ai-tablet-closed-room.png?v=1785339213\" alt=\"Josh.ai tablet showing garage door closed status\" width=\"1920\" height=\"1200\" loading=\"lazy\" style=\"width:100%;height:auto;display:block;border-radius:20px;\"></div>"
           },
           "blocks": {}
         }
@@ -2008,7 +2008,7 @@
               "type": "custom-liquid",
               "name": "t:names.custom_liquid",
               "settings": {
-                "custom_liquid": "<div style=\"aspect-ratio:1 / 1;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:20px;background:#fff;\"><img src=\"{{ 'josh-ai-phone-open.png' | asset_url }}\" alt=\"Josh.ai mobile garage door open status\" width=\"1080\" height=\"2340\" loading=\"lazy\" style=\"max-width:100%;max-height:100%;width:auto;height:auto;display:block;object-fit:contain;\"></div>"
+                "custom_liquid": "<div style=\"aspect-ratio:1 / 1;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:20px;background:#fff;\"><img src=\"https://cdn.shopify.com/s/files/1/2085/3145/files/josh-ai-phone-open.png?v=1785339213\" alt=\"Josh.ai mobile garage door open status\" width=\"1080\" height=\"2340\" loading=\"lazy\" style=\"max-width:100%;max-height:100%;width:auto;height:auto;display:block;object-fit:contain;\"></div>"
               },
               "blocks": {}
             },
@@ -2189,7 +2189,7 @@
               "type": "custom-liquid",
               "name": "t:names.custom_liquid",
               "settings": {
-                "custom_liquid": "<div style=\"aspect-ratio:1 / 1;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:20px;background:#fff;\"><img src=\"{{ 'josh-ai-phone-closed.png' | asset_url }}\" alt=\"Josh.ai mobile garage door closed status\" width=\"1080\" height=\"2340\" loading=\"lazy\" style=\"max-width:100%;max-height:100%;width:auto;height:auto;display:block;object-fit:contain;\"></div>"
+                "custom_liquid": "<div style=\"aspect-ratio:1 / 1;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:20px;background:#fff;\"><img src=\"https://cdn.shopify.com/s/files/1/2085/3145/files/josh-ai-phone-closed.png?v=1785339213\" alt=\"Josh.ai mobile garage door closed status\" width=\"1080\" height=\"2340\" loading=\"lazy\" style=\"max-width:100%;max-height:100%;width:auto;height:auto;display:block;object-fit:contain;\"></div>"
               },
               "blocks": {}
             },
@@ -2370,7 +2370,7 @@
               "type": "custom-liquid",
               "name": "t:names.custom_liquid",
               "settings": {
-                "custom_liquid": "<div style=\"aspect-ratio:1 / 1;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:20px;background:#fff;\"><img src=\"{{ 'josh-ai-phone-stop.png' | asset_url }}\" alt=\"Josh.ai mobile more buttons for garage door control\" width=\"1080\" height=\"2340\" loading=\"lazy\" style=\"max-width:100%;max-height:100%;width:auto;height:auto;display:block;object-fit:contain;\"></div>"
+                "custom_liquid": "<div style=\"aspect-ratio:1 / 1;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:20px;background:#fff;\"><img src=\"https://cdn.shopify.com/s/files/1/2085/3145/files/josh-ai-phone-stop.png?v=1785339213\" alt=\"Josh.ai mobile more buttons for garage door control\" width=\"1080\" height=\"2340\" loading=\"lazy\" style=\"max-width:100%;max-height:100%;width:auto;height:auto;display:block;object-fit:contain;\"></div>"
               },
               "blocks": {}
             },
@@ -2780,7 +2780,7 @@
           "type": "custom-liquid",
           "name": "t:names.custom_liquid",
           "settings": {
-            "custom_liquid": "<div style=\"max-width:420px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center;\"><img src=\"{{ 'josh-ai-logo.png' | asset_url }}\" alt=\"Josh.ai logo\" width=\"3000\" height=\"1058\" loading=\"lazy\" style=\"width:100%;max-width:340px;height:auto;display:block;\"><div style=\"font-size:clamp(2rem,4vw,3rem);font-weight:700;line-height:1;color:#1f2933;\">+</div><img src=\"{{ 'konnected-logo-blue.png' | asset_url }}\" alt=\"Konnected logo\" width=\"908\" height=\"164\" loading=\"lazy\" style=\"width:100%;max-width:340px;height:auto;display:block;\"></div>"
+            "custom_liquid": "<div style=\"max-width:420px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center;\"><img src=\"https://cdn.shopify.com/s/files/1/2085/3145/files/josh-ai-logo_5c8262c9-b963-4df5-90c0-963ef1db1115.png?v=1785339213\" alt=\"Josh.ai logo\" width=\"3000\" height=\"1058\" loading=\"lazy\" style=\"width:100%;max-width:340px;height:auto;display:block;\"><div style=\"font-size:clamp(2rem,4vw,3rem);font-weight:700;line-height:1;color:#1f2933;\">+</div><img src=\"https://cdn.shopify.com/s/files/1/2085/3145/files/konnected-logo-blue.png?v=1785339213\" alt=\"Konnected logo\" width=\"908\" height=\"164\" loading=\"lazy\" style=\"width:100%;max-width:340px;height:auto;display:block;\"></div>"
           },
           "blocks": {}
         },
