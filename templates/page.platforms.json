@@ -471,7 +471,7 @@
               "type": "group",
               "name": "t:names.group",
               "settings": {
-                "link": "shopify://pages/home-assistant",
+                "link": "shopify://pages/control4",
                 "open_in_new_tab": false,
                 "content_direction": "column",
                 "vertical_on_mobile": true,
@@ -544,6 +544,126 @@
           },
           "block_order": [
             "group_DgAPmk"
+          ]
+        },
+        "carousel_card_joshAi": {
+          "type": "_carousel-card",
+          "name": "Carousel Item",
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "reverse_on_mobile": false,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "custom_mobile_alignment": false,
+            "mobile_vertical_alignment": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "enable_mobile_radius": false,
+            "mobile_border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "custom_mobile_padding": false,
+            "mobile-padding-block-start": 0,
+            "mobile-padding-block-end": 0,
+            "mobile-padding-inline-start": 0,
+            "mobile-padding-inline-end": 0,
+            "css_class": ""
+          },
+          "blocks": {
+            "group_joshAi": {
+              "type": "group",
+              "name": "t:names.group",
+              "settings": {
+                "link": "shopify://pages/joshai",
+                "open_in_new_tab": false,
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "reverse_on_mobile": false,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "center",
+                "custom_mobile_alignment": false,
+                "mobile_vertical_alignment": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 0,
+                "enable_mobile_gap": false,
+                "mobile_gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": false,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 24,
+                "enable_mobile_radius": false,
+                "mobile_border_radius": 0,
+                "placeholder": "",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "padding-block-start": 72,
+                "padding-block-end": 72,
+                "padding-inline-start": 24,
+                "padding-inline-end": 24,
+                "custom_mobile_padding": false,
+                "mobile-padding-block-start": 0,
+                "mobile-padding-block-end": 0,
+                "mobile-padding-inline-start": 0,
+                "mobile-padding-inline-end": 0,
+                "css_class": ""
+              },
+              "blocks": {
+                "icon_joshAi": {
+                  "type": "icon",
+                  "name": "t:names.icon",
+                  "settings": {
+                    "icon": "price_tag",
+                    "image_upload": "shopify://shop_images/josh-ai-logo.png",
+                    "width": 24,
+                    "use_height": true,
+                    "height": 56,
+                    "custom_mobile_height": false,
+                    "mobile-height": 24,
+                    "link": "shopify://pages/joshai",
+                    "open_in_new_tab": false
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "icon_joshAi"
+              ]
+            }
+          },
+          "block_order": [
+            "group_joshAi"
           ]
         },
         "static-header": {
@@ -622,7 +742,8 @@
         "carousel_card_yqhemD",
         "carousel_card_HhVQkf",
         "carousel_card_brKtdc",
-        "carousel_card_GqjBjW"
+        "carousel_card_GqjBjW",
+        "carousel_card_joshAi"
       ],
       "name": "Grid Section",
       "settings": {
@@ -633,7 +754,7 @@
         "hide_arrows": false,
         "autoplay": false,
         "autoplay_speed": 4,
-        "columns": 4,
+        "columns": 5,
         "peek_desktop": false,
         "mobile_columns": "2",
         "mobile_card_size": "60cqw",
