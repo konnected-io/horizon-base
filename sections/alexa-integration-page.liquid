@@ -1,0 +1,353 @@
+{% style %}
+  .alexa-page {
+    --alexa-blue: #00a8e1;
+    --alexa-ink: #111820;
+    --alexa-muted: #53606c;
+    --alexa-surface: #f3f7fb;
+    color: var(--alexa-ink);
+  }
+
+  .alexa-page__inner {
+    width: min(1120px, calc(100% - 40px));
+    margin: 0 auto;
+  }
+
+  .alexa-hero {
+    min-height: 76svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #f5f9fc 0%, #ffffff 100%);
+  }
+
+  .alexa-hero__lockup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .alexa-hero__konnected,
+  .alexa-hero__alexa {
+    display: block;
+    width: min(360px, 72vw);
+    height: auto;
+  }
+
+  .alexa-hero__plus {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    line-height: 1;
+    font-weight: 700;
+    color: rgba(17, 24, 32, 0.68);
+  }
+
+  .alexa-section {
+    padding: 72px 0;
+  }
+
+  .alexa-section--tint {
+    background: var(--alexa-surface);
+  }
+
+  .alexa-section h2 {
+    margin: 0 0 20px;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.05;
+    letter-spacing: 0;
+  }
+
+  .alexa-section p {
+    color: var(--alexa-muted);
+  }
+
+  .alexa-overview {
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr);
+    gap: 52px;
+    align-items: center;
+  }
+
+  .alexa-phone-pair,
+  .alexa-state-pair {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    align-items: start;
+  }
+
+  .alexa-phone-card,
+  .alexa-media-card {
+    background: #ffffff;
+    border: 1px solid rgba(17, 24, 32, 0.1);
+    border-radius: 20px;
+    padding: 18px;
+    box-shadow: 0 16px 44px rgba(17, 24, 32, 0.08);
+  }
+
+  .alexa-phone-card img,
+  .alexa-media-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+  }
+
+  .alexa-phone-card--pending {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 9 / 16;
+    background: linear-gradient(180deg, #ffffff, #edf4fa);
+    color: var(--alexa-muted);
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .alexa-checks {
+    display: grid;
+    gap: 18px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .alexa-checks li {
+    display: grid;
+    grid-template-columns: 24px minmax(0, 1fr);
+    gap: 12px;
+    align-items: start;
+    color: var(--alexa-muted);
+  }
+
+  .alexa-checks li::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    background: var(--alexa-blue);
+    border-radius: 999px;
+    box-shadow: inset 0 0 0 5px #ffffff;
+    outline: 2px solid var(--alexa-blue);
+  }
+
+  .alexa-checks strong {
+    color: var(--alexa-ink);
+  }
+
+  .alexa-split {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 52px;
+    align-items: center;
+  }
+
+  .alexa-split--reverse {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  }
+
+  .alexa-copy {
+    display: grid;
+    gap: 16px;
+  }
+
+  .alexa-copy p {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.65;
+  }
+
+  .alexa-note {
+    padding: 16px 18px;
+    border: 1px solid rgba(17, 24, 32, 0.12);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.78);
+    color: var(--alexa-muted);
+    font-size: 0.95rem;
+  }
+
+  .alexa-partner-lockup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    text-align: center;
+  }
+
+  .alexa-partner-lockup img {
+    display: block;
+    width: min(320px, 70vw);
+    height: auto;
+  }
+
+  .alexa-link {
+    color: var(--alexa-ink);
+    font-weight: 700;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+  }
+
+  @media (max-width: 899px) {
+    .alexa-overview,
+    .alexa-split,
+    .alexa-split--reverse {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .alexa-section {
+      padding: 52px 0;
+    }
+  }
+
+  @media (max-width: 599px) {
+    .alexa-page__inner {
+      width: min(100% - 28px, 1120px);
+    }
+
+    .alexa-phone-pair,
+    .alexa-state-pair {
+      grid-template-columns: 1fr;
+    }
+
+    .alexa-hero {
+      min-height: 68svh;
+    }
+  }
+{% endstyle %}
+
+<div class="alexa-page">
+  <section class="alexa-hero" aria-labelledby="alexa-page-title">
+    <div class="alexa-hero__lockup" role="img" aria-label="Konnected plus Works with Amazon Alexa">
+      <img
+        class="alexa-hero__konnected"
+        src="https://cdn.shopify.com/s/files/1/2085/3145/files/konnected-logo-blue.png?v=1785339213"
+        alt="Konnected"
+        width="908"
+        height="164"
+      >
+      <span class="alexa-hero__plus" aria-hidden="true">+</span>
+      <img
+        class="alexa-hero__alexa"
+        src="{{ 'alexa-wordmark.png' | asset_url }}"
+        alt="Works with Amazon Alexa"
+        width="3000"
+        height="1058"
+      >
+    </div>
+    <h1 id="alexa-page-title" class="visually-hidden">Konnected + Works with Amazon Alexa</h1>
+  </section>
+
+  <section class="alexa-section">
+    <div class="alexa-page__inner alexa-overview">
+      <div class="alexa-phone-pair" aria-label="Alexa app screenshots">
+        <div class="alexa-phone-card">
+          <img
+            src="{{ 'alexa-gdo-actions.png' | asset_url }}"
+            alt="Alexa app garage door controls for a Konnected GDO blaQ"
+            width="1080"
+            height="2340"
+            loading="lazy"
+          >
+        </div>
+        <div class="alexa-phone-card alexa-phone-card--pending">
+          Alarm mode screenshot slot
+        </div>
+      </div>
+      <ul class="alexa-checks">
+        <li><span><strong>Garage voice control</strong> - ask Alexa to open, close, or check the status of a compatible Konnected garage door opener.</span></li>
+        <li><span><strong>Protected opening</strong> - Alexa can require a voice code before opening a garage door by voice.</span></li>
+        <li><span><strong>Routines and status</strong> - use supported garage-door state changes in Alexa routines where Alexa exposes them.</span></li>
+        <li><span><strong>Alarm modes</strong> - with Konnected Standalone Alarm System and Konnected Cloud enabled, Alexa can arm in away, stay, or night mode.</span></li>
+        <li><span><strong>Cloud integration</strong> - Alexa connects through the free Konnected Cloud service and Konnected Alexa skill.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="alexa-section alexa-section--tint">
+    <div class="alexa-page__inner alexa-split">
+      <div class="alexa-copy">
+        <h2>Control your garage door with Alexa</h2>
+        <p>Konnected Smart Garage Door Openers can connect to Alexa through Konnected Cloud. After setup in the Konnected app, enable the Konnected Alexa skill, sign in to Konnected Cloud, and discover your devices in Alexa.</p>
+        <p>For everyday use, Alexa can answer status questions and respond to commands such as opening or closing the garage door. GDO blaQ can also expose additional capabilities such as level, light, lock, and routine-trigger behavior where supported.</p>
+        <div class="alexa-note">Alexa app touch controls and status displays can vary by Alexa device type and app behavior, so this page should emphasize voice commands, routines, and supported cloud capabilities.</div>
+      </div>
+      <div class="alexa-media-card">
+        <img
+          src="{{ 'alexa-echo-hub-garage.png' | asset_url }}"
+          alt="Alexa smart display interface showing Konnected garage door controls"
+          width="1920"
+          height="1200"
+          loading="lazy"
+        >
+      </div>
+    </div>
+  </section>
+
+  <section class="alexa-section">
+    <div class="alexa-page__inner alexa-split alexa-split--reverse">
+      <div class="alexa-state-pair" aria-label="Konnected alarm Alexa states">
+        <div class="alexa-phone-card alexa-phone-card--pending">
+          Alarm disarmed screenshot slot
+        </div>
+        <div class="alexa-phone-card alexa-phone-card--pending">
+          Alarm armed away screenshot slot
+        </div>
+      </div>
+      <div class="alexa-copy">
+        <h2>Use Alexa with your Konnected Alarm Panel</h2>
+        <p>Konnected Alarm Panel users can bring wired sensors into Alexa through Konnected Cloud. Depending on setup, Alexa can show wired sensor devices, answer status questions, and use supported sensor state changes in routines.</p>
+        <p>For Konnected Standalone Alarm System setups, Alexa can arm the Konnected alarm in away, stay, or night mode and can disarm with an Alexa voice code.</p>
+        <div class="alexa-note">Do not position Alexa as a life-safety monitoring path. Alarm PIN behavior, routines, and siren automation support have Alexa-specific limits.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alexa-section alexa-section--tint">
+    <div class="alexa-page__inner alexa-split">
+      <div class="alexa-partner-lockup" role="img" aria-label="Konnected plus Amazon Alexa">
+        <img
+          src="https://cdn.shopify.com/s/files/1/2085/3145/files/konnected-logo-blue.png?v=1785339213"
+          alt="Konnected"
+          width="908"
+          height="164"
+          loading="lazy"
+        >
+        <span class="alexa-hero__plus" aria-hidden="true">+</span>
+        <img
+          src="{{ 'alexa-wordmark.png' | asset_url }}"
+          alt="Amazon Alexa"
+          width="3000"
+          height="1058"
+          loading="lazy"
+        >
+      </div>
+      <div class="alexa-copy">
+        <h2>We're proud to be a partner</h2>
+        <p>Konnected works with Alexa so smart-home users can include wired sensors, garage doors, voice commands, and routines in the Alexa homes they already use. The integration runs through Konnected Cloud and the Konnected Alexa skill.</p>
+        <p><a class="alexa-link" href="https://support.konnected.io/using-the-garage-door-opener-with-alexa">Learn more about using Konnected with Alexa</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="alexa-section">
+    <div class="alexa-page__inner alexa-copy">
+      <h2>Where you can use it</h2>
+      <p>Use Konnected with Alexa-enabled speakers, displays, and dashboards for hands-free commands, quick status checks, and smart-home routines. Garage-door commands can fit daily arrivals and departures, while wired alarm sensors can help trigger announcements and automations when supported by Alexa.</p>
+      <p>Alexa support depends on Konnected Cloud, the Konnected Alexa skill, device setup, and Alexa availability. Current support material says the Konnected Alexa skill is available in countries where English is the primary language.</p>
+    </div>
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "Alexa integration page",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Alexa integration page"
+    }
+  ]
+}
+{% endschema %}
