@@ -35,6 +35,10 @@
     height: auto;
   }
 
+  .alexa-hero__konnected {
+    max-width: 221px;
+  }
+
   .alexa-hero__plus {
     font-size: clamp(2.2rem, 5vw, 4rem);
     line-height: 1;
@@ -85,24 +89,17 @@
     box-shadow: 0 16px 44px rgba(17, 24, 32, 0.08);
   }
 
+  .alexa-media-card--phone {
+    width: min(360px, 100%);
+    margin: 0 auto;
+  }
+
   .alexa-phone-card img,
   .alexa-media-card img {
     display: block;
     width: 100%;
     height: auto;
     border-radius: 14px;
-  }
-
-  .alexa-phone-card--pending {
-    min-height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    aspect-ratio: 9 / 16;
-    background: linear-gradient(180deg, #ffffff, #edf4fa);
-    color: var(--alexa-muted);
-    text-align: center;
-    font-weight: 600;
   }
 
   .alexa-checks {
@@ -119,6 +116,7 @@
     gap: 12px;
     align-items: start;
     color: var(--alexa-muted);
+    position: relative;
   }
 
   .alexa-checks li::before {
@@ -126,10 +124,23 @@
     width: 20px;
     height: 20px;
     margin-top: 2px;
-    background: var(--alexa-blue);
+    border: 2px solid var(--alexa-blue);
     border-radius: 999px;
-    box-shadow: inset 0 0 0 5px #ffffff;
-    outline: 2px solid var(--alexa-blue);
+    background:
+      linear-gradient(135deg, transparent 48%, #ffffff 48% 58%, transparent 58%),
+      var(--alexa-blue);
+    position: relative;
+  }
+
+  .alexa-checks li::after {
+    content: "";
+    width: 9px;
+    height: 5px;
+    border-left: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    transform: rotate(-45deg);
+    position: absolute;
+    margin: 8px 0 0 5px;
   }
 
   .alexa-checks strong {
@@ -222,18 +233,18 @@
     <div class="alexa-hero__lockup" role="img" aria-label="Konnected plus Works with Amazon Alexa">
       <img
         class="alexa-hero__konnected"
-        src="https://cdn.shopify.com/s/files/1/2085/3145/files/konnected-logo-blue.png?v=1785339213"
+        src="{{ 'alexa-konnected-logo.avif' | asset_url }}"
         alt="Konnected"
-        width="908"
-        height="164"
+        width="221"
+        height="40"
       >
       <span class="alexa-hero__plus" aria-hidden="true">+</span>
       <img
         class="alexa-hero__alexa"
-        src="{{ 'alexa-wordmark.png' | asset_url }}"
+        src="{{ 'alexa-amazon-wordmark.webp' | asset_url }}"
         alt="Works with Amazon Alexa"
-        width="3000"
-        height="1058"
+        width="1920"
+        height="282"
       >
     </div>
     <h1 id="alexa-page-title" class="visually-hidden">Konnected + Works with Amazon Alexa</h1>
@@ -244,22 +255,28 @@
       <div class="alexa-phone-pair" aria-label="Alexa app screenshots">
         <div class="alexa-phone-card">
           <img
-            src="{{ 'alexa-gdo-actions.png' | asset_url }}"
-            alt="Alexa app garage door controls for a Konnected GDO blaQ"
-            width="1080"
-            height="2340"
+            src="{{ 'alexa-gdo-settings.png' | asset_url }}"
+            alt="Alexa app settings for Konnected GDO blaQ voice control and unlock options"
+            width="1206"
+            height="2622"
             loading="lazy"
           >
         </div>
-        <div class="alexa-phone-card alexa-phone-card--pending">
-          Alarm mode screenshot slot
+        <div class="alexa-phone-card">
+          <img
+            src="{{ 'alexa-alarm-disarmed.png' | asset_url }}"
+            alt="Alexa app showing Konnected Alarm disarmed mode"
+            width="1206"
+            height="2622"
+            loading="lazy"
+          >
         </div>
       </div>
       <ul class="alexa-checks">
         <li><span><strong>Garage voice control</strong> - ask Alexa to open, close, or check the status of a compatible Konnected garage door opener.</span></li>
         <li><span><strong>Protected opening</strong> - Alexa can require a voice code before opening a garage door by voice.</span></li>
         <li><span><strong>Routines and status</strong> - use supported garage-door state changes in Alexa routines where Alexa exposes them.</span></li>
-        <li><span><strong>Alarm modes</strong> - with Konnected Standalone Alarm System and Konnected Cloud enabled, Alexa can arm in away, stay, or night mode.</span></li>
+        <li><span><strong>Alarm modes</strong> - with Konnected Standalone Alarm System and Konnected Cloud enabled, Alexa can arm in away, home/stay, or night mode.</span></li>
         <li><span><strong>Cloud integration</strong> - Alexa connects through the free Konnected Cloud service and Konnected Alexa skill.</span></li>
       </ul>
     </div>
@@ -273,12 +290,12 @@
         <p>For everyday use, Alexa can answer status questions and respond to commands such as opening or closing the garage door. GDO blaQ can also expose additional capabilities such as level, light, lock, and routine-trigger behavior where supported.</p>
         <div class="alexa-note">Alexa app touch controls and status displays can vary by Alexa device type and app behavior, so this page should emphasize voice commands, routines, and supported cloud capabilities.</div>
       </div>
-      <div class="alexa-media-card">
+      <div class="alexa-media-card alexa-media-card--phone">
         <img
-          src="{{ 'alexa-echo-hub-garage.png' | asset_url }}"
-          alt="Alexa smart display interface showing Konnected garage door controls"
-          width="1920"
-          height="1200"
+          src="{{ 'alexa-chat.gif' | asset_url }}"
+          alt="Alexa app chat interface for voice control"
+          width="480"
+          height="907"
           loading="lazy"
         >
       </div>
@@ -288,17 +305,29 @@
   <section class="alexa-section">
     <div class="alexa-page__inner alexa-split alexa-split--reverse">
       <div class="alexa-state-pair" aria-label="Konnected alarm Alexa states">
-        <div class="alexa-phone-card alexa-phone-card--pending">
-          Alarm disarmed screenshot slot
+        <div class="alexa-phone-card">
+          <img
+            src="{{ 'alexa-alarm-disarmed.png' | asset_url }}"
+            alt="Alexa app showing Konnected Alarm disarmed mode"
+            width="1206"
+            height="2622"
+            loading="lazy"
+          >
         </div>
-        <div class="alexa-phone-card alexa-phone-card--pending">
-          Alarm armed away screenshot slot
+        <div class="alexa-phone-card">
+          <img
+            src="{{ 'alexa-alarm-armed-away.jpg' | asset_url }}"
+            alt="Alexa app showing Konnected Alarm armed away mode"
+            width="332"
+            height="719"
+            loading="lazy"
+          >
         </div>
       </div>
       <div class="alexa-copy">
         <h2>Use Alexa with your Konnected Alarm Panel</h2>
         <p>Konnected Alarm Panel users can bring wired sensors into Alexa through Konnected Cloud. Depending on setup, Alexa can show wired sensor devices, answer status questions, and use supported sensor state changes in routines.</p>
-        <p>For Konnected Standalone Alarm System setups, Alexa can arm the Konnected alarm in away, stay, or night mode and can disarm with an Alexa voice code.</p>
+        <p>For Konnected Standalone Alarm System setups, Alexa can arm the Konnected alarm in away, home/stay, or night mode and can disarm with an Alexa voice code.</p>
         <div class="alexa-note">Do not position Alexa as a life-safety monitoring path. Alarm PIN behavior, routines, and siren automation support have Alexa-specific limits.</div>
       </div>
     </div>
@@ -308,18 +337,18 @@
     <div class="alexa-page__inner alexa-split">
       <div class="alexa-partner-lockup" role="img" aria-label="Konnected plus Amazon Alexa">
         <img
-          src="https://cdn.shopify.com/s/files/1/2085/3145/files/konnected-logo-blue.png?v=1785339213"
+          src="{{ 'alexa-konnected-logo.avif' | asset_url }}"
           alt="Konnected"
-          width="908"
-          height="164"
+          width="221"
+          height="40"
           loading="lazy"
         >
         <span class="alexa-hero__plus" aria-hidden="true">+</span>
         <img
-          src="{{ 'alexa-wordmark.png' | asset_url }}"
+          src="{{ 'alexa-amazon-wordmark.webp' | asset_url }}"
           alt="Amazon Alexa"
-          width="3000"
-          height="1058"
+          width="1920"
+          height="282"
           loading="lazy"
         >
       </div>
