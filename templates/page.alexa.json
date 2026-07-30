@@ -1047,7 +1047,7 @@
           "type": "custom-liquid",
           "name": "t:names.custom_liquid",
           "settings": {
-            "custom_liquid": "<div style=\"display:flex;justify-content:center;\"><img src=\"{{ 'alexa-gdo-settings.png' | asset_url }}\" alt=\"Alexa app settings for Konnected GDO voice control\" width=\"1080\" height=\"1920\" loading=\"lazy\" style=\"width:min(100%,240px);height:auto;display:block;border-radius:20px;\"></div>"
+            "custom_liquid": "<div style=\"display:flex;justify-content:center;\"><img src=\"{{ 'alexa-alarm-settings.png' | asset_url }}\" alt=\"Alexa app settings for Konnected Alarm voice and Echo Hub controls\" width=\"1206\" height=\"2622\" loading=\"lazy\" style=\"width:min(100%,240px);height:auto;display:block;border-radius:20px;\"></div>"
           },
           "blocks": {
           }
@@ -1056,7 +1056,7 @@
           "type": "custom-liquid",
           "name": "t:names.custom_liquid",
           "settings": {
-            "custom_liquid": "<div style=\"display:flex;justify-content:center;\"><img src=\"{{ 'alexa-chat.gif' | asset_url }}\" alt=\"Amazon Alexa chat interface showing garage door control\" width=\"1080\" height=\"1920\" loading=\"lazy\" style=\"width:min(100%,240px);height:auto;display:block;border-radius:20px;\"></div>"
+            "custom_liquid": "<div style=\"display:flex;justify-content:center;\"><img src=\"{{ 'alexa-gdo-blaq-settings.png' | asset_url }}\" alt=\"Alexa app settings for GDO blaQ voice control\" width=\"1206\" height=\"2622\" loading=\"lazy\" style=\"width:min(100%,240px);height:auto;display:block;border-radius:20px;\"></div>"
           },
           "blocks": {
           }
@@ -1125,7 +1125,7 @@
                 "height": 20,
                 "custom_mobile_height": false,
                 "mobile-height": 24,
-                "text": "<p><strong>Voice control</strong> - open, close, and stop your garage door with a simple command.</p>",
+                "text": "<p><strong>GDO voice control</strong> - ask Alexa to open or close your Konnected garage door with voice-code protection where Alexa requires it.</p>",
                 "text_width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -1180,7 +1180,7 @@
                 "height": 20,
                 "custom_mobile_height": false,
                 "mobile-height": 24,
-                "text": "<p><strong>Cloud skill setup</strong> - connects through Konnected Cloud and the Konnected Alexa skill.</p>",
+                "text": "<p><strong>Alarm arm and disarm</strong> - use Alexa and Echo Hub controls for supported Konnected Standalone Alarm System modes.</p>",
                 "text_width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -1235,7 +1235,7 @@
                 "height": 20,
                 "custom_mobile_height": false,
                 "mobile-height": 24,
-                "text": "<p><strong>Works on tablets & phones</strong> - control from Amazon Alexa wall panels or the mobile app.</p>",
+                "text": "<p><strong>Echo Hub ready</strong> - expose compatible GDO and alarm controls on Alexa displays, wall panels, and the mobile app.</p>",
                 "text_width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -1290,7 +1290,7 @@
                 "height": 20,
                 "custom_mobile_height": false,
                 "mobile-height": 24,
-                "text": "<p><strong>Full blaQ control</strong> - Open, Close, Stop, and Light on the Smart Garage Door Opener blaQ.</p>",
+                "text": "<p><strong>GDO blaQ settings</strong> - enable voice opening, Alexa app unlocks, and unlock by voice or Echo Hub with an access code.</p>",
                 "text_width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -1345,7 +1345,7 @@
                 "height": 20,
                 "custom_mobile_height": false,
                 "mobile-height": 24,
-                "text": "<p><strong>Multiple doors</strong> - manage every garage door from one place.</p>",
+                "text": "<p><strong>Alarm safety settings</strong> - disarm by voice or Echo Hub can use the security system PINs already configured in Alexa.</p>",
                 "text_width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -1400,7 +1400,7 @@
                 "height": 20,
                 "custom_mobile_height": false,
                 "mobile-height": 24,
-                "text": "<p><strong>Real-time status</strong> - see Open / Closed at a glance.</p>",
+                "text": "<p><strong>Status and routines</strong> - check garage door state, use alarm modes, and build Alexa routines around supported Konnected devices.</p>",
                 "text_width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -1635,7 +1635,7 @@
           "type": "custom-liquid",
           "name": "t:names.custom_liquid",
           "settings": {
-            "custom_liquid": "<div style=\"max-width:980px;margin:0 auto;\"><img src=\"{{ 'alexa-chat.gif' | asset_url }}\" alt=\"Amazon Alexa chat interface showing Konnected garage control\" width=\"1920\" height=\"1200\" loading=\"lazy\" style=\"width:100%;height:auto;display:block;border-radius:20px;\"></div>"
+            "custom_liquid": "<div style=\"max-width:420px;margin:0 auto;\"><img src=\"{{ 'alexa-chat.gif' | asset_url }}\" alt=\"Amazon Alexa chat interface showing Konnected garage control\" width=\"480\" height=\"907\" loading=\"lazy\" style=\"width:100%;height:auto;display:block;border-radius:20px;\"></div>"
           },
           "blocks": {
           }
