@@ -3222,39 +3222,7 @@
             "mobile-padding-inline-start": 0,
             "mobile-padding-inline-end": 0
           },
-          "blocks": {
-            "product_list_text_YejWRj": {
-              "type": "_product-list-text",
-              "name": "t:names.collection_title",
-              "settings": {
-                "text": "",
-                "width": "100%",
-                "max_width": "none",
-                "alignment": "center",
-                "type_preset": "h2",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "enable_mobile_size": true,
-                "mobile_font_size": "1.92rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "text_color": "{{ settings.color_palette.konnected_blue }}",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "product_list_text_YejWRj"
-          ]
+          "blocks": {}
         }
       },
       "block_order": [
