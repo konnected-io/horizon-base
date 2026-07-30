@@ -1618,7 +1618,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>Josh.ai connects to Konnected garage door openers on the local network through ESPHome using the device IP and port 6053. The integration is supported by Nimble DevSuite and gives Josh.ai homes local garage control without a cloud dependency for the control path. <a href=\"https://www.josh.ai\" target=\"_blank\">Learn more about Josh.ai</a>.</p>",
+            "text": "<p>Josh.ai connects to Konnected garage door openers on the local network through ESPHome using the device IP and port 6053. The integration is supported by Nimble DevSuite and gives Josh.ai homes local garage control without a cloud dependency for garage commands. <a href=\"https://www.josh.ai\" target=\"_blank\">Learn more about Josh.ai</a>.</p>",
             "width": "100%",
             "max_width": "none",
             "alignment": "left",
@@ -1801,6 +1801,63 @@
         "border_radius": 0,
         "padding-block-start": 72,
         "padding-block-end": 0,
+        "custom_mobile_padding": false,
+        "mobile-padding-block-start": 0,
+        "mobile-padding-block-end": 0,
+        "mobile-padding-inline-start": 0,
+        "mobile-padding-inline-end": 0,
+        "css_class": "",
+        "add_section_id": false,
+        "section_id": ""
+      }
+    },
+    "section_joshai_compatibility": {
+      "type": "section",
+      "blocks": {
+        "compatibility_content": {
+          "type": "custom-liquid",
+          "name": "t:names.custom_liquid",
+          "settings": {
+            "custom_liquid": "<section class=\"josh-ai-compatibility\" style=\"max-width:1180px;margin:0 auto;padding:0 24px;color:#111820;\">\n  <div style=\"display:grid;gap:22px;\">\n    <div style=\"max-width:820px;\">\n      <h2 style=\"margin:0 0 14px;font-size:clamp(1.9rem,3vw,2.65rem);line-height:1.12;color:#111820;\">Choose the right Konnected GDO for the opener</h2>\n      <p style=\"margin:0;font-size:1.05rem;line-height:1.65;color:#36414d;\">A Josh.ai home can still have different garage opener types. Choose the Konnected product by opener compatibility first, then connect the garage into the Josh.ai project.</p>\n    </div>\n    <div style=\"overflow-x:auto;border:1px solid rgba(17,24,32,.14);border-radius:8px;background:#fff;box-shadow:0 10px 26px rgba(17,24,32,.06);\">\n      <table style=\"width:100%;border-collapse:collapse;min-width:720px;font-size:1rem;line-height:1.5;\">\n        <thead>\n          <tr style=\"background:#eef4f8;color:#111820;text-align:left;\">\n            <th style=\"padding:16px 18px;border-bottom:1px solid rgba(17,24,32,.14);\">Opener situation</th>\n            <th style=\"padding:16px 18px;border-bottom:1px solid rgba(17,24,32,.14);\">Best Konnected option</th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr>\n            <td style=\"padding:16px 18px;border-bottom:1px solid rgba(17,24,32,.1);\">Chamberlain, LiftMaster, Craftsman, or Merlin opener using supported Security+ or Security+ 2.0 technology</td>\n            <td style=\"padding:16px 18px;border-bottom:1px solid rgba(17,24,32,.1);\"><a href=\"https://konnected.io/products/smart-garage-door-opener-blaq-myq-alternative\" data-content-cta data-content-slug=\"joshai\" data-content-cluster=\"garage_gdo\" data-destination-type=\"product\" data-cta-location=\"compatibility_table\">Check GDO blaQ compatibility</a></td>\n          </tr>\n          <tr>\n            <td style=\"padding:16px 18px;border-bottom:1px solid rgba(17,24,32,.1);\">Compatible opener that uses a normal dry-contact or wired push-button control path</td>\n            <td style=\"padding:16px 18px;border-bottom:1px solid rgba(17,24,32,.1);\"><a href=\"https://konnected.io/products/smart-garage-door-opener\" data-content-cta data-content-slug=\"joshai\" data-content-cluster=\"garage_gdo\" data-destination-type=\"product\" data-cta-location=\"compatibility_table\">Review GDO White</a></td>\n          </tr>\n          <tr>\n            <td style=\"padding:16px 18px;border-bottom:1px solid rgba(17,24,32,.1);\">Security+ 3.0 opener with a round white learn button</td>\n            <td style=\"padding:16px 18px;border-bottom:1px solid rgba(17,24,32,.1);\"><strong>Not currently supported by Konnected GDO products</strong></td>\n          </tr>\n          <tr>\n            <td style=\"padding:16px 18px;\">Not sure which opener you have</td>\n            <td style=\"padding:16px 18px;\">Start with the <a href=\"https://konnected.io/collections/smart-garage-door-openers\" data-content-cta data-content-slug=\"joshai\" data-content-cluster=\"garage_gdo\" data-destination-type=\"collection\" data-cta-location=\"compatibility_table\">Smart Garage Door Openers collection</a> and verify compatibility before buying.</td>\n          </tr>\n        </tbody>\n      </table>\n    </div>\n  </div>\n  <style>@media (max-width:749px){.josh-ai-compatibility{padding:0 16px !important}.josh-ai-compatibility table{font-size:.95rem !important}}</style>\n</section>"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "compatibility_content"
+      ],
+      "name": "Josh.ai compatibility",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "reverse_on_mobile": false,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 24,
+        "enable_mobile_gap": false,
+        "mobile_gap": 12,
+        "section_width": "full-width",
+        "full_width_on_mobile": false,
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "#f7fafc",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 40,
+        "padding-block-end": 72,
         "custom_mobile_padding": false,
         "mobile-padding-block-start": 0,
         "mobile-padding-block-end": 0,
@@ -2431,7 +2488,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<p>Supported devices: blaQ and GDO White v2</p>",
+                    "text": "<p>Supported devices: GDO blaQ and GDO White v2</p>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "center",
@@ -2464,7 +2521,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>blaQ supports Open, Close, Stop, and Light. GDO White v2 supports Open and Close.</p>",
+                    "text": "<p>GDO blaQ supports Open, Close, Stop, and Light. GDO White v2 supports Open and Close.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3367,6 +3424,7 @@
     "section_NteVin",
     "section_HbU7bK",
     "section_yBNcjh",
+    "section_joshai_compatibility",
     "section_N737Dd",
     "grid_section_MYP4bp",
     "section_DFYaA3",
