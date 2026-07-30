@@ -43,16 +43,14 @@
             "mobile-padding-inline-start": 0,
             "mobile-padding-inline-end": 0
           },
-          "blocks": {
-          }
+          "blocks": {}
         },
         "page-content": {
           "type": "page-content",
           "settings": {
             "text_color": ""
           },
-          "blocks": {
-          }
+          "blocks": {}
         }
       },
       "block_order": [
@@ -77,8 +75,7 @@
           "settings": {
             "custom_liquid": "{% style %}\n#shopify-section-{{ section.id }} .hero {\n  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.72) 0%, rgba(255, 255, 255, 0.42) 48%, rgba(255, 255, 255, 0.16) 100%), url({{ 'alexa-hero-background.jpg' | asset_url }});\n  background-size: cover;\n  background-position: center;\n  background-repeat: no-repeat;\n}\n#shopify-section-{{ section.id }} .hero__media {\n  display: none;\n}\n#shopify-section-{{ section.id }} .alexa-hero-lockup {\n  display: inline-flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  gap: 8px;\n  width: min(410px, 40vw);\n  margin-inline: 0;\n  text-align: center;\n}\n#shopify-section-{{ section.id }} .alexa-hero-lockup__konnected {\n  width: min(380px, 100%);\n  height: auto;\n}\n#shopify-section-{{ section.id }} .alexa-hero-lockup__plus {\n  color: rgba(0, 0, 0, 0.62);\n  font-size: clamp(2rem, 4vw, 3rem);\n  font-weight: 700;\n  line-height: 0.8;\n}\n#shopify-section-{{ section.id }} .alexa-works-badge {\n  display: inline-flex;\n  align-items: center;\n  gap: 14px;\n  width: min(352px, 100%);\n  min-height: 78px;\n  padding: 8px 18px;\n  border: 1px solid rgba(17, 24, 32, 0.16);\n  border-radius: 4px;\n  background: rgba(255, 255, 255, 0.94);\n  color: #050505;\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);\n  font-family: var(--font-body--family);\n  line-height: 1;\n}\n#shopify-section-{{ section.id }} .alexa-works-badge__icon {\n  flex: 0 0 70px;\n  display: grid;\n  place-items: center;\n  width: 70px;\n  height: 70px;\n}\n#shopify-section-{{ section.id }} .alexa-works-badge__mark {\n  display: block;\n  width: 70px;\n  height: auto;\n}\n#shopify-section-{{ section.id }} .alexa-works-badge__copy {\n  display: flex;\n  min-width: 0;\n  flex-direction: column;\n  align-items: flex-start;\n  text-align: left;\n  white-space: nowrap;\n}\n#shopify-section-{{ section.id }} .alexa-works-badge__eyebrow {\n  font-size: clamp(1.25rem, 2vw, 1.55rem);\n  font-weight: 400;\n}\n#shopify-section-{{ section.id }} .alexa-works-badge strong {\n  font-size: clamp(1.7rem, 2.75vw, 2.25rem);\n  font-weight: 700;\n  letter-spacing: 0;\n}\n@media (max-width: 749px) {\n  #shopify-section-{{ section.id }} .alexa-hero-lockup {\n    gap: 9px;\n    width: min(310px, 65vw);\n  }\n  #shopify-section-{{ section.id }} .alexa-hero-lockup__konnected {\n    width: min(300px, 100%);\n  }\n  #shopify-section-{{ section.id }} .alexa-works-badge {\n    gap: 10px;\n    min-height: 68px;\n    padding: 7px 14px;\n  }\n  #shopify-section-{{ section.id }} .alexa-works-badge__icon {\n    flex-basis: 58px;\n    width: 58px;\n    height: 58px;\n  }\n  #shopify-section-{{ section.id }} .alexa-works-badge__mark {\n    width: 58px;\n  }\n}\n{% endstyle %}"
           },
-          "blocks": {
-          }
+          "blocks": {}
         },
         "hero_logo_lockup": {
           "type": "custom-liquid",
@@ -86,8 +83,7 @@
           "settings": {
             "custom_liquid": "<div class=\"alexa-hero-lockup\" role=\"img\" aria-label=\"Konnected plus Works with Amazon Alexa\">\n  <img class=\"alexa-hero-lockup__konnected\" src=\"https://cdn.shopify.com/s/files/1/2085/3145/files/konnected-logo-blue.png?v=1785339213\" alt=\"Konnected\" width=\"908\" height=\"164\">\n  <span class=\"alexa-hero-lockup__plus\" aria-hidden=\"true\">+</span>\n  <div class=\"alexa-works-badge\" aria-label=\"Works with Amazon Alexa\">\n    <span class=\"alexa-works-badge__icon\" aria-hidden=\"true\">\n      <img class=\"alexa-works-badge__mark\" src=\"{{ 'alexa-mark.png' | asset_url }}\" alt=\"\" width=\"447\" height=\"447\">\n    </span>\n    <span class=\"alexa-works-badge__copy\"><span class=\"alexa-works-badge__eyebrow\">Works with</span><strong>Amazon Alexa</strong></span>\n  </div>\n</div>\n<h1 class=\"visually-hidden\">Konnected + Works with Amazon Alexa</h1>"
           },
-          "blocks": {
-          }
+          "blocks": {}
         }
       },
       "block_order": [
@@ -250,8 +246,7 @@
                     "padding-inline-start": 0,
                     "padding-inline-end": 0
                   },
-                  "blocks": {
-                  }
+                  "blocks": {}
                 },
                 "text_g7kJHH": {
                   "type": "text",
@@ -284,8 +279,7 @@
                     "mobile-padding-inline-start": 0,
                     "mobile-padding-inline-end": 0
                   },
-                  "blocks": {
-                  }
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -416,8 +410,7 @@
                     "padding-inline-start": 0,
                     "padding-inline-end": 0
                   },
-                  "blocks": {
-                  }
+                  "blocks": {}
                 },
                 "text_bdwXFA": {
                   "type": "text",
@@ -450,8 +443,7 @@
                     "mobile-padding-inline-start": 0,
                     "mobile-padding-inline-end": 0
                   },
-                  "blocks": {
-                  }
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -582,8 +574,7 @@
                     "padding-inline-start": 0,
                     "padding-inline-end": 0
                   },
-                  "blocks": {
-                  }
+                  "blocks": {}
                 },
                 "text_QnJF7f": {
                   "type": "text",
@@ -616,8 +607,7 @@
                     "mobile-padding-inline-start": 0,
                     "mobile-padding-inline-end": 0
                   },
-                  "blocks": {
-                  }
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -748,8 +738,7 @@
                     "padding-inline-start": 0,
                     "padding-inline-end": 0
                   },
-                  "blocks": {
-                  }
+                  "blocks": {}
                 },
                 "text_8VePz7": {
                   "type": "text",
@@ -782,8 +771,7 @@
                     "mobile-padding-inline-start": 0,
                     "mobile-padding-inline-end": 0
                   },
-                  "blocks": {
-                  }
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -861,8 +849,7 @@
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
-              "blocks": {
-              }
+              "blocks": {}
             },
             "text_mV4ckw": {
               "type": "text",
@@ -895,8 +882,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0
               },
-              "blocks": {
-              }
+              "blocks": {}
             }
           },
           "block_order": [
@@ -991,8 +977,7 @@
             "mobile-padding-inline-start": 0,
             "mobile-padding-inline-end": 0
           },
-          "blocks": {
-          }
+          "blocks": {}
         }
       },
       "block_order": [
@@ -1049,8 +1034,7 @@
           "settings": {
             "custom_liquid": "<div style=\"display:flex;justify-content:center;\"><img src=\"{{ 'alexa-alarm-settings.png' | asset_url }}\" alt=\"Alexa app settings for Konnected Alarm voice and Echo Hub controls\" width=\"1206\" height=\"2622\" loading=\"lazy\" style=\"width:min(100%,240px);height:auto;display:block;border-radius:20px;\"></div>"
           },
-          "blocks": {
-          }
+          "blocks": {}
         },
         "image_closed_status": {
           "type": "custom-liquid",
@@ -1058,8 +1042,7 @@
           "settings": {
             "custom_liquid": "<div style=\"display:flex;justify-content:center;\"><img src=\"{{ 'alexa-gdo-blaq-settings.png' | asset_url }}\" alt=\"Alexa app settings for GDO blaQ voice control\" width=\"1206\" height=\"2622\" loading=\"lazy\" style=\"width:min(100%,240px);height:auto;display:block;border-radius:20px;\"></div>"
           },
-          "blocks": {
-          }
+          "blocks": {}
         },
         "group_dXrMU9": {
           "type": "group",
@@ -1165,8 +1148,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0
               },
-              "blocks": {
-              }
+              "blocks": {}
             },
             "text_icon_zFKkfz": {
               "type": "text-icon",
@@ -1220,8 +1202,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0
               },
-              "blocks": {
-              }
+              "blocks": {}
             },
             "text_icon_fqQenr": {
               "type": "text-icon",
@@ -1275,8 +1256,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0
               },
-              "blocks": {
-              }
+              "blocks": {}
             },
             "text_icon_TjULiP": {
               "type": "text-icon",
@@ -1330,8 +1310,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0
               },
-              "blocks": {
-              }
+              "blocks": {}
             },
             "text_icon_cFqQGr": {
               "type": "text-icon",
@@ -1385,8 +1364,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0
               },
-              "blocks": {
-              }
+              "blocks": {}
             },
             "text_icon_9k7EAL": {
               "type": "text-icon",
@@ -1440,8 +1418,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0
               },
-              "blocks": {
-              }
+              "blocks": {}
             }
           },
           "block_order": [
@@ -1588,8 +1565,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0
               },
-              "blocks": {
-              }
+              "blocks": {}
             },
             "text_Uczbwz": {
               "type": "text",
@@ -1622,8 +1598,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0
               },
-              "blocks": {
-              }
+              "blocks": {}
             }
           },
           "block_order": [
@@ -1637,8 +1612,7 @@
           "settings": {
             "custom_liquid": "<div style=\"max-width:300px;margin:0 auto;\"><img src=\"{{ 'alexa-chat.gif' | asset_url }}\" alt=\"Amazon Alexa chat interface showing Konnected garage control\" width=\"480\" height=\"907\" loading=\"lazy\" style=\"width:100%;height:auto;display:block;border-radius:20px;\"></div>"
           },
-          "blocks": {
-          }
+          "blocks": {}
         },
         "text_U3gqkD": {
           "type": "text",
@@ -1671,8 +1645,7 @@
             "mobile-padding-inline-start": 0,
             "mobile-padding-inline-end": 0
           },
-          "blocks": {
-          }
+          "blocks": {}
         }
       },
       "block_order": [
@@ -1756,8 +1729,7 @@
             "mobile-padding-inline-start": 0,
             "mobile-padding-inline-end": 0
           },
-          "blocks": {
-          }
+          "blocks": {}
         },
         "text_9gCWXB": {
           "type": "text",
@@ -1790,8 +1762,7 @@
             "mobile-padding-inline-start": 0,
             "mobile-padding-inline-end": 0
           },
-          "blocks": {
-          }
+          "blocks": {}
         }
       },
       "block_order": [
@@ -1926,8 +1897,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0
               },
-              "blocks": {
-              }
+              "blocks": {}
             }
           },
           "block_order": [
@@ -1940,8 +1910,7 @@
           "settings": {
             "custom_liquid": "<div style=\"display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start;max-width:720px;margin:0 auto;\"><img src=\"{{ 'alexa-alarm-disarmed.png' | asset_url }}\" alt=\"Alexa app showing Konnected alarm disarmed\" width=\"1206\" height=\"2622\" loading=\"lazy\" style=\"width:100%;height:auto;display:block;border-radius:20px;\"><img src=\"{{ 'alexa-alarm-armed-away.jpg' | asset_url }}\" alt=\"Alexa app showing Konnected alarm armed away\" width=\"332\" height=\"719\" loading=\"lazy\" style=\"width:100%;height:auto;display:block;border-radius:20px;\"></div>"
           },
-          "blocks": {
-          }
+          "blocks": {}
         }
       },
       "block_order": [
@@ -2041,8 +2010,7 @@
               "settings": {
                 "custom_liquid": "<div style=\"aspect-ratio:1 / 1;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:20px;background:#fff;\"><img src=\"{{ 'alexa-gdo-settings.png' | asset_url }}\" alt=\"Amazon Alexa mobile garage door open status\" width=\"1080\" height=\"2340\" loading=\"lazy\" style=\"max-width:100%;max-height:100%;width:auto;height:auto;display:block;object-fit:contain;\"></div>"
               },
-              "blocks": {
-              }
+              "blocks": {}
             },
             "group_RTW8mV": {
               "type": "group",
@@ -2128,8 +2096,7 @@
                     "mobile-padding-inline-start": 0,
                     "mobile-padding-inline-end": 0
                   },
-                  "blocks": {
-                  }
+                  "blocks": {}
                 },
                 "text_7U34cL": {
                   "type": "text",
@@ -2162,8 +2129,7 @@
                     "mobile-padding-inline-start": 0,
                     "mobile-padding-inline-end": 0
                   },
-                  "blocks": {
-                  }
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -2225,8 +2191,7 @@
               "settings": {
                 "custom_liquid": "<div style=\"aspect-ratio:1 / 1;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:20px;background:#fff;\"><img src=\"{{ 'alexa-alarm-armed-away.jpg' | asset_url }}\" alt=\"Amazon Alexa app showing Konnected alarm armed away\" width=\"1080\" height=\"2340\" loading=\"lazy\" style=\"max-width:100%;max-height:100%;width:auto;height:auto;display:block;object-fit:contain;\"></div>"
               },
-              "blocks": {
-              }
+              "blocks": {}
             },
             "group_gLGPdQ": {
               "type": "group",
@@ -2312,8 +2277,7 @@
                     "mobile-padding-inline-start": 0,
                     "mobile-padding-inline-end": 0
                   },
-                  "blocks": {
-                  }
+                  "blocks": {}
                 },
                 "text_Tc7NNb": {
                   "type": "text",
@@ -2346,8 +2310,7 @@
                     "mobile-padding-inline-start": 0,
                     "mobile-padding-inline-end": 0
                   },
-                  "blocks": {
-                  }
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -2409,8 +2372,7 @@
               "settings": {
                 "custom_liquid": "<div style=\"aspect-ratio:1 / 1;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:20px;background:#fff;\"><img src=\"{{ 'alexa-chat.gif' | asset_url }}\" alt=\"Amazon Alexa chat interface for garage door control\" width=\"480\" height=\"907\" loading=\"lazy\" style=\"max-width:72%;max-height:72%;width:auto;height:auto;display:block;object-fit:contain;\"></div>"
               },
-              "blocks": {
-              }
+              "blocks": {}
             },
             "group_RTW8mV": {
               "type": "group",
@@ -2496,8 +2458,7 @@
                     "mobile-padding-inline-start": 0,
                     "mobile-padding-inline-end": 0
                   },
-                  "blocks": {
-                  }
+                  "blocks": {}
                 },
                 "text_7U34cL": {
                   "type": "text",
@@ -2530,8 +2491,7 @@
                     "mobile-padding-inline-start": 0,
                     "mobile-padding-inline-end": 0
                   },
-                  "blocks": {
-                  }
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -2610,8 +2570,7 @@
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
-              "blocks": {
-              }
+              "blocks": {}
             },
             "text_CCkGzP": {
               "type": "text",
@@ -2644,8 +2603,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0
               },
-              "blocks": {
-              }
+              "blocks": {}
             }
           },
           "block_order": [
@@ -2733,8 +2691,7 @@
             "mobile-padding-inline-start": 0,
             "mobile-padding-inline-end": 0
           },
-          "blocks": {
-          }
+          "blocks": {}
         },
         "text_HH9qGx": {
           "type": "text",
@@ -2767,8 +2724,7 @@
             "mobile-padding-inline-start": 0,
             "mobile-padding-inline-end": 0
           },
-          "blocks": {
-          }
+          "blocks": {}
         }
       },
       "block_order": [
@@ -2826,8 +2782,7 @@
           "settings": {
             "custom_liquid": "<div style=\"max-width:420px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center;\"><img src=\"{{ 'alexa-amazon-wordmark.webp' | asset_url }}\" alt=\"Amazon Alexa logo\" width=\"1920\" height=\"282\" loading=\"lazy\" style=\"width:100%;max-width:340px;height:auto;display:block;\"><div style=\"font-size:clamp(2rem,4vw,3rem);font-weight:700;line-height:1;color:#1f2933;\">+</div><img src=\"https://cdn.shopify.com/s/files/1/2085/3145/files/konnected-logo-blue.png?v=1785339213\" alt=\"Konnected logo\" width=\"908\" height=\"164\" loading=\"lazy\" style=\"width:100%;max-width:340px;height:auto;display:block;\"></div>"
           },
-          "blocks": {
-          }
+          "blocks": {}
         },
         "group_NKwhjn": {
           "type": "group",
@@ -2912,8 +2867,7 @@
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0
               },
-              "blocks": {
-              }
+              "blocks": {}
             },
             "group_KyeTkz": {
               "type": "group",
@@ -2974,8 +2928,7 @@
                   "settings": {
                     "custom_liquid": ""
                   },
-                  "blocks": {
-                  }
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -3043,7 +2996,7 @@
           "name": "t:names.title",
           "static": true,
           "settings": {
-            "text": "<h2>Dig deeper into Amazon Alexa & Konnected</h2>",
+            "text": "<h2>Dig deeper into  Konnected</h2>",
             "width": "100%",
             "max_width": "none",
             "alignment": "center",
@@ -3064,8 +3017,7 @@
             "padding-inline-start": 0,
             "padding-inline-end": 0
           },
-          "blocks": {
-          }
+          "blocks": {}
         },
         "static-blog-post-card": {
           "type": "_featured-blog-posts-card",
@@ -3097,8 +3049,7 @@
                 "border_color": "",
                 "border_radius": 20
               },
-              "blocks": {
-              }
+              "blocks": {}
             },
             "title": {
               "type": "_heading",
@@ -3122,8 +3073,7 @@
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
-              "blocks": {
-              }
+              "blocks": {}
             },
             "blog-post-info-text": {
               "type": "_blog-post-info-text",
@@ -3141,8 +3091,7 @@
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
-              "blocks": {
-              }
+              "blocks": {}
             },
             "blog-post-description": {
               "type": "_blog-post-description",
@@ -3163,13 +3112,10 @@
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
-              "blocks": {
-              }
+              "blocks": {}
             }
           },
-          "block_order": [
-
-          ]
+          "block_order": []
         }
       },
       "name": "t:names.blog_posts_carousel",
@@ -3236,8 +3182,7 @@
             "mobile-padding-inline-end": 0,
             "css_class": ""
           },
-          "blocks": {
-          }
+          "blocks": {}
         },
         "static-header": {
           "type": "_product-list-content",
@@ -3282,7 +3227,7 @@
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<h2>Browse our SmartThings library to learn more</h2>",
+                "text": "",
                 "width": "100%",
                 "max_width": "none",
                 "alignment": "center",
@@ -3304,8 +3249,7 @@
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
-              "blocks": {
-              }
+              "blocks": {}
             }
           },
           "block_order": [
