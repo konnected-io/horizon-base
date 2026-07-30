@@ -1390,7 +1390,7 @@
                 "height": 80,
                 "custom_mobile_height": true,
                 "mobile-height": 42,
-                "link": "",
+                "link": "shopify://pages/alexa",
                 "open_in_new_tab": false
               },
               "blocks": {}
