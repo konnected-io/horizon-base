@@ -1460,7 +1460,7 @@
         "hide_arrows": true,
         "autoplay": true,
         "autoplay_speed": 6,
-        "columns": 6,
+        "columns": 7,
         "peek_desktop": false,
         "mobile_columns": "1",
         "mobile_card_size": "44cqw",

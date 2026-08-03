@@ -1618,7 +1618,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>Amazon Alexa connects to Konnected through Konnected Cloud and the Konnected Alexa skill. After setup, Alexa can discover supported Konnected devices for voice commands, status checks, app controls, Echo Hub access, and routines where Alexa exposes those capabilities.<a href=\"https://support.konnected.io/using-the-garage-door-opener-with-alexa\" target=\"_blank\">Learn more about using Konnected with Alexa</a>.</p>",
+            "text": "<p>Amazon Alexa connects to Konnected through Konnected Cloud and the Konnected Alexa skill. After setup, Alexa can discover supported Konnected devices for voice commands, status checks, app controls, Echo Hub access, and routines where Alexa exposes those capabilities.<a href=\"https://support.konnected.io/using-the-garage-door-opener-with-alexa\" target=\"_blank\" data-content-cta data-content-slug=\"alexa\" data-content-cluster=\"garage_gdo\" data-destination-type=\"support_page\" data-cta-location=\"cloud_section\">Learn more about using Konnected with Alexa</a>.</p>",
             "width": "100%",
             "max_width": "none",
             "alignment": "left",
@@ -2840,7 +2840,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>Our integration with <a href=\"https://support.konnected.io/using-the-garage-door-opener-with-alexa\">Amazon Alexa</a> brings natural voice control to your Konnected garage door. Alexa connects through Konnected Cloud and the Konnected Alexa skill, so you can bring compatible garage doors, wired sensors, and standalone alarm modes into the Alexa home you already use.</p>",
+                "text": "<p>Our integration with <a href=\"https://support.konnected.io/using-the-garage-door-opener-with-alexa\" data-content-cta data-content-slug=\"alexa\" data-content-cluster=\"garage_gdo\" data-destination-type=\"support_page\" data-cta-location=\"partner_section\">Amazon Alexa</a> brings natural voice control to your Konnected garage door. Alexa connects through Konnected Cloud and the Konnected Alexa skill, so you can bring compatible garage doors, wired sensors, and standalone alarm modes into the Alexa home you already use.</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
