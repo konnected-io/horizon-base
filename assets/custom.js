@@ -240,17 +240,73 @@ document.querySelectorAll('[data-klaviyo]').forEach(e=> {
   })
 })
 
-function tagContentCtaLinks() {
-  if (window.location.pathname !== '/pages/home-assistant') return;
+function tagContentCtaLink(link, attributes) {
+  if (!link || link.hasAttribute('data-content-cta')) return;
 
-  document
-    .querySelectorAll('a[href="/pages/replace-old-alarm-panel-or-keep-it"]')
-    .forEach(function(link) {
-      link.setAttribute('data-content-cta', '');
-      link.setAttribute('data-content-slug', 'home-assistant');
-      link.setAttribute('data-content-cluster', 'alarm_panel');
-      link.setAttribute('data-destination-type', 'guide');
-      link.setAttribute('data-cta-location', 'intro_text');
+  link.setAttribute('data-content-cta', '');
+  Object.entries(attributes).forEach(function([name, value]) {
+    link.setAttribute(name, value);
+  });
+}
+
+function tagContentCtaLinks() {
+  if (window.location.pathname === '/pages/home-assistant') {
+    document
+      .querySelectorAll('a[href="/pages/replace-old-alarm-panel-or-keep-it"]')
+      .forEach(function(link) {
+        tagContentCtaLink(link, {
+          'data-content-slug': 'home-assistant',
+          'data-content-cluster': 'alarm_panel',
+          'data-destination-type': 'guide',
+          'data-cta-location': 'intro_text',
+        });
+      });
+  }
+
+  [
+    {
+      path: '/',
+      contentSlug: 'home',
+      contentCluster: 'platform_integrations',
+      ctaLocation: 'platform_logo_row',
+    },
+    {
+      path: '/collections/smart-garage-door-openers',
+      contentSlug: 'gdo_collection',
+      contentCluster: 'garage_gdo',
+      ctaLocation: 'platform_logo_row',
+    },
+    {
+      path: '/products/smart-garage-door-opener',
+      contentSlug: 'gdo_white',
+      contentCluster: 'garage_gdo',
+      ctaLocation: 'platform_logo_row',
+    },
+    {
+      path: '/collections/smart-alarm-panels',
+      contentSlug: 'alarm_panel_collection',
+      contentCluster: 'alarm_panel',
+      ctaLocation: 'platform_logo_row',
+    },
+    {
+      path: '/pages/platforms',
+      contentSlug: 'platforms',
+      contentCluster: 'platform_integrations',
+      ctaLocation: 'platform_card',
+    },
+  ]
+    .filter(function(route) {
+      return window.location.pathname === route.path;
+    })
+    .forEach(function(route) {
+      document.querySelectorAll('a[href="/pages/alexa"]').forEach(function(link) {
+        tagContentCtaLink(link, {
+          'data-content-slug': route.contentSlug,
+          'data-content-cluster': route.contentCluster,
+          'data-destination-type': 'integration_page',
+          'data-cta-location': route.ctaLocation,
+        });
+      });
     });
 }
 
@@ -269,7 +325,8 @@ document.addEventListener('click', function(event) {
   const contentSlug = link.dataset.contentSlug || '';
   const destinationType = link.dataset.destinationType || 'other';
   const ctaLocation = link.dataset.ctaLocation || 'other';
-  const ctaLabel = link.textContent.trim().slice(0, 100);
+  const imageLabel = link.querySelector('img[alt]')?.getAttribute('alt') || '';
+  const ctaLabel = (link.textContent.trim() || link.getAttribute('aria-label') || imageLabel || link.title || '').slice(0, 100);
 
   window.gtag('event', 'content_cta_click', {
     content_url: window.location.pathname,
