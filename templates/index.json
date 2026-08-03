@@ -798,7 +798,7 @@
               "type": "image",
               "settings": {
                 "image": "shopify://shop_images/amazon_alexa.png",
-                "link": "",
+                "link": "shopify://pages/alexa",
                 "open_in_new_tab": false,
                 "image_ratio": "adapt",
                 "width": "fill",
