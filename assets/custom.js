@@ -308,6 +308,36 @@ function tagContentCtaLinks() {
         });
       });
     });
+
+  [
+    {
+      path: '/pages/alexa',
+      contentSlug: 'alexa',
+      contentCluster: 'garage_gdo',
+      destinationPath: '/pages/amazon-alexa-automation-ideas-konnected',
+      ctaLocation: 'integration_page_post_publish',
+    },
+    {
+      path: '/pages/josh-ai-konnected-garage-door-control',
+      contentSlug: 'joshai',
+      contentCluster: 'garage_gdo',
+      destinationPath: '/pages/josh-ai-garage-door-automation-ideas',
+      ctaLocation: 'integration_page_post_publish',
+    },
+  ]
+    .filter(function(route) {
+      return window.location.pathname === route.path;
+    })
+    .forEach(function(route) {
+      document.querySelectorAll(`a[href="${route.destinationPath}"]`).forEach(function(link) {
+        tagContentCtaLink(link, {
+          'data-content-slug': route.contentSlug,
+          'data-content-cluster': route.contentCluster,
+          'data-destination-type': 'guide',
+          'data-cta-location': route.ctaLocation,
+        });
+      });
+    });
 }
 
 if (document.readyState === 'loading') {
