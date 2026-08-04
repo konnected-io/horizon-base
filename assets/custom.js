@@ -318,7 +318,7 @@ function tagContentCtaLinks() {
       ctaLocation: 'integration_page_post_publish',
     },
     {
-      path: '/pages/josh-ai-konnected-garage-door-control',
+      path: '/pages/joshai',
       contentSlug: 'joshai',
       contentCluster: 'garage_gdo',
       destinationPath: '/pages/josh-ai-garage-door-automation-ideas',
