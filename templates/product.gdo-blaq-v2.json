@@ -7042,7 +7042,7 @@
               "name": "Accordion row (dynamic)",
               "settings": {
                 "heading": "What smart home platforms or apps does it work with?",
-                "content": "<p>Konnected's GDO works with Home Assistant and Hubitat via a 100% local integration using the ESPHome native API.<br/><br/><a href=\"https://chowmain.software/drivers/control4-konnected-blaq-garage-door-opener\" target=\"_blank\" title=\"https://chowmain.software/drivers/control4-konnected-blaq-garage-door-opener\">Control4 driver</a> is now available as a paid license.</p><p>It also works with SmartThings and Alexa via a connection to Konnected's free Konnected Cloud service.</p>",
+                "content": "<p>Konnected's GDO works with Home Assistant and Hubitat via a 100% local integration using the ESPHome native API.<br/><br/><a href=\"https://chowmain.software/drivers/control4-konnected-blaq-garage-door-opener\" target=\"_blank\" title=\"https://chowmain.software/drivers/control4-konnected-blaq-garage-door-opener\">Control4 driver</a> is now available as a paid license.</p><p>It also works with SmartThings and Alexa via a connection to Konnected's free Konnected Cloud service. For practical examples, read the <a href=\"/pages/amazon-alexa-automation-ideas-konnected\">Amazon Alexa automation ideas guide</a> or the <a href=\"/pages/josh-ai-garage-door-automation-ideas\">Josh.ai garage door automation ideas guide</a>.</p>",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
