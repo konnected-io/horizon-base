@@ -2897,7 +2897,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>Our integration with <a href=\"https://www.josh.ai\">Josh.ai</a> brings natural voice control to your Konnected garage door. Josh.ai connects locally over your network, so you can open, close, and stop the door — and control the blaQ's light — from a Josh.ai wall tablet, the mobile app, or just by asking. Read the <a href=\"/pages/josh-ai-garage-door-automation-ideas\" data-content-cta data-content-slug=\"joshai\" data-content-cluster=\"garage_gdo\" data-destination-type=\"guide\" data-cta-location=\"partner_section\">Josh.ai garage door automation ideas guide</a>.</p>",
+                "text": "<p>Our integration with <a href=\"https://www.josh.ai\">Josh.ai</a> brings natural voice control to your Konnected garage door. Josh.ai connects locally over your network, so you can open, close, and stop the door — and control the blaQ's light — from a Josh.ai wall tablet, the mobile app, or just by asking. Read the <a href=\"/pages/josh-ai-garage-door-automation-ideas\">Josh.ai garage door automation ideas guide</a>.</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
