@@ -265,6 +265,47 @@ function tagContentCtaLinks() {
 
   [
     {
+      path: '/collections/smart-alarm-panels',
+      contentSlug: 'alarm_panel_collection',
+      ctaLocation: 'alarm_collection_post_publish',
+    },
+    {
+      path: '/products/konnected-alarm-panel-pro-12-zone-kit',
+      contentSlug: 'alarm_panel_pro_conversion',
+      ctaLocation: 'product_page_post_publish',
+    },
+    {
+      path: '/products/konnected-alarm-panel-pro-12-zone-interface-kit',
+      contentSlug: 'alarm_panel_pro_interface',
+      ctaLocation: 'product_page_post_publish',
+    },
+    {
+      path: '/pages/home-assistant',
+      contentSlug: 'home-assistant',
+      ctaLocation: 'alarm_section_post_publish',
+    },
+  ]
+    .filter(function(route) {
+      return window.location.pathname === route.path;
+    })
+    .forEach(function(route) {
+      [
+        '/pages/reuse-old-wired-alarm-sensors-smart-home',
+        '/pages/smart-home-security-system-no-monthly-fee',
+      ].forEach(function(destinationPath) {
+        document.querySelectorAll(`a[href="${destinationPath}"]`).forEach(function(link) {
+          tagContentCtaLink(link, {
+            'data-content-slug': route.contentSlug,
+            'data-content-cluster': 'alarm_panel',
+            'data-destination-type': 'guide',
+            'data-cta-location': route.ctaLocation,
+          });
+        });
+      });
+    });
+
+  [
+    {
       path: '/',
       contentSlug: 'home',
       contentCluster: 'platform_integrations',
