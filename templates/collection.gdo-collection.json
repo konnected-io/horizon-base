@@ -48,7 +48,7 @@
           "type": "text",
           "name": "Description",
           "settings": {
-            "text": "<p>Konnected's GDOs are WiFi devices that retrofit any motorized garage door opener* to work with popular smart home platforms</p>",
+            "text": "<p>Konnected's GDOs are WiFi devices that retrofit any motorized garage door opener* to work with popular smart home platforms. Planning automations? Read the <a href=\"/pages/amazon-alexa-automation-ideas-konnected\">Amazon Alexa automation ideas guide</a> or the <a href=\"/pages/josh-ai-garage-door-automation-ideas\">Josh.ai garage door automation ideas guide</a>.</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
