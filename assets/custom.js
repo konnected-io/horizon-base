@@ -263,14 +263,6 @@ function tagContentCtaLinks() {
       });
   }
 
-  if (window.location.pathname === '/pages/josh-ai-garage-door-automation-ideas') {
-    document
-      .querySelectorAll('a[href="/pages/josh-ai-konnected-garage-door-control"], a[href="https://konnected.io/pages/josh-ai-konnected-garage-door-control"]')
-      .forEach(function(link) {
-        (link.closest('p') || link).remove();
-      });
-  }
-
   [
     {
       path: '/',
