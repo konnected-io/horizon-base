@@ -31,12 +31,21 @@
     assign sizes = '(min-width: 1024px) 1024px, ' | append: media_width_desktop | append: ', ' | append: media_width_mobile
     assign widths = '240, 352, 832, 1200'
     assign image_alt = alt_text | default: image_upload.alt
+    assign image_alt_escaped = image_alt | escape
+    assign image_alt_attribute = 'alt="' | append: image_alt_escaped | append: '"'
   %}
 
   {% assign image_style = 'width: ' | append: width | append: 'px;' %}
-  {{
-    image_upload
-    | image_url: width: 1200
-    | image_tag: widths: widths, class: class_name, style: image_style, sizes: sizes, alt: image_alt
-  }}
+  {% capture image_markup %}
+    {{
+      image_upload
+      | image_url: width: 1200
+      | image_tag: widths: widths, class: class_name, style: image_style, sizes: sizes, alt: image_alt
+    }}
+  {% endcapture %}
+  {% if image_alt != blank %}
+    {{ image_markup | replace: 'alt=""', image_alt_attribute }}
+  {% else %}
+    {{ image_markup }}
+  {% endif %}
 {%- endif -%}
