@@ -35,8 +35,6 @@
   if video_alt != blank
     assign poster_alt = video_alt
   endif
-  assign poster_alt_escaped = poster_alt | escape
-  assign poster_alt_attribute = 'alt="' | append: poster_alt_escaped | append: '"'
   assign video_autoplay = video_autoplay | default: block_settings.video_autoplay
   assign video_loop = video_loop | default: block_settings.video_loop
   assign media_width_desktop = 100 | divided_by: 2 | append: 'vw'
@@ -138,17 +136,28 @@
         data-video-src="{{ video.sources[0].url }}"
     >
     {% if video_preview_image != blank %}
-      {% capture poster_markup %}
+      {% if poster_alt != blank %}
+        <img
+          src="{{ video_preview_image | image_url: width: 3840 }}"
+          alt="{{ poster_alt | escape }}"
+          srcset="
+            {%- assign width_values = widths | split: ', ' -%}
+            {%- for poster_image_width in width_values -%}
+              {{ video_preview_image | image_url: width: poster_image_width }} {{ poster_image_width }}w{% unless forloop.last %}, {% endunless %}
+            {%- endfor -%}
+          "
+          width="{{ video_preview_image.width }}"
+          height="{{ video_preview_image.height }}"
+          loading="{{ loading }}"
+          sizes="{{ sizes }}"
+          class="deferred-media__poster-image"
+        >
+      {% else %}
         {{
           video_preview_image
           | image_url: width: 3840
-          | image_tag: widths: widths, sizes: sizes, loading: loading, class: 'deferred-media__poster-image', alt: poster_alt
+          | image_tag: widths: widths, sizes: sizes, loading: loading, class: 'deferred-media__poster-image'
         }}
-      {% endcapture %}
-      {% if poster_alt != blank %}
-        {{ poster_markup | append: '' | replace: 'alt=""', poster_alt_attribute }}
-      {% else %}
-        {{ poster_markup }}
       {% endif %}
     {% endif %}
         <noscript>
@@ -174,17 +183,28 @@
         style="--video-aspect-ratio: {{ video.aspect_ratio }}"
       >
         {% unless video_autoplay == true %}
-        {% capture poster_markup %}
+        {% if poster_alt != blank %}
+          <img
+            src="{{ video_preview_image | image_url: width: 3840 }}"
+            alt="{{ poster_alt | escape }}"
+            srcset="
+              {%- assign width_values = widths | split: ', ' -%}
+              {%- for poster_image_width in width_values -%}
+                {{ video_preview_image | image_url: width: poster_image_width }} {{ poster_image_width }}w{% unless forloop.last %}, {% endunless %}
+              {%- endfor -%}
+            "
+            width="{{ video_preview_image.width }}"
+            height="{{ video_preview_image.height }}"
+            loading="{{ loading }}"
+            sizes="{{ sizes }}"
+            class="deferred-media__poster-image"
+          >
+        {% else %}
           {{
             video_preview_image
             | image_url: width: 3840
-            | image_tag: widths: widths, sizes: sizes, loading: loading, class: 'deferred-media__poster-image', alt: poster_alt
+            | image_tag: widths: widths, sizes: sizes, loading: loading, class: 'deferred-media__poster-image'
           }}
-        {% endcapture %}
-        {% if poster_alt != blank %}
-          {{ poster_markup | append: '' | replace: 'alt=""', poster_alt_attribute }}
-        {% else %}
-          {{ poster_markup }}
         {% endif %}
         {% endunless %}
 
@@ -236,13 +256,23 @@
     style="{%- if video_style -%}{{ video_style }} {%- endif -%}--video-placeholder-width: {{ block_settings.custom_width | default: 100 }}%;"
   >
     {% if video_preview_image != blank and video_autoplay == false %}
-      {% capture poster_markup %}
-        {{ video_preview_image | image_url: width: 3840 | image_tag: widths: widths, sizes: sizes, loading: loading, alt: poster_alt }}
-      {% endcapture %}
       {% if poster_alt != blank %}
-        {{ poster_markup | append: '' | replace: 'alt=""', poster_alt_attribute }}
+        <img
+          src="{{ video_preview_image | image_url: width: 3840 }}"
+          alt="{{ poster_alt | escape }}"
+          srcset="
+            {%- assign width_values = widths | split: ', ' -%}
+            {%- for poster_image_width in width_values -%}
+              {{ video_preview_image | image_url: width: poster_image_width }} {{ poster_image_width }}w{% unless forloop.last %}, {% endunless %}
+            {%- endfor -%}
+          "
+          width="{{ video_preview_image.width }}"
+          height="{{ video_preview_image.height }}"
+          loading="{{ loading }}"
+          sizes="{{ sizes }}"
+        >
       {% else %}
-        {{ poster_markup }}
+        {{ video_preview_image | image_url: width: 3840 | image_tag: widths: widths, sizes: sizes, loading: loading }}
       {% endif %}
     {% else %}
       {{ 'hero-apparel-3' | placeholder_svg_tag }}

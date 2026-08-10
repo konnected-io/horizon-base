@@ -34,21 +34,30 @@
     if alt_text != blank
       assign image_alt = alt_text
     endif
-    assign image_alt_escaped = image_alt | escape
-    assign image_alt_attribute = 'alt="' | append: image_alt_escaped | append: '"'
   %}
 
   {% assign image_style = 'width: ' | append: width | append: 'px;' %}
-  {% capture image_markup %}
+  {% if image_alt != blank %}
+    <img
+      src="{{ image_upload | image_url: width: 1200 }}"
+      alt="{{ image_alt | escape }}"
+      srcset="
+        {%- assign width_values = widths | split: ', ' -%}
+        {%- for image_width in width_values -%}
+          {{ image_upload | image_url: width: image_width }} {{ image_width }}w{% unless forloop.last %}, {% endunless %}
+        {%- endfor -%}
+      "
+      width="{{ image_upload.width }}"
+      height="{{ image_upload.height }}"
+      class="{{ class_name }}"
+      style="{{ image_style }}"
+      sizes="{{ sizes }}"
+    >
+  {% else %}
     {{
       image_upload
       | image_url: width: 1200
-      | image_tag: widths: widths, class: class_name, style: image_style, sizes: sizes, alt: image_alt
+      | image_tag: widths: widths, class: class_name, style: image_style, sizes: sizes
     }}
-  {% endcapture %}
-  {% if image_alt != blank %}
-    {{ image_markup | append: '' | replace: 'alt=""', image_alt_attribute }}
-  {% else %}
-    {{ image_markup }}
   {% endif %}
 {%- endif -%}

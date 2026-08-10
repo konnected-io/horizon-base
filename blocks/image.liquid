@@ -40,13 +40,27 @@
   if block_settings.alt_text != blank
     assign image_alt = block_settings.alt_text
   endif
-  assign image_alt_escaped = image_alt | escape
-  assign image_alt_attribute = 'alt="' | append: image_alt_escaped | append: '"'
 %}
 
 {% capture image %}
   {%- if block_settings.image -%}
-    {% capture image_markup %}
+    {% if image_alt != blank %}
+      <img
+        src="{{ block_settings.image | image_url: width: 3840 }}"
+        alt="{{ image_alt | escape }}"
+        srcset="
+          {%- assign width_values = widths | split: ', ' -%}
+          {%- for image_width in width_values -%}
+            {{ block_settings.image | image_url: width: image_width }} {{ image_width }}w{% unless forloop.last %}, {% endunless %}
+          {%- endfor -%}
+        "
+        width="{{ block_settings.image.width }}"
+        height="{{ block_settings.image.height }}"
+        class="image-block__image border-style"
+        style="{{ image_border_style }}"
+        sizes="{{ sizes }}"
+      >
+    {% else %}
       {{
         block_settings.image
         | image_url: width: 3840
@@ -56,14 +70,8 @@
           height: block_settings.image.height,
           class: 'image-block__image border-style',
           style: image_border_style,
-          sizes: sizes,
-          alt: image_alt
+          sizes: sizes
       }}
-    {% endcapture %}
-    {% if image_alt != blank %}
-      {{ image_markup | replace: 'alt=""', image_alt_attribute }}
-    {% else %}
-      {{ image_markup }}
     {% endif %}
   {%- else -%}
     <div class="placeholder-image border-style size-style" style="{{ image_border_style }}">
