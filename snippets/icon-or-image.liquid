@@ -47,7 +47,7 @@
     }}
   {% endcapture %}
   {% if image_alt != blank %}
-    {{ image_markup | replace: 'alt=""', image_alt_attribute }}
+    {{ image_markup | append: '' | replace: 'alt=""', image_alt_attribute }}
   {% else %}
     {{ image_markup }}
   {% endif %}

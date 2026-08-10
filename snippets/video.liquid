@@ -146,7 +146,7 @@
         }}
       {% endcapture %}
       {% if poster_alt != blank %}
-        {{ poster_markup | replace: 'alt=""', poster_alt_attribute }}
+        {{ poster_markup | append: '' | replace: 'alt=""', poster_alt_attribute }}
       {% else %}
         {{ poster_markup }}
       {% endif %}
@@ -182,7 +182,7 @@
           }}
         {% endcapture %}
         {% if poster_alt != blank %}
-          {{ poster_markup | replace: 'alt=""', poster_alt_attribute }}
+          {{ poster_markup | append: '' | replace: 'alt=""', poster_alt_attribute }}
         {% else %}
           {{ poster_markup }}
         {% endif %}
@@ -240,7 +240,7 @@
         {{ video_preview_image | image_url: width: 3840 | image_tag: widths: widths, sizes: sizes, loading: loading, alt: poster_alt }}
       {% endcapture %}
       {% if poster_alt != blank %}
-        {{ poster_markup | replace: 'alt=""', poster_alt_attribute }}
+        {{ poster_markup | append: '' | replace: 'alt=""', poster_alt_attribute }}
       {% else %}
         {{ poster_markup }}
       {% endif %}

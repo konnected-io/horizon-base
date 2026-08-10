@@ -115,7 +115,7 @@
           }}
         {% endcapture %}
         {% if featured_image_alt != blank %}
-          {{ featured_image_markup | replace: 'alt=""', featured_image_alt_attribute }}
+          {{ featured_image_markup | append: '' | replace: 'alt=""', featured_image_alt_attribute }}
         {% else %}
           {{ featured_image_markup }}
         {% endif %}
@@ -148,7 +148,7 @@
             }}
           {% endcapture %}
           {% if secondary_image_alt != blank %}
-            {{ secondary_image_markup | replace: 'alt=""', secondary_image_alt_attribute }}
+            {{ secondary_image_markup | append: '' | replace: 'alt=""', secondary_image_alt_attribute }}
           {% else %}
             {{ secondary_image_markup }}
           {% endif %}
@@ -187,7 +187,7 @@
               }}
             {% endcapture %}
             {% if product_image_alt != blank %}
-              {{ product_image_markup | replace: 'alt=""', product_image_alt_attribute }}
+              {{ product_image_markup | append: '' | replace: 'alt=""', product_image_alt_attribute }}
             {% else %}
               {{ product_image_markup }}
             {% endif %}
