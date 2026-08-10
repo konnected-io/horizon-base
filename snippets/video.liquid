@@ -32,6 +32,8 @@
   assign alt = 'blocks.load_video' | t: description: video_alt | escape
   assign video_preview_image = video_preview_image | default: video.preview_image
   assign poster_alt = video_alt | default: video_preview_image.alt
+  assign poster_alt_escaped = poster_alt | escape
+  assign poster_alt_attribute = 'alt="' | append: poster_alt_escaped | append: '"'
   assign video_autoplay = video_autoplay | default: block_settings.video_autoplay
   assign video_loop = video_loop | default: block_settings.video_loop
   assign media_width_desktop = 100 | divided_by: 2 | append: 'vw'
@@ -133,11 +135,18 @@
         data-video-src="{{ video.sources[0].url }}"
     >
     {% if video_preview_image != blank %}
-      {{
-        video_preview_image
-        | image_url: width: 3840
-        | image_tag: widths: widths, sizes: sizes, loading: loading, class: 'deferred-media__poster-image', alt: poster_alt
-      }}
+      {% capture poster_markup %}
+        {{
+          video_preview_image
+          | image_url: width: 3840
+          | image_tag: widths: widths, sizes: sizes, loading: loading, class: 'deferred-media__poster-image', alt: poster_alt
+        }}
+      {% endcapture %}
+      {% if poster_alt != blank %}
+        {{ poster_markup | replace: 'alt=""', poster_alt_attribute }}
+      {% else %}
+        {{ poster_markup }}
+      {% endif %}
     {% endif %}
         <noscript>
           {{ video_tag }}
@@ -162,11 +171,18 @@
         style="--video-aspect-ratio: {{ video.aspect_ratio }}"
       >
         {% unless video_autoplay == true %}
-        {{
-          video_preview_image
-          | image_url: width: 3840
-          | image_tag: widths: widths, sizes: sizes, loading: loading, class: 'deferred-media__poster-image', alt: poster_alt
-        }}
+        {% capture poster_markup %}
+          {{
+            video_preview_image
+            | image_url: width: 3840
+            | image_tag: widths: widths, sizes: sizes, loading: loading, class: 'deferred-media__poster-image', alt: poster_alt
+          }}
+        {% endcapture %}
+        {% if poster_alt != blank %}
+          {{ poster_markup | replace: 'alt=""', poster_alt_attribute }}
+        {% else %}
+          {{ poster_markup }}
+        {% endif %}
         {% endunless %}
 
         <span class="deferred-media__poster-icon icon-play">
@@ -217,7 +233,14 @@
     style="{%- if video_style -%}{{ video_style }} {%- endif -%}--video-placeholder-width: {{ block_settings.custom_width | default: 100 }}%;"
   >
     {% if video_preview_image != blank and video_autoplay == false %}
-      {{ video_preview_image | image_url: width: 3840 | image_tag: widths: widths, sizes: sizes, loading: loading, alt: poster_alt }}
+      {% capture poster_markup %}
+        {{ video_preview_image | image_url: width: 3840 | image_tag: widths: widths, sizes: sizes, loading: loading, alt: poster_alt }}
+      {% endcapture %}
+      {% if poster_alt != blank %}
+        {{ poster_markup | replace: 'alt=""', poster_alt_attribute }}
+      {% else %}
+        {{ poster_markup }}
+      {% endif %}
     {% else %}
       {{ 'hero-apparel-3' | placeholder_svg_tag }}
     {% endif %}

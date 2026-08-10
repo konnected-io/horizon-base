@@ -82,6 +82,8 @@
       {% assign featured_image = resource.featured_media.preview_image | default: resource.featured_image %}
       {% liquid
         assign featured_image_alt = featured_image.alt | default: resource.title
+        assign featured_image_alt_escaped = featured_image_alt | escape
+        assign featured_image_alt_attribute = 'alt="' | append: featured_image_alt_escaped | append: '"'
         assign primary_focal_point_style = ''
         if resource.media[0].presentation.focal_point != blank
           assign primary_focal_point_style = 'object-position: ' | append: resource.media[0].presentation.focal_point | append: ';'
@@ -94,40 +96,56 @@
             assign ref_image_to_transition = 'imagesToTransition[]'
           endif
         %}
-        {{
-          featured_image
-          | image_url: width: image_width
-          | image_tag:
-            loading: 'lazy',
-            class: 'resource-card__image',
-            widths: widths,
-            sizes: image_sizes,
-            ref: ref_image_to_transition,
-            data-media-id: featured_image.id,
-            style: primary_focal_point_style,
-            alt: featured_image_alt
-        }}
+        {% capture featured_image_markup %}
+          {{
+            featured_image
+            | image_url: width: image_width
+            | image_tag:
+              loading: 'lazy',
+              class: 'resource-card__image',
+              widths: widths,
+              sizes: image_sizes,
+              ref: ref_image_to_transition,
+              data-media-id: featured_image.id,
+              style: primary_focal_point_style,
+              alt: featured_image_alt
+          }}
+        {% endcapture %}
+        {% if featured_image_alt != blank %}
+          {{ featured_image_markup | replace: 'alt=""', featured_image_alt_attribute }}
+        {% else %}
+          {{ featured_image_markup }}
+        {% endif %}
         {%- if image_hover and resource.media.size > 1 -%}
           {% liquid
             assign secondary_image_alt = resource.media[1].alt | default: resource.title
+            assign secondary_image_alt_escaped = secondary_image_alt | escape
+            assign secondary_image_alt_attribute = 'alt="' | append: secondary_image_alt_escaped | append: '"'
             assign secondary_focal_point_style = ''
             if resource.media[1].presentation.focal_point != blank
               assign secondary_focal_point_style = 'object-position: ' | append: resource.media[1].presentation.focal_point | append: ';'
             endif
           %}
-          {{
-            resource.media[1]
-            | image_url: width: image_width
-            | image_tag:
-              loading: 'lazy',
-              class: 'resource-card__image resource-card__image--secondary',
-              widths: widths,
-              sizes: image_sizes,
-              ref: ref_image_to_transition,
-              data-media-id: resource.media[1].id,
-              style: secondary_focal_point_style,
-              alt: secondary_image_alt
-          }}
+          {% capture secondary_image_markup %}
+            {{
+              resource.media[1]
+              | image_url: width: image_width
+              | image_tag:
+                loading: 'lazy',
+                class: 'resource-card__image resource-card__image--secondary',
+                widths: widths,
+                sizes: image_sizes,
+                ref: ref_image_to_transition,
+                data-media-id: resource.media[1].id,
+                style: secondary_focal_point_style,
+                alt: secondary_image_alt
+            }}
+          {% endcapture %}
+          {% if secondary_image_alt != blank %}
+            {{ secondary_image_markup | replace: 'alt=""', secondary_image_alt_attribute }}
+          {% else %}
+            {{ secondary_image_markup }}
+          {% endif %}
         {%- endif -%}
       {%- else -%}
         <div
@@ -142,16 +160,28 @@
         <div class="resource-card__image-wrapper">
           {% assign resource_products = resource.products | where: 'featured_image' %}
           {% for product in resource_products limit: 4 %}
-            {{
-              product.featured_image
-              | image_url: width: image_width
-              | image_tag:
-                loading: 'lazy',
-                class: 'resource-card__collection-image',
-                sizes: image_sizes,
-                widths: widths,
-                alt: product.featured_image.alt | default: product.title
-            }}
+            {% liquid
+              assign product_image_alt = product.featured_image.alt | default: product.title
+              assign product_image_alt_escaped = product_image_alt | escape
+              assign product_image_alt_attribute = 'alt="' | append: product_image_alt_escaped | append: '"'
+            %}
+            {% capture product_image_markup %}
+              {{
+                product.featured_image
+                | image_url: width: image_width
+                | image_tag:
+                  loading: 'lazy',
+                  class: 'resource-card__collection-image',
+                  sizes: image_sizes,
+                  widths: widths,
+                  alt: product_image_alt
+              }}
+            {% endcapture %}
+            {% if product_image_alt != blank %}
+              {{ product_image_markup | replace: 'alt=""', product_image_alt_attribute }}
+            {% else %}
+              {{ product_image_markup }}
+            {% endif %}
           {% endfor %}
         </div>
       {%- endif -%}
