@@ -18,6 +18,7 @@
       image_upload: block_settings.image_upload,
       width: block_settings.width,
       class_name: icon_block_class,
+      alt_text: block_settings.alt_text,
       attributes: block.shopify_attributes
     %}
   {% endcapture %}
@@ -303,6 +304,12 @@
       "type": "image_picker",
       "id": "image_upload",
       "label": "t:settings.image_icon"
+    },
+    {
+      "type": "text",
+      "id": "alt_text",
+      "label": "Alt text",
+      "info": "Describe meaningful uploaded images for accessibility. Leave blank for decorative icons."
     },
     {
       "type": "range",
