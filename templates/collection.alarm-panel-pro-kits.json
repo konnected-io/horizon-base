@@ -309,6 +309,7 @@
               "name": "t:names.image",
               "settings": {
                 "image": "shopify://shop_images/Conversion_Kit_banner_image_diagram.png",
+                "alt_text": "Diagram showing a Konnected Alarm Panel Pro conversion kit replacing a wired alarm panel",
                 "link": "",
                 "open_in_new_tab": false,
                 "image_ratio": "adapt",
@@ -606,6 +607,7 @@
               "name": "t:names.image",
               "settings": {
                 "image": "shopify://shop_images/interface_illustration_for_header.png",
+                "alt_text": "Diagram showing a Konnected Alarm Panel Pro interface module connected to an existing wired alarm panel",
                 "link": "",
                 "open_in_new_tab": false,
                 "image_ratio": "adapt",
@@ -820,6 +822,7 @@
               "settings": {
                 "icon": "price_tag",
                 "image_upload": "shopify://shop_images/homeassistant.png",
+                "alt_text": "Home Assistant logo",
                 "width": 24,
                 "use_height": true,
                 "height": 80,
@@ -884,6 +887,7 @@
               "settings": {
                 "icon": "price_tag",
                 "image_upload": "shopify://shop_images/smartthings_128556bd-bd49-48ff-820a-a53c0e22f146.png",
+                "alt_text": "SmartThings logo",
                 "width": 24,
                 "use_height": true,
                 "height": 80,
@@ -948,6 +952,7 @@
               "settings": {
                 "icon": "price_tag",
                 "image_upload": "shopify://shop_images/image_-_2026-02-16T160530.498.png",
+                "alt_text": "Hubitat logo",
                 "width": 24,
                 "use_height": true,
                 "height": 80,
@@ -1012,6 +1017,7 @@
               "settings": {
                 "icon": "price_tag",
                 "image_upload": "shopify://shop_images/amazon_alexa.png",
+                "alt_text": "Amazon Alexa logo",
                 "width": 24,
                 "use_height": true,
                 "height": 80,
@@ -1076,6 +1082,7 @@
               "settings": {
                 "icon": "price_tag",
                 "image_upload": "shopify://shop_images/homebridge_1544d3cd-a79f-431f-b0e1-e06f6fd57fb8.png",
+                "alt_text": "Homebridge logo",
                 "width": 24,
                 "use_height": true,
                 "height": 80,
@@ -1140,6 +1147,7 @@
               "settings": {
                 "icon": "price_tag",
                 "image_upload": "shopify://shop_images/control_4.png",
+                "alt_text": "Control4 logo",
                 "width": 24,
                 "use_height": true,
                 "height": 80,
@@ -4531,6 +4539,7 @@
               "name": "t:names.image",
               "settings": {
                 "image": "shopify://shop_images/02166205cdfec617ba45c6979d68e164.png",
+                "alt_text": "Home floor plan showing wired sensors connected to a Konnected smart alarm panel",
                 "link": "",
                 "open_in_new_tab": false,
                 "image_ratio": "adapt",
@@ -5649,6 +5658,7 @@
               "name": "t:names.image",
               "settings": {
                 "image": "shopify://shop_images/Group_3490_e680ebf9-b784-4033-9a07-63ff6331ab20.png",
+                "alt_text": "Annotated Konnected Alarm Panel Pro board showing ports and connectors",
                 "link": "",
                 "open_in_new_tab": false,
                 "image_ratio": "adapt",
