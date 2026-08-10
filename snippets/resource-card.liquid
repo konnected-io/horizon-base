@@ -81,7 +81,10 @@
       {% endcomment %}
       {% assign featured_image = resource.featured_media.preview_image | default: resource.featured_image %}
       {% liquid
-        assign featured_image_alt = featured_image.alt | default: resource.title
+        assign featured_image_alt = featured_image.alt
+        if featured_image_alt == blank
+          assign featured_image_alt = resource.title
+        endif
         assign featured_image_alt_escaped = featured_image_alt | escape
         assign featured_image_alt_attribute = 'alt="' | append: featured_image_alt_escaped | append: '"'
         assign primary_focal_point_style = ''
@@ -118,7 +121,10 @@
         {% endif %}
         {%- if image_hover and resource.media.size > 1 -%}
           {% liquid
-            assign secondary_image_alt = resource.media[1].alt | default: resource.title
+            assign secondary_image_alt = resource.media[1].alt
+            if secondary_image_alt == blank
+              assign secondary_image_alt = resource.title
+            endif
             assign secondary_image_alt_escaped = secondary_image_alt | escape
             assign secondary_image_alt_attribute = 'alt="' | append: secondary_image_alt_escaped | append: '"'
             assign secondary_focal_point_style = ''
@@ -161,7 +167,10 @@
           {% assign resource_products = resource.products | where: 'featured_image' %}
           {% for product in resource_products limit: 4 %}
             {% liquid
-              assign product_image_alt = product.featured_image.alt | default: product.title
+              assign product_image_alt = product.featured_image.alt
+              if product_image_alt == blank
+                assign product_image_alt = product.title
+              endif
               assign product_image_alt_escaped = product_image_alt | escape
               assign product_image_alt_attribute = 'alt="' | append: product_image_alt_escaped | append: '"'
             %}

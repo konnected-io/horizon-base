@@ -31,7 +31,10 @@
   assign video_alt = video_alt | default: video.alt
   assign alt = 'blocks.load_video' | t: description: video_alt | escape
   assign video_preview_image = video_preview_image | default: video.preview_image
-  assign poster_alt = video_alt | default: video_preview_image.alt
+  assign poster_alt = video_preview_image.alt
+  if video_alt != blank
+    assign poster_alt = video_alt
+  endif
   assign poster_alt_escaped = poster_alt | escape
   assign poster_alt_attribute = 'alt="' | append: poster_alt_escaped | append: '"'
   assign video_autoplay = video_autoplay | default: block_settings.video_autoplay
