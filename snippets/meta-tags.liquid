@@ -24,8 +24,13 @@
   assign og_type = 'website'
   assign seo_description = page_description
 
-  if request.page_type == 'page' and page.metafields.global.description_tag != blank
-    assign seo_description = page.metafields.global.description_tag.value | default: page.metafields.global.description_tag
+  if request.page_type == 'page'
+    if page.metafields.global.description_tag != blank
+      assign seo_description = page.metafields.global.description_tag.value | default: page.metafields.global.description_tag
+    elsif page.handle == 'replace-old-alarm-panel-or-keep-it'
+      # Page SEO fields are not exposed through Admin GraphQL, so keep this override scoped to the affected guide.
+      assign seo_description = 'Decide whether to replace your old alarm panel or keep it connected with Konnected. Compare conversion and interface paths before choosing a kit.'
+    endif
   endif
 
   assign og_description = seo_description | default: shop.description | default: shop.name
