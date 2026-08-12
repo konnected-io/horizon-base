@@ -1,0 +1,733 @@
+{% liquid
+  assign default_fee = section.settings.default_monthly_fee | default: 25
+  assign default_years = section.settings.default_years | default: 5
+  assign default_upfront = section.settings.default_upfront_cost | default: 200
+  assign default_subscription_total = default_fee | times: 12 | times: default_years
+  assign default_savings = default_subscription_total | minus: default_upfront
+  assign ten_year_min_savings = 20 | times: 12 | times: 10 | minus: default_upfront
+  assign ten_year_max_savings = 50 | times: 12 | times: 10 | minus: default_upfront
+  assign default_fee_cents = default_fee | times: 100
+  assign default_upfront_cents = default_upfront | times: 100
+  assign default_subscription_total_cents = default_subscription_total | times: 100
+  assign default_savings_cents = default_savings | times: 100
+  assign ten_year_min_savings_cents = ten_year_min_savings | times: 100
+  assign ten_year_max_savings_cents = ten_year_max_savings | times: 100
+%}
+
+<section
+  class="savings-calculator-section spacing-style"
+  data-savings-calculator-section
+  data-content-cluster="alarm_panel"
+  data-content-slug="{{ section.settings.tracking_slug | escape }}"
+  style="{% render 'spacing-padding', settings: section.settings %}"
+>
+  <div class="savings-calculator-section__inner">
+    {% if section.settings.show_quick_answer %}
+      <div class="savings-calculator-quick-answer">
+        {% if section.settings.quick_answer_eyebrow != blank %}
+          <p class="savings-calculator-quick-answer__eyebrow">{{ section.settings.quick_answer_eyebrow }}</p>
+        {% endif %}
+        <h2>{{ section.settings.quick_answer_heading }}</h2>
+        <p>
+          Switching from a paid security subscription to a no-monthly-fee system like Konnected can save about
+          <strong>{{ ten_year_min_savings_cents | money_without_trailing_zeros }} to {{ ten_year_max_savings_cents | money_without_trailing_zeros }} over 10 years</strong>
+          using the comparison range below. The estimate assumes competitor monitoring fees from $20 to $50 per month and a
+          {{ default_upfront_cents | money_without_trailing_zeros }} one-time Konnected setup estimate.
+        </p>
+      </div>
+    {% endif %}
+
+    <div class="savings-calculator-section__header">
+      <p class="savings-calculator-section__eyebrow">{{ section.settings.eyebrow }}</p>
+      <h2>{{ section.settings.heading }}</h2>
+      <p>{{ section.settings.subheading }}</p>
+    </div>
+
+    <div
+      class="savings-calculator"
+      data-savings-calculator
+      data-default-fee="{{ default_fee }}"
+      data-default-years="{{ default_years }}"
+      data-default-upfront="{{ default_upfront }}"
+      data-tracking-slug="{{ section.settings.tracking_slug | escape }}"
+      data-cta-location="{{ section.settings.cta_location | escape }}"
+    >
+      <div class="savings-calculator__presets" aria-label="Estimated monthly fee presets">
+        <button type="button" data-preset-name="Ring" data-preset-fee="20">Ring $20</button>
+        <button type="button" data-preset-name="SimpliSafe" data-preset-fee="23">SimpliSafe $23</button>
+        <button type="button" data-preset-name="ADT" data-preset-fee="25">ADT $25</button>
+        <button type="button" data-preset-name="Vivint" data-preset-fee="30">Vivint $30</button>
+        <button type="button" data-preset-name="ADT Premium" data-preset-fee="45">ADT Premium $45</button>
+        <button type="button" data-preset-name="Frontpoint" data-preset-fee="50">Frontpoint $50</button>
+        <button type="button" data-preset-name="Other" data-preset-fee="0">Other</button>
+      </div>
+
+      <div class="savings-calculator__controls">
+        <label>
+          <span>Their monthly fee</span>
+          <input data-savings-fee type="range" min="0" max="60" step="1" value="{{ default_fee }}" aria-label="Their monthly fee">
+          <strong data-savings-fee-output>{{ default_fee_cents | money_without_trailing_zeros }}</strong>
+        </label>
+        <label>
+          <span>Years you keep it</span>
+          <input data-savings-years type="range" min="1" max="10" step="1" value="{{ default_years }}" aria-label="Years you keep it">
+          <strong data-savings-years-output>{{ default_years }} yrs</strong>
+        </label>
+        <label>
+          <span>Konnected setup (one-time)</span>
+          <input data-savings-upfront type="range" min="100" max="500" step="10" value="{{ default_upfront }}" aria-label="Konnected one-time setup cost">
+          <strong data-savings-upfront-output>{{ default_upfront_cents | money_without_trailing_zeros }}</strong>
+        </label>
+      </div>
+
+      <div class="savings-calculator__metrics" aria-live="polite">
+        <div class="savings-calculator__metric">
+          <span>They pay in fees</span>
+          <strong data-savings-subscription-total>{{ default_subscription_total_cents | money_without_trailing_zeros }}</strong>
+        </div>
+        <div class="savings-calculator__metric">
+          <span>Konnected one-time</span>
+          <strong data-savings-konnected-total>{{ default_upfront_cents | money_without_trailing_zeros }}</strong>
+        </div>
+        <div class="savings-calculator__metric savings-calculator__metric--save">
+          <span>You save</span>
+          <strong data-savings-total>{{ default_savings_cents | money_without_trailing_zeros }}</strong>
+        </div>
+      </div>
+
+      <p class="visually-hidden" data-savings-summary>
+        With a {{ default_fee_cents | money_without_trailing_zeros }} monthly fee over {{ default_years }} years and a
+        {{ default_upfront_cents | money_without_trailing_zeros }} one-time Konnected setup, estimated savings are
+        {{ default_savings_cents | money_without_trailing_zeros }}.
+      </p>
+
+      <div class="savings-calculator__legend" aria-hidden="true">
+        <span><i class="savings-calculator__dot savings-calculator__dot--subscription"></i>Subscription fees</span>
+        <span><i class="savings-calculator__dot savings-calculator__dot--konnected"></i>Konnected (one-time)</span>
+      </div>
+      <div class="savings-calculator__chartbox" aria-hidden="true">
+        <canvas data-savings-chart></canvas>
+      </div>
+    </div>
+
+    <div class="savings-calculator-section__footer">
+      <p>{{ section.settings.footnote }}</p>
+      {% if section.settings.evidence_link != blank %}
+        <a
+          href="{{ section.settings.evidence_link }}"
+          data-content-cta
+          data-content-slug="{{ section.settings.tracking_slug | escape }}"
+          data-content-cluster="alarm_panel"
+          data-destination-type="guide"
+          data-cta-location="{{ section.settings.cta_location | escape }}"
+        >
+          {{ section.settings.evidence_link_text }}
+        </a>
+      {% endif %}
+      {% if section.settings.primary_cta_link != blank %}
+        <a
+          class="savings-calculator-section__cta"
+          href="{{ section.settings.primary_cta_link }}"
+          data-content-cta
+          data-content-slug="{{ section.settings.tracking_slug | escape }}"
+          data-content-cluster="alarm_panel"
+          data-destination-type="{{ section.settings.primary_cta_destination_type | escape }}"
+          data-cta-location="{{ section.settings.cta_location | escape }}"
+        >
+          {{ section.settings.primary_cta_text }}
+        </a>
+      {% elsif template.name == 'product' and section.settings.primary_cta_text != blank %}
+        <button
+          class="savings-calculator-section__cta"
+          type="button"
+          data-savings-scroll-product-form
+        >
+          {{ section.settings.primary_cta_text }}
+        </button>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .savings-calculator-section {
+    background: rgb(var(--color-background));
+  }
+
+  .savings-calculator-section__inner {
+    width: min(100% - 32px, 640px);
+    margin: 0 auto;
+  }
+
+  .savings-calculator-quick-answer {
+    margin-bottom: 28px;
+    padding: 20px;
+    border: 1px solid rgba(var(--color-foreground), 0.14);
+    border-radius: 8px;
+    background: rgba(var(--color-foreground), 0.035);
+  }
+
+  .savings-calculator-quick-answer__eyebrow,
+  .savings-calculator-section__eyebrow {
+    margin: 0 0 8px;
+    color: rgba(var(--color-foreground), 0.68);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+
+  .savings-calculator-quick-answer h2,
+  .savings-calculator-section__header h2 {
+    margin: 0 0 8px;
+    font-size: clamp(1.55rem, 2.4vw, 2.15rem);
+    line-height: 1.15;
+  }
+
+  .savings-calculator-quick-answer p,
+  .savings-calculator-section__header p,
+  .savings-calculator-section__footer p {
+    margin: 0;
+    color: rgba(var(--color-foreground), 0.72);
+    line-height: 1.55;
+  }
+
+  .savings-calculator-section__header {
+    margin-bottom: 20px;
+  }
+
+  .savings-calculator {
+    padding: 22px;
+    border: 1px solid rgba(var(--color-foreground), 0.12);
+    border-radius: 8px;
+    background: #f6f6f4;
+    color: #1a1a1a;
+  }
+
+  .savings-calculator__presets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+
+  .savings-calculator__presets button {
+    min-height: 36px;
+    padding: 6px 12px;
+    border: 1px solid #d8d8d2;
+    border-radius: 8px;
+    background: #fff;
+    color: #1a1a1a;
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.86rem;
+  }
+
+  .savings-calculator__presets button[aria-pressed='true'],
+  .savings-calculator__presets button:hover {
+    border-color: #185fa5;
+    box-shadow: 0 0 0 1px #185fa5;
+  }
+
+  .savings-calculator__controls {
+    display: grid;
+    gap: 12px;
+  }
+
+  .savings-calculator__controls label {
+    display: grid;
+    grid-template-columns: minmax(132px, 1fr) minmax(160px, 2fr) 64px;
+    gap: 12px;
+    align-items: center;
+    color: #5c5c5c;
+    font-size: 0.95rem;
+  }
+
+  .savings-calculator__controls input[type='range'] {
+    width: 100%;
+    accent-color: #185fa5;
+  }
+
+  .savings-calculator__controls strong {
+    color: #1a1a1a;
+    text-align: right;
+  }
+
+  .savings-calculator__metrics {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    margin: 18px 0;
+  }
+
+  .savings-calculator__metric {
+    min-width: 0;
+    padding: 13px;
+    border: 1px solid #e0e0dc;
+    border-radius: 8px;
+    background: #fff;
+  }
+
+  .savings-calculator__metric span {
+    display: block;
+    margin-bottom: 4px;
+    color: #5c5c5c;
+    font-size: 0.78rem;
+  }
+
+  .savings-calculator__metric strong {
+    display: block;
+    color: #1a1a1a;
+    font-size: clamp(1.3rem, 2vw, 1.55rem);
+    line-height: 1.1;
+    overflow-wrap: anywhere;
+  }
+
+  .savings-calculator__metric--save {
+    border-color: #bfe0d3;
+    background: #e7f3ee;
+  }
+
+  .savings-calculator__metric--save span,
+  .savings-calculator__metric--save strong {
+    color: #0f6e56;
+  }
+
+  .savings-calculator__legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin: 6px 2px 4px;
+    color: #5c5c5c;
+    font-size: 0.78rem;
+  }
+
+  .savings-calculator__legend span {
+    display: inline-flex;
+    gap: 6px;
+    align-items: center;
+  }
+
+  .savings-calculator__dot {
+    display: inline-block;
+    width: 12px;
+    height: 3px;
+    border-radius: 2px;
+  }
+
+  .savings-calculator__dot--subscription {
+    background: #993c1d;
+  }
+
+  .savings-calculator__dot--konnected {
+    background: #0f6e56;
+  }
+
+  .savings-calculator__chartbox {
+    height: 210px;
+  }
+
+  .savings-calculator__chartbox canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .savings-calculator-section__footer {
+    display: grid;
+    gap: 10px;
+    margin-top: 16px;
+    color: rgba(var(--color-foreground), 0.72);
+    font-size: 0.86rem;
+  }
+
+  .savings-calculator-section__footer a {
+    width: fit-content;
+  }
+
+  .savings-calculator-section__cta {
+    display: inline-flex;
+    align-items: center;
+    min-height: 40px;
+    padding: 8px 14px;
+    border: 0;
+    border-radius: 8px;
+    background: rgb(var(--color-foreground));
+    color: rgb(var(--color-background));
+    cursor: pointer;
+    font: inherit;
+    text-decoration: none;
+  }
+
+  @media (max-width: 560px) {
+    .savings-calculator-section__inner {
+      width: min(100% - 24px, 640px);
+    }
+
+    .savings-calculator {
+      padding: 16px;
+    }
+
+    .savings-calculator__controls label,
+    .savings-calculator__metrics {
+      grid-template-columns: 1fr;
+    }
+
+    .savings-calculator__controls strong {
+      text-align: left;
+    }
+  }
+{% endstylesheet %}
+
+{% javascript %}
+  (function() {
+    var money = function(value) {
+      return new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+        maximumFractionDigits: 0,
+      }).format(Math.round(value));
+    };
+
+    function pushSavingsEvent(calculator, eventName, detail) {
+      var payload = Object.assign(
+        {
+          event: eventName,
+          content_slug: calculator.dataset.trackingSlug || 'savings_calculator',
+          content_cluster: 'alarm_panel',
+          cta_location: calculator.dataset.ctaLocation || 'savings_calculator',
+        },
+        detail
+      );
+
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push(payload);
+    }
+
+    function drawChart(canvas, monthlyFee, years, upfront) {
+      if (!canvas || !canvas.getContext) return;
+      var ctx = canvas.getContext('2d');
+      var dpr = window.devicePixelRatio || 1;
+      var width = canvas.clientWidth;
+      var height = canvas.clientHeight;
+      canvas.width = width * dpr;
+      canvas.height = height * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      ctx.clearRect(0, 0, width, height);
+
+      var padLeft = 56;
+      var padRight = 14;
+      var padTop = 12;
+      var padBottom = 26;
+      var plotWidth = width - padLeft - padRight;
+      var plotHeight = height - padTop - padBottom;
+      var maxY = Math.max(monthlyFee * 12 * years, upfront) * 1.12 || 1;
+      var x = function(year) {
+        return padLeft + (year / years) * plotWidth;
+      };
+      var y = function(value) {
+        return padTop + plotHeight - (value / maxY) * plotHeight;
+      };
+
+      ctx.font = '11px -apple-system, BlinkMacSystemFont, sans-serif';
+      ctx.lineWidth = 1;
+      for (var i = 0; i <= 4; i += 1) {
+        var val = (maxY * i) / 4;
+        var yy = y(val);
+        ctx.strokeStyle = '#e4e4e4';
+        ctx.beginPath();
+        ctx.moveTo(padLeft, yy);
+        ctx.lineTo(width - padRight, yy);
+        ctx.stroke();
+        ctx.fillStyle = '#5c5c5c';
+        ctx.textAlign = 'right';
+        ctx.fillText('$' + Math.round(val).toLocaleString(), padLeft - 6, yy + 3);
+      }
+
+      ctx.textAlign = 'center';
+      ctx.fillStyle = '#5c5c5c';
+      var xStep = years <= 6 ? 1 : Math.ceil(years / 6);
+      for (var year = 0; year <= years; year += xStep) {
+        ctx.fillText(year, x(year), height - 8);
+      }
+
+      ctx.strokeStyle = '#993c1d';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      for (var subYear = 0; subYear <= years; subYear += 1) {
+        var px = x(subYear);
+        var py = y(monthlyFee * 12 * subYear);
+        if (subYear === 0) {
+          ctx.moveTo(px, py);
+        } else {
+          ctx.lineTo(px, py);
+        }
+      }
+      ctx.stroke();
+
+      ctx.strokeStyle = '#0f6e56';
+      ctx.beginPath();
+      ctx.moveTo(x(0), y(upfront));
+      ctx.lineTo(x(years), y(upfront));
+      ctx.stroke();
+    }
+
+    function initCalculator(calculator) {
+      var feeInput = calculator.querySelector('[data-savings-fee]');
+      var yearsInput = calculator.querySelector('[data-savings-years]');
+      var upfrontInput = calculator.querySelector('[data-savings-upfront]');
+      var chart = calculator.querySelector('[data-savings-chart]');
+      var presetButtons = calculator.querySelectorAll('[data-preset-fee]');
+
+      if (!feeInput || !yearsInput || !upfrontInput) return;
+
+      function update(options) {
+        var monthlyFee = Number(feeInput.value);
+        var years = Number(yearsInput.value);
+        var upfront = Number(upfrontInput.value);
+        var subscriptionTotal = monthlyFee * 12 * years;
+        var savingsTotal = subscriptionTotal - upfront;
+
+        calculator.querySelector('[data-savings-fee-output]').textContent = money(monthlyFee);
+        calculator.querySelector('[data-savings-years-output]').textContent = years + ' yr' + (years === 1 ? '' : 's');
+        calculator.querySelector('[data-savings-upfront-output]').textContent = money(upfront);
+        calculator.querySelector('[data-savings-subscription-total]').textContent = money(subscriptionTotal);
+        calculator.querySelector('[data-savings-konnected-total]').textContent = money(upfront);
+        calculator.querySelector('[data-savings-total]').textContent = money(savingsTotal);
+        calculator.querySelector('[data-savings-summary]').textContent =
+          'With a ' +
+          money(monthlyFee) +
+          ' monthly fee over ' +
+          years +
+          ' years and a ' +
+          money(upfront) +
+          ' one-time Konnected setup, estimated savings are ' +
+          money(savingsTotal) +
+          '.';
+
+        drawChart(chart, monthlyFee, years, upfront);
+
+        if (options && options.track) {
+          pushSavingsEvent(calculator, 'savings_calculated', {
+            monthly_fee: monthlyFee,
+            years: years,
+            konnected_upfront: upfront,
+            subscription_total: subscriptionTotal,
+            savings_total: savingsTotal,
+          });
+        }
+      }
+
+      presetButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+          feeInput.value = button.dataset.presetFee;
+          presetButtons.forEach(function(presetButton) {
+            presetButton.setAttribute('aria-pressed', presetButton === button ? 'true' : 'false');
+          });
+          pushSavingsEvent(calculator, 'competitor_selected', {
+            competitor: button.dataset.presetName,
+            monthly_fee: Number(button.dataset.presetFee),
+          });
+          update({ track: true });
+          feeInput.focus();
+        });
+      });
+
+      [feeInput, yearsInput, upfrontInput].forEach(function(input) {
+        input.addEventListener('input', function() {
+          update({ track: true });
+        });
+      });
+
+      var productFormButton = calculator
+        .closest('[data-savings-calculator-section]')
+        .querySelector('[data-savings-scroll-product-form]');
+      if (productFormButton) {
+        productFormButton.addEventListener('click', function() {
+          var productForm = document.querySelector('product-form-component, .buy-buttons-block, form[action*="/cart/add"]');
+          if (productForm) {
+            productForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        });
+      }
+
+      window.addEventListener('resize', function() {
+        update();
+      });
+
+      update();
+    }
+
+    document.querySelectorAll('[data-savings-calculator]').forEach(initCalculator);
+  })();
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "Savings calculator",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_quick_answer",
+      "label": "Show AEO quick answer",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "quick_answer_eyebrow",
+      "label": "Quick answer eyebrow",
+      "default": "Quick answer"
+    },
+    {
+      "type": "text",
+      "id": "quick_answer_heading",
+      "label": "Quick answer heading",
+      "default": "How much can a no-monthly-fee security system save?"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "No monthly fee savings"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "How much you save without a monthly fee"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Enter what a security service charges per month and see what you would save over time versus a one-time Konnected setup."
+    },
+    {
+      "type": "range",
+      "id": "default_monthly_fee",
+      "label": "Default monthly fee",
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "unit": "$",
+      "default": 25
+    },
+    {
+      "type": "range",
+      "id": "default_years",
+      "label": "Default years",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "default_upfront_cost",
+      "label": "Default Konnected setup",
+      "min": 100,
+      "max": 500,
+      "step": 10,
+      "unit": "$",
+      "default": 200
+    },
+    {
+      "type": "textarea",
+      "id": "footnote",
+      "label": "Footnote",
+      "default": "Estimates are for comparison only. Competitor fees can change, and your actual Konnected setup cost depends on the equipment you choose."
+    },
+    {
+      "type": "url",
+      "id": "evidence_link",
+      "label": "Evidence link"
+    },
+    {
+      "type": "text",
+      "id": "evidence_link_text",
+      "label": "Evidence link text",
+      "default": "How we calculated this"
+    },
+    {
+      "type": "url",
+      "id": "primary_cta_link",
+      "label": "Primary CTA link"
+    },
+    {
+      "type": "text",
+      "id": "primary_cta_text",
+      "label": "Primary CTA text",
+      "default": "Find your no-fee system"
+    },
+    {
+      "type": "select",
+      "id": "primary_cta_destination_type",
+      "label": "Primary CTA destination type",
+      "options": [
+        {
+          "value": "collection",
+          "label": "Collection"
+        },
+        {
+          "value": "product",
+          "label": "Product"
+        },
+        {
+          "value": "quiz",
+          "label": "Quiz"
+        },
+        {
+          "value": "guide",
+          "label": "Guide"
+        }
+      ],
+      "default": "collection"
+    },
+    {
+      "type": "text",
+      "id": "tracking_slug",
+      "label": "Tracking slug",
+      "default": "savings_calculator"
+    },
+    {
+      "type": "text",
+      "id": "cta_location",
+      "label": "CTA location",
+      "default": "savings_calculator"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    }
+  ],
+  "presets": [
+    {
+      "name": "Savings calculator",
+      "category": "AEO"
+    }
+  ],
+  "enabled_on": {
+    "templates": ["product", "collection", "page"]
+  }
+}
+{% endschema %}

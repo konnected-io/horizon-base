@@ -6970,7 +6970,7 @@
               "name": "Accordion row (dynamic)",
               "settings": {
                 "heading": "How does GDO blaQ compare with ratgdo?",
-                "content": "<p>GDO blaQ builds on the same open-source Security+ idea that made ratgdo popular, then turns it into a finished Konnected product with easier setup, broader smart home integrations, support, Amazon availability, returns, warranty, and safety compliance for automated garage-door control. <a href=\"/pages/ratgdo-vs-konnected-gdo-blaq\" data-content-cta data-content-slug=\"gdo-blaq\" data-content-cluster=\"garage_gdo\" data-destination-type=\"guide\" data-cta-location=\"product_faq\">Read the full ratgdo vs GDO blaQ comparison</a>.</p>",
+                "content": "<p>GDO blaQ builds on the same open-source Security+ idea that made ratgdo popular, then turns it into a finished Konnected product with easier setup, broader smart home integrations, support, Amazon availability, returns, warranty, and safety compliance for automated garage-door control. <a href=\"/pages/ratgdo-vs-konnected-gdo-blaq\">Read the full ratgdo vs GDO blaQ comparison</a>.</p>",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -7493,7 +7493,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>GDO blaQ is the Konnected garage controller for Chamberlain, LiftMaster, Craftsman, and Merlin openers that use supported Security+ or Security+ 2.0 technology.</p><p>It bypasses the myQ cloud entirely and is built for local-first Home Assistant garage control. It is not a universal replacement for every myQ-branded opener, so check compatibility before buying.</p><p>If your opener uses a dry-contact wall-button path, or if you are not sure which product fits, compare the Konnected GDO family before choosing.</p><p><a href=\"/pages/myq-home-assistant-alternative\" data-content-cta data-content-slug=\"gdo-blaq\" data-content-cluster=\"garage_gdo\" data-destination-type=\"guide\" data-cta-location=\"myq_home_assistant_answer\">Read the myQ + Home Assistant replacement guide</a> or <a href=\"/collections/smart-garage-door-openers\" data-content-cta data-content-slug=\"gdo-blaq\" data-content-cluster=\"garage_gdo\" data-destination-type=\"collection\" data-cta-location=\"myq_home_assistant_answer\">find the right Konnected garage door opener</a>.</p>",
+            "text": "<p>GDO blaQ is the Konnected garage controller for Chamberlain, LiftMaster, Craftsman, and Merlin openers that use supported Security+ or Security+ 2.0 technology.</p><p>It bypasses the myQ cloud entirely and is built for local-first Home Assistant garage control. It is not a universal replacement for every myQ-branded opener, so check compatibility before buying.</p><p>If your opener uses a dry-contact wall-button path, or if you are not sure which product fits, compare the Konnected GDO family before choosing.</p><p><a href=\"/pages/myq-home-assistant-alternative\">Read the myQ + Home Assistant replacement guide</a> or <a href=\"/collections/smart-garage-door-openers\">find the right Konnected garage door opener</a>.</p>",
             "width": "100%",
             "max_width": "narrow",
             "alignment": "left",
