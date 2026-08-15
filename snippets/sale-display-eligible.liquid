@@ -1,0 +1,33 @@
+{%- doc -%}
+  Outputs whether a product should show the automatic sale display.
+
+  @param {product} product_resource - The product to evaluate
+{%- enddoc -%}
+
+{%- liquid
+  assign sale_display_eligible = false
+  assign sale_collection_handle = 'shop-now'
+
+  if product_resource != blank and product_resource.available and product_resource.type != 'Wholesale'
+    assign customer_is_b2b = false
+
+    if customer and customer.b2b?
+      assign customer_is_b2b = true
+    endif
+
+    unless customer_is_b2b
+      if collection.handle == sale_collection_handle or template.name == 'product'
+        assign sale_display_eligible = true
+      else
+        for product_collection in product_resource.collections
+          if product_collection.handle == sale_collection_handle
+            assign sale_display_eligible = true
+            break
+          endif
+        endfor
+      endif
+    endunless
+  endif
+
+  echo sale_display_eligible
+-%}
