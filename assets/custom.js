@@ -249,168 +249,197 @@ function tagContentCtaLink(link, attributes) {
   });
 }
 
-function tagContentCtaLinks() {
-  if (window.location.pathname === '/pages/home-assistant') {
-    document
-      .querySelectorAll('a[href="/pages/replace-old-alarm-panel-or-keep-it"]')
-      .forEach(function(link) {
-        tagContentCtaLink(link, {
-          'data-content-slug': 'home-assistant',
-          'data-content-cluster': 'alarm_panel',
-          'data-destination-type': 'guide',
-          'data-cta-location': 'intro_text',
-        });
-      });
+const CONTENT_CTA_ROUTES = [
+  {
+    sourcePath: '/pages/home-assistant',
+    contentSlug: 'home-assistant',
+    contentCluster: 'alarm_panel',
+    destinationType: 'guide',
+    ctaLocation: 'intro_text',
+    destinationPaths: ['/pages/replace-old-alarm-panel-or-keep-it'],
+  },
+  {
+    sourcePath: '/collections/smart-alarm-panels',
+    contentSlug: 'alarm_panel_collection',
+    contentCluster: 'alarm_panel',
+    destinationType: 'guide',
+    ctaLocation: 'alarm_collection_post_publish',
+    destinationPaths: [
+      '/pages/reuse-old-wired-alarm-sensors-smart-home',
+      '/pages/smart-home-security-system-no-monthly-fee',
+    ],
+  },
+  {
+    sourcePath: '/products/konnected-alarm-panel-pro-12-zone-kit',
+    contentSlug: 'alarm_panel_pro_conversion',
+    contentCluster: 'alarm_panel',
+    destinationType: 'guide',
+    ctaLocation: 'product_page_post_publish',
+    destinationPaths: [
+      '/pages/reuse-old-wired-alarm-sensors-smart-home',
+      '/pages/smart-home-security-system-no-monthly-fee',
+    ],
+  },
+  {
+    sourcePath: '/products/konnected-alarm-panel-pro-12-zone-interface-kit',
+    contentSlug: 'alarm_panel_pro_interface',
+    contentCluster: 'alarm_panel',
+    destinationType: 'guide',
+    ctaLocation: 'product_page_post_publish',
+    destinationPaths: [
+      '/pages/reuse-old-wired-alarm-sensors-smart-home',
+      '/pages/smart-home-security-system-no-monthly-fee',
+    ],
+  },
+  {
+    sourcePath: '/pages/home-assistant',
+    contentSlug: 'home-assistant',
+    contentCluster: 'alarm_panel',
+    destinationType: 'guide',
+    ctaLocation: 'alarm_section_post_publish',
+    destinationPaths: [
+      '/pages/reuse-old-wired-alarm-sensors-smart-home',
+      '/pages/smart-home-security-system-no-monthly-fee',
+    ],
+  },
+  {
+    sourcePath: '/',
+    contentSlug: 'home',
+    contentCluster: 'platform_integrations',
+    destinationType: 'integration_page',
+    ctaLocation: 'platform_logo_row',
+    destinationPaths: ['/pages/alexa'],
+  },
+  {
+    sourcePath: '/collections/smart-garage-door-openers',
+    contentSlug: 'gdo_collection',
+    contentCluster: 'garage_gdo',
+    destinationType: 'integration_page',
+    ctaLocation: 'platform_logo_row',
+    destinationPaths: ['/pages/alexa'],
+  },
+  {
+    sourcePath: '/products/smart-garage-door-opener',
+    contentSlug: 'gdo_white',
+    contentCluster: 'garage_gdo',
+    destinationType: 'integration_page',
+    ctaLocation: 'platform_logo_row',
+    destinationPaths: ['/pages/alexa'],
+  },
+  {
+    sourcePath: '/collections/smart-alarm-panels',
+    contentSlug: 'alarm_panel_collection',
+    contentCluster: 'alarm_panel',
+    destinationType: 'integration_page',
+    ctaLocation: 'platform_logo_row',
+    destinationPaths: ['/pages/alexa'],
+  },
+  {
+    sourcePath: '/pages/platforms',
+    contentSlug: 'platforms',
+    contentCluster: 'platform_integrations',
+    destinationType: 'integration_page',
+    ctaLocation: 'platform_card',
+    destinationPaths: ['/pages/alexa'],
+  },
+  {
+    sourcePath: '/pages/alexa',
+    contentSlug: 'alexa',
+    contentCluster: 'garage_gdo',
+    destinationType: 'guide',
+    ctaLocation: 'integration_page_post_publish',
+    destinationPaths: ['/pages/amazon-alexa-automation-ideas-konnected'],
+  },
+  {
+    sourcePath: '/collections/smart-garage-door-openers',
+    contentSlug: 'gdo_collection',
+    contentCluster: 'garage_gdo',
+    destinationType: 'guide',
+    ctaLocation: 'collection_intro',
+    destinationPaths: [
+      '/pages/amazon-alexa-automation-ideas-konnected',
+      '/pages/josh-ai-garage-door-automation-ideas',
+    ],
+  },
+  {
+    sourcePath: '/products/smart-garage-door-opener',
+    contentSlug: 'gdo_white',
+    contentCluster: 'garage_gdo',
+    destinationType: 'guide',
+    ctaLocation: 'platform_faq',
+    destinationPaths: ['/pages/amazon-alexa-automation-ideas-konnected'],
+  },
+  {
+    sourcePath: '/products/smart-garage-door-opener-blaq-myq-alternative',
+    contentSlug: 'gdo_blaq',
+    contentCluster: 'garage_gdo',
+    destinationType: 'guide',
+    ctaLocation: 'platform_faq',
+    destinationPaths: [
+      '/pages/amazon-alexa-automation-ideas-konnected',
+      '/pages/josh-ai-garage-door-automation-ideas',
+    ],
+  },
+  {
+    sourcePath: '/pages/joshai',
+    contentSlug: 'joshai',
+    contentCluster: 'garage_gdo',
+    destinationType: 'guide',
+    ctaLocation: 'integration_page_post_publish',
+    destinationPaths: ['/pages/josh-ai-garage-door-automation-ideas'],
+  },
+  {
+    sourcePath: '/pages/usb-c-pd-vs-12v-to-5v-usb-power-converter',
+    contentSlug: 'usb-c-pd-vs-12v-to-5v-usb-power-converter',
+    contentCluster: 'power_accessories',
+    destinationType: 'product',
+    ctaLocation: function(link) {
+      return link.closest('table') ? 'comparison_table' : 'inline_answer';
+    },
+    destinationPaths: [
+      '/products/usb-pd-type-c-dc-fast-charge-power-converter',
+      '/products/12v-to-5v-usb-power-converter',
+    ],
+  },
+];
+
+function getContentCtaHrefSelector(destinationPath) {
+  const hrefs = new Set([destinationPath]);
+
+  if (destinationPath.charAt(0) === '/') {
+    hrefs.add(`${window.location.origin}${destinationPath}`);
+    hrefs.add(`https://konnected.io${destinationPath}`);
   }
 
-  [
-    {
-      path: '/collections/smart-alarm-panels',
-      contentSlug: 'alarm_panel_collection',
-      ctaLocation: 'alarm_collection_post_publish',
-    },
-    {
-      path: '/products/konnected-alarm-panel-pro-12-zone-kit',
-      contentSlug: 'alarm_panel_pro_conversion',
-      ctaLocation: 'product_page_post_publish',
-    },
-    {
-      path: '/products/konnected-alarm-panel-pro-12-zone-interface-kit',
-      contentSlug: 'alarm_panel_pro_interface',
-      ctaLocation: 'product_page_post_publish',
-    },
-    {
-      path: '/pages/home-assistant',
-      contentSlug: 'home-assistant',
-      ctaLocation: 'alarm_section_post_publish',
-    },
-  ]
+  return Array.from(hrefs)
+    .map(function(href) {
+      return `a[href="${href}"]`;
+    })
+    .join(',');
+}
+
+function getContentCtaLocation(route, link) {
+  if (typeof route.ctaLocation === 'function') {
+    return route.ctaLocation(link);
+  }
+
+  return route.ctaLocation;
+}
+
+function tagContentCtaLinks() {
+  CONTENT_CTA_ROUTES
     .filter(function(route) {
-      return window.location.pathname === route.path;
+      return window.location.pathname === route.sourcePath;
     })
     .forEach(function(route) {
-      [
-        '/pages/reuse-old-wired-alarm-sensors-smart-home',
-        '/pages/smart-home-security-system-no-monthly-fee',
-      ].forEach(function(destinationPath) {
-        document.querySelectorAll(`a[href="${destinationPath}"]`).forEach(function(link) {
+      route.destinationPaths.forEach(function(destinationPath) {
+        document.querySelectorAll(getContentCtaHrefSelector(destinationPath)).forEach(function(link) {
           tagContentCtaLink(link, {
             'data-content-slug': route.contentSlug,
-            'data-content-cluster': 'alarm_panel',
-            'data-destination-type': 'guide',
-            'data-cta-location': route.ctaLocation,
+            'data-content-cluster': route.contentCluster,
+            'data-destination-type': route.destinationType,
+            'data-cta-location': getContentCtaLocation(route, link),
           });
-        });
-      });
-    });
-
-  [
-    {
-      path: '/',
-      contentSlug: 'home',
-      contentCluster: 'platform_integrations',
-      ctaLocation: 'platform_logo_row',
-    },
-    {
-      path: '/collections/smart-garage-door-openers',
-      contentSlug: 'gdo_collection',
-      contentCluster: 'garage_gdo',
-      ctaLocation: 'platform_logo_row',
-    },
-    {
-      path: '/products/smart-garage-door-opener',
-      contentSlug: 'gdo_white',
-      contentCluster: 'garage_gdo',
-      ctaLocation: 'platform_logo_row',
-    },
-    {
-      path: '/collections/smart-alarm-panels',
-      contentSlug: 'alarm_panel_collection',
-      contentCluster: 'alarm_panel',
-      ctaLocation: 'platform_logo_row',
-    },
-    {
-      path: '/pages/platforms',
-      contentSlug: 'platforms',
-      contentCluster: 'platform_integrations',
-      ctaLocation: 'platform_card',
-    },
-  ]
-    .filter(function(route) {
-      return window.location.pathname === route.path;
-    })
-    .forEach(function(route) {
-      document.querySelectorAll('a[href="/pages/alexa"]').forEach(function(link) {
-        tagContentCtaLink(link, {
-          'data-content-slug': route.contentSlug,
-          'data-content-cluster': route.contentCluster,
-          'data-destination-type': 'integration_page',
-          'data-cta-location': route.ctaLocation,
-        });
-      });
-    });
-
-  [
-    {
-      path: '/pages/alexa',
-      contentSlug: 'alexa',
-      contentCluster: 'garage_gdo',
-      destinationPath: '/pages/amazon-alexa-automation-ideas-konnected',
-      ctaLocation: 'integration_page_post_publish',
-    },
-    {
-      path: '/collections/smart-garage-door-openers',
-      contentSlug: 'gdo_collection',
-      contentCluster: 'garage_gdo',
-      destinationPath: '/pages/amazon-alexa-automation-ideas-konnected',
-      ctaLocation: 'collection_intro',
-    },
-    {
-      path: '/collections/smart-garage-door-openers',
-      contentSlug: 'gdo_collection',
-      contentCluster: 'garage_gdo',
-      destinationPath: '/pages/josh-ai-garage-door-automation-ideas',
-      ctaLocation: 'collection_intro',
-    },
-    {
-      path: '/products/smart-garage-door-opener',
-      contentSlug: 'gdo_white',
-      contentCluster: 'garage_gdo',
-      destinationPath: '/pages/amazon-alexa-automation-ideas-konnected',
-      ctaLocation: 'platform_faq',
-    },
-    {
-      path: '/products/smart-garage-door-opener-blaq-myq-alternative',
-      contentSlug: 'gdo_blaq',
-      contentCluster: 'garage_gdo',
-      destinationPath: '/pages/amazon-alexa-automation-ideas-konnected',
-      ctaLocation: 'platform_faq',
-    },
-    {
-      path: '/products/smart-garage-door-opener-blaq-myq-alternative',
-      contentSlug: 'gdo_blaq',
-      contentCluster: 'garage_gdo',
-      destinationPath: '/pages/josh-ai-garage-door-automation-ideas',
-      ctaLocation: 'platform_faq',
-    },
-    {
-      path: '/pages/joshai',
-      contentSlug: 'joshai',
-      contentCluster: 'garage_gdo',
-      destinationPath: '/pages/josh-ai-garage-door-automation-ideas',
-      ctaLocation: 'integration_page_post_publish',
-    },
-  ]
-    .filter(function(route) {
-      return window.location.pathname === route.path;
-    })
-    .forEach(function(route) {
-      document.querySelectorAll(`a[href="${route.destinationPath}"]`).forEach(function(link) {
-        tagContentCtaLink(link, {
-          'data-content-slug': route.contentSlug,
-          'data-content-cluster': route.contentCluster,
-          'data-destination-type': 'guide',
-          'data-cta-location': route.ctaLocation,
         });
       });
     });
