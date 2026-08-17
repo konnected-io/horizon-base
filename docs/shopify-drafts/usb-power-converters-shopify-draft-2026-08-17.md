@@ -1,23 +1,24 @@
-# USB power converters Shopify draft
+# USB power converters published Shopify page
 
 Status: Shopify CMS page published
 Owner: Josh
 Date: 2026-08-17
 
-## Shopify draft
+## Shopify page
 
 - Source review Doc: https://docs.google.com/document/d/1Nj0l2iJrEnC6OrcyOxTG2WbihI57288IYAYdiKaE9Vw/edit?usp=sharing
 - Local source markdown: `content-engine/content/shopify-drafts/usb-c-pd-vs-12v-to-5v-usb-power-converter-shopify-page-draft-2026-08-12.md`
 - Shopify page ID: `gid://shopify/Page/157383328059`
-- Draft handle: `usb-c-pd-vs-12v-to-5v-usb-power-converter`
-- Intended URL after publish: `/pages/usb-c-pd-vs-12v-to-5v-usb-power-converter`
+- Handle: `usb-c-pd-vs-12v-to-5v-usb-power-converter`
 - Live URL: https://konnected.io/pages/usb-c-pd-vs-12v-to-5v-usb-power-converter
 - Published state: `isPublished: true`, `publishedAt: 2026-08-17T13:37:55Z`
 - Template suffix: generic page template
 
 ## CMS vs theme decision
 
-This is CMS body content, not a theme runtime change. The article body, comparison table, figures, FAQ content, and product CTAs live in the published Shopify page body. No one-off article copy, page-specific FAQ content, or page-specific schema was added to Liquid, JSON templates, sections, snippets, or theme assets.
+The article itself is CMS body content. The article body, comparison table, figures, FAQ content, and product CTAs live in the published Shopify page body. No one-off article copy, page-specific FAQ content, or page-specific schema was added to Liquid, JSON templates, sections, snippets, or theme assets.
+
+This PR's theme change is limited to CTA tracking support in `assets/custom.js` so the live article's product clicks can be measured after publishing.
 
 ## Nate comment fixes reconciled before Shopify Admin
 
@@ -42,22 +43,21 @@ Verified through Shopify Admin GraphQL on 2026-08-17:
 - Public URL returned HTTP 200.
 - Public HTML contains the expected title, Nate-driven USB-C/5V charging-speed language, physical-size comparison row, vehicle fast-charging section, and both product CTAs.
 
-Shopify Admin GraphQL `PageCreateInput` and `PageUpdateInput` in API version `2026-04` do not expose an SEO title or description field. SEO metadata should be checked or set through the supported Shopify Admin surface before publish approval.
+Shopify Admin GraphQL `PageCreateInput` and `PageUpdateInput` in API version `2026-04` do not expose an SEO title or description field. SEO metadata remains a post-publish Admin surface check unless it has already been verified manually.
 
-## Remaining follow-up gates
+## Post-publish follow-ups
 
 - Confirm or set the SEO title and meta description in the supported Admin surface.
-- Decide whether any follow-up work should recreate this as a blog article instead of keeping the published evergreen page URL.
-- Confirm final product/spec language for USB-C PD output behavior, fixed 5V input/output, Raspberry Pi caveat, Alarm Panel Pro AUX/PoE caveat, vehicle wiring safety, and solar/off-grid language.
-- Add internal routing only after the live page URL is accepted as the canonical target.
+- Add the published URL to Published Monitor.
+- Run the internal-linking/navigation pass once Milo/Nate confirm this page URL is the canonical target.
+- Re-check product/spec-sensitive sections if the related product pages change USB-C PD output behavior, fixed 5V input/output, Raspberry Pi guidance, Alarm Panel Pro AUX/PoE guidance, vehicle wiring safety, or solar/off-grid language.
 
 ## Post-publish plan
 
-- Add the published URL to Published Monitor after it is live.
-- Baseline GSC performance for the new URL and both converter product pages before publish or immediately after indexing.
+- Baseline GSC performance for the new URL and both converter product pages after publish/indexing.
 - Recheck GSC, GA4 product referral behavior, and ChatGPT/OpenAI referral landing pages at 2, 4, and 8 weeks.
 - Run AI visibility checks for PD-vs-5V, wall-tablet, vehicle/fleet, solar/off-grid, and Raspberry Pi prompts.
-- Add one contextual support-article link from the high-impression USB cable article after publish approval.
+- Add one contextual support-article link from the high-impression USB cable article during the internal-linking/navigation pass, if that placement is approved.
 - Track whether AI citations move from scattered support/product pages toward the canonical guide.
 
 ## CTA tracking added in this PR
