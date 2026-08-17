@@ -1482,7 +1482,7 @@
                     "height": 20,
                     "custom_mobile_height": false,
                     "mobile-height": 24,
-                    "text": "<p>Going keypad-free with app or tablet control</p>",
+                    "text": "<p>Going keypad-free with app or tablet control? <a href=\"/pages/usb-c-pd-vs-12v-to-5v-usb-power-converter\" data-content-cta data-content-slug=\"alarm_panel_collection\" data-content-cluster=\"alarm_panel\" data-destination-type=\"guide\" data-cta-location=\"tablet_decision_copy\">Compare USB-C PD vs 5V tablet power options</a>.</p>",
                     "text_width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
