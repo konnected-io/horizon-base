@@ -491,6 +491,18 @@
 
       if (!feeInput || !feeNumberInput || !yearsInput || !upfrontInput) return;
 
+      if (window.location.pathname === '/pages/smart-home-security-system-no-monthly-fee') {
+        var sectionNode = calculator.closest('.shopify-section') || calculator.closest('[data-savings-calculator-section]');
+        var quickAnswerHeading = Array.prototype.slice.call(document.querySelectorAll('h2')).find(function(heading) {
+          return heading.textContent.trim().toLowerCase().indexOf('quick answer: smart security without a required monthly fee') === 0;
+        });
+
+        if (sectionNode && quickAnswerHeading && quickAnswerHeading.parentNode && sectionNode.dataset.savingsMoved !== 'true') {
+          quickAnswerHeading.parentNode.insertBefore(sectionNode, quickAnswerHeading);
+          sectionNode.dataset.savingsMoved = 'true';
+        }
+      }
+
       function clampFee(value) {
         var parsed = parseInt(value, 10);
         if (Number.isNaN(parsed)) return null;

@@ -67,7 +67,7 @@
     "savings_calculator": {
       "type": "savings-calculator",
       "settings": {
-        "show_quick_answer": true,
+        "show_quick_answer": false,
         "quick_answer_eyebrow": "Quick estimate",
         "quick_answer_heading": "How much can you save without a monthly security fee?",
         "eyebrow": "No monthly fee savings",
@@ -84,8 +84,8 @@
         "primary_cta_destination_type": "collection",
         "tracking_slug": "smart-home-security-system-no-monthly-fee",
         "cta_location": "savings_calculator",
-        "padding-block-start": 48,
-        "padding-block-end": 72
+        "padding-block-start": 24,
+        "padding-block-end": 48
       }
     }
   },
