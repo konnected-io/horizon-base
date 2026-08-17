@@ -59,3 +59,14 @@ Shopify Admin GraphQL `PageCreateInput` and `PageUpdateInput` in API version `20
 - Run AI visibility checks for PD-vs-5V, wall-tablet, vehicle/fleet, solar/off-grid, and Raspberry Pi prompts.
 - Add one contextual support-article link from the high-impression USB cable article after publish approval.
 - Track whether AI citations move from scattered support/product pages toward the canonical guide.
+
+## CTA tracking added in this PR
+
+`assets/custom.js` now auto-tags product links on `/pages/usb-c-pd-vs-12v-to-5v-usb-power-converter` for `content_cta_click` reporting:
+
+- USB-C PD product destination: `/products/usb-pd-type-c-dc-fast-charge-power-converter`
+- 12V-to-5V USB product destination: `/products/12v-to-5v-usb-power-converter`
+- `content_slug`: `usb-c-pd-vs-12v-to-5v-usb-power-converter`
+- `content_cluster`: `power_accessories`
+- `destination_type`: `product`
+- `cta_location`: `comparison_table` for links inside the comparison table, `inline_answer` for other matching product links.

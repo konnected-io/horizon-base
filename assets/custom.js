@@ -414,6 +414,30 @@ function tagContentCtaLinks() {
         });
       });
     });
+
+  [
+    {
+      destinationPath: '/products/usb-pd-type-c-dc-fast-charge-power-converter',
+      destinationUrl: 'https://konnected.io/products/usb-pd-type-c-dc-fast-charge-power-converter',
+    },
+    {
+      destinationPath: '/products/12v-to-5v-usb-power-converter',
+      destinationUrl: 'https://konnected.io/products/12v-to-5v-usb-power-converter',
+    },
+  ].forEach(function(route) {
+    if (window.location.pathname !== '/pages/usb-c-pd-vs-12v-to-5v-usb-power-converter') return;
+
+    document
+      .querySelectorAll(`a[href="${route.destinationPath}"], a[href="${route.destinationUrl}"]`)
+      .forEach(function(link) {
+        tagContentCtaLink(link, {
+          'data-content-slug': 'usb-c-pd-vs-12v-to-5v-usb-power-converter',
+          'data-content-cluster': 'power_accessories',
+          'data-destination-type': 'product',
+          'data-cta-location': link.closest('table') ? 'comparison_table' : 'inline_answer',
+        });
+      });
+  });
 }
 
 if (document.readyState === 'loading') {
