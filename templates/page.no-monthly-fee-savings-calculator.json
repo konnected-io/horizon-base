@@ -1,0 +1,96 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "name": "Title",
+          "settings": {
+            "text": "<h1>{{ closest.page.title }}</h1>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h2",
+            "font": "var(--font-primary--family)",
+            "font_size": "",
+            "enable_mobile_size": true,
+            "mobile_font_size": "1.92rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "custom_mobile_padding": false,
+            "mobile-padding-block-start": 0,
+            "mobile-padding-block-end": 0,
+            "mobile-padding-inline-start": 0,
+            "mobile-padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "page-content": {
+          "type": "page-content",
+          "settings": {},
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading",
+        "page-content"
+      ],
+      "custom_css": [
+        ".page-width-content {--full-page-grid-central-column-width: min( 46rem - var(--page-margin) * 2, calc(100% - var(--page-margin) * 2) );}"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "gap": 32,
+        "padding-block-start": 72,
+        "padding-block-end": 80
+      }
+    },
+    "savings_calculator": {
+      "type": "savings-calculator",
+      "settings": {
+        "show_quick_answer": false,
+        "quick_answer_eyebrow": "Quick estimate",
+        "quick_answer_heading": "How much can you save without a monthly security fee?",
+        "eyebrow": "No monthly fee savings",
+        "heading": "How much you save without a monthly fee",
+        "subheading": "Enter the monthly service fee from your current quote or plan and see what you would save over time versus a one-time Konnected setup.",
+        "default_monthly_fee": 25,
+        "default_years": 5,
+        "default_upfront_cost": 200,
+        "footnote": "Enter your current security service's monthly fee, or the plan you are comparing, to estimate savings. Monthly fee accepts $1-$100. Taxes, installation, financing, promotions, monitoring tiers, cellular backup, video storage, and professional dispatch services can change the total.",
+        "evidence_link": "",
+        "evidence_link_text": "How we calculated this",
+        "primary_cta_link": "",
+        "primary_cta_text": "Find your no-fee system",
+        "primary_cta_destination_type": "collection",
+        "tracking_slug": "smart-home-security-system-no-monthly-fee",
+        "cta_location": "savings_calculator",
+        "padding-block-start": 24,
+        "padding-block-end": 48
+      }
+    }
+  },
+  "order": [
+    "main",
+    "savings_calculator"
+  ]
+}
