@@ -1,6 +1,6 @@
 # USB power converters Shopify draft
 
-Status: unpublished Shopify CMS draft created
+Status: Shopify CMS page published
 Owner: Josh
 Date: 2026-08-17
 
@@ -11,12 +11,13 @@ Date: 2026-08-17
 - Shopify page ID: `gid://shopify/Page/157383328059`
 - Draft handle: `usb-c-pd-vs-12v-to-5v-usb-power-converter`
 - Intended URL after publish: `/pages/usb-c-pd-vs-12v-to-5v-usb-power-converter`
-- Published state: `isPublished: false`, `publishedAt: null`
+- Live URL: https://konnected.io/pages/usb-c-pd-vs-12v-to-5v-usb-power-converter
+- Published state: `isPublished: true`, `publishedAt: 2026-08-17T13:37:55Z`
 - Template suffix: generic page template
 
 ## CMS vs theme decision
 
-This is CMS body content, not a theme runtime change. The article body, comparison table, figures, FAQ content, and product CTAs live in the unpublished Shopify page draft. No one-off article copy, page-specific FAQ content, or page-specific schema was added to Liquid, JSON templates, sections, snippets, or theme assets.
+This is CMS body content, not a theme runtime change. The article body, comparison table, figures, FAQ content, and product CTAs live in the published Shopify page body. No one-off article copy, page-specific FAQ content, or page-specific schema was added to Liquid, JSON templates, sections, snippets, or theme assets.
 
 ## Nate comment fixes reconciled before Shopify Admin
 
@@ -27,27 +28,28 @@ This is CMS body content, not a theme runtime change. The article body, comparis
 - Added a physical-size comparison row: PD converter is the larger body; 12V-to-5V converter is the smaller body.
 - Double-checked the fixed 5V converter input spec against the live product page and kept it as `12V DC`.
 
-## Shopify Admin verification
+## Shopify Admin and live-page verification
 
 Verified through Shopify Admin GraphQL on 2026-08-17:
 
 - `id`: `gid://shopify/Page/157383328059`
 - `title`: `USB-C PD vs 12V-to-5V USB power converters: which one do you need?`
 - `handle`: `usb-c-pd-vs-12v-to-5v-usb-power-converter`
-- `isPublished`: `false`
-- `publishedAt`: `null`
+- `isPublished`: `true`
+- `publishedAt`: `2026-08-17T13:37:55Z`
 - `bodySummary` begins with the expected low-voltage DC-to-USB intro.
 - Body HTML contains the expected comparison table, two product figures, product CTAs, FAQ section, and Nate-driven USB-C/5V charging-speed language.
+- Public URL returned HTTP 200.
+- Public HTML contains the expected title, Nate-driven USB-C/5V charging-speed language, physical-size comparison row, vehicle fast-charging section, and both product CTAs.
 
 Shopify Admin GraphQL `PageCreateInput` and `PageUpdateInput` in API version `2026-04` do not expose an SEO title or description field. SEO metadata should be checked or set through the supported Shopify Admin surface before publish approval.
 
-## Remaining approval gates
+## Remaining follow-up gates
 
-- Review the unpublished Shopify page draft in Shopify Admin.
 - Confirm or set the SEO title and meta description in the supported Admin surface.
-- Confirm whether the page should publish as `/pages/...` or be recreated as a blog article before going live.
+- Decide whether any follow-up work should recreate this as a blog article instead of keeping the published evergreen page URL.
 - Confirm final product/spec language for USB-C PD output behavior, fixed 5V input/output, Raspberry Pi caveat, Alarm Panel Pro AUX/PoE caveat, vehicle wiring safety, and solar/off-grid language.
-- Do not publish until Milo/Nate approval is explicit.
+- Add internal routing only after the live page URL is accepted as the canonical target.
 
 ## Post-publish plan
 
