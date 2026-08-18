@@ -64,9 +64,35 @@
         "padding-block-start": 72,
         "padding-block-end": 80
       }
+    },
+    "savings_calculator": {
+      "type": "savings-calculator",
+      "settings": {
+        "show_quick_answer": false,
+        "quick_answer_eyebrow": "Quick estimate",
+        "quick_answer_heading": "How much can you save without a monthly security fee?",
+        "limit_to_page_handle": "smart-home-security-system-no-monthly-fee",
+        "eyebrow": "No monthly fee savings",
+        "heading": "How much you save without a monthly fee",
+        "subheading": "Enter the monthly service fee from your current quote or plan and see what you would save over time versus a one-time Konnected setup.",
+        "default_monthly_fee": 25,
+        "default_years": 5,
+        "default_upfront_cost": 200,
+        "footnote": "Enter your current security service's monthly fee, or the plan you are comparing, to estimate savings. Monthly fee accepts $1-$100. Taxes, installation, financing, promotions, monitoring tiers, cellular backup, video storage, and professional dispatch services can change the total.",
+        "evidence_link": "",
+        "evidence_link_text": "How we calculated this",
+        "primary_cta_link": "",
+        "primary_cta_text": "Find your no-fee system",
+        "primary_cta_destination_type": "collection",
+        "tracking_slug": "smart-home-security-system-no-monthly-fee",
+        "cta_location": "savings_calculator",
+        "padding-block-start": 24,
+        "padding-block-end": 48
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "savings_calculator"
   ]
 }

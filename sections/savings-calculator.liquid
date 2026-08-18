@@ -8,8 +8,15 @@
   assign default_upfront_cents = default_upfront | times: 100
   assign default_subscription_total_cents = default_subscription_total | times: 100
   assign default_savings_cents = default_savings | times: 100
+  assign limit_to_page_handle = section.settings.limit_to_page_handle | strip
+  assign render_savings_calculator = true
+
+  if limit_to_page_handle != blank and page.handle != limit_to_page_handle
+    assign render_savings_calculator = false
+  endif
 %}
 
+{% if render_savings_calculator %}
 <section
   class="savings-calculator-section spacing-style"
   data-savings-calculator-section
@@ -145,6 +152,7 @@
     </div>
   </div>
 </section>
+{% endif %}
 
 {% stylesheet %}
   .savings-calculator-section {
@@ -618,6 +626,11 @@
       "id": "quick_answer_heading",
       "label": "Quick answer heading",
       "default": "How much can a no-monthly-fee security system save?"
+    },
+    {
+      "type": "text",
+      "id": "limit_to_page_handle",
+      "label": "Only show on page handle"
     },
     {
       "type": "text",
