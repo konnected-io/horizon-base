@@ -29,6 +29,7 @@
 
 {% render 'gap-style', value: settings.gap %}
 
+{% comment %} Mobile gap override: intentionally custom — stock Horizon's gap fluid-scales the desktop value proportionally; configured values across the theme diverge from that scale-down in most instances (see issue #55). {% endcomment %}
 {% if settings.enable_mobile_gap %}
   --mobile-gap: {{ settings.mobile_gap }}px;
 {% endif %}
