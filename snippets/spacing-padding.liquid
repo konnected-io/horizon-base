@@ -12,6 +12,7 @@
 px; --padding-inline-start:{{ settings['padding-inline-start'] | default: 0 }}px; --padding-inline-end:
 {{- settings['padding-inline-end'] | default: 0 -}}
 px;
+{% comment %} Mobile padding override: intentionally custom — stock Horizon's --spacing-scale only fluid-scales the desktop value proportionally; configured values across the theme diverge from that scale-down in most instances (see issue #55). {% endcomment %}
 {% if settings.custom_mobile_padding == true %}
 --mobile-padding-block-start: {{ settings['mobile-padding-block-start'] | default: 0 }}px; --mobile-padding-block-end:
 {{- settings['mobile-padding-block-end'] | default: 0 -}}
