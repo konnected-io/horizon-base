@@ -12,15 +12,9 @@
   assign customer_tag_shop = shop.metafields.custom.customer_discounts.value
   assign discount = blank
 
-  capture discount_label
-    render 'discount-label'
-  endcapture
-
-  assign discount_label = discount_label | strip
-
   if customer_tag_shop.size > 0 and customer.b2b? == false
       for item in customer_tag_shop
-          assign applies_to = item.applies_to.value.products | where: 'id', product.id
+          assign applies_to = item.applies_to.value.products | where: 'id', product_resource.id
 
           if applies_to.size > 0 and item.discount != blank
               assign discount = item.discount
@@ -35,11 +29,24 @@
   assign price = selected_variant.price
   assign compare_at_price = selected_variant.compare_at_price
 
+  capture sale_display_eligible
+    render 'sale-display-eligible', product_resource: product_resource
+  endcapture
+
+  assign sale_display_eligible = sale_display_eligible | strip
+
   if discount != blank
     assign discount_percentage = discount | plus: 0
     assign discount_multiplier = 100 | minus: discount_percentage
 
     assign discounted_price = price | times: discount_multiplier | divided_by: 100
+
+    assign compare_at_price = price
+    assign price = discounted_price
+  elsif sale_display_eligible == 'true'
+    assign sale_display_percentage = 20
+    assign sale_display_multiplier = 100 | minus: sale_display_percentage
+    assign discounted_price = price | times: sale_display_multiplier | divided_by: 100
 
     assign compare_at_price = price
     assign price = discounted_price
