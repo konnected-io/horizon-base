@@ -37,7 +37,7 @@
         "section_width": "page-width",
         "section_height": "auto",
         "section_height_custom": 50,
-        "color_scheme": "scheme-5",
+        "background_color": "{{ settings.color_palette.dark }}",
         "toggle_overlay": false,
         "overlay_color": "#00000026",
         "overlay_style": "gradient",
@@ -45,8 +45,7 @@
         "blurred_reflection": false,
         "reflection_opacity": 75,
         "padding-block-start": 0,
-        "padding-block-end": 0,
-        "background_color": "{{ settings.color_palette.dark }}"
+        "padding-block-end": 0
       }
     },
     "header_announcements_9jGBFp": {
@@ -54,6 +53,7 @@
       "blocks": {
         "announcement_BxgCk9": {
           "type": "_announcement",
+          "disabled": true,
           "settings": {
             "text": "Join the Konnected Community here",
             "link": "https://community.konnected.io/",
@@ -61,12 +61,14 @@
             "font_size": "0.875rem",
             "weight": "",
             "letter_spacing": "normal",
-            "case": "none"
+            "case": "none",
+            "text_color": ""
           },
           "blocks": {}
         },
         "announcement_CnmdUR": {
           "type": "_announcement",
+          "disabled": true,
           "settings": {
             "text": "Sign up for our Newsletter and get 10% Off",
             "link": "",
@@ -74,21 +76,22 @@
             "font_size": "0.875rem",
             "weight": "",
             "letter_spacing": "normal",
-            "case": "none"
+            "case": "none",
+            "text_color": ""
           },
           "blocks": {}
         },
         "announcement_N8PCk4": {
           "type": "_announcement",
-          "disabled": true,
           "settings": {
-            "text": "WINTER SALE IS LIVE! - SAVE 2O%",
-            "link": "shopify://collections/shop-now",
-            "font": "var(--font-subheading--family)",
-            "font_size": "0.875rem",
+            "text": "GDO BOGO Labor Day flash sale! Buy 1 GDO, get the 2nd 50% off",
+            "link": "shopify://collections/smart-garage-door-openers",
+            "font": "var(--font-accent--family)",
+            "font_size": "1.125rem",
             "weight": "",
             "letter_spacing": "normal",
-            "case": "none"
+            "case": "none",
+            "text_color": "{{ settings.color_palette.background }}"
           },
           "blocks": {}
         }
@@ -101,12 +104,12 @@
       "name": "t:names.announcement_bar",
       "settings": {
         "speed": 5,
-        "section_width": "page-width",
-        "color_scheme": "scheme-5",
+        "section_width": "full-width",
+        "background_color": "{{ settings.color_palette.electric_cyan }}",
         "divider_width": 1,
+        "divider_color": "",
         "padding-block-start": 12,
-        "padding-block-end": 12,
-        "background_color": "{{ settings.color_palette.dark }}"
+        "padding-block-end": 12
       }
     },
     "header_section": {
@@ -135,9 +138,7 @@
           "settings": {
             "hide_logo_on_home_page": false,
             "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "padding-block-end": 0
           },
           "blocks": {}
         },
@@ -146,7 +147,8 @@
           "static": true,
           "settings": {
             "menu": "dawn-main-menu-josh-draft",
-            "color_scheme": "",
+            "background_color": "{{ settings.color_palette.background }}",
+            "text_color": "",
             "type_font_primary_size": "1rem",
             "menu_font_style": "regular",
             "type_font_primary_link": "body",
@@ -156,7 +158,8 @@
             "featured_collections_aspect_ratio": "16 / 9",
             "image_border_radius": 0,
             "navigation_bar": false,
-            "color_scheme_navigation_bar": "",
+            "background_color_navigation_bar": "{{ settings.color_palette.background }}",
+            "text_color_navigation_bar": "",
             "drawer_accordion": true,
             "drawer_accordion_expand_first": false,
             "drawer_dividers": true
@@ -184,20 +187,29 @@
         "enable_sticky_header": "always",
         "divider_width": 0,
         "divider_size": "page-width",
+        "divider_color": "",
         "border_width": 1,
+        "bottom_border_color": "",
         "actions_display_style": "icon",
         "actions_font_size": "0.875rem",
         "actions_font": "body",
         "actions_text_case": "none",
-        "color_scheme_top": "scheme-1",
-        "color_scheme_bottom": "",
-        "color_scheme_transparent": "scheme-6",
+        "background_color_top": "",
+        "text_color_top": "",
+        "background_color_bottom": "",
+        "text_color_bottom": "",
+        "bubble_style": "default",
+        "bubble_background_color": "",
+        "bubble_text_color": "",
         "enable_transparent_header_home": false,
-        "home_color_scheme": "inverse",
+        "home_inverse_logo": false,
+        "text_color_transparent_home": "",
         "enable_transparent_header_product": false,
-        "product_color_scheme": "default",
+        "product_inverse_logo": false,
+        "text_color_transparent_product": "",
         "enable_transparent_header_collection": false,
-        "collection_color_scheme": "default"
+        "collection_inverse_logo": false,
+        "text_color_transparent_collection": ""
       }
     }
   },
