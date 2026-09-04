@@ -36,3 +36,10 @@ jobs:
           token: ${{ github.token }}
           base: ${{ github.event.pull_request.base.sha }}
           flags: "--fail-level error"
+
+      # Theme Check never inspects a setting's *value* against the rules for that
+      # setting's *type*. Shopify enforces the `richtext` allowlist server-side on
+      # upload and rejects the whole file — silently, on a GitHub-connected theme.
+      # See bin/check-richtext-settings.py for the incident this guards against.
+      - name: Validate richtext setting values
+        run: python3 bin/check-richtext-settings.py
