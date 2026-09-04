@@ -650,3 +650,121 @@ back-to-top svg {
 .gdo-blaq-josh-ai-logo img[alt="Josh.ai logo"] {
     filter: invert(1);
 }
+
+/* ---------------------------------------------------------------------------
+   Labor Day 2026 flash sale — "GDO BOGO" (buy one GDO, second 50% off).
+   Runs Fri Sep 4 – Tue Sep 8, 2026. Used by the two GDO product templates
+   (product.gdo-blaq-v2.json, product.garage-door-opener.json) and the GDO
+   collection (collection.gdo-collection.json). Shared here rather than in each
+   template's `custom_css` because the same promo appears on three templates.
+   TO RETIRE: delete this block plus the `gdo_bogo_*` blocks/section in those
+   three templates.
+   --------------------------------------------------------------------------- */
+.group-block.gdo-bogo {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid color-mix(in srgb, var(--color-primary) 32%, transparent);
+    border-radius: 10px;
+    background:
+        radial-gradient(125% 150% at 0% 0%, rgb(34 190 255 / 13%) 0%, transparent 60%),
+        color-mix(in srgb, var(--color-background) 93%, var(--color-primary) 7%);
+}
+
+.group-block.gdo-bogo::before {
+    content: "";
+    position: absolute;
+    inset-block: 0;
+    inset-inline-start: 0;
+    width: 3px;
+    background: linear-gradient(180deg, var(--color-electric-cyan, #22beff) 0%, var(--color-primary) 100%);
+}
+
+.gdo-bogo .gdo-bogo__eyebrow {
+    margin-block: 0;
+    color: var(--color-primary);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    line-height: 1.3;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.gdo-bogo .gdo-bogo__lede {
+    margin-block: 4px 0;
+    font-size: 1.125rem;
+    font-weight: 650;
+    line-height: 1.25;
+    text-wrap: balance;
+}
+
+.gdo-bogo .gdo-bogo__lede strong {
+    color: var(--color-primary);
+    font-weight: 750;
+    white-space: nowrap;
+}
+
+.gdo-bogo .gdo-bogo__note {
+    margin-block: 6px 0;
+    color: rgb(var(--color-foreground-rgb) / 68%);
+    font-size: 0.8125rem;
+    line-height: 1.45;
+}
+
+.gdo-bogo .gdo-bogo__note a {
+    color: var(--color-primary);
+    text-underline-offset: 2px;
+}
+
+/* Collection band: copy left, calls to action right; stacks under 990px. */
+.group-block.gdo-bogo--band {
+    padding: clamp(18px, 2.6vw, 26px) clamp(18px, 2.6vw, 28px);
+}
+
+.gdo-bogo--band .gdo-bogo__lede {
+    font-size: clamp(1.25rem, 2.2vw, 1.625rem);
+}
+
+.gdo-bogo--band .gdo-bogo__note {
+    font-size: 0.875rem;
+    max-width: 62ch;
+}
+
+/* The copy takes the slack so the two buttons keep their intrinsic width. */
+.gdo-bogo--band > .group-block-content > .text-block {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.gdo-bogo--band .gdo-bogo__actions {
+    flex: 0 0 auto;
+    width: auto;
+}
+
+.gdo-bogo--band .gdo-bogo__actions .button,
+.gdo-bogo--band .gdo-bogo__actions .button-secondary {
+    white-space: nowrap;
+}
+
+/* The theme only stacks group rows at 749px; the band gets tight before that. */
+@media screen and (max-width: 989px) {
+    .gdo-bogo--band > .group-block-content {
+        flex-flow: column nowrap;
+        align-items: flex-start;
+    }
+}
+
+@media screen and (max-width: 749px) {
+    .gdo-bogo .gdo-bogo__lede {
+        font-size: 1.0625rem;
+    }
+
+    .gdo-bogo--band .gdo-bogo__actions,
+    .gdo-bogo--band .gdo-bogo__actions .button,
+    .gdo-bogo--band .gdo-bogo__actions .button-secondary {
+        width: 100%;
+    }
+
+    .gdo-bogo--band .gdo-bogo__actions > .group-block-content {
+        flex-wrap: wrap;
+    }
+}
