@@ -657,6 +657,15 @@ back-to-top svg {
    (product.gdo-blaq-v2.json, product.garage-door-opener.json) and the GDO
    collection (collection.gdo-collection.json). Shared here rather than in each
    template's `custom_css` because the same promo appears on three templates.
+
+   The three copy lines are three sibling `text` blocks, addressed by position.
+   They CANNOT carry their own classes: a text block's `text` setting is a
+   Shopify `richtext`, which permits only a small tag allowlist and no `class`
+   attribute — an invalid value makes Shopify reject the whole template file on
+   GitHub sync, and the page silently falls back to the default template.
+   Positional selectors are the same approach the decision-guide styles above
+   use, so keep the block order eyebrow / headline / details.
+
    TO RETIRE: delete this block plus the `gdo_bogo_*` blocks/section in those
    three templates.
    --------------------------------------------------------------------------- */
@@ -679,7 +688,8 @@ back-to-top svg {
     background: linear-gradient(180deg, var(--color-electric-cyan, #22beff) 0%, var(--color-primary) 100%);
 }
 
-.gdo-bogo .gdo-bogo__eyebrow {
+/* 1 = eyebrow, 2 = headline, 3 = details. */
+.gdo-bogo__copy .text-block:nth-child(1) p {
     margin-block: 0;
     color: var(--color-primary);
     font-size: 0.6875rem;
@@ -689,28 +699,28 @@ back-to-top svg {
     letter-spacing: 0.08em;
 }
 
-.gdo-bogo .gdo-bogo__lede {
-    margin-block: 4px 0;
+.gdo-bogo__copy .text-block:nth-child(2) p {
+    margin-block: 0;
     font-size: 1.125rem;
     font-weight: 650;
     line-height: 1.25;
     text-wrap: balance;
 }
 
-.gdo-bogo .gdo-bogo__lede strong {
+.gdo-bogo__copy .text-block:nth-child(2) strong {
     color: var(--color-primary);
     font-weight: 750;
     white-space: nowrap;
 }
 
-.gdo-bogo .gdo-bogo__note {
-    margin-block: 6px 0;
+.gdo-bogo__copy .text-block:nth-child(3) p {
+    margin-block: 2px 0;
     color: rgb(var(--color-foreground-rgb) / 68%);
     font-size: 0.8125rem;
     line-height: 1.45;
 }
 
-.gdo-bogo .gdo-bogo__note a {
+.gdo-bogo__copy .text-block:nth-child(3) a {
     color: var(--color-primary);
     text-underline-offset: 2px;
 }
@@ -720,17 +730,17 @@ back-to-top svg {
     padding: clamp(18px, 2.6vw, 26px) clamp(18px, 2.6vw, 28px);
 }
 
-.gdo-bogo--band .gdo-bogo__lede {
+.gdo-bogo--band .gdo-bogo__copy .text-block:nth-child(2) p {
     font-size: clamp(1.25rem, 2.2vw, 1.625rem);
 }
 
-.gdo-bogo--band .gdo-bogo__note {
+.gdo-bogo--band .gdo-bogo__copy .text-block:nth-child(3) p {
     font-size: 0.875rem;
     max-width: 62ch;
 }
 
 /* The copy takes the slack so the two buttons keep their intrinsic width. */
-.gdo-bogo--band > .group-block-content > .text-block {
+.gdo-bogo--band .gdo-bogo__copy {
     flex: 1 1 auto;
     min-width: 0;
 }
@@ -754,7 +764,8 @@ back-to-top svg {
 }
 
 @media screen and (max-width: 749px) {
-    .gdo-bogo .gdo-bogo__lede {
+    .gdo-bogo__copy .text-block:nth-child(2) p,
+    .gdo-bogo--band .gdo-bogo__copy .text-block:nth-child(2) p {
         font-size: 1.0625rem;
     }
 

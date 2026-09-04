@@ -515,9 +515,9 @@
                 "custom_mobile_alignment": false,
                 "mobile_vertical_alignment": "flex-start",
                 "vertical_alignment_flex_direction_column": "center",
-                "gap": 0,
+                "gap": 4,
                 "enable_mobile_gap": false,
-                "mobile_gap": 12,
+                "mobile_gap": 4,
                 "width": "fill",
                 "custom_width": 100,
                 "width_mobile": "fill",
@@ -547,14 +547,78 @@
                 "mobile-padding-block-end": 0,
                 "mobile-padding-inline-start": 0,
                 "mobile-padding-inline-end": 0,
-                "css_class": "gdo-bogo gdo-bogo--pdp"
+                "css_class": "gdo-bogo gdo-bogo--pdp gdo-bogo__copy"
               },
               "blocks": {
-                "text_gdo_bogo_copy": {
+                "text_gdo_bogo_eyebrow": {
                   "type": "text",
-                  "name": "BOGO copy",
+                  "name": "BOGO eyebrow",
                   "settings": {
-                    "text": "<p class=\"gdo-bogo__eyebrow\">Labor Day Flash Sale · Ends Tuesday, Sept 8</p><p class=\"gdo-bogo__lede\">Buy one GDO, get the 2nd <strong>50% off</strong></p><p class=\"gdo-bogo__note\">Add a second blaQ, or mix and match with the <a href=\"/products/smart-garage-door-opener\">GDO White</a>. No code needed — 50% comes off the second opener automatically in your cart.</p>",
+                    "text": "<p>Labor Day Flash Sale · Ends Tuesday, Sept 8</p>",
+                    "width": "100%",
+                    "max_width": "none",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "",
+                    "enable_mobile_size": false,
+                    "mobile_font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0,
+                    "custom_mobile_padding": false,
+                    "mobile-padding-block-start": 0,
+                    "mobile-padding-block-end": 0,
+                    "mobile-padding-inline-start": 0,
+                    "mobile-padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_gdo_bogo_lede": {
+                  "type": "text",
+                  "name": "BOGO headline",
+                  "settings": {
+                    "text": "<p>Buy one GDO, get the 2nd <strong>50% off</strong></p>",
+                    "width": "100%",
+                    "max_width": "none",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "",
+                    "enable_mobile_size": false,
+                    "mobile_font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0,
+                    "custom_mobile_padding": false,
+                    "mobile-padding-block-start": 0,
+                    "mobile-padding-block-end": 0,
+                    "mobile-padding-inline-start": 0,
+                    "mobile-padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_gdo_bogo_note": {
+                  "type": "text",
+                  "name": "BOGO details",
+                  "settings": {
+                    "text": "<p>Add a second blaQ, or mix and match with the <a href=\"/products/smart-garage-door-opener\">GDO White</a>. No code needed — 50% comes off the second opener automatically in your cart.</p>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "left",
@@ -584,7 +648,9 @@
                 }
               },
               "block_order": [
-                "text_gdo_bogo_copy"
+                "text_gdo_bogo_eyebrow",
+                "text_gdo_bogo_lede",
+                "text_gdo_bogo_note"
               ]
             }
           },
