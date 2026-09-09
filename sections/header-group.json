@@ -83,6 +83,7 @@
         },
         "announcement_N8PCk4": {
           "type": "_announcement",
+          "disabled": true,
           "settings": {
             "text": "GDO BOGO Labor Day flash sale! Buy 1 GDO, get the 2nd 50% off",
             "link": "shopify://collections/smart-garage-door-openers",
