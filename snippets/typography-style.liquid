@@ -73,6 +73,7 @@
     {% endif %}
     --letter-spacing: var(--letter-spacing--{{ type }}-{{ settings.letter_spacing }});
   {%- endif -%}
+  {% comment %} Mobile font-size override: intentionally custom — v4's fluid clamp() above only applies to custom-preset sizes >= 3rem; this covers smaller and preset-based text. {% endcomment %}
   {% if settings.enable_mobile_size and settings.mobile_font_size != blank %}
     --mobile-font-size:  {{ settings.mobile_font_size }};
   {% endif %}
