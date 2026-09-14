@@ -263,6 +263,34 @@ function tagContentCtaLinks() {
       });
   }
 
+  if (window.location.pathname === '/pages/smartthings-automation-ideas-konnected') {
+    [
+      {
+        destinationPath: '/pages/smartthings',
+        destinationType: 'integration_page',
+      },
+      {
+        destinationPath: '/collections/smart-garage-door-openers',
+        destinationType: 'collection',
+      },
+      {
+        destinationPath: '/collections/smart-alarm-panels',
+        destinationType: 'collection',
+      },
+    ].forEach(function(route) {
+      document
+        .querySelectorAll(`a[href="${route.destinationPath}"], a[href="https://konnected.io${route.destinationPath}"]`)
+        .forEach(function(link) {
+          tagContentCtaLink(link, {
+            'data-content-slug': 'smartthings-automation-ideas-konnected',
+            'data-content-cluster': 'platform_integrations',
+            'data-destination-type': route.destinationType,
+            'data-cta-location': 'article_footer',
+          });
+        });
+    });
+  }
+
   [
     {
       path: '/collections/smart-alarm-panels',
