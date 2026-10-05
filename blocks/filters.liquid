@@ -7,6 +7,8 @@
 {%- enddoc -%}
 
 {% render 'theme-drawer-styles' %}
+{% render 'swatch-styles' %}
+{% render 'pills-styles' %}
 
 <script
   src="{{ 'facets.js' | asset_url }}"
@@ -106,7 +108,7 @@
   {% if block_settings.filter_style == 'vertical' %}
     {% # These elements are always rendered in the horizontal bar that's why we apply the .facets--horizontal class %}
     <div
-      class="facets facets--horizontal facets-controls-wrapper spacing-style"
+      class="facets facets--horizontal facets-controls-wrapper spacing-style{% if has_custom_color %} color-custom-{{ block.id }}{% endif %}"
       style="{% render 'spacing-style', settings: block_settings %}{% if block_settings.text_label_case == 'uppercase' %} --facet-label-transform: uppercase;{% endif %}"
     >
       {% if block_settings.enable_filtering %}
@@ -319,7 +321,7 @@
     class="
       facets-toggle
       {%- if block_settings.enable_filtering == false %} facets-toggle--no-filters{% endif %}
-      {%- if block_settings.filter_style == 'horizontal' and has_custom_color %} color-custom-{{ block.id }}{% endif %}
+      {%- if has_custom_color %} color-custom-{{ block.id }}{% endif %}
     "
     style="
       --facets-inner-padding-block: {{ block_settings['padding-block-start'] }}px {{ block_settings['padding-block-end'] }}px; --facets-inner-padding-inline: var(--padding-lg);
@@ -582,7 +584,7 @@
   }
 
   .facets-toggle__wrapper {
-    margin-left: var(--icon-offset);
+    margin-inline-start: var(--icon-offset);
   }
 
   .facets-toggle__button {
@@ -863,14 +865,6 @@
 
   .facets--drawer .facets__summary .icon-caret {
     margin-inline-start: var(--margin-2xs);
-  }
-
-  /* Facets - Bubble */
-  .facets__bubble {
-    display: inline-flex;
-    font-family: var(--font-paragraph--family);
-    font-weight: var(--font-paragraph--weight);
-    aspect-ratio: 1 / 1;
   }
 
   /* Facets - Inputs */
@@ -1161,7 +1155,7 @@
   .facets--horizontal .products-count-wrapper {
     @media screen and (min-width: 750px) {
       display: flex;
-      margin-left: auto;
+      margin-inline-start: auto;
       flex-shrink: 0;
       align-items: center;
       height: var(--minimum-touch-target);
@@ -1262,6 +1256,11 @@
     margin-top: auto;
     background-image: var(--to-top-gradient-background);
     background-color: var(--color-background);
+  }
+
+  /* Clear all is hidden until filters are active; its empty wrapper must not reserve gap */
+  .facets__drawer-actions:not(:has(.facets__clear-all--active)) {
+    gap: 0;
   }
 
   /* Clear all button */

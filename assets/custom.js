@@ -414,6 +414,122 @@ function tagContentCtaLinks() {
         });
       });
     });
+
+  // Links inside template content. Shopify rejects data-* attributes in rich text
+  // settings, and custom liquid uses the same table for consistency. Each rule is
+  // scoped to one section (and, by default, the rich text copy within it) so cards
+  // and menu links to the same URL aren't tagged too. Set `within: null` to match
+  // anywhere in the section, e.g. custom liquid markup.
+  [
+    {
+      path: '/collections/smart-alarm-panels',
+      section: 'grid_section_AfzNBp',
+      contentSlug: 'alarm_panel_collection',
+      contentCluster: 'alarm_panel',
+      ctaLocation: 'tablet_decision_copy',
+      links: [{ href: '/pages/usb-c-pd-vs-12v-to-5v-usb-power-converter', destinationType: 'guide' }],
+    },
+    {
+      path: '/collections/smart-garage-door-openers',
+      section: 'section_gdo_buying_guides',
+      contentSlug: 'smart-garage-door-openers',
+      contentCluster: 'garage_gdo',
+      ctaLocation: 'gdo_decision_accordion',
+      links: [
+        { href: '/pages/myq-home-assistant-alternative', destinationType: 'guide' },
+        { href: '/pages/ratgdo-vs-konnected-gdo-blaq', destinationType: 'guide' },
+        { href: '/products/smart-garage-door-opener-blaq-myq-alternative', destinationType: 'product' },
+        { href: '/products/konnected-smart-garage-door-opener', destinationType: 'product' },
+      ],
+    },
+    {
+      path: '/products/smart-garage-door-opener-blaq-myq-alternative',
+      section: 'section_TAQrRD',
+      contentSlug: 'gdo-blaq',
+      contentCluster: 'garage_gdo',
+      ctaLocation: 'product_faq',
+      links: [{ href: '/pages/ratgdo-vs-konnected-gdo-blaq', destinationType: 'guide' }],
+    },
+    {
+      path: '/products/smart-garage-door-opener-blaq-myq-alternative',
+      section: 'section_myq_home_assistant_answer',
+      contentSlug: 'gdo-blaq',
+      contentCluster: 'garage_gdo',
+      ctaLocation: 'myq_home_assistant_answer',
+      links: [
+        { href: '/pages/myq-home-assistant-alternative', destinationType: 'guide' },
+        { href: '/collections/smart-garage-door-openers', destinationType: 'collection' },
+      ],
+    },
+    {
+      path: '/products/konnected-alarm-panel-pro-12-zone-kit',
+      section: 'section_FKBXbw',
+      contentSlug: 'alarm_panel_pro_conversion',
+      contentCluster: 'alarm_panel',
+      ctaLocation: 'tablet_power_section',
+      links: [{ href: '/pages/usb-c-pd-vs-12v-to-5v-usb-power-converter', destinationType: 'guide' }],
+    },
+    {
+      path: '/pages/joshai',
+      section: 'section_joshai_compatibility',
+      within: null,
+      contentSlug: 'joshai',
+      contentCluster: 'garage_gdo',
+      ctaLocation: 'compatibility_table',
+      links: [
+        { href: 'https://konnected.io/products/smart-garage-door-opener-blaq-myq-alternative', destinationType: 'product' },
+        { href: 'https://konnected.io/products/smart-garage-door-opener', destinationType: 'product' },
+        { href: 'https://konnected.io/collections/smart-garage-door-openers', destinationType: 'collection' },
+      ],
+    },
+    {
+      path: '/pages/joshai',
+      section: 'josh_ai_shop_products',
+      within: null,
+      contentSlug: 'joshai',
+      contentCluster: 'garage_gdo',
+      ctaLocation: 'product_card',
+      links: [
+        { href: 'https://konnected.io/products/smart-garage-door-opener-blaq-myq-alternative', destinationType: 'product' },
+        { href: 'https://konnected.io/products/smart-garage-door-opener', destinationType: 'product' },
+      ],
+    },
+    {
+      path: '/pages/joshai',
+      section: 'josh_ai_shop_products',
+      within: null,
+      contentSlug: 'joshai',
+      contentCluster: 'garage_gdo',
+      ctaLocation: 'related_resources',
+      links: [
+        {
+          href: 'https://community.konnected.io/t/konnected-josh-ai-the-ultimate-privacy-first-smart-garage-experience/40252',
+          destinationType: 'support_page',
+        },
+        { href: 'https://www.josh.ai/devices', destinationType: 'other' },
+        { href: 'https://konnected.io/collections/smart-garage-door-openers', destinationType: 'collection' },
+      ],
+    },
+  ]
+    .filter(function(route) {
+      return window.location.pathname === route.path;
+    })
+    .forEach(function(route) {
+      const within = route.within === undefined ? ':is(.text-block, .details-content) ' : route.within ? `${route.within} ` : '';
+
+      document.querySelectorAll(`[id$="__${route.section}"]`).forEach(function(section) {
+        route.links.forEach(function(destination) {
+          section.querySelectorAll(`${within}a[href="${destination.href}"]`).forEach(function(link) {
+            tagContentCtaLink(link, {
+              'data-content-slug': route.contentSlug,
+              'data-content-cluster': route.contentCluster,
+              'data-destination-type': destination.destinationType,
+              'data-cta-location': route.ctaLocation,
+            });
+          });
+        });
+      });
+    });
 }
 
 if (document.readyState === 'loading') {
