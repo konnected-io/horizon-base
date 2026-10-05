@@ -4309,7 +4309,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>If you are replacing myQ, start with the <a href=\"/pages/myq-home-assistant-alternative\" data-content-cta data-content-slug=\"smart-garage-door-openers\" data-content-cluster=\"garage_gdo\" data-destination-type=\"guide\" data-cta-location=\"gdo_decision_accordion\">myQ alternative guide</a> before choosing a garage controller. It explains the local-control path and helps route most Chamberlain and LiftMaster users toward GDO blaQ instead of another cloud workaround.</p>",
+                    "text": "<p>If you are replacing myQ, start with the <a href=\"/pages/myq-home-assistant-alternative\">myQ alternative guide</a> before choosing a garage controller. It explains the local-control path and helps route most Chamberlain and LiftMaster users toward GDO blaQ instead of another cloud workaround.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -4356,7 +4356,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>If you are evaluating the DIY ratgdo route, read the <a href=\"/pages/ratgdo-vs-konnected-gdo-blaq\" data-content-cta data-content-slug=\"smart-garage-door-openers\" data-content-cluster=\"garage_gdo\" data-destination-type=\"guide\" data-cta-location=\"gdo_decision_accordion\">ratgdo vs GDO blaQ comparison</a> to see when GDO blaQ is the better finished product for compatible Chamberlain and LiftMaster openers.</p>",
+                    "text": "<p>If you are evaluating the DIY ratgdo route, read the <a href=\"/pages/ratgdo-vs-konnected-gdo-blaq\">ratgdo vs GDO blaQ comparison</a> to see when GDO blaQ is the better finished product for compatible Chamberlain and LiftMaster openers.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -4403,7 +4403,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Choose <a href=\"/products/smart-garage-door-opener-blaq-myq-alternative\" data-content-cta data-content-slug=\"smart-garage-door-openers\" data-content-cluster=\"garage_gdo\" data-destination-type=\"product\" data-cta-location=\"gdo_decision_accordion\">GDO blaQ</a> for many Security+ 2.0 Chamberlain, LiftMaster, and Craftsman openers, especially myQ-era openers that do not behave like a simple wall button. Choose <a href=\"/products/konnected-smart-garage-door-opener\" data-content-cta data-content-slug=\"smart-garage-door-openers\" data-content-cluster=\"garage_gdo\" data-destination-type=\"product\" data-cta-location=\"gdo_decision_accordion\">GDO White</a> for compatible dry-contact, wall-button, or relay-style openers.</p>",
+                    "text": "<p>Choose <a href=\"/products/smart-garage-door-opener-blaq-myq-alternative\">GDO blaQ</a> for many Security+ 2.0 Chamberlain, LiftMaster, and Craftsman openers, especially myQ-era openers that do not behave like a simple wall button. Choose <a href=\"/products/konnected-smart-garage-door-opener\">GDO White</a> for compatible dry-contact, wall-button, or relay-style openers.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -4497,7 +4497,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Both Konnected GDO products are designed for local smart home integrations. If your main goal is Home Assistant, compare your opener type first, then use the <a href=\"/pages/myq-home-assistant-alternative\" data-content-cta data-content-slug=\"smart-garage-door-openers\" data-content-cluster=\"garage_gdo\" data-destination-type=\"guide\" data-cta-location=\"gdo_decision_accordion\">myQ replacement guide</a> to pick the cleanest local-control path.</p>",
+                    "text": "<p>Both Konnected GDO products are designed for local smart home integrations. If your main goal is Home Assistant, compare your opener type first, then use the <a href=\"/pages/myq-home-assistant-alternative\">myQ replacement guide</a> to pick the cleanest local-control path.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",

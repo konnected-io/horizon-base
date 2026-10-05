@@ -414,6 +414,77 @@ function tagContentCtaLinks() {
         });
       });
     });
+
+  // Links inside rich text settings. Shopify rejects data-* attributes in rich text,
+  // so they're tagged here instead, scoped to the copy in one section so cards and
+  // menu links to the same URL aren't tagged too.
+  [
+    {
+      path: '/collections/smart-alarm-panels',
+      section: 'grid_section_AfzNBp',
+      contentSlug: 'alarm_panel_collection',
+      contentCluster: 'alarm_panel',
+      ctaLocation: 'tablet_decision_copy',
+      links: [{ href: '/pages/usb-c-pd-vs-12v-to-5v-usb-power-converter', destinationType: 'guide' }],
+    },
+    {
+      path: '/collections/smart-garage-door-openers',
+      section: 'section_gdo_buying_guides',
+      contentSlug: 'smart-garage-door-openers',
+      contentCluster: 'garage_gdo',
+      ctaLocation: 'gdo_decision_accordion',
+      links: [
+        { href: '/pages/myq-home-assistant-alternative', destinationType: 'guide' },
+        { href: '/pages/ratgdo-vs-konnected-gdo-blaq', destinationType: 'guide' },
+        { href: '/products/smart-garage-door-opener-blaq-myq-alternative', destinationType: 'product' },
+        { href: '/products/konnected-smart-garage-door-opener', destinationType: 'product' },
+      ],
+    },
+    {
+      path: '/products/smart-garage-door-opener-blaq-myq-alternative',
+      section: 'section_TAQrRD',
+      contentSlug: 'gdo-blaq',
+      contentCluster: 'garage_gdo',
+      ctaLocation: 'product_faq',
+      links: [{ href: '/pages/ratgdo-vs-konnected-gdo-blaq', destinationType: 'guide' }],
+    },
+    {
+      path: '/products/smart-garage-door-opener-blaq-myq-alternative',
+      section: 'section_myq_home_assistant_answer',
+      contentSlug: 'gdo-blaq',
+      contentCluster: 'garage_gdo',
+      ctaLocation: 'myq_home_assistant_answer',
+      links: [
+        { href: '/pages/myq-home-assistant-alternative', destinationType: 'guide' },
+        { href: '/collections/smart-garage-door-openers', destinationType: 'collection' },
+      ],
+    },
+    {
+      path: '/products/konnected-alarm-panel-pro-12-zone-kit',
+      section: 'section_FKBXbw',
+      contentSlug: 'alarm_panel_pro_conversion',
+      contentCluster: 'alarm_panel',
+      ctaLocation: 'tablet_power_section',
+      links: [{ href: '/pages/usb-c-pd-vs-12v-to-5v-usb-power-converter', destinationType: 'guide' }],
+    },
+  ]
+    .filter(function(route) {
+      return window.location.pathname === route.path;
+    })
+    .forEach(function(route) {
+      document.querySelectorAll(`[id$="__${route.section}"]`).forEach(function(section) {
+        route.links.forEach(function(destination) {
+          section.querySelectorAll(`:is(.text-block, .details-content) a[href="${destination.href}"]`).forEach(function(link) {
+            tagContentCtaLink(link, {
+              'data-content-slug': route.contentSlug,
+              'data-content-cluster': route.contentCluster,
+              'data-destination-type': destination.destinationType,
+              'data-cta-location': route.ctaLocation,
+            });
+          });
+        });
+      });
+    });
 }
 
 if (document.readyState === 'loading') {
