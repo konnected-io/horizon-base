@@ -415,9 +415,11 @@ function tagContentCtaLinks() {
       });
     });
 
-  // Links inside rich text settings. Shopify rejects data-* attributes in rich text,
-  // so they're tagged here instead, scoped to the copy in one section so cards and
-  // menu links to the same URL aren't tagged too.
+  // Links inside template content. Shopify rejects data-* attributes in rich text
+  // settings, and custom liquid uses the same table for consistency. Each rule is
+  // scoped to one section (and, by default, the rich text copy within it) so cards
+  // and menu links to the same URL aren't tagged too. Set `within: null` to match
+  // anywhere in the section, e.g. custom liquid markup.
   [
     {
       path: '/collections/smart-alarm-panels',
@@ -467,14 +469,57 @@ function tagContentCtaLinks() {
       ctaLocation: 'tablet_power_section',
       links: [{ href: '/pages/usb-c-pd-vs-12v-to-5v-usb-power-converter', destinationType: 'guide' }],
     },
+    {
+      path: '/pages/joshai',
+      section: 'section_joshai_compatibility',
+      within: null,
+      contentSlug: 'joshai',
+      contentCluster: 'garage_gdo',
+      ctaLocation: 'compatibility_table',
+      links: [
+        { href: 'https://konnected.io/products/smart-garage-door-opener-blaq-myq-alternative', destinationType: 'product' },
+        { href: 'https://konnected.io/products/smart-garage-door-opener', destinationType: 'product' },
+        { href: 'https://konnected.io/collections/smart-garage-door-openers', destinationType: 'collection' },
+      ],
+    },
+    {
+      path: '/pages/joshai',
+      section: 'josh_ai_shop_products',
+      within: null,
+      contentSlug: 'joshai',
+      contentCluster: 'garage_gdo',
+      ctaLocation: 'product_card',
+      links: [
+        { href: 'https://konnected.io/products/smart-garage-door-opener-blaq-myq-alternative', destinationType: 'product' },
+        { href: 'https://konnected.io/products/smart-garage-door-opener', destinationType: 'product' },
+      ],
+    },
+    {
+      path: '/pages/joshai',
+      section: 'josh_ai_shop_products',
+      within: null,
+      contentSlug: 'joshai',
+      contentCluster: 'garage_gdo',
+      ctaLocation: 'related_resources',
+      links: [
+        {
+          href: 'https://community.konnected.io/t/konnected-josh-ai-the-ultimate-privacy-first-smart-garage-experience/40252',
+          destinationType: 'support_page',
+        },
+        { href: 'https://www.josh.ai/devices', destinationType: 'other' },
+        { href: 'https://konnected.io/collections/smart-garage-door-openers', destinationType: 'collection' },
+      ],
+    },
   ]
     .filter(function(route) {
       return window.location.pathname === route.path;
     })
     .forEach(function(route) {
+      const within = route.within === undefined ? ':is(.text-block, .details-content) ' : route.within ? `${route.within} ` : '';
+
       document.querySelectorAll(`[id$="__${route.section}"]`).forEach(function(section) {
         route.links.forEach(function(destination) {
-          section.querySelectorAll(`:is(.text-block, .details-content) a[href="${destination.href}"]`).forEach(function(link) {
+          section.querySelectorAll(`${within}a[href="${destination.href}"]`).forEach(function(link) {
             tagContentCtaLink(link, {
               'data-content-slug': route.contentSlug,
               'data-content-cluster': route.contentCluster,
