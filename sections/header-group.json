@@ -53,6 +53,7 @@
       "blocks": {
         "announcement_BxgCk9": {
           "type": "_announcement",
+          "disabled": true,
           "settings": {
             "text": "Join the Konnected Community here",
             "link": "https://community.konnected.io/",
@@ -67,6 +68,7 @@
         },
         "announcement_CnmdUR": {
           "type": "_announcement",
+          "disabled": true,
           "settings": {
             "text": "Sign up for our Newsletter and get 10% Off",
             "link": "",
@@ -81,10 +83,9 @@
         },
         "announcement_N8PCk4": {
           "type": "_announcement",
-          "disabled": true,
           "settings": {
-            "text": "GDO BOGO Labor Day flash sale! Buy 1 GDO, get the 2nd 50% off",
-            "link": "shopify://collections/smart-garage-door-openers",
+            "text": "Fall Sale: 20% OFF everything. No code needed. Ends October 8 at 3:00 AM ET.",
+            "link": "shopify://collections/shop-now",
             "font": "var(--font-accent--family)",
             "font_size": "1.125rem",
             "weight": "",
