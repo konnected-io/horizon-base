@@ -5388,53 +5388,291 @@
       }
     },
     "custom_hero_duo": {
-      "type": "custom-liquid",
+      "type": "custom-hero",
       "name": "Hero: dual product lines",
-      "custom_css": [
-        ".section-background {background: radial-gradient(circle 240px at 91% -70px, transparent 58%, rgba(34,190,255,.26) 60%, rgba(63,117,255,.15) 74%, transparent 76%), radial-gradient(circle 260px at 3% 108%, transparent 60%, rgba(63,117,255,.18) 62%, rgba(34,190,255,.09) 76%, transparent 78%), radial-gradient(640px 420px at 88% -10%, rgba(34,190,255,.12), transparent 65%), linear-gradient(180deg, #ffffff 0%, #eef4f9 100%);}"
+      "blocks": {
+        "block_1": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/smart_alarm_panels.png",
+            "image_alt": "Konnected Alarm Panel Pro board",
+            "image_size": "compact",
+            "fit": "",
+            "title": "Smart Alarm Panels",
+            "text": "Every wired door, window, and motion sensor in your walls becomes a smart sensor in the app you already use.",
+            "button_label": "Shop Alarm Panels",
+            "link": "shopify://collections/smart-alarm-panels",
+            "note": "From DIY retrofit to new builds"
+          }
+        },
+        "block_2": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Smart_Garage_Openers.png",
+            "image_alt": "Konnected GDO blaQ and GDO White smart garage controllers",
+            "image_size": "default",
+            "fit": "",
+            "title": "Smart Garage Openers",
+            "text": "Retrofit the opener you already own with local control, real-time door status, and automations.",
+            "button_label": "Shop Garage Openers",
+            "link": "shopify://collections/smart-garage-door-openers",
+            "note": "Works with most major brands"
+          }
+        },
+        "block_3": {
+          "type": "quote",
+          "settings": {
+            "quote": "Worked exactly as expected right out of the box. I can’t rate this cloudless, subscription-less device highly enough.",
+            "author": "Josh P. - Verified customer"
+          }
+        },
+        "block_4": {
+          "type": "quote",
+          "settings": {
+            "quote": "Love this product! My alarm is now totally integrated with my other smart home devices and platforms.",
+            "author": "Martin J. - Verified customer"
+          }
+        },
+        "block_5": {
+          "type": "quote",
+          "settings": {
+            "quote": "I got my GDO blaQs! 2x installed in under 15 mins. It’s amazing how quickly I had full integration with all my smart home services.",
+            "author": "Anthony P. - Verified customer"
+          }
+        },
+        "block_6": {
+          "type": "quote",
+          "settings": {
+            "quote": "The Konnected Pro and Interface Boards work perfectly. App interface to SmartThings work perfectly.",
+            "author": "David L. - Verified customer"
+          }
+        },
+        "block_7": {
+          "type": "quote",
+          "settings": {
+            "quote": "Very consistent and works without fail! I recommend it for anyone using SmartThings.",
+            "author": "Aaron P. - Verified customer"
+          }
+        },
+        "block_8": {
+          "type": "quote",
+          "settings": {
+            "quote": "The hardware works great and is super easy to setup. I use my Alarm Panel Pro integrated with Home Assistant and love the built in integration!",
+            "author": "Jedidiah H. - Verified customer"
+          }
+        },
+        "block_9": {
+          "type": "badge",
+          "settings": {
+            "image": "shopify://shop_images/Works_With_HA_-_Generic.png",
+            "alt": "Works with Home Assistant"
+          }
+        },
+        "block_10": {
+          "type": "badge",
+          "settings": {
+            "image": "shopify://shop_images/1._works-with-smart-things.png",
+            "alt": "Works with SmartThings"
+          }
+        }
+      },
+      "block_order": [
+        "block_1",
+        "block_2",
+        "block_3",
+        "block_4",
+        "block_5",
+        "block_6",
+        "block_7",
+        "block_8",
+        "block_9",
+        "block_10"
       ],
       "settings": {
-        "custom_liquid": "<div class=\"k-hero\"><div class=\"k-hero__head\"><div class=\"k-hero__intro\"><h2 class=\"k-hero__title\">Breathe new life into the wiring your home <em>already has</em>.</h2><p class=\"k-hero__sub\">Konnected retrofits two things every house already owns: the <strong>wired alarm system</strong> and the <strong>garage door opener</strong>. No subscriptions, no cloud lock-in.</p></div><aside class=\"k-hero__proof\"><p class=\"k-hero__stars\" role=\"img\" aria-label=\"Rated 5 out of 5 stars\">&#9733;&#9733;&#9733;&#9733;&#9733;</p><div class=\"k-quote-rotator\"><figure class=\"k-quote is-active\"><blockquote>“Worked exactly as expected right out of the box. I can’t rate this cloudless, subscription-less device highly enough.”</blockquote><figcaption>Josh P. - Verified customer</figcaption></figure><figure class=\"k-quote\"><blockquote>“Love this product! My alarm is now totally integrated with my other smart home devices and platforms.”</blockquote><figcaption>Martin J. - Verified customer</figcaption></figure><figure class=\"k-quote\"><blockquote>“I got my GDO blaQs! 2x installed in under 15 mins. It’s amazing how quickly I had full integration with all my smart home services.”</blockquote><figcaption>Anthony P. - Verified customer</figcaption></figure><figure class=\"k-quote\"><blockquote>“The Konnected Pro and Interface Boards work perfectly. App interface to SmartThings work perfectly.”</blockquote><figcaption>David L. - Verified customer</figcaption></figure><figure class=\"k-quote\"><blockquote>“Very consistent and works without fail! I recommend it for anyone using SmartThings.”</blockquote><figcaption>Aaron P. - Verified customer</figcaption></figure><figure class=\"k-quote\"><blockquote>“The hardware works great and is super easy to setup. I use my Alarm Panel Pro integrated with Home Assistant and love the built in integration!”</blockquote><figcaption>Jedidiah H. - Verified customer</figcaption></figure></div><div class=\"k-hero__badges\"><img src=\"{{ 'Works_With_HA_-_Generic.png' | file_img_url: '400x' }}\" alt=\"Works with Home Assistant\" loading=\"lazy\"><img src=\"{{ '1._works-with-smart-things.png' | file_img_url: '400x' }}\" alt=\"Works with SmartThings\" loading=\"lazy\"></div></aside></div><div class=\"k-hero__duo\"><article class=\"k-line-card k-reveal\"><a class=\"k-line-card__media-link\" href=\"/collections/smart-alarm-panels\" tabindex=\"-1\" aria-hidden=\"true\"><img class=\"k-line-card__img k-line-card__img--alarm\" src=\"{{ 'smart_alarm_panels.png' | file_img_url: '900x' }}\" alt=\"Konnected Alarm Panel Pro board\" fetchpriority=\"high\"></a><h3 class=\"k-line-card__title\">Smart Alarm Panels</h3><p class=\"k-line-card__text\">Every wired door, window, and motion sensor in your walls becomes a smart sensor in the app you already use.</p><div class=\"k-line-card__row\"><a class=\"button\" href=\"/collections/smart-alarm-panels\">Shop Alarm Panels</a><span class=\"k-line-card__note\">From DIY retrofit to new builds</span></div></article><article class=\"k-line-card k-reveal\"><a class=\"k-line-card__media-link\" href=\"/collections/smart-garage-door-openers\" tabindex=\"-1\" aria-hidden=\"true\"><img class=\"k-line-card__img\" src=\"{{ 'Smart_Garage_Openers.png' | file_img_url: '900x' }}\" alt=\"Konnected GDO blaQ and GDO White smart garage controllers\" fetchpriority=\"high\"></a><h3 class=\"k-line-card__title\">Smart Garage Openers</h3><p class=\"k-line-card__text\">Retrofit the opener you already own with local control, real-time door status, and automations.</p><div class=\"k-line-card__row\"><a class=\"button\" href=\"/collections/smart-garage-door-openers\">Shop Garage Openers</a><span class=\"k-line-card__note\">Works with most major brands</span></div></article></div></div>",
+        "heading_tag": "h2",
+        "show_breadcrumbs": false,
+        "heading": "Breathe new life into the wiring your home <em>already has</em>.",
+        "subheading": "Konnected retrofits two things every house already owns: the <strong>wired alarm system</strong> and the <strong>garage door opener</strong>. No subscriptions, no cloud lock-in.",
+        "rating_label": "Rated 5 out of 5 stars",
         "section_width": "page-width",
         "padding-block-start": 0,
         "padding-block-end": 0
-      }
+      },
+      "custom_css": [
+        ".section-background {background: radial-gradient(circle 240px at 91% -70px, transparent 58%, rgba(34,190,255,.26) 60%, rgba(63,117,255,.15) 74%, transparent 76%), radial-gradient(circle 260px at 3% 108%, transparent 60%, rgba(63,117,255,.18) 62%, rgba(34,190,255,.09) 76%, transparent 78%), radial-gradient(640px 420px at 88% -10%, rgba(34,190,255,.12), transparent 65%), linear-gradient(180deg, #ffffff 0%, #eef4f9 100%);}"
+      ]
     },
     "custom_stats": {
-      "type": "custom-liquid",
+      "type": "custom-stats",
       "name": "Konnected in numbers",
+      "blocks": {
+        "stat_1": {
+          "type": "stat",
+          "settings": {
+            "value": "9",
+            "label": "Smart home integrations"
+          }
+        },
+        "stat_2": {
+          "type": "stat",
+          "settings": {
+            "value": "$780",
+            "label": "Average yearly savings"
+          }
+        },
+        "stat_3": {
+          "type": "stat",
+          "settings": {
+            "value": "25k+",
+            "label": "Konnected cloud users"
+          }
+        },
+        "stat_4": {
+          "type": "stat",
+          "settings": {
+            "value": "60+",
+            "label": "Countries shipped to"
+          }
+        },
+        "stat_5": {
+          "type": "stat",
+          "settings": {
+            "value": "~1hr",
+            "label": "Estimated install"
+          }
+        }
+      },
+      "block_order": [
+        "stat_1",
+        "stat_2",
+        "stat_3",
+        "stat_4",
+        "stat_5"
+      ],
       "settings": {
-        "custom_liquid": "<div class=\"k-stats\"><h2 class=\"k-stats__title\">Konnected in numbers</h2><div class=\"k-stats__grid\"><div class=\"k-stat k-reveal\"><span class=\"k-stat__n\">9</span><span class=\"k-stat__l\">Smart home integrations</span></div><div class=\"k-stat k-reveal\"><span class=\"k-stat__n\">$780</span><span class=\"k-stat__l\">Average yearly savings</span></div><div class=\"k-stat k-reveal\"><span class=\"k-stat__n\">25k+</span><span class=\"k-stat__l\">Konnected cloud users</span></div><div class=\"k-stat k-reveal\"><span class=\"k-stat__n\">60+</span><span class=\"k-stat__l\">Countries shipped to</span></div><div class=\"k-stat k-reveal\"><span class=\"k-stat__n\">~1hr</span><span class=\"k-stat__l\">Estimated install</span></div></div></div>",
+        "heading": "Konnected in numbers",
         "section_width": "page-width",
         "padding-block-start": 64,
         "padding-block-end": 64
       }
     },
     "custom_quiz": {
-      "type": "custom-liquid",
+      "type": "custom-quiz-cta",
       "name": "Quiz CTA",
+      "blocks": {
+        "quiz_1": {
+          "type": "quiz_button",
+          "settings": {
+            "label": "Alarm panel quiz",
+            "quiz_id": "7f8f415c-2756-4637-8119-aa24df66b6b7",
+            "style": "primary"
+          }
+        },
+        "quiz_2": {
+          "type": "quiz_button",
+          "settings": {
+            "label": "Garage opener quiz",
+            "quiz_id": "d515c056-caae-4c7d-8890-d9fcc8947b62",
+            "style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "quiz_1",
+        "quiz_2"
+      ],
       "settings": {
-        "custom_liquid": "<div class=\"k-quiz k-reveal\"><h2 class=\"k-quiz__title\">Not sure which product is right for you?</h2><p class=\"k-quiz__sub\">Take a short quiz and we&rsquo;ll point you to the right kit for your home.</p><div class=\"k-quiz__actions\"><div class=\"okeQuizModalButton\" style=\"display:flex;\"><a href=\"#\" onclick=\"okeConnectApi.showQuiz('7f8f415c-2756-4637-8119-aa24df66b6b7', '1d0a586e-45b1-4a7e-b30d-539e2e1abc0e')\" class=\"button\">Alarm panel quiz</a></div><div class=\"okeQuizModalButton\" style=\"display:flex;\"><a href=\"#\" onclick=\"okeConnectApi.showQuiz('d515c056-caae-4c7d-8890-d9fcc8947b62', '1d0a586e-45b1-4a7e-b30d-539e2e1abc0e')\" class=\"button\">Garage opener quiz</a></div></div></div>",
+        "heading": "Not sure which product is right for you?",
+        "text": "Take a short quiz and we’ll point you to the right kit for your home.",
+        "okendo_subscriber_id": "1d0a586e-45b1-4a7e-b30d-539e2e1abc0e",
         "section_width": "page-width",
         "padding-block-start": 24,
         "padding-block-end": 48
       }
     },
     "custom_what_lines": {
-      "type": "custom-liquid",
+      "type": "custom-intro",
       "name": "Intro: smart home in your walls",
+      "blocks": {
+        "fit_1": {
+          "type": "fit",
+          "settings": {
+            "question": "Just moved into a house with an old alarm system?",
+            "answer": "Those wired sensors are faster and more reliable than anything in a retail kit. One board in the panel closet wakes up every one of them."
+          }
+        },
+        "fit_2": {
+          "type": "fit",
+          "settings": {
+            "question": "Paying monthly for a keypad you never touch?",
+            "answer": "Keep the sensors, drop the contract. Arm, disarm, and get instant alerts from your phone, wherever you are."
+          }
+        },
+        "fit_3": {
+          "type": "fit",
+          "settings": {
+            "question": "Building on Home Assistant, SmartThings, or Hubitat?",
+            "answer": "Konnected is a first-class citizen: official integrations, local APIs, and ESPHome inside. Automations keep running even when the internet is out."
+          }
+        }
+      },
+      "block_order": [
+        "fit_1",
+        "fit_2",
+        "fit_3"
+      ],
       "settings": {
-        "custom_liquid": "<div class=\"k-intro\"><div class=\"k-intro__head k-reveal\"><h2 class=\"k-intro__title\">There&rsquo;s a smart home hiding in your walls.</h2><p class=\"k-intro__lede\">That alarm panel in the closet already wires to every door, window, and motion sensor in the house. A Konnected board plugs in and hands every sensor to Home Assistant, SmartThings, Alexa, or whichever platform runs your home. <strong>No monthly fees</strong>, no rewiring, and most installs take <strong>about an hour</strong>.</p></div><div class=\"k-intro__media k-reveal\"><img class=\"k-intro__img\" src=\"{{ '02166205cdfec617ba45c6979d68e164.png' | file_img_url: '1200x' }}\" alt=\"Cutaway view of a home with wired sensors marked at every door and window, the garage door, and a Konnected board installed in the existing alarm panel\" width=\"1200\" height=\"1010\" loading=\"lazy\"><p class=\"k-intro__caption\">Every blue dot is a wired sensor most homes already have. One Konnected board brings them all online.</p></div><ul class=\"k-intro__fits\" role=\"list\"><li class=\"k-intro__fit k-reveal\"><h3 class=\"k-intro__q\">Just moved into a house with an old alarm system?</h3><p class=\"k-intro__a\">Those wired sensors are faster and more reliable than anything in a retail kit. One board in the panel closet wakes up every one of them.</p></li><li class=\"k-intro__fit k-reveal\"><h3 class=\"k-intro__q\">Paying monthly for a keypad you never touch?</h3><p class=\"k-intro__a\">Keep the sensors, drop the contract. Arm, disarm, and get instant alerts from your phone, wherever you are.</p></li><li class=\"k-intro__fit k-reveal\"><h3 class=\"k-intro__q\">Building on Home Assistant, SmartThings, or Hubitat?</h3><p class=\"k-intro__a\">Konnected is a first-class citizen: official integrations, local APIs, and ESPHome inside. Automations keep running even when the internet is out.</p></li></ul></div>",
+        "heading": "There’s a smart home hiding in your walls.",
+        "lede": "That alarm panel in the closet already wires to every door, window, and motion sensor in the house. A Konnected board plugs in and hands every sensor to Home Assistant, SmartThings, Alexa, or whichever platform runs your home. <strong>No monthly fees</strong>, no rewiring, and most installs take <strong>about an hour</strong>.",
+        "image": "shopify://shop_images/02166205cdfec617ba45c6979d68e164.png",
+        "image_alt": "Cutaway view of a home with wired sensors marked at every door and window, the garage door, and a Konnected board installed in the existing alarm panel",
+        "image_style": "illustration",
+        "caption": "Every blue dot is a wired sensor most homes already have. One Konnected board brings them all online.",
+        "flip": false,
         "section_width": "page-width",
         "padding-block-start": 64,
         "padding-block-end": 32
       }
     },
     "custom_intro_gdo": {
-      "type": "custom-liquid",
+      "type": "custom-intro",
       "name": "Intro: garage door opener",
+      "blocks": {
+        "fit_1": {
+          "type": "fit",
+          "settings": {
+            "question": "Ever driven off wondering if the door closed?",
+            "answer": "Live status in your app, an alert the moment it opens, and a goodnight routine that closes it behind you."
+          }
+        },
+        "fit_2": {
+          "type": "fit",
+          "settings": {
+            "question": "Done fighting myQ and its disappearing features?",
+            "answer": "GDO blaQ talks to your platform directly, with local control that no firmware update can take away."
+          }
+        },
+        "fit_3": {
+          "type": "fit",
+          "settings": {
+            "question": "Opener older than your smart home?",
+            "answer": "GDO White wires to nearly any opener with a wall button, whatever the brand, whatever the decade."
+          }
+        }
+      },
+      "block_order": [
+        "fit_1",
+        "fit_2",
+        "fit_3"
+      ],
       "settings": {
-        "custom_liquid": "<div class=\"k-intro k-intro--flip\"><div class=\"k-intro__head k-reveal\"><h2 class=\"k-intro__title\">The biggest door in your house shouldn&rsquo;t be the dumbest.</h2><p class=\"k-intro__lede\">A Konnected GDO snaps onto the garage door opener you already own and gives it live open and closed status, voice control, and automations in the same app as the rest of your home. GDO blaQ is <strong>the myQ alternative</strong>; GDO White is <strong>the universal option</strong>. Neither asks for a subscription.</p></div><div class=\"k-intro__media k-reveal\"><img class=\"k-intro__img k-intro__img--photo\" src=\"{{ 'Rectangle_585_2.jpg' | file_img_url: '1200x' }}\" alt=\"A Konnected garage door opener controller held between a thumb and forefinger\" width=\"1280\" height=\"720\" loading=\"lazy\"><p class=\"k-intro__caption\">The whole retrofit fits in one hand. Your app finally knows whether the door is open or closed.</p></div><ul class=\"k-intro__fits\" role=\"list\"><li class=\"k-intro__fit k-reveal\"><h3 class=\"k-intro__q\">Ever driven off wondering if the door closed?</h3><p class=\"k-intro__a\">Live status in your app, an alert the moment it opens, and a goodnight routine that closes it behind you.</p></li><li class=\"k-intro__fit k-reveal\"><h3 class=\"k-intro__q\">Done fighting myQ and its disappearing features?</h3><p class=\"k-intro__a\">GDO blaQ talks to your platform directly, with local control that no firmware update can take away.</p></li><li class=\"k-intro__fit k-reveal\"><h3 class=\"k-intro__q\">Opener older than your smart home?</h3><p class=\"k-intro__a\">GDO White wires to nearly any opener with a wall button, whatever the brand, whatever the decade.</p></li></ul></div>",
+        "heading": "The biggest door in your house shouldn’t be the dumbest.",
+        "lede": "A Konnected GDO snaps onto the garage door opener you already own and gives it live open and closed status, voice control, and automations in the same app as the rest of your home. GDO blaQ is <strong>the myQ alternative</strong>; GDO White is <strong>the universal option</strong>. Neither asks for a subscription.",
+        "image": "shopify://shop_images/Rectangle_585_2.jpg",
+        "image_alt": "A Konnected garage door opener controller held between a thumb and forefinger",
+        "image_style": "photo",
+        "caption": "The whole retrofit fits in one hand. Your app finally knows whether the door is open or closed.",
+        "flip": true,
         "section_width": "page-width",
         "padding-block-start": 32,
         "padding-block-end": 64

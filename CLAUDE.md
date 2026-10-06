@@ -107,8 +107,9 @@ Worse, an `!important` in `custom.css` forces *every* downstream override to esc
 
 ### Konnected-specific customizations
 These are the local additions on top of stock Horizon — preserve them when merging upstream:
-- **`assets/custom.js`, `assets/custom.css`** — site-specific JS (hash-scroll with sticky-header offset, header group height calc) and styles.
+- **`assets/custom.js`, `assets/custom.css`** — site-specific JS (video media, CTA tracking, 2026 refresh quote rotator / reveal-on-scroll / logo-marquee a11y) and styles. Note: since Horizon v4 the desktop page scrolls inside `.page-wrapper`, not `window`, so `window` scroll listeners never fire there.
 - **`assets/accordion-custom.js`, `assets/product-custom-property.js`** — bespoke components.
+- **2026 refresh sections** — `sections/custom-hero.liquid`, `custom-intro.liquid`, `custom-quiz-cta.liquid`, `custom-stats.liquid`, `custom-notice.liquid` (net-new, Konnected-owned; `k-*` styles at the end of `custom.css`). Also `sections/grid-section.liquid` and `savings-calculator.liquid`.
 - **Custom templates** (named JSON templates assigned to specific products/collections/pages in the editor): `page.platforms.json`, `page.control4.json`, `page.smartthings.json`, `page.hubitat.json`, `page.homeassistant.json`, `page.konnected-partners.json`, `page.partners-index.json`, `page.collabs.json`, `collection.alarm-panel-pro-kits.json`, `collection.gdo-collection.json`, `collection.partners-and-resellers.json`, `product.gdo-blaq-v2.json`, `product.garage-door-opener.json`, `product.pro-conversion-kit.json`, `product.pro-interface-kit.json`.
 
 ## Conventions enforced by Cursor rules (`.cursor/rules/`)

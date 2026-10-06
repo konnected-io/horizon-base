@@ -10,10 +10,11 @@
 {
   "sections": {
     "custom_safety_notice": {
-      "type": "custom-liquid",
+      "type": "custom-notice",
       "name": "Safety notice",
       "settings": {
-        "custom_liquid": "<div class=\"k-notice k-reveal\" role=\"note\"><span class=\"k-notice__icon\" aria-hidden=\"true\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z\"/><path d=\"M12 9v4\"/><path d=\"M12 17h.01\"/></svg></span><p class=\"k-notice__text\"><span class=\"k-notice__label\">Safety</span> To reduce the risk of injury to persons &mdash; <strong>Do not use this device with one&#8209;piece doors or swinging doors.</strong></p></div>",
+        "label": "Safety",
+        "text": "To reduce the risk of injury to persons — <strong>Do not use this device with one‑piece doors or swinging doors.</strong>",
         "section_width": "page-width",
         "padding-block-start": 24,
         "padding-block-end": 0
@@ -4031,23 +4032,85 @@
       }
     },
     "custom_hero_collection": {
-      "type": "custom-liquid",
+      "type": "custom-hero",
       "name": "Hero: kit chooser",
-      "custom_css": [
-        ".section-background {background: radial-gradient(circle 240px at 91% -70px, transparent 58%, rgba(34,190,255,.26) 60%, rgba(63,117,255,.15) 74%, transparent 76%), radial-gradient(circle 260px at 3% 108%, transparent 60%, rgba(63,117,255,.18) 62%, rgba(34,190,255,.09) 76%, transparent 78%), radial-gradient(640px 420px at 88% -10%, rgba(34,190,255,.12), transparent 65%), linear-gradient(180deg, #ffffff 0%, #eef4f9 100%);}"
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_29_934122cf-65a4-48dd-a55c-ed2c50db7f56.png",
+            "image_alt": "GDO blaQ",
+            "image_size": "default",
+            "fit": "Best for Chamberlain, LiftMaster, Craftsman & Merlin",
+            "title": "GDO blaQ",
+            "text": "For garage openers made after 1997 with a Yellow, Purple, or Red learn button. Full control, light, and lock from your smart home.",
+            "button_label": "View GDO blaQ",
+            "link": "shopify://products/smart-garage-door-opener-blaq-myq-alternative",
+            "note": "The myQ alternative"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_31_d77b69be-354d-4efe-9cbc-fd22eebe31a5.png",
+            "image_alt": "GDO White",
+            "image_size": "default",
+            "fit": "Best for nearly any other opener, old or new",
+            "title": "GDO White",
+            "text": "Wires to any opener that triggers with a standard push button or relay, and adds real-time open/close status.",
+            "button_label": "View GDO White",
+            "link": "shopify://products/smart-garage-door-opener",
+            "note": "The universal option"
+          }
+        }
+      },
+      "block_order": [
+        "card_1",
+        "card_2"
       ],
       "settings": {
-        "custom_liquid": "<div class=\"k-hero k-hero--collection\"><div class=\"k-hero__intro\"><nav class=\"k-crumbs\" aria-label=\"Breadcrumb\"><a href=\"/\">Home</a><span class=\"k-crumbs__sep\" aria-hidden=\"true\">&rsaquo;</span><span aria-current=\"page\">Smart Garage Door Openers</span></nav><script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"{{ request.origin }}/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Smart Garage Door Openers\",\"item\":\"{{ request.origin }}/collections/smart-garage-door-openers\"}]}</script><h1 class=\"k-hero__title\">Make any Garage Door Opener Smart</h1><p class=\"k-hero__sub\">Konnected’s GDOs are WiFi devices that retrofit any motorized garage door opener* to work with popular smart home platforms.</p></div><div class=\"k-hero__duo\"><article class=\"k-line-card k-reveal\"><a class=\"k-line-card__media-link\" href=\"/products/smart-garage-door-opener-blaq-myq-alternative\" tabindex=\"-1\" aria-hidden=\"true\"><img class=\"k-line-card__img\" src=\"{{ 'Untitled_29_934122cf-65a4-48dd-a55c-ed2c50db7f56.png' | file_img_url: '900x' }}\" alt=\"GDO blaQ\" fetchpriority=\"high\"></a><p class=\"k-line-card__fit\">Best for Chamberlain, LiftMaster, Craftsman &amp; Merlin</p><h2 class=\"k-line-card__title\">GDO blaQ</h2><p class=\"k-line-card__text\">For garage openers made after 1997 with a Yellow, Purple, or Red learn button. Full control, light, and lock from your smart home.</p><div class=\"k-line-card__row\"><a class=\"button\" href=\"/products/smart-garage-door-opener-blaq-myq-alternative\">View GDO blaQ</a><span class=\"k-line-card__note\">The myQ alternative</span></div></article><article class=\"k-line-card k-reveal\"><a class=\"k-line-card__media-link\" href=\"/products/smart-garage-door-opener\" tabindex=\"-1\" aria-hidden=\"true\"><img class=\"k-line-card__img\" src=\"{{ 'Untitled_31_d77b69be-354d-4efe-9cbc-fd22eebe31a5.png' | file_img_url: '900x' }}\" alt=\"GDO White\" fetchpriority=\"high\"></a><p class=\"k-line-card__fit\">Best for nearly any other opener, old or new</p><h2 class=\"k-line-card__title\">GDO White</h2><p class=\"k-line-card__text\">Wires to any opener that triggers with a standard push button or relay, and adds real-time open/close status.</p><div class=\"k-line-card__row\"><a class=\"button\" href=\"/products/smart-garage-door-opener\">View GDO White</a><span class=\"k-line-card__note\">The universal option</span></div></article></div></div>",
+        "heading_tag": "h1",
+        "show_breadcrumbs": true,
+        "heading": "Make any Garage Door Opener Smart",
+        "subheading": "Konnected’s GDOs are WiFi devices that retrofit any motorized garage door opener* to work with popular smart home platforms.",
+        "rating_label": "",
         "section_width": "page-width",
         "padding-block-start": 0,
         "padding-block-end": 0
-      }
+      },
+      "custom_css": [
+        ".section-background {background: radial-gradient(circle 240px at 91% -70px, transparent 58%, rgba(34,190,255,.26) 60%, rgba(63,117,255,.15) 74%, transparent 76%), radial-gradient(circle 260px at 3% 108%, transparent 60%, rgba(63,117,255,.18) 62%, rgba(34,190,255,.09) 76%, transparent 78%), radial-gradient(640px 420px at 88% -10%, rgba(34,190,255,.12), transparent 65%), linear-gradient(180deg, #ffffff 0%, #eef4f9 100%);}"
+      ]
     },
     "custom_quiz": {
-      "type": "custom-liquid",
+      "type": "custom-quiz-cta",
       "name": "Quiz CTA",
+      "blocks": {
+        "quiz_1": {
+          "type": "quiz_button",
+          "settings": {
+            "label": "GDO compatibility quiz",
+            "quiz_id": "d515c056-caae-4c7d-8890-d9fcc8947b62",
+            "style": "primary"
+          }
+        },
+        "quiz_2": {
+          "type": "quiz_button",
+          "settings": {
+            "label": "Alarm panel quiz",
+            "quiz_id": "7f8f415c-2756-4637-8119-aa24df66b6b7",
+            "style": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "quiz_1",
+        "quiz_2"
+      ],
       "settings": {
-        "custom_liquid": "<div class=\"k-quiz k-reveal\"><h2 class=\"k-quiz__title\">Find the right GDO for your opener.</h2><p class=\"k-quiz__sub\">A few quick questions and we&rsquo;ll match you with GDO blaQ or GDO White.</p><div class=\"k-quiz__actions\"><div class=\"okeQuizModalButton\" style=\"display:flex;\"><a href=\"#\" onclick=\"okeConnectApi.showQuiz('d515c056-caae-4c7d-8890-d9fcc8947b62', '1d0a586e-45b1-4a7e-b30d-539e2e1abc0e')\" class=\"button\">GDO compatibility quiz</a></div><div class=\"okeQuizModalButton okeQuizModalButton--ghost\" style=\"display:flex;\"><a href=\"#\" onclick=\"okeConnectApi.showQuiz('7f8f415c-2756-4637-8119-aa24df66b6b7', '1d0a586e-45b1-4a7e-b30d-539e2e1abc0e')\" class=\"button\">Alarm panel quiz</a></div></div></div>",
+        "heading": "Find the right GDO for your opener.",
+        "text": "A few quick questions and we’ll match you with GDO blaQ or GDO White.",
+        "okendo_subscriber_id": "1d0a586e-45b1-4a7e-b30d-539e2e1abc0e",
         "section_width": "page-width",
         "padding-block-start": 24,
         "padding-block-end": 48

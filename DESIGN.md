@@ -79,7 +79,7 @@ Use on hero/heading sections only. Body sections stay clean. Derived from the br
 
 ## 3. Component language (`k-*` in `assets/custom.css`)
 
-All custom markup lives in **template-JSON `custom-liquid` sections** (precedent: the alarm retrofit chooser). No upstream Liquid was modified.
+Each component is a **Konnected-owned section** (`sections/custom-hero.liquid`, `custom-intro`, `custom-quiz-cta`, `custom-stats`, `custom-notice`). Copy, images, links, and quiz IDs are section settings and blocks, so they are editable in the theme editor. Styling stays in `custom.css`, and no upstream Liquid was modified. (The older alarm retrofit chooser is still a `custom-liquid` section.)
 
 ### 3.1 `k-hero` — the hero pattern
 - **Homepage:** left column = headline + subtext; right column = boxless social proof separated by a hairline (stars → quote rotator → official works-with badges); below = the dual-line duo.
@@ -141,7 +141,8 @@ Stock AI-gen table block restyled **via its own settings** (template JSON): midn
 
 | Concern | Where it lives |
 |---|---|
-| Hero/stats/chooser markup | `templates/index.json` (`custom_hero_duo`, `custom_stats`), `templates/collection.*.json` (`custom_hero_collection`) as `custom-liquid` sections |
+| Hero/intro/quiz/stats/notice markup | `sections/custom-hero.liquid`, `custom-intro.liquid`, `custom-quiz-cta.liquid`, `custom-stats.liquid`, `custom-notice.liquid`. Content is in the template JSON (`custom_hero_duo`, `custom_what_lines`, `custom_intro_gdo`, `custom_quiz`, `custom_stats`, `custom_hero_collection`, `custom_safety_notice`) and editable in the theme editor |
+| Platform logo strips | stock `marquee` section, id `logo_marquee` on index + both collections; styles keyed on `[id$='__logo_marquee']` |
 | `k-*` styles | end of `assets/custom.css` (banner-commented block) |
 | Rotator + reveal JS | end of `assets/custom.js` (module, loads `fetchpriority=low`) |
 | Palette custom properties | `snippets/custom-palette-vars.liquid` (single source: theme color palette) |

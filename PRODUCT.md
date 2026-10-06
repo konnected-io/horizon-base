@@ -42,4 +42,4 @@ Confident, plain-spoken, trust-first. Second person, platform- and product-named
 - WAI-ARIA per-component rules in `.cursor/rules/` are non-negotiable (keyboard paths, focus management, ARIA states).
 - All motion beyond hover is disabled under `prefers-reduced-motion`.
 - Body text contrast ≥ 4.5:1; secondary text uses foreground at ≥ 60% alpha on light surfaces.
-- All user-facing strings are translation keys in theme Liquid (custom-liquid template sections are exempt: English-only store).
+- All static user-facing strings are translation keys in theme Liquid. Merchant-editable copy lives in section settings, and `custom-liquid` sections are exempt because the store is English-only.
