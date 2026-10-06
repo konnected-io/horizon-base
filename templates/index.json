@@ -5611,7 +5611,7 @@
         "fit_3": {
           "type": "fit",
           "settings": {
-            "question": "Building on Home Assistant, SmartThings, Hubitat, Alexa, or Google Home?",
+            "question": "Building on Home Assistant, SmartThings, Hubitat, or Alexa?",
             "answer": "Konnected is a first-class citizen: official integrations, local APIs, an optional cloud connector, and open-source firmware made with ESPHome. Konnected makes native integration a priority, so your smart home works the way you want it."
           }
         }
