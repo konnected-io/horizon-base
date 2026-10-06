@@ -5242,7 +5242,7 @@
             "image": "shopify://shop_images/Conversion_Kit_banner_image_diagram.png",
             "image_alt": "Diagram showing a Konnected Alarm Panel Pro conversion kit replacing a wired alarm panel",
             "image_size": "default",
-            "fit": "Best for replacing your old panel",
+            "fit": "Best for replacing an old panel or for brand-new installs",
             "title": "Alarm Panel Pro Conversion Kit",
             "text": "Replace your system’s brain or build smart from scratch with wired sensors. Keypads are out; full control lives on your phone or a wall tablet.",
             "button_label": "View Conversion Kit",
@@ -5272,7 +5272,7 @@
       "settings": {
         "heading_tag": "h1",
         "show_breadcrumbs": true,
-        "heading": "The Smart Home Security Upgrade You’ve Been Waiting For",
+        "heading": "The Smart Home Security Upgrade You’ve Been Looking For",
         "subheading": "Keep the reliability of traditional wired sensors, add the brains of your favorite smart home platform, and control everything your way.",
         "rating_label": "",
         "section_width": "page-width",

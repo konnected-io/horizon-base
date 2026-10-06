@@ -5413,7 +5413,7 @@
             "image_size": "default",
             "fit": "",
             "title": "Smart Garage Openers",
-            "text": "Retrofit the opener you already own with local control, real-time door status, and automations.",
+            "text": "Retrofit the garage opener you already own with local control, real-time door status, and automations.",
             "button_label": "Shop Garage Openers",
             "link": "shopify://collections/smart-garage-door-openers",
             "note": "Works with most major brands"
@@ -5492,7 +5492,7 @@
         "heading_tag": "h2",
         "show_breadcrumbs": false,
         "heading": "Breathe new life into the wiring your home <em>already has</em>.",
-        "subheading": "Konnected retrofits two things every house already owns: the <strong>wired alarm system</strong> and the <strong>garage door opener</strong>. No subscriptions, no cloud lock-in.",
+        "subheading": "Konnected retrofits your home’s <strong>wired alarm system</strong> and <strong>garage door opener</strong> and makes them smart. No subscriptions, no cloud lock-in. Works locally and integrates with tons of apps.",
         "rating_label": "Rated 5 out of 5 stars",
         "section_width": "page-width",
         "padding-block-start": 0,
@@ -5611,8 +5611,8 @@
         "fit_3": {
           "type": "fit",
           "settings": {
-            "question": "Building on Home Assistant, SmartThings, or Hubitat?",
-            "answer": "Konnected is a first-class citizen: official integrations, local APIs, and ESPHome inside. Automations keep running even when the internet is out."
+            "question": "Building on Home Assistant, SmartThings, Hubitat, Alexa, or Google Home?",
+            "answer": "Konnected is a first-class citizen: official integrations, local APIs, an optional cloud connector, and open-source firmware made with ESPHome. Konnected makes native integration a priority, so your smart home works the way you want it."
           }
         }
       },
@@ -5642,21 +5642,21 @@
           "type": "fit",
           "settings": {
             "question": "Ever driven off wondering if the door closed?",
-            "answer": "Live status in your app, an alert the moment it opens, and a goodnight routine that closes it behind you."
+            "answer": "Live status in your app, an alert the moment it opens, and a goodbye routine that closes it behind you."
           }
         },
         "fit_2": {
           "type": "fit",
           "settings": {
             "question": "Done fighting myQ and its disappearing features?",
-            "answer": "GDO blaQ talks to your platform directly, with local control that no firmware update can take away."
+            "answer": "GDO blaQ talks to your smart home directly and plugs into LiftMaster and Chamberlain garage openers by wire, bypassing the myQ cloud entirely."
           }
         },
         "fit_3": {
           "type": "fit",
           "settings": {
-            "question": "Opener older than your smart home?",
-            "answer": "GDO White wires to nearly any opener with a wall button, whatever the brand, whatever the decade."
+            "question": "Garage opener super old?",
+            "answer": "GDO White hooks up to nearly any opener with a push-button wall switch and has a built-in laser sensor to detect whether the door is open or closed."
           }
         }
       },
@@ -5667,11 +5667,11 @@
       ],
       "settings": {
         "heading": "The biggest door in your house shouldn’t be the dumbest.",
-        "lede": "A Konnected GDO snaps onto the garage door opener you already own and gives it live open and closed status, voice control, and automations in the same app as the rest of your home. GDO blaQ is <strong>the myQ alternative</strong>; GDO White is <strong>the universal option</strong>. Neither asks for a subscription.",
+        "lede": "A Konnected GDO hooks up to the garage door opener you already own and gives it live open and closed status, voice control, and automations in the same app as the rest of your home. GDO blaQ is <strong>the myQ alternative</strong>; GDO White is <strong>the universal option</strong>. Neither needs a subscription.",
         "image": "shopify://shop_images/Rectangle_585_2.jpg",
         "image_alt": "A Konnected garage door opener controller held between a thumb and forefinger",
         "image_style": "photo",
-        "caption": "The whole retrofit fits in one hand. Your app finally knows whether the door is open or closed.",
+        "caption": "Just a few wires and some mounting strips or screws, and this little guy makes your garage door part of your smart home.",
         "flip": true,
         "section_width": "page-width",
         "padding-block-start": 32,
