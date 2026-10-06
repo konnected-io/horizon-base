@@ -1,0 +1,74 @@
+{%- comment -%}
+  2026 refresh caution notice (k-notice): sunrise-yellow card with a warning
+  icon, a short label, and the notice text. Konnected-owned section; styles
+  live in assets/custom.css.
+{%- endcomment -%}
+
+<div class="section-background"></div>
+<div
+  class="section section--{{ section.settings.section_width }} spacing-style"
+  style="{% render 'spacing-padding', settings: section.settings %}"
+>
+  <div class="k-notice k-reveal" role="note">
+    <span class="k-notice__icon" aria-hidden="true">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/>
+        <path d="M12 9v4"/>
+        <path d="M12 17h.01"/>
+      </svg>
+    </span>
+    <p class="k-notice__text">
+      {%- if section.settings.label != blank -%}
+        <span class="k-notice__label">{{ section.settings.label }}</span>
+      {% endif -%}
+      {{ section.settings.text }}
+    </p>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Caution notice",
+  "settings": [
+    { "type": "text", "id": "label", "label": "Label", "default": "Safety" },
+    {
+      "type": "inline_richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "To reduce the risk of injury to persons — <strong>Do not use this device with one‑piece doors or swinging doors.</strong>"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Width",
+      "options": [
+        { "value": "page-width", "label": "Page" },
+        { "value": "full-width", "label": "Full" }
+      ],
+      "default": "page-width"
+    },
+    { "type": "header", "content": "Padding" },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [{ "name": "Caution notice" }]
+}
+{% endschema %}

@@ -5233,23 +5233,85 @@
       }
     },
     "custom_hero_collection": {
-      "type": "custom-liquid",
+      "type": "custom-hero",
       "name": "Hero: kit chooser",
-      "custom_css": [
-        ".section-background {background: radial-gradient(circle 240px at 91% -70px, transparent 58%, rgba(34,190,255,.26) 60%, rgba(63,117,255,.15) 74%, transparent 76%), radial-gradient(circle 260px at 3% 108%, transparent 60%, rgba(63,117,255,.18) 62%, rgba(34,190,255,.09) 76%, transparent 78%), radial-gradient(640px 420px at 88% -10%, rgba(34,190,255,.12), transparent 65%), linear-gradient(180deg, #ffffff 0%, #eef4f9 100%);}"
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Conversion_Kit_banner_image_diagram.png",
+            "image_alt": "Diagram showing a Konnected Alarm Panel Pro conversion kit replacing a wired alarm panel",
+            "image_size": "default",
+            "fit": "Best for replacing your old panel",
+            "title": "Alarm Panel Pro Conversion Kit",
+            "text": "Replace your system’s brain or build smart from scratch with wired sensors. Keypads are out; full control lives on your phone or a wall tablet.",
+            "button_label": "View Conversion Kit",
+            "link": "shopify://products/konnected-alarm-panel-pro-12-zone-kit",
+            "note": "Keypads retire, the app takes over"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/interface_illustration_for_header.png",
+            "image_alt": "Diagram showing a Konnected Alarm Panel Pro interface module connected to an existing wired alarm panel",
+            "image_size": "default",
+            "fit": "Best for keeping your panel and keypads",
+            "title": "Alarm Panel Pro Interface Kit",
+            "text": "Installs alongside your existing alarm panel to monitor and automate every wired zone. Reprogram with your installer code and keep everything you have.",
+            "button_label": "View Interface Kit",
+            "link": "shopify://products/konnected-alarm-panel-pro-12-zone-interface-kit",
+            "note": "Keypads and monitoring stay"
+          }
+        }
+      },
+      "block_order": [
+        "card_1",
+        "card_2"
       ],
       "settings": {
-        "custom_liquid": "<div class=\"k-hero k-hero--collection\"><div class=\"k-hero__intro\"><nav class=\"k-crumbs\" aria-label=\"Breadcrumb\"><a href=\"/\">Home</a><span class=\"k-crumbs__sep\" aria-hidden=\"true\">&rsaquo;</span><span aria-current=\"page\">Smart Alarm Panels</span></nav><script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"{{ request.origin }}/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Smart Alarm Panels\",\"item\":\"{{ request.origin }}/collections/smart-alarm-panels\"}]}</script><h1 class=\"k-hero__title\">The Smart Home Security Upgrade You’ve Been Waiting For</h1><p class=\"k-hero__sub\">Keep the reliability of traditional wired sensors, add the brains of your favorite smart home platform, and control everything your way.</p></div><div class=\"k-hero__duo\"><article class=\"k-line-card k-reveal\"><a class=\"k-line-card__media-link\" href=\"/products/konnected-alarm-panel-pro-12-zone-kit\" tabindex=\"-1\" aria-hidden=\"true\"><img class=\"k-line-card__img\" src=\"{{ 'Conversion_Kit_banner_image_diagram.png' | file_img_url: '900x' }}\" alt=\"Diagram showing a Konnected Alarm Panel Pro conversion kit replacing a wired alarm panel\" fetchpriority=\"high\"></a><p class=\"k-line-card__fit\">Best for replacing your old panel</p><h2 class=\"k-line-card__title\">Alarm Panel Pro Conversion Kit</h2><p class=\"k-line-card__text\">Replace your system’s brain or build smart from scratch with wired sensors. Keypads are out; full control lives on your phone or a wall tablet.</p><div class=\"k-line-card__row\"><a class=\"button\" href=\"/products/konnected-alarm-panel-pro-12-zone-kit\">View Conversion Kit</a><span class=\"k-line-card__note\">Keypads retire, the app takes over</span></div></article><article class=\"k-line-card k-reveal\"><a class=\"k-line-card__media-link\" href=\"/products/konnected-alarm-panel-pro-12-zone-interface-kit\" tabindex=\"-1\" aria-hidden=\"true\"><img class=\"k-line-card__img\" src=\"{{ 'interface_illustration_for_header.png' | file_img_url: '900x' }}\" alt=\"Diagram showing a Konnected Alarm Panel Pro interface module connected to an existing wired alarm panel\" fetchpriority=\"high\"></a><p class=\"k-line-card__fit\">Best for keeping your panel and keypads</p><h2 class=\"k-line-card__title\">Alarm Panel Pro Interface Kit</h2><p class=\"k-line-card__text\">Installs alongside your existing alarm panel to monitor and automate every wired zone. Reprogram with your installer code and keep everything you have.</p><div class=\"k-line-card__row\"><a class=\"button\" href=\"/products/konnected-alarm-panel-pro-12-zone-interface-kit\">View Interface Kit</a><span class=\"k-line-card__note\">Keypads and monitoring stay</span></div></article></div></div>",
+        "heading_tag": "h1",
+        "show_breadcrumbs": true,
+        "heading": "The Smart Home Security Upgrade You’ve Been Waiting For",
+        "subheading": "Keep the reliability of traditional wired sensors, add the brains of your favorite smart home platform, and control everything your way.",
+        "rating_label": "",
         "section_width": "page-width",
         "padding-block-start": 0,
         "padding-block-end": 0
-      }
+      },
+      "custom_css": [
+        ".section-background {background: radial-gradient(circle 240px at 91% -70px, transparent 58%, rgba(34,190,255,.26) 60%, rgba(63,117,255,.15) 74%, transparent 76%), radial-gradient(circle 260px at 3% 108%, transparent 60%, rgba(63,117,255,.18) 62%, rgba(34,190,255,.09) 76%, transparent 78%), radial-gradient(640px 420px at 88% -10%, rgba(34,190,255,.12), transparent 65%), linear-gradient(180deg, #ffffff 0%, #eef4f9 100%);}"
+      ]
     },
     "custom_quiz": {
-      "type": "custom-liquid",
+      "type": "custom-quiz-cta",
       "name": "Quiz CTA",
+      "blocks": {
+        "quiz_1": {
+          "type": "quiz_button",
+          "settings": {
+            "label": "Take the alarm panel quiz",
+            "quiz_id": "7f8f415c-2756-4637-8119-aa24df66b6b7",
+            "style": "primary"
+          }
+        },
+        "quiz_2": {
+          "type": "quiz_button",
+          "settings": {
+            "label": "Garage opener quiz",
+            "quiz_id": "d515c056-caae-4c7d-8890-d9fcc8947b62",
+            "style": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "quiz_1",
+        "quiz_2"
+      ],
       "settings": {
-        "custom_liquid": "<div class=\"k-quiz k-reveal\"><h2 class=\"k-quiz__title\">Find the right kit for your home.</h2><p class=\"k-quiz__sub\">A few quick questions and we&rsquo;ll match you with the right alarm panel setup.</p><div class=\"k-quiz__actions\"><div class=\"okeQuizModalButton\" style=\"display:flex;\"><a href=\"#\" onclick=\"okeConnectApi.showQuiz('7f8f415c-2756-4637-8119-aa24df66b6b7', '1d0a586e-45b1-4a7e-b30d-539e2e1abc0e')\" class=\"button\">Take the alarm panel quiz</a></div><div class=\"okeQuizModalButton okeQuizModalButton--ghost\" style=\"display:flex;\"><a href=\"#\" onclick=\"okeConnectApi.showQuiz('d515c056-caae-4c7d-8890-d9fcc8947b62', '1d0a586e-45b1-4a7e-b30d-539e2e1abc0e')\" class=\"button\">Garage opener quiz</a></div></div></div>",
+        "heading": "Find the right kit for your home.",
+        "text": "A few quick questions and we’ll match you with the right alarm panel setup.",
+        "okendo_subscriber_id": "1d0a586e-45b1-4a7e-b30d-539e2e1abc0e",
         "section_width": "page-width",
         "padding-block-start": 24,
         "padding-block-end": 48
