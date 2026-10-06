@@ -13,16 +13,15 @@
   "sections": {
     "hero_BzLcdE": {
       "type": "hero",
-      "disabled": true,
       "name": "Promotional Banner",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/Spring_Sale_2026_-_Banner.jpg",
+        "image_1": "shopify://shop_images/Fall_Sale_2026_-_Banner.jpg",
         "media_type_2": "image",
         "stack_media_on_mobile": false,
         "custom_mobile_media": true,
         "media_type_1_mobile": "image",
-        "image_1_mobile": "shopify://shop_images/Spring_Sale_2026_-_Banner_Mobile_2.jpg",
+        "image_1_mobile": "shopify://shop_images/Fall_Sale_2026_-_Banner_Mobile.jpg",
         "media_type_2_mobile": "image",
         "link": "shopify://collections/shop-now",
         "open_in_new_tab": false,
@@ -50,24 +49,10 @@
     },
     "header_announcements_9jGBFp": {
       "type": "header-announcements",
+      "disabled": true,
       "blocks": {
-        "announcement_fall_sale": {
-          "type": "_announcement",
-          "settings": {
-            "text": "<strong>Fall Sale is on:</strong> 20% off everything through Oct 7. No code needed.",
-            "link": "shopify://collections/shop-now",
-            "font": "var(--font-subheading--family)",
-            "font_size": "1rem",
-            "weight": "",
-            "letter_spacing": "normal",
-            "case": "none",
-            "text_color": "#fff6e8"
-          },
-          "blocks": {}
-        },
         "announcement_BxgCk9": {
           "type": "_announcement",
-          "disabled": true,
           "settings": {
             "text": "Join the Konnected Community here",
             "link": "https://community.konnected.io/",
@@ -82,7 +67,6 @@
         },
         "announcement_CnmdUR": {
           "type": "_announcement",
-          "disabled": true,
           "settings": {
             "text": "Sign up for our Newsletter and get 10% Off",
             "link": "",
@@ -112,7 +96,6 @@
         }
       },
       "block_order": [
-        "announcement_fall_sale",
         "announcement_BxgCk9",
         "announcement_CnmdUR",
         "announcement_N8PCk4"
@@ -121,7 +104,7 @@
       "settings": {
         "speed": 5,
         "section_width": "full-width",
-        "background_color": "#7a2e0e",
+        "background_color": "{{ settings.color_palette.foreground }}",
         "divider_width": 1,
         "divider_color": "",
         "padding-block-start": 9,
