@@ -51,8 +51,23 @@
     "header_announcements_9jGBFp": {
       "type": "header-announcements",
       "blocks": {
+        "announcement_fall_sale": {
+          "type": "_announcement",
+          "settings": {
+            "text": "<strong>Fall Sale is on:</strong> 20% off everything through Oct 7. No code needed.",
+            "link": "shopify://collections/shop-now",
+            "font": "var(--font-subheading--family)",
+            "font_size": "1rem",
+            "weight": "",
+            "letter_spacing": "normal",
+            "case": "none",
+            "text_color": "#fff6e8"
+          },
+          "blocks": {}
+        },
         "announcement_BxgCk9": {
           "type": "_announcement",
+          "disabled": true,
           "settings": {
             "text": "Join the Konnected Community here",
             "link": "https://community.konnected.io/",
@@ -67,6 +82,7 @@
         },
         "announcement_CnmdUR": {
           "type": "_announcement",
+          "disabled": true,
           "settings": {
             "text": "Sign up for our Newsletter and get 10% Off",
             "link": "",
@@ -96,6 +112,7 @@
         }
       },
       "block_order": [
+        "announcement_fall_sale",
         "announcement_BxgCk9",
         "announcement_CnmdUR",
         "announcement_N8PCk4"
@@ -104,7 +121,7 @@
       "settings": {
         "speed": 5,
         "section_width": "full-width",
-        "background_color": "{{ settings.color_palette.foreground }}",
+        "background_color": "#7a2e0e",
         "divider_width": 1,
         "divider_color": "",
         "padding-block-start": 9,
