@@ -25,13 +25,18 @@
               style="display:flex;"
               {{ block.shopify_attributes }}
             >
-              <button
-                type="button"
+              {%- comment -%}
+                Must stay an <a class="button"> inside .okeQuizModalButton:
+                Okendo's init-quizzes.js only installs okeConnectApi.showQuiz
+                when it finds `.okeQuizModalButton a.button` on the page.
+              {%- endcomment -%}
+              <a
+                href="#"
                 class="button"
-                onclick="okeConnectApi.showQuiz({{ block.settings.quiz_id | strip | json | escape }}, {{ section.settings.okendo_subscriber_id | strip | json | escape }})"
+                onclick="okeConnectApi.showQuiz({{ block.settings.quiz_id | strip | json | escape }}, {{ section.settings.okendo_subscriber_id | strip | json | escape }}); return false;"
               >
-                {{ block.settings.label }}
-              </button>
+                {{- block.settings.label -}}
+              </a>
             </div>
           {%- endif -%}
         {%- endfor -%}
