@@ -45,7 +45,10 @@
         "reflection_opacity": 75,
         "padding-block-start": 0,
         "padding-block-end": 0
-      }
+      },
+      "custom_css": [
+        ".hero {border-block-end: 1px solid rgb(0 0 0 / 25%);}"
+      ]
     },
     "header_announcements_9jGBFp": {
       "type": "header-announcements",
