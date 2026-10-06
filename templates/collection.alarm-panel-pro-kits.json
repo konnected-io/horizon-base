@@ -9,472 +9,124 @@
  */
 {
   "sections": {
-    "grid_section_kwJrwU": {
-      "type": "grid-section",
+    "logo_marquee": {
+      "type": "marquee",
+      "name": "Platform logos",
       "blocks": {
-        "carousel_card_RUtGqV": {
-          "type": "_carousel-card",
-          "name": "Carousel Item",
+        "logo_home_assistant": {
+          "type": "icon",
           "settings": {
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "reverse_on_mobile": false,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "center",
-            "custom_mobile_alignment": false,
-            "mobile_vertical_alignment": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 12,
-            "enable_mobile_gap": false,
-            "mobile_gap": 12,
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "enable_mobile_radius": false,
-            "mobile_border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0,
-            "custom_mobile_padding": false,
-            "mobile-padding-block-start": 0,
-            "mobile-padding-block-end": 0,
-            "mobile-padding-inline-start": 0,
-            "mobile-padding-inline-end": 0,
-            "css_class": ""
-          },
-          "blocks": {
-            "icon_xYJRa4": {
-              "type": "icon",
-              "name": "t:names.icon",
-              "settings": {
-                "icon": "price_tag",
-                "image_upload": "shopify://shop_images/homeassistant.png",
-                "alt_text": "Home Assistant logo",
-                "width": 24,
-                "use_height": true,
-                "height": 80,
-                "custom_mobile_height": true,
-                "mobile-height": 42,
-                "link": "",
-                "open_in_new_tab": false
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "icon_xYJRa4"
-          ]
+            "icon": "none",
+            "image_upload": "shopify://shop_images/homeassistant.png",
+            "alt_text": "Home Assistant",
+            "width": 160,
+            "use_height": false,
+            "custom_mobile_height": false,
+            "link": "shopify://pages/home-assistant",
+            "open_in_new_tab": false,
+            "icon_color": ""
+          }
         },
-        "carousel_card_PXNA7P": {
-          "type": "_carousel-card",
-          "name": "Carousel Item",
+        "logo_smartthings": {
+          "type": "icon",
           "settings": {
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "reverse_on_mobile": false,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "center",
-            "custom_mobile_alignment": false,
-            "mobile_vertical_alignment": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 12,
-            "enable_mobile_gap": false,
-            "mobile_gap": 12,
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "enable_mobile_radius": false,
-            "mobile_border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0,
-            "custom_mobile_padding": false,
-            "mobile-padding-block-start": 0,
-            "mobile-padding-block-end": 0,
-            "mobile-padding-inline-start": 0,
-            "mobile-padding-inline-end": 0,
-            "css_class": ""
-          },
-          "blocks": {
-            "icon_nd4me7": {
-              "type": "icon",
-              "name": "t:names.icon",
-              "settings": {
-                "icon": "price_tag",
-                "image_upload": "shopify://shop_images/smartthings_128556bd-bd49-48ff-820a-a53c0e22f146.png",
-                "alt_text": "SmartThings logo",
-                "width": 24,
-                "use_height": true,
-                "height": 80,
-                "custom_mobile_height": true,
-                "mobile-height": 42,
-                "link": "",
-                "open_in_new_tab": false
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "icon_nd4me7"
-          ]
+            "icon": "none",
+            "image_upload": "shopify://shop_images/smartthings_128556bd-bd49-48ff-820a-a53c0e22f146.png",
+            "alt_text": "SmartThings",
+            "width": 132,
+            "use_height": false,
+            "custom_mobile_height": false,
+            "link": "shopify://pages/smartthings",
+            "open_in_new_tab": false,
+            "icon_color": ""
+          }
         },
-        "carousel_card_RhT7aG": {
-          "type": "_carousel-card",
-          "name": "Carousel Item",
+        "logo_hubitat": {
+          "type": "icon",
           "settings": {
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "reverse_on_mobile": false,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "center",
-            "custom_mobile_alignment": false,
-            "mobile_vertical_alignment": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 12,
-            "enable_mobile_gap": false,
-            "mobile_gap": 12,
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "enable_mobile_radius": false,
-            "mobile_border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0,
-            "custom_mobile_padding": false,
-            "mobile-padding-block-start": 0,
-            "mobile-padding-block-end": 0,
-            "mobile-padding-inline-start": 0,
-            "mobile-padding-inline-end": 0,
-            "css_class": ""
-          },
-          "blocks": {
-            "icon_YKcLVN": {
-              "type": "icon",
-              "name": "t:names.icon",
-              "settings": {
-                "icon": "price_tag",
-                "image_upload": "shopify://shop_images/image_-_2026-02-16T160530.498.png",
-                "alt_text": "Hubitat logo",
-                "width": 24,
-                "use_height": true,
-                "height": 80,
-                "custom_mobile_height": true,
-                "mobile-height": 42,
-                "link": "",
-                "open_in_new_tab": false
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "icon_YKcLVN"
-          ]
+            "icon": "none",
+            "image_upload": "shopify://shop_images/image_-_2026-02-16T160530.498.png",
+            "alt_text": "Hubitat",
+            "width": 116,
+            "use_height": false,
+            "custom_mobile_height": false,
+            "link": "shopify://pages/hubitat",
+            "open_in_new_tab": false,
+            "icon_color": ""
+          }
         },
-        "carousel_card_MFVz6w": {
-          "type": "_carousel-card",
-          "name": "Carousel Item",
+        "logo_alexa": {
+          "type": "icon",
           "settings": {
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "reverse_on_mobile": false,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "center",
-            "custom_mobile_alignment": false,
-            "mobile_vertical_alignment": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 12,
-            "enable_mobile_gap": false,
-            "mobile_gap": 12,
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "enable_mobile_radius": false,
-            "mobile_border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0,
-            "custom_mobile_padding": false,
-            "mobile-padding-block-start": 0,
-            "mobile-padding-block-end": 0,
-            "mobile-padding-inline-start": 0,
-            "mobile-padding-inline-end": 0,
-            "css_class": ""
-          },
-          "blocks": {
-            "icon_Jnt7F9": {
-              "type": "icon",
-              "name": "t:names.icon",
-              "settings": {
-                "icon": "price_tag",
-                "image_upload": "shopify://shop_images/amazon_alexa.png",
-                "alt_text": "Amazon Alexa logo",
-                "width": 24,
-                "use_height": true,
-                "height": 80,
-                "custom_mobile_height": true,
-                "mobile-height": 42,
-                "link": "shopify://pages/alexa",
-                "open_in_new_tab": false
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "icon_Jnt7F9"
-          ]
+            "icon": "none",
+            "image_upload": "shopify://shop_images/amazon_alexa.png",
+            "alt_text": "Amazon Alexa",
+            "width": 156,
+            "use_height": false,
+            "custom_mobile_height": false,
+            "link": "shopify://pages/alexa",
+            "open_in_new_tab": false,
+            "icon_color": ""
+          }
         },
-        "carousel_card_kGtPgJ": {
-          "type": "_carousel-card",
-          "name": "Carousel Item",
+        "logo_homebridge": {
+          "type": "icon",
           "settings": {
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "reverse_on_mobile": false,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "center",
-            "custom_mobile_alignment": false,
-            "mobile_vertical_alignment": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 12,
-            "enable_mobile_gap": false,
-            "mobile_gap": 12,
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "enable_mobile_radius": false,
-            "mobile_border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0,
-            "custom_mobile_padding": false,
-            "mobile-padding-block-start": 0,
-            "mobile-padding-block-end": 0,
-            "mobile-padding-inline-start": 0,
-            "mobile-padding-inline-end": 0,
-            "css_class": ""
-          },
-          "blocks": {
-            "icon_3GCcLM": {
-              "type": "icon",
-              "name": "t:names.icon",
-              "settings": {
-                "icon": "price_tag",
-                "image_upload": "shopify://shop_images/homebridge_1544d3cd-a79f-431f-b0e1-e06f6fd57fb8.png",
-                "alt_text": "Homebridge logo",
-                "width": 24,
-                "use_height": true,
-                "height": 80,
-                "custom_mobile_height": true,
-                "mobile-height": 42,
-                "link": "",
-                "open_in_new_tab": false
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "icon_3GCcLM"
-          ]
+            "icon": "none",
+            "image_upload": "shopify://shop_images/homebridge_1544d3cd-a79f-431f-b0e1-e06f6fd57fb8.png",
+            "alt_text": "Homebridge",
+            "width": 122,
+            "use_height": false,
+            "custom_mobile_height": false,
+            "link": "",
+            "open_in_new_tab": false,
+            "icon_color": ""
+          }
         },
-        "carousel_card_xUGRYj": {
-          "type": "_carousel-card",
-          "name": "Carousel Item",
+        "logo_control4": {
+          "type": "icon",
           "settings": {
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "reverse_on_mobile": false,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "center",
-            "custom_mobile_alignment": false,
-            "mobile_vertical_alignment": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 12,
-            "enable_mobile_gap": false,
-            "mobile_gap": 12,
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "enable_mobile_radius": false,
-            "mobile_border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0,
-            "custom_mobile_padding": false,
-            "mobile-padding-block-start": 0,
-            "mobile-padding-block-end": 0,
-            "mobile-padding-inline-start": 0,
-            "mobile-padding-inline-end": 0,
-            "css_class": ""
-          },
-          "blocks": {
-            "icon_9CktCA": {
-              "type": "icon",
-              "name": "t:names.icon",
-              "settings": {
-                "icon": "price_tag",
-                "image_upload": "shopify://shop_images/control_4.png",
-                "alt_text": "Control4 logo",
-                "width": 24,
-                "use_height": true,
-                "height": 80,
-                "custom_mobile_height": true,
-                "mobile-height": 42,
-                "link": "",
-                "open_in_new_tab": false
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "icon_9CktCA"
-          ]
+            "icon": "none",
+            "image_upload": "shopify://shop_images/control_4.png",
+            "alt_text": "Control4",
+            "width": 128,
+            "use_height": false,
+            "custom_mobile_height": false,
+            "link": "shopify://pages/control4",
+            "open_in_new_tab": false,
+            "icon_color": ""
+          }
         },
-        "static-header": {
-          "type": "_product-list-content",
-          "name": "t:names.header",
-          "disabled": true,
-          "static": true,
+        "logo_homeseer": {
+          "type": "icon",
           "settings": {
-            "content_direction": "row",
-            "vertical_on_mobile": false,
-            "horizontal_alignment": "space-between",
-            "vertical_alignment": "flex-end",
-            "align_baseline": true,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 12,
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 12,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0,
-            "custom_mobile_padding": false,
-            "mobile-padding-block-start": 0,
-            "mobile-padding-block-end": 0,
-            "mobile-padding-inline-start": 0,
-            "mobile-padding-inline-end": 0
-          },
-          "blocks": {}
+            "icon": "none",
+            "image_upload": "shopify://shop_images/id1BlxhHPp_1791250340892.png",
+            "alt_text": "HomeSeer",
+            "width": 140,
+            "use_height": false,
+            "custom_mobile_height": false,
+            "link": "",
+            "open_in_new_tab": false,
+            "icon_color": ""
+          }
         }
       },
       "block_order": [
-        "carousel_card_RUtGqV",
-        "carousel_card_PXNA7P",
-        "carousel_card_RhT7aG",
-        "carousel_card_MFVz6w",
-        "carousel_card_kGtPgJ",
-        "carousel_card_xUGRYj"
+        "logo_home_assistant",
+        "logo_smartthings",
+        "logo_hubitat",
+        "logo_alexa",
+        "logo_homebridge",
+        "logo_control4",
+        "logo_homeseer"
       ],
-      "name": "Grid Section",
       "settings": {
-        "alignment": "left",
-        "layout_type": "carousel",
-        "carousel_on_mobile": true,
-        "enable_dots": false,
-        "hide_arrows": true,
-        "autoplay": true,
-        "autoplay_speed": 6,
-        "columns": 5,
-        "peek_desktop": false,
-        "mobile_columns": "1",
-        "mobile_card_size": "44cqw",
-        "columns_gap": 32,
-        "rows_gap": 8,
-        "icons_style": "chevron",
-        "icons_shape": "circle",
-        "section_width": "page-width",
-        "full_width_on_mobile": true,
-        "gap": 0,
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 24,
-        "padding-block-end": 0,
-        "custom_mobile_padding": true,
-        "mobile-padding-block-start": 12,
-        "mobile-padding-block-end": 0,
-        "mobile-padding-inline-start": 0,
-        "mobile-padding-inline-end": 0,
-        "css_class": "",
-        "add_section_id": false,
-        "section_id": ""
+        "movement_direction": "normal",
+        "background_color": "",
+        "padding-block-start": 28,
+        "padding-block-end": 28,
+        "gap_between_elements": 64
       }
     },
     "grid_section_AfzNBp": {
@@ -5597,7 +5249,7 @@
       "type": "custom-liquid",
       "name": "Quiz CTA",
       "settings": {
-        "custom_liquid": "<div class=\"k-quiz k-reveal\"><h2 class=\"k-quiz__title\">Find the right kit for your home.</h2><p class=\"k-quiz__sub\">A few quick questions and we&rsquo;ll match you with the right alarm panel setup.</p><div class=\"k-quiz__actions\"><div class=\"okeQuizModalButton\" style=\"display:flex;\"><a href=\"#\" onclick=\"okeConnectApi.showQuiz('7f8f415c-2756-4637-8119-aa24df66b6b7', '1d0a586e-45b1-4a7e-b30d-539e2e1abc0e')\" class=\"button\">Take the alarm panel quiz</a></div><div class=\"okeQuizModalButton okeQuizModalButton--ghost\" style=\"display:flex;\"><a href=\"javascript:void(0)\" onclick=\"okeConnectApi.showQuiz('b946b895-0e54-4cfb-800b-883a36e1aa89', '1d0a586e-45b1-4a7e-b30d-539e2e1abc0e', { fullScreen: true })\" class=\"button\">Garage opener quiz</a></div></div></div>",
+        "custom_liquid": "<div class=\"k-quiz k-reveal\"><h2 class=\"k-quiz__title\">Find the right kit for your home.</h2><p class=\"k-quiz__sub\">A few quick questions and we&rsquo;ll match you with the right alarm panel setup.</p><div class=\"k-quiz__actions\"><div class=\"okeQuizModalButton\" style=\"display:flex;\"><a href=\"#\" onclick=\"okeConnectApi.showQuiz('7f8f415c-2756-4637-8119-aa24df66b6b7', '1d0a586e-45b1-4a7e-b30d-539e2e1abc0e')\" class=\"button\">Take the alarm panel quiz</a></div><div class=\"okeQuizModalButton okeQuizModalButton--ghost\" style=\"display:flex;\"><a href=\"#\" onclick=\"okeConnectApi.showQuiz('d515c056-caae-4c7d-8890-d9fcc8947b62', '1d0a586e-45b1-4a7e-b30d-539e2e1abc0e')\" class=\"button\">Garage opener quiz</a></div></div></div>",
         "section_width": "page-width",
         "padding-block-start": 24,
         "padding-block-end": 48
@@ -5606,7 +5258,7 @@
   },
   "order": [
     "custom_hero_collection",
-    "grid_section_kwJrwU",
+    "logo_marquee",
     "grid_section_AfzNBp",
     "grid_section_eKRNdM",
     "section_i93pxL",

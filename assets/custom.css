@@ -882,9 +882,43 @@ product-price [ref="priceContainer"]:has(.product-badges__badge) .product-badges
         max-height: 135px;
     }
 
+    /* five stats on a six-track grid: three across, then two across,
+       so no stat is stranded alone on the last row */
     .k-stats__grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 1.5rem 1.25rem;
+    }
+
+    .k-stat {
+        grid-column: span 2;
+    }
+
+    .k-stat:nth-child(n + 4) {
+        grid-column: span 3;
+    }
+
+    .k-stat__n {
+        font-size: 1.75rem;
+    }
+
+    /* mobile hero: product cards (and their Shop buttons) come straight
+       after the headline; the review quote and badges follow them */
+    .k-hero:has(.k-hero__proof) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .k-hero:has(.k-hero__proof) .k-hero__head {
+        display: contents;
+    }
+
+    .k-hero:has(.k-hero__proof) .k-hero__duo {
+        margin-top: 1.5rem;
+    }
+
+    .k-hero:has(.k-hero__proof) .k-hero__proof {
+        order: 1;
+        margin-top: 1.75rem;
     }
 }
 
@@ -1145,5 +1179,130 @@ product-price [ref="priceContainer"]:has(.product-badges__badge) .product-badges
 
     .k-intro__fits {
         margin-top: 0;
+    }
+}
+
+/* safety notice (GDO collection): sunrise-yellow caution card */
+.k-notice {
+    --k-sunrise: #f5b423;
+    --k-sunrise-rgb: 245 180 35;
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    max-width: 46rem;
+    margin-inline: auto;
+    padding: 0.85rem 1.25rem 0.85rem 0.9rem;
+    border: 1px solid rgb(var(--k-sunrise-rgb) / 0.35);
+    border-radius: 14px;
+    background:
+        radial-gradient(120% 180% at 0% 50%, rgb(var(--k-sunrise-rgb) / 0.2) 0%, transparent 55%),
+        linear-gradient(100deg, #fff8e1 0%, #fffcf2 60%, #ffffff 100%);
+    box-shadow: 0 12px 32px rgb(var(--k-sunrise-rgb) / 0.14);
+}
+
+.k-notice__icon {
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    color: #8a5a00;
+    background: rgb(var(--k-sunrise-rgb) / 0.28);
+}
+
+.k-notice__text {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--color-foreground);
+    text-wrap: balance;
+}
+
+.k-notice__label {
+    display: inline-block;
+    margin-inline-end: 0.35rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #8a5a00;
+}
+
+@media (max-width: 749px) {
+    .k-notice {
+        align-items: flex-start;
+    }
+
+    .k-notice__text {
+        font-size: 0.875rem;
+    }
+}
+
+/* platform logo marquee: the stock Horizon marquee section, keyed by the
+   `logo_marquee` section id used in index + both commercial collections.
+   Logo widths are set per block so every mark has similar visual weight. */
+[id$='__logo_marquee'] marquee-component {
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent);
+}
+
+[id$='__logo_marquee'] .icon-block {
+    align-items: center;
+}
+
+[id$='__logo_marquee'] .icon-block__media {
+    display: block;
+    max-width: none;
+}
+
+[id$='__logo_marquee'] a:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 6px;
+    border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    [id$='__logo_marquee'] .icon-block__media {
+        transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    [id$='__logo_marquee'] a:hover .icon-block__media {
+        transform: translateY(-2px) scale(1.04);
+    }
+
+    /* the marquee already eases to a stop on hover; also hold still while
+       a keyboard user is on one of the links */
+    [id$='__logo_marquee'] marquee-component:focus-within .marquee__wrapper {
+        animation-play-state: paused;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    /* no motion: show one centered, wrapping set instead of a clipped row */
+    [id$='__logo_marquee'] marquee-component {
+        -webkit-mask-image: none;
+        mask-image: none;
+    }
+
+    [id$='__logo_marquee'] .marquee__wrapper,
+    [id$='__logo_marquee'] .marquee__content,
+    [id$='__logo_marquee'] .marquee__repeated-items {
+        width: 100%;
+        min-width: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 1.5rem;
+    }
+
+    [id$='__logo_marquee'] .marquee__content[aria-hidden],
+    [id$='__logo_marquee'] .marquee__repeated-items + .marquee__repeated-items {
+        display: none;
+    }
+}
+
+@media (max-width: 749px) {
+    [id$='__logo_marquee'] .marquee__wrapper {
+        zoom: 0.8;
     }
 }
