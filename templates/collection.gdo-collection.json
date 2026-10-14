@@ -1654,7 +1654,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Meets U.S Safety Standards</p>",
+                    "text": "<p>Meets U.S. safety standards</p>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "left",
