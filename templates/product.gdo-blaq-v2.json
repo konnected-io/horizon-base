@@ -6604,7 +6604,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p><strong>Works with Chamberlain/LiftMaster garage openers with Security+ or Security+ 2.0 technology</strong></p><p>Reads garage door status directly from the garage door opener<br/></p><p><strong>Can open and closes the garage to a specific level. Example: open 10%</strong></p><p>Mounts directly on the garage door opener (or supports)</p>",
+                        "text": "<p><strong>Works with Chamberlain/LiftMaster garage openers with Security+ or Security+ 2.0 technology</strong></p><p>Reads garage door status directly from the garage door opener<br/></p><p><strong>Can open and close the garage to a specific level. Example: open 10%</strong></p><p>Mounts directly on the garage door opener (or supports)</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "center",
