@@ -9526,7 +9526,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>Upgradable and serviceable via USB connectionto a computer</p><p><strong>Warranty:<br/></strong>1-year limited warranty</p><p><strong>Physical:<br/></strong>14.5cm L x 4.6cm W</p><p>Designed in the USA </p><p>Assembled in North America</p>",
+                "text": "<p>Upgradable and serviceable via USB connection to a computer</p><p><strong>Warranty:<br/></strong>1-year limited warranty</p><p><strong>Physical:<br/></strong>14.5cm L x 4.6cm W</p><p>Designed in the USA </p><p>Assembled in North America</p>",
                 "width": "100%",
                 "max_width": "none",
                 "alignment": "left",
