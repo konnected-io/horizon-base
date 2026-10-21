@@ -3223,7 +3223,7 @@
                 "height": 20,
                 "custom_mobile_height": false,
                 "mobile-height": 24,
-                "text": "<p>Need Ethernet connectivity & POE because your home is pre-wired for Ethernet</p>",
+                "text": "<p>Need Ethernet connectivity & PoE because your home is pre-wired for Ethernet</p>",
                 "text_width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
