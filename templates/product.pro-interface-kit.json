@@ -9889,7 +9889,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>Works with up to 2 Konnected Alarm Panel Interface modules</p><p><strong>Auxiliary Power Output:<br/></strong>Outputs 12VDC</p><p>Limited to 1A when powered via PoE</p><p><strong>Signal Output:<br/></strong>5VDC supply (max 300mA)</p><p>3.3V output for switching a relay or piezo buzzer</p><p><strong>Micro-USB port:<br/></strong>Upgradable and serviceable via USB connectionto a computer</p><p><strong>Warranty:<br/></strong>1-year limited warranty</p><p><strong>Physical:<br/></strong>14.5cm L x 4.6cm W</p><p>Designed in the USA </p><p>Assembled in North America</p>",
+                "text": "<p>Works with up to 2 Konnected Alarm Panel Interface modules</p><p><strong>Auxiliary Power Output:<br/></strong>Outputs 12VDC</p><p>Limited to 1A when powered via PoE</p><p><strong>Signal Output:<br/></strong>5VDC supply (max 300mA)</p><p>3.3V output for switching a relay or piezo buzzer</p><p><strong>Micro-USB port:<br/></strong>Upgradable and serviceable via USB connection to a computer</p><p><strong>Warranty:<br/></strong>1-year limited warranty</p><p><strong>Physical:<br/></strong>14.5cm L x 4.6cm W</p><p>Designed in the USA </p><p>Assembled in North America</p>",
                 "width": "100%",
                 "max_width": "none",
                 "alignment": "left",
