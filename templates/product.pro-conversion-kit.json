@@ -3255,7 +3255,7 @@
                 "height": 20,
                 "custom_mobile_height": false,
                 "mobile-height": 24,
-                "text": "<p>Don’t want to use the original alarm system anymoreWant the ability to replace original keypads with touch-screen tablets</p>",
+                "text": "<p>Don’t want to use the original alarm system anymore</p><p>Want the ability to replace original keypads with touch-screen tablets</p>",
                 "text_width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
