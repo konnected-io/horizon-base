@@ -578,7 +578,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h2>Works where<br/>myQ doesnt</h2>",
+                "text": "<h2>Works where<br/>myQ doesn’t</h2>",
                 "width": "100%",
                 "max_width": "none",
                 "alignment": "left",
