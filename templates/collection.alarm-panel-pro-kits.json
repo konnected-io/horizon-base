@@ -804,7 +804,7 @@
                     "height": 20,
                     "custom_mobile_height": false,
                     "mobile-height": 24,
-                    "text": "<p>Maintaining professional monitoring while gaining smart features</p>",
+                    "text": "<p>Keeping the existing alarm panel active while adding smart-home features</p>",
                     "text_width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -5258,10 +5258,10 @@
             "image_size": "default",
             "fit": "Best for keeping your panel and keypads",
             "title": "Alarm Panel Pro Interface Kit",
-            "text": "Installs alongside your existing alarm panel to monitor and automate every wired zone. Reprogram with your installer code and keep everything you have.",
+            "text": "Installs alongside your existing alarm panel to monitor and automate compatible wired zones. Requires installer/engineer code access and key-switch programming while the existing panel stays active.",
             "button_label": "View Interface Kit",
             "link": "shopify://products/konnected-alarm-panel-pro-12-zone-interface-kit",
-            "note": "Keypads and monitoring stay"
+            "note": "Existing panel and keypads stay active"
           }
         }
       },
