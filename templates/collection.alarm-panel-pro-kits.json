@@ -928,7 +928,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>Whether you’re building new or modernizing an existing alarm system, Konnected makes it smart, simple, and subscription-free.</p>",
+                "text": "<p>Whether you’re building new or modernizing an existing alarm system, Konnected adds smart-home control with no required monthly subscription.</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -1731,7 +1731,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>No additional fees</p>",
+                    "text": "<p>No required monthly fee</p>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "left",
@@ -3047,7 +3047,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Switch to remote smart home monitoring, use the smart home platforms you already love - from SmartThings, Alexa, Home Assistant, and more! Stay updated about your home status <strong>without monthly fees</strong>. New to wired alarm upgrades? Start with the <a href=\"/pages/smart-home-security-system-no-monthly-fee\">no-monthly-fee security system guide</a>.</p><p>Already have wired alarm sensors in the walls? Read the <a href=\"/pages/reuse-old-wired-alarm-sensors-smart-home\">wired alarm retrofit guide</a>. If you are deciding whether to retire the old board or keep it active, use the <a href=\"/pages/replace-old-alarm-panel-or-keep-it\">replace-or-keep alarm panel guide</a>.</p>",
+                    "text": "<p>Switch to remote smart home monitoring, use the smart home platforms you already love - from SmartThings, Alexa, Home Assistant, and more! Stay updated about your home status with <strong>no required monthly fee</strong> for Konnected smart-home control. Optional professional monitoring and third-party services may have separate fees. New to wired alarm upgrades? Start with the <a href=\"/pages/smart-home-security-system-no-monthly-fee\">no-monthly-fee security system guide</a>.</p><p>Already have wired alarm sensors in the walls? Read the <a href=\"/pages/reuse-old-wired-alarm-sensors-smart-home\">wired alarm retrofit guide</a>. If you are deciding whether to retire the old board or keep it active, use the <a href=\"/pages/replace-old-alarm-panel-or-keep-it\">replace-or-keep alarm panel guide</a>.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
