@@ -901,7 +901,7 @@
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<h2>Perfect for every project</h2>",
+                "text": "<h2>A smart fit for many wired-alarm projects</h2>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -3227,7 +3227,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>Konnected makes every wired sensor in your home smart. Breathe new life into all of your pre-existing door, window, motion sensors, and more. Use them as a part of your smart alarm system and bring more convenience to your everyday life through custom automations & routines.</p>",
+                "text": "<p>Konnected makes compatible wired sensors in your home smart. Breathe new life into existing wired door, window, and motion sensors after confirming compatibility. Use them as part of your smart alarm system and bring more convenience to your everyday life through custom automations & routines.</p>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "center",
