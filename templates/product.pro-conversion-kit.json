@@ -5145,7 +5145,7 @@
                 "height": 58,
                 "custom_mobile_height": false,
                 "mobile-height": 24,
-                "text": "<p>*THIS PRODUCT IS NOT A FIRE OR LIFE SAFETY DEVICE. Use with smoke and carbon monoxide detectors is for informational purposes only. Do not rely on Konnected alone to notify you in a life threatening emergency.</p>",
+                "text": "<p>*THIS PRODUCT IS NOT A FIRE OR LIFE SAFETY DEVICE. Use with smoke and carbon monoxide detectors is for informational purposes only. Do not rely on Konnected alone to notify you in a life-threatening emergency.</p>",
                 "text_width": "100%",
                 "max_width": "none",
                 "alignment": "left",
