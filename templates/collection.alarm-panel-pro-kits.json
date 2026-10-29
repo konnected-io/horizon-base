@@ -4378,7 +4378,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<ul><li>Ethernet connectivity & PoE</li><li>ESP32 microcontroller with integrated Wi-Fi</li><li>5V output & 3.3V triggers</li><li>12V AUX output & two alarm outputs</li><li>12 zones</li><li>Expansions ports for interface module(s)</li><li>USB port</li><li>RF shield</li><li>12V input</li></ul>",
+                "text": "<ul><li>Ethernet connectivity & PoE</li><li>ESP32 microcontroller with integrated Wi-Fi</li><li>5V output & 3.3V triggers</li><li>12V AUX output & two alarm outputs</li><li>12 zones</li><li>Expansion ports for interface module(s)</li><li>USB port</li><li>RF shield</li><li>12V input</li></ul>",
                 "width": "100%",
                 "max_width": "none",
                 "alignment": "center",
