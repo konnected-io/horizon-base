@@ -5899,7 +5899,7 @@
               "type": "_table-row",
               "name": "Table row",
               "settings": {
-                "text_column_1": "<p>12-zones per panel</p>",
+                "text_column_1": "<p>12 zones per panel</p>",
                 "center_text_1": false,
                 "text_column_2": "",
                 "center_text_2": true,
