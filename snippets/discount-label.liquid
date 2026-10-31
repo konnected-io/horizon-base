@@ -1,8 +1,13 @@
 {% liquid
     assign customer_tag_shop = shop.metafields.custom.customer_discounts.value
     assign discount_label = blank
+    assign is_b2b_customer = false
 
-    if customer_tag_shop.size > 0 
+    if customer != blank and customer.b2b?
+        assign is_b2b_customer = true
+    endif
+
+    if customer_tag_shop.size > 0 and is_b2b_customer == false
         for item in customer_tag_shop
             assign applies_to = item.applies_to.value.products | where: 'id', product.id
 
@@ -20,7 +25,7 @@
         endfor
     endif
 
-    if discount_label == blank and settings.seasonal_sale_enabled and product != blank and product.available and product.type != 'Wholesale' and customer.b2b? == false
+    if discount_label == blank and settings.seasonal_sale_enabled and product != blank and product.available and product.type != 'Wholesale' and is_b2b_customer == false
         assign discount_label = settings.seasonal_sale_percent | append: '% OFF'
     endif
 
