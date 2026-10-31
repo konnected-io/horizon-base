@@ -62,6 +62,7 @@
       {% capture discount_label %}
         {% render 'discount-label', product: product_resource, under_product_page: true %}
       {% endcapture %}
+      {% assign discount_label = discount_label | strip %}
 
       {% if discount_label != blank %}
         <div
