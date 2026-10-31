@@ -80,6 +80,28 @@
     ]
   },
   {
+    "name": "Seasonal sale",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "seasonal_sale_enabled",
+        "label": "Enable seasonal sale treatment",
+        "default": false
+      },
+      {
+        "type": "range",
+        "id": "seasonal_sale_percent",
+        "label": "Discount percentage",
+        "min": 1,
+        "max": 50,
+        "step": 1,
+        "unit": "%",
+        "default": 18,
+        "visible_if": "{{ settings.seasonal_sale_enabled }}"
+      }
+    ]
+  },
+  {
     "name": "t:names.typography",
     "settings": [
       {
