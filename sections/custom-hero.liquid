@@ -39,7 +39,7 @@
   class="section section--{{ section.settings.section_width }} spacing-style"
   style="{% render 'spacing-padding', settings: section.settings %}"
 >
-  <div class="k-hero{% if has_proof == false %} k-hero--collection{% endif %}">
+  <div class="k-hero{% if has_proof == false %} k-hero--collection{% endif %}{% if settings.seasonal_sale_enabled and has_proof %} k-hero--sale{% endif %}">
     {%- capture intro -%}
       <div class="k-hero__intro">
         {%- if section.settings.show_breadcrumbs and crumb_title != blank -%}
@@ -59,10 +59,17 @@
             }
           </script>
         {%- endif -%}
-        {%- if section.settings.heading != blank -%}
+        {%- if settings.seasonal_sale_enabled and has_proof -%}
+          <{{ heading_tag }} class="k-hero__title">
+            {{ section.settings.sale_heading_prefix }}
+            <span class="k-hero__sale-highlight">{{ settings.seasonal_sale_percent }}% off everything.</span>
+          </{{ heading_tag }}>
+        {%- elsif section.settings.heading != blank -%}
           <{{ heading_tag }} class="k-hero__title">{{ section.settings.heading }}</{{ heading_tag }}>
         {%- endif -%}
-        {%- if section.settings.subheading != blank -%}
+        {%- if settings.seasonal_sale_enabled and has_proof and section.settings.sale_subheading != blank -%}
+          <p class="k-hero__sub">{{ section.settings.sale_subheading }}</p>
+        {%- elsif section.settings.subheading != blank -%}
           <p class="k-hero__sub">{{ section.settings.subheading }}</p>
         {%- endif -%}
       </div>
@@ -129,6 +136,9 @@
             endif
           -%}
           <article class="k-line-card k-reveal" {{ block.shopify_attributes }}>
+            {%- if settings.seasonal_sale_enabled and has_proof -%}
+              <p class="k-line-card__sale">Fall sale · {{ settings.seasonal_sale_percent }}% off</p>
+            {%- endif -%}
             {%- if card.image != blank -%}
               {%- capture card_img -%}
                 {{
@@ -205,6 +215,23 @@
       "type": "inline_richtext",
       "id": "subheading",
       "label": "Subheading"
+    },
+    {
+      "type": "header",
+      "content": "Seasonal sale"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "sale_heading_prefix",
+      "label": "Sale heading prefix",
+      "info": "The configured discount percentage and ‘off everything’ are appended automatically.",
+      "default": "This fall, make your home smarter —"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "sale_subheading",
+      "label": "Sale subheading",
+      "default": "Upgrade the wired alarm system and garage opener you already own with local, subscription-free smart control. Your discount will be applied automatically at checkout."
     },
     {
       "type": "text",
