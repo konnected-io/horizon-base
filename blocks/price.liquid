@@ -54,20 +54,30 @@
   
   {% if block_settings.show_badge == true %}
     {% capture badge %}
-
-      {% capture discount_label %}
-        {% render 'discount-label', product: product, under_product_page: true %}
-      {% endcapture %}
-
-      {% if discount_label != blank %}
+      {% if settings.seasonal_sale_enabled and customer.b2b? == false and product_resource.available %}
         <div
           class="
             product-badges__badge product-badges__badge--rectangle
             color-custom-badge-sale
           "
         >
-          {{ discount_label }}
+          {{ settings.seasonal_sale_percent }}% OFF
         </div>
+      {% else %}
+        {% capture discount_label %}
+          {% render 'discount-label', product: product_resource, under_product_page: true %}
+        {% endcapture %}
+
+        {% if discount_label != blank %}
+          <div
+            class="
+              product-badges__badge product-badges__badge--rectangle
+              color-custom-badge-sale
+            "
+          >
+            {{ discount_label }}
+          </div>
+        {% endif %}
       {% endif %}
     {% endcapture %}
   {% endif %}
