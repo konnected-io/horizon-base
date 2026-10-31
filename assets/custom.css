@@ -766,7 +766,6 @@ product-price [ref="priceContainer"]:has(.product-badges__badge) .product-badges
     letter-spacing: 0.06em;
     line-height: 1;
     text-transform: uppercase;
-    transform: rotate(-1deg);
 }
 
 .k-line-card__img {
