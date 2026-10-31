@@ -6,8 +6,6 @@
         for item in customer_tag_shop
             assign applies_to = item.applies_to.value.products | where: 'id', product.id
 
-            assign applies_to = item.applies_to.value.products | where: 'id', product.id
-
             if under_product_page == true
                 if applies_to.size > 0
                     assign discount_label = item.pdp_discount_price_label
@@ -21,5 +19,10 @@
             endif
         endfor
     endif
+
+    if discount_label == blank and settings.seasonal_sale_enabled and product != blank and product.available and product.type != 'Wholesale' and customer.b2b? == false
+        assign discount_label = settings.seasonal_sale_percent | append: '% OFF'
+    endif
+
     echo discount_label
 %}

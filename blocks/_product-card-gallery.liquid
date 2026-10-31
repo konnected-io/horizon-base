@@ -1,10 +1,4 @@
 {% assign product = closest.product %}
-{% liquid
-  assign show_seasonal_sale_badge = false
-  if settings.seasonal_sale_enabled and customer.b2b? == false and product.available
-    assign show_seasonal_sale_badge = true
-  endif
-%}
 
 {% capture children %}
   {% unless product == blank %}
@@ -12,7 +6,7 @@
       {% render 'discount-label', product: product %}
     {% endcapture %}
 
-    {%- if show_seasonal_sale_badge or discount_label != blank or product.available == false or product.compare_at_price > product.price -%}
+    {%- if discount_label != blank or product.available == false or product.compare_at_price > product.price -%}
       <div
         class="product-badges product-badges--{{ settings.badge_position }}"
         style="
@@ -20,16 +14,7 @@
             --badge-font-family: var(--font-{{ settings.badge_font_family }}--family); --badge-font-weight: var(--font-{{ settings.badge_font_family }}--weight); --badge-text-transform: {{ settings.badge_text_transform }};
         "
       >
-        {%- if show_seasonal_sale_badge -%}
-          <div
-            class="
-              product-badges__badge product-badges__badge--rectangle
-              color-custom-badge-sale
-            "
-          >
-            {{ settings.seasonal_sale_percent }}% OFF
-          </div>
-        {%- elsif discount_label != blank -%}
+        {%- if discount_label != blank -%}
           <div
             class="
               product-badges__badge product-badges__badge--rectangle

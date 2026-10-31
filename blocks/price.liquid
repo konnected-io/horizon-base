@@ -11,6 +11,11 @@
     assign is_rte = true
   endif
 
+  assign show_price_badge = block_settings.show_badge
+  if settings.seasonal_sale_enabled and template.name == 'product'
+    assign show_price_badge = true
+  endif
+
   capture text_block_classes
     if block_settings.width == '100%'
       echo 'text-block--align-' | append: block_settings.alignment
@@ -52,32 +57,21 @@
   {{ block.shopify_attributes }}
 >
   
-  {% if block_settings.show_badge == true %}
+  {% if show_price_badge %}
     {% capture badge %}
-      {% if settings.seasonal_sale_enabled and customer.b2b? == false and product_resource.available %}
+      {% capture discount_label %}
+        {% render 'discount-label', product: product_resource, under_product_page: true %}
+      {% endcapture %}
+
+      {% if discount_label != blank %}
         <div
           class="
             product-badges__badge product-badges__badge--rectangle
             color-custom-badge-sale
           "
         >
-          {{ settings.seasonal_sale_percent }}% OFF
+          {{ discount_label }}
         </div>
-      {% else %}
-        {% capture discount_label %}
-          {% render 'discount-label', product: product_resource, under_product_page: true %}
-        {% endcapture %}
-
-        {% if discount_label != blank %}
-          <div
-            class="
-              product-badges__badge product-badges__badge--rectangle
-              color-custom-badge-sale
-            "
-          >
-            {{ discount_label }}
-          </div>
-        {% endif %}
       {% endif %}
     {% endcapture %}
   {% endif %}
