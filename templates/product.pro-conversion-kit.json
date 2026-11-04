@@ -9300,7 +9300,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p><strong>Wireless:<br/></strong>802.11b/g/n 2.4GHz</p><p><strong>Ethernet:<br/></strong>100BASE-TX 802.3u<br/>PoE+ 802.3at</p><p><strong>Microcontroller:<br/></strong>ESP32</p><p><strong>Inputs/Outputs: <br/></strong>Up to 12 NC/NO input zones for wired sensors</p><p>Zones 1-8 may be used as 3.3V signal outputs</p><p>Zones 1-8 may be used for temperature sensors</p><p>1 dedicated 12V alarm output (max 2A)</p><p>1 dedicated 3.3V signal output</p><p>1 toggleable 12V/3.3V output</p><p>Toggleable 12V/3.3V output</p>",
+                "text": "<p><strong>Wireless:<br/></strong>802.11b/g/n 2.4GHz</p><p><strong>Ethernet:<br/></strong>100BASE-TX 802.3u<br/>PoE+ 802.3at</p><p><strong>Microcontroller:<br/></strong>ESP32</p><p><strong>Inputs/Outputs: <br/></strong>Up to 12 NC/NO input zones for wired sensors</p><p>Zones 1-8 may be used as 3.3V signal outputs</p><p>Zones 1-8 may be used for temperature sensors</p><p>1 dedicated 12V alarm output (max 2A)</p><p>1 dedicated 3.3V signal output</p><p>1 toggleable 12V/3.3V output</p>",
                 "width": "100%",
                 "max_width": "none",
                 "alignment": "left",
