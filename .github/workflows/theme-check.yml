@@ -36,3 +36,7 @@ jobs:
           token: ${{ github.token }}
           base: ${{ github.event.pull_request.base.sha }}
           flags: "--fail-level error"
+          # Pinned because Shopify CLI 5 changed the `theme check --output json`
+          # shape, which crashes the action with "e.filter is not a function".
+          # Remove once Shopify/theme-check-action ships a fix (issue #71, PR #72).
+          version: "4.9.5"
