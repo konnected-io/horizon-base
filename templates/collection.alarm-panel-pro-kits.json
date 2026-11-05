@@ -5258,7 +5258,7 @@
             "image_size": "default",
             "fit": "Best for keeping your panel and keypads",
             "title": "Alarm Panel Pro Interface Kit",
-            "text": "Installs alongside your existing alarm panel to monitor and automate compatible wired zones. Requires installer/engineer code access and key-switch programming while the existing panel stays active.",
+            "text": "Installs alongside your existing alarm panel to monitor wired zones and automate arming. Requires installer/engineer code access and key-switch programming while the existing panel stays active.",
             "button_label": "View Interface Kit",
             "link": "shopify://products/konnected-alarm-panel-pro-12-zone-interface-kit",
             "note": "Existing panel and keypads stay active"
