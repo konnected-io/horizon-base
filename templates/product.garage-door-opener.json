@@ -1334,7 +1334,7 @@
                         "slide_3_text": "<p><a href=\"https://esphome.io/guides/made_for_esphome.html\" target=\"_blank\" title=\"https://esphome.io/guides/made_for_esphome.html\">ESPHome-based firmware</a> pre-installed</p>",
                         "slide_4_enabled": true,
                         "slide_4_heading": "Open source",
-                        "slide_4_text": "<p>designed with an emphasis on<em>choice</em>, <em>privacy</em>, and <em>local </em>control</p>",
+                        "slide_4_text": "<p>designed with an emphasis on <em>choice</em>, <em>privacy</em>, and <em>local </em>control</p>",
                         "slide_5_enabled": false,
                         "slide_5_heading": "Slide 5",
                         "slide_5_text": "<p>This is the fifth slide</p>"
