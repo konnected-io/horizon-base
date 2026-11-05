@@ -409,6 +409,97 @@ document.addEventListener('click', function(event) {
   });
 });
 
+// Keep the GDO quiz useful when a privacy browser blocks Okendo's automatic
+// support-page redirect. Successful recommendation pages are left untouched.
+const GDO_QUIZ_ID = 'd515c056-caae-4c7d-8890-d9fcc8947b62';
+const GDO_COMPATIBILITY_GUIDE =
+  'https://support.konnected.io/what-garage-doors-does-your-garage-door-opener-work-with';
+
+function markActiveOkendoQuiz(event) {
+  const trigger = event.target.closest('[onclick*="okeConnectApi.showQuiz"]');
+  if (!trigger) return;
+
+  const onclick = trigger.getAttribute('onclick') || '';
+  document.documentElement.dataset.konnectedActiveQuiz = onclick.includes(GDO_QUIZ_ID) ? 'gdo' : 'other';
+}
+
+function createQuizFallbackLink(label, href, destinationType) {
+  const link = document.createElement('a');
+  link.className = 'c-resultButton-secondary c-button c-resultButton k-quiz-fallback__link';
+  link.href = href;
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+  link.textContent = label;
+  link.setAttribute('data-content-cta', '');
+  link.setAttribute('data-content-slug', 'gdo_quiz');
+  link.setAttribute('data-content-cluster', 'garage_gdo');
+  link.setAttribute('data-destination-type', destinationType);
+  link.setAttribute('data-cta-location', 'quiz_fallback');
+  return link;
+}
+
+function addQuizContextNote(heading, text, marker) {
+  const header = heading.closest('.c-questions-header') || heading.parentElement;
+  if (!header || header.querySelector(`[data-konnected-quiz-note="${marker}"]`)) return;
+
+  const note = document.createElement('p');
+  note.className = 'k-quiz-context-note';
+  note.dataset.konnectedQuizNote = marker;
+  note.textContent = text;
+  header.appendChild(note);
+}
+
+function enhanceGdoQuiz() {
+  if (document.documentElement.dataset.konnectedActiveQuiz !== 'gdo') return;
+
+  const modal = document.querySelector('.c-quiz.c-quiz--modal');
+  if (!modal) return;
+
+  const heading = modal.querySelector('[role="heading"]');
+  const headingText = heading?.textContent.trim() || '';
+
+  if (headingText === 'How did you hear about Konnected?') {
+    addQuizContextNote(heading, 'This answer does not affect your compatibility result.', 'attribution');
+  }
+
+  if (headingText === "What's your email address?") {
+    addQuizContextNote(heading, 'Email is optional. Continue to see your compatibility result.', 'email');
+  }
+
+  const fallbackTitle = [...modal.querySelectorAll('.c-resultBlock-title')].find(
+    (title) => title.textContent.trim() === 'No products could be recommended based on your answers.'
+  );
+  if (!fallbackTitle) return;
+
+  const resultBlock = fallbackTitle.closest('.c-resultBlock') || fallbackTitle.parentElement;
+  if (!resultBlock || resultBlock.dataset.konnectedFallbackEnhanced === 'true') return;
+
+  resultBlock.dataset.konnectedFallbackEnhanced = 'true';
+  fallbackTitle.textContent = 'We need a little more information';
+
+  let subtitle = resultBlock.querySelector('.c-resultBlock-subtitle');
+  if (!subtitle) {
+    subtitle = document.createElement('p');
+    subtitle.className = 'c-resultBlock-subtitle c-subtitle';
+    fallbackTitle.insertAdjacentElement('afterend', subtitle);
+  }
+  subtitle.textContent =
+    "We couldn't confidently match your opener from these answers. Review the compatibility guide before buying, or contact Konnected Support if you're still unsure.";
+
+  const actions = document.createElement('div');
+  actions.className = 'k-quiz-fallback__actions';
+  actions.append(
+    createQuizFallbackLink('Review opener compatibility', GDO_COMPATIBILITY_GUIDE, 'support_page'),
+    createQuizFallbackLink('Contact support', '/pages/contact', 'contact')
+  );
+  resultBlock.appendChild(actions);
+}
+
+document.addEventListener('click', markActiveOkendoQuiz, true);
+
+const okendoQuizObserver = new MutationObserver(enhanceGdoQuiz);
+okendoQuizObserver.observe(document.documentElement, { childList: true, subtree: true });
+
 // ============================================================
 // 2026 visual refresh: hero quote rotator + reveal-on-scroll
 // Companion styles live in custom.css (.k-quote, .k-willreveal).
