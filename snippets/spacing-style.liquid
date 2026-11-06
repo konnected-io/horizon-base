@@ -34,6 +34,9 @@
       echo ';'
     endif
   endfor
+  comment
+    Mobile padding override: intentionally custom — stock Horizon's --spacing-scale only fluid-scales the desktop value proportionally at the 990px breakpoint. Data pulled from every configured instance in this theme (issue #55) shows mobile values overwhelmingly diverge from that proportional scale-down (zeroed out, added where desktop is 0, or scaled by a different ratio), so this is kept as a deliberate independent-value override.
+  endcomment
   if settings.custom_mobile_padding == true
   for mobile_key in mobile_keys
     assign mobile_value = settings[mobile_key]
