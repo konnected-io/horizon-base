@@ -5850,51 +5850,6 @@
               },
               "block_order": []
             },
-            "table_row_XD3kFF": {
-              "type": "_table-row",
-              "name": "Table row",
-              "settings": {
-                "text_column_1": "<p>6-zones per panel</p>",
-                "center_text_1": false,
-                "text_column_2": "",
-                "center_text_2": true,
-                "use_icon_2": true,
-                "icon_type_2": "dash",
-                "use_product_2": false,
-                "product_2": "",
-                "product_element_2": "price",
-                "add_background_color_2": false,
-                "background_color_2": "",
-                "add_text_color_2": false,
-                "text_color_2": "",
-                "add_radius_2": false,
-                "radius_2": "top-left",
-                "text_column_3": "",
-                "center_text_3": false,
-                "use_icon_3": true,
-                "icon_type_3": "dash",
-                "use_product_3": false,
-                "product_3": "",
-                "product_element_3": "price",
-                "add_background_color_3": false,
-                "background_color_3": "",
-                "add_text_color_3": false,
-                "text_color_3": "",
-                "add_radius_3": false,
-                "radius_3": "top-left"
-              },
-              "blocks": {
-                "add-to-cart": {
-                  "type": "add-to-cart",
-                  "static": true,
-                  "settings": {
-                    "style_class": "button-secondary"
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": []
-            },
             "table_row_AcmM8g": {
               "type": "_table-row",
               "name": "Table row",
@@ -6061,7 +6016,6 @@
             "table_row_9KMFPV",
             "table_row_jR3TzB",
             "table_row_Vqe9P9",
-            "table_row_XD3kFF",
             "table_row_AcmM8g",
             "table_row_RFx6PA",
             "table_row_4ARi4k"
