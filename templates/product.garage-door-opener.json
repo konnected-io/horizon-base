@@ -5703,7 +5703,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>Our Garage Door Opener retrofits your existing dumb garage door opener and adds smart functionality to it.<a href=\"https://support.konnected.io/product-manuals#garage-door-opener\" target=\"_blank\" title=\"Konnected GDO Knowledge Base\">More details at our knowledge base</a>.</p>",
+                "text": "<p>Our Garage Door Opener retrofits your existing dumb garage door opener and adds smart functionality to it. <a href=\"https://support.konnected.io/konnected-smart-garage-door-opener-white-v2-setup-and-installation-guide\" target=\"_blank\" title=\"Smart Garage Door Opener White v2 installation guide\">See the installation guide</a>.</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
