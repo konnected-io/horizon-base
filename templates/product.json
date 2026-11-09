@@ -234,14 +234,6 @@
               },
               "block_order": []
             },
-            "custom_liquid_interface_warning": {
-              "type": "custom-liquid",
-              "name": "Interface Module zone warning",
-              "settings": {
-                "custom_liquid": "{% if closest.product.handle == 'konnected-alarm-panel-interface-module' %}<aside class=\"interface-module-warning\" role=\"note\" aria-label=\"Important compatibility information\"><strong>⚠️ Important:</strong> Connecting an Interface Module to the EXP port does not add zones to an Alarm Panel Pro. One or two Interface Modules use the Pro's existing 12 zone inputs; they do not increase the Pro beyond 12 zones.</aside><style>.interface-module-warning{background:#fff4d6;border:1px solid #f2b84b;border-left:5px solid #e99a00;border-radius:10px;color:#3d2b00;font-size:0.95rem;line-height:1.5;padding:14px 16px}.interface-module-warning strong{font-weight:700}</style>{% endif %}"
-              },
-              "blocks": {}
-            },
             "text_aEtTtq": {
               "type": "text",
               "name": "Product description",
@@ -352,7 +344,6 @@
             "group_icgrde",
             "variant_picker_R3rGDr",
             "buy_buttons_eYQEYi",
-            "custom_liquid_interface_warning",
             "text_aEtTtq",
             "accordion_33MKVF"
           ]
