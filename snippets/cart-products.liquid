@@ -212,6 +212,14 @@
                         mode: 'trigger'
                       %}
                     </div>
+                    {% if item.product.handle == 'konnected-alarm-panel-pro-12-zone-interface-kit'
+                      or item.product.handle == 'konnected-alarm-panel-interface-module'
+                    %}
+                      <p class="cart-items__capacity-note" role="note">
+                        <strong>Interface Modules do not add zones.</strong>
+                        One Alarm Panel Pro monitors up to 12 zones; 13+ zones require another Pro board.
+                      </p>
+                    {% endif %}
                     {% if item.product.vendor and block_settings.vendor %}
                       <p>
                         <bdi>{{ item.product.vendor }}</bdi>
@@ -505,6 +513,12 @@
 
   .cart-items__product-info {
     min-width: 0;
+  }
+
+  .cart-items__capacity-note {
+    margin-block-start: var(--margin-3xs);
+    color: var(--color-foreground);
+    line-height: 1.4;
   }
 
   /* Cart drawer: separate grid areas for variants and unit price */
