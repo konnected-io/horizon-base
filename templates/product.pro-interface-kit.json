@@ -6850,7 +6850,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h3>LOCAL AND/OR CLOUD BASED AUTOMATION</h3>",
+                "text": "<h3>LOCAL AND/OR CLOUD-BASED AUTOMATION</h3>",
                 "width": "100%",
                 "max_width": "none",
                 "alignment": "left",
@@ -6883,7 +6883,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>Konnected supports LAN-based local home automation or convenient & secure cloud based platforms via our free to use Konnected Cloud service. Learn more <a href=\"https://konnected.io/blogs/smart-home-security/cloud-vs-local-what-smart-home-platform-is-best-for-you-and-why\" target=\"_blank\">about cloud vs. local</a> on the blog</p>",
+                "text": "<p>Konnected supports LAN-based local home automation or convenient & secure cloud-based platforms via our free-to-use Konnected Cloud service. Learn more <a href=\"https://konnected.io/blogs/smart-home-security/cloud-vs-local-what-smart-home-platform-is-best-for-you-and-why\" target=\"_blank\">about cloud vs. local</a> on the blog</p>",
                 "width": "100%",
                 "max_width": "none",
                 "alignment": "left",
