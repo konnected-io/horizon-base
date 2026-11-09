@@ -3422,59 +3422,6 @@
                 "mobile-padding-inline-end": 0
               },
               "blocks": {}
-            },
-            "text_icon_hFV4kq": {
-              "type": "text-icon",
-              "name": "Text Icon",
-              "settings": {
-                "icon_position": "left",
-                "icon": "apple",
-                "image_upload": "shopify://shop_images/k-check.svg",
-                "icon_width": 24,
-                "use_height": true,
-                "height": 20,
-                "custom_mobile_height": false,
-                "mobile-height": 24,
-                "text": "<p>Compare with <a href=\"https://konnected.io/collections/shop-now/products/konnected-alarm-panel-interface-kit\" target=\"_blank\">Alarm Panel</a></p>",
-                "text_width": "fit-content",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "enable_mobile_size": false,
-                "mobile_font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "link": "",
-                "open_in_new_tab": false,
-                "content_direction": "row",
-                "vertical_on_mobile": false,
-                "reverse_on_mobile": false,
-                "horizontal_alignment": "flex-start",
-                "vertical_alignment": "flex-start",
-                "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "flex-start",
-                "custom_mobile_alignment": false,
-                "mobile_vertical_alignment": "flex-start",
-                "vertical_alignment_flex_direction_column": "center",
-                "gap": 12,
-                "enable_mobile_gap": false,
-                "mobile_gap": 12,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0,
-                "custom_mobile_padding": false,
-                "mobile-padding-block-start": 0,
-                "mobile-padding-block-end": 0,
-                "mobile-padding-inline-start": 0,
-                "mobile-padding-inline-end": 0
-              },
-              "blocks": {}
             }
           },
           "block_order": [
@@ -3484,8 +3431,7 @@
             "text_icon_ih7TfB",
             "text_icon_hUU3xp",
             "text_icon_mUUd8r",
-            "text_icon_N7Y8EB",
-            "text_icon_hFV4kq"
+            "text_icon_N7Y8EB"
           ]
         }
       },
@@ -10168,7 +10114,7 @@
               "name": "Accordion row (dynamic)",
               "settings": {
                 "heading": "WHAT IS KEY SWITCH PROGRAMMING FOR INTERFACE KITS?",
-                "content": "<p>Before purchasing this kit, please keep in mind that to ensure the correct operation of the Konnected Alarm Panel Pro 12-Zone Interface Kit, it is essential to program one of the outputs as a key switch. To achieve this,  you or the person carrying out the installation will be required to know the \"installation code/engineer code\" of the existing alarm system, as programming is involved via the existing keypad, and this code is needed. Once programmed, the key switch will enable remote arming and disarming of your alarm system through your smart home platform.  If you cannot program an Output to be a key switch, please do not buy the Interface Kit, you should consider the <a href=\"https://konnected.io/products/konnected-alarm-panel-pro-12-zone-kit\"><span style=\"text-decoration:underline\">Pro Conversion Kit </span></a>instead. This is a direct replacement for your existing alarm system, and therefore, does not require any key switch programming.</p><p>Please refer to our <a href=\"https://support.konnected.io/wiring-a-keyswitch-with-the-konnected-alarm-panel-interface%20for%20step-by-step%20instructions\" target=\"_blank\" title=\"https://support.konnected.io/wiring-a-keyswitch-with-the-konnected-alarm-panel-interface for step-by-step instructions\">detailed guide</a> on wiring a key switch with the Konnected Alarm Panel Interface.</p>",
+                "content": "<p>Before purchasing this kit, please keep in mind that to ensure the correct operation of the Konnected Alarm Panel Pro 12-Zone Interface Kit, it is essential to program one of the outputs as a key switch. To achieve this,  you or the person carrying out the installation will be required to know the \"installation code/engineer code\" of the existing alarm system, as programming is involved via the existing keypad, and this code is needed. Once programmed, the key switch will enable remote arming and disarming of your alarm system through your smart home platform.  If you cannot program an Output to be a key switch, please do not buy the Interface Kit, you should consider the <a href=\"https://konnected.io/products/konnected-alarm-panel-pro-12-zone-kit\"><span style=\"text-decoration:underline\">Pro Conversion Kit </span></a>instead. This is a direct replacement for your existing alarm system, and therefore, does not require any key switch programming.</p><p>Please refer to our <a href=\"https://support.konnected.io/wiring-a-keyswitch-with-the-konnected-alarm-panel-interface\" target=\"_blank\" title=\"Wiring a keyswitch with the Konnected Alarm Panel Interface\">detailed guide</a> on wiring a key switch with the Konnected Alarm Panel Interface.</p>",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
