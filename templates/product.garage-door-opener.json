@@ -6540,7 +6540,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>This product ships with <a href=\"https://esphome.io/guides/made_for_esphome.html\" target=\"_blank\" title=\"https://esphome.io/guides/made_for_esphome.html\">ESPHome-based</a> firmware pre-loaded for <strong>local</strong>, <strong>secure</strong>, and <strong>open-source</strong> integration with Home Assistant and Hubitat.</p><p>Konnected is committed to making this powerful DIY smart home firmware easy and accessible for all, which is why we’ve created a cloud connector for ESPHome to integrate with SmartThings and Alexa.</p><p>Powerful, customizable, and plug-and play smart home integration with your choice of smart home platform.</p>",
+                "text": "<p>This product ships with <a href=\"https://esphome.io/guides/made_for_esphome.html\" target=\"_blank\" title=\"https://esphome.io/guides/made_for_esphome.html\">ESPHome-based</a> firmware pre-loaded for <strong>local</strong>, <strong>secure</strong>, and <strong>open-source</strong> integration with Home Assistant and Hubitat.</p><p>Konnected is committed to making this powerful DIY smart home firmware easy and accessible for all, which is why we’ve created a cloud connector for ESPHome to integrate with SmartThings and Alexa.</p><p>Powerful, customizable, and plug-and-play smart home integration with your choice of smart home platform.</p>",
                 "width": "100%",
                 "max_width": "none",
                 "alignment": "left",
