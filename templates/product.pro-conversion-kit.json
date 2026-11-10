@@ -6803,7 +6803,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>Konnected supports LAN-based local home automation or convenient & secure cloud based platforms via our free to use Konnected Cloud service. Learn more about cloud vs. local on the blog</p>",
+                "text": "<p>Konnected supports LAN-based local home automation or convenient & secure cloud-based platforms via our free-to-use Konnected Cloud service. Learn more about cloud vs. local on the blog</p>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "center",
