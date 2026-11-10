@@ -1645,7 +1645,7 @@
                       "type": "button",
                       "name": "t:names.button",
                       "settings": {
-                        "label": "GDO White",
+                        "label": "Make an old opener smart",
                         "link": "shopify://products/smart-garage-door-opener",
                         "open_in_new_tab": false,
                         "style_class": "button",
@@ -1660,7 +1660,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p><em>for all other Garage Door Openers</em></p>",
+                        "text": "<p><em>for compatible dry-contact or wired push-button openers</em></p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "center",

@@ -3050,7 +3050,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Choose <a href=\"/products/smart-garage-door-opener-blaq-myq-alternative\">GDO blaQ</a> for many Security+ 2.0 Chamberlain, LiftMaster, and Craftsman openers, especially myQ-era openers that do not behave like a simple wall button. Choose <a href=\"/products/konnected-smart-garage-door-opener\">GDO White</a> for compatible dry-contact, wall-button, or relay-style openers.</p>",
+                    "text": "<p>Choose <a href=\"/products/smart-garage-door-opener-blaq-myq-alternative\">GDO blaQ</a> for many Security+ 2.0 Chamberlain, LiftMaster, and Craftsman openers, especially myQ-era openers that do not behave like a simple wall button. For a compatible opener that uses a wired push button or dry-contact closure, <a href=\"/products/smart-garage-door-opener\">make an old opener smart with GDO White</a>.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -4055,10 +4055,10 @@
             "image": "shopify://shop_images/Untitled_31_d77b69be-354d-4efe-9cbc-fd22eebe31a5.png",
             "image_alt": "GDO White",
             "image_size": "default",
-            "fit": "Best for nearly any other opener, old or new",
+            "fit": "Best for nearly all other opener brands",
             "title": "GDO White",
-            "text": "Wires to any opener that triggers with a standard push button, and adds real-time open/close status.",
-            "button_label": "View GDO White",
+            "text": "Works with openers triggered by a standard wired push button or dry-contact closure, with real-time open/close status.",
+            "button_label": "Make an old opener smart",
             "link": "shopify://products/smart-garage-door-opener",
             "note": "Most other brands"
           }
@@ -4071,8 +4071,8 @@
       "settings": {
         "heading_tag": "h1",
         "show_breadcrumbs": true,
-        "heading": "Make any Garage Door Opener Smart",
-        "subheading": "Konnected’s GDOs are WiFi devices that retrofit any motorized garage door opener to work with popular smart home platforms.",
+        "heading": "Compare GDO blaQ and GDO White",
+        "subheading": "Choose the Konnected garage controller that matches your opener's learn button and control method.",
         "rating_label": "",
         "section_width": "page-width",
         "padding-block-start": 0,
