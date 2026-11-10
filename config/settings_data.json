@@ -50,6 +50,8 @@
     "page_transition_enabled": false,
     "transition_to_main_product": false,
     "card_hover_effect": "none",
+    "seasonal_sale_enabled": true,
+    "seasonal_sale_percent": 18,
     "badge_position": "bottom-left",
     "badge_corner_radius": 0,
     "badge_text_transform": "none",
@@ -125,7 +127,7 @@
       },
       "13768625480086291342": {
         "type": "shopify://apps/forms/blocks/forms/8744a304-fcb1-4347-b211-bb6b4759a76a",
-        "disabled": false,
+        "disabled": true,
         "settings": {}
       }
     },
