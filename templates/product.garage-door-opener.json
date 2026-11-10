@@ -121,7 +121,7 @@
                   "type": "text",
                   "name": "t:names.title",
                   "settings": {
-                    "text": "<h1>{{ closest.product.title }}</h1>",
+                    "text": "<h1>Make Your Old Garage Door Opener Smart with GDO White</h1>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "left",
@@ -202,7 +202,7 @@
               "type": "text",
               "name": "Product description",
               "settings": {
-                "text": "{{ closest.product.description }}",
+                "text": "<p><strong>Make your old garage door opener smart with GDO White.</strong> Retrofit a compatible opener that uses a wired push-button or dry-contact closure, then control it and see its open/closed status in your smart home.</p>{{ closest.product.description }}",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
@@ -2191,7 +2191,7 @@
       "settings": {
         "alignment": "left",
         "layout_type": "grid",
-        "carousel_on_mobile": true,
+        "carousel_on_mobile": false,
         "enable_dots": true,
         "hide_arrows": false,
         "autoplay": false,

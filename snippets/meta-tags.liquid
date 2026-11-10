@@ -19,7 +19,14 @@
 >
 
 {%- liquid
-  assign og_title = page_title | default: shop.name
+  assign seo_title = page_title | default: shop.name
+  if request.page_type == 'product' and product.handle == 'smart-garage-door-opener'
+    assign seo_title = 'Smart Garage Door Opener Retrofit | GDO White'
+  elsif request.page_type == 'collection' and collection.handle == 'smart-garage-door-openers'
+    assign seo_title = 'Compare GDO blaQ vs GDO White Garage Controllers'
+  endif
+
+  assign og_title = seo_title
   assign og_url = canonical_url | default: request.origin
   assign og_type = 'website'
   assign seo_description = page_description
@@ -114,10 +121,10 @@
 >
 
 <title>
-  {{ page_title }}
+  {{ seo_title }}
   {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
   {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
-  {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+  {%- unless seo_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
 </title>
 
 <link
