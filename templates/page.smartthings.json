@@ -2832,7 +2832,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>Konnected adds a second funcionality to your security system. Create custom automations & routines.</p>",
+                "text": "<p>Konnected adds a second functionality to your security system. Create custom automations & routines.</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
