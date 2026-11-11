@@ -2525,7 +2525,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Make your HVAC system turn off when you window sensor reads as open.</p>",
+                    "text": "<p>Make your HVAC system turn off when your window sensor reads as open.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
