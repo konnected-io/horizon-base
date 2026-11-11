@@ -1114,7 +1114,7 @@
                 "height": 20,
                 "custom_mobile_height": false,
                 "mobile-height": 24,
-                "text": "<p>No monthly fees</p>",
+                "text": "<p>No required monthly fee</p>",
                 "text_width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
