@@ -1747,7 +1747,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>Hubitat is a local smart home platform. The <strong>required </strong><a href=\"https://hubitat.com/products\" target=\"_blank\">Hubitat hub</a> is connected directly to your router (either by WiFi or wired Ethernet), which creates a home-based network that works even without an internet connection. Thanks to the hub, there’s also less latency due to data processing within your network and <a href=\"https://konnected.io/blogs/smart-home-security/cloud-vs-local-what-smart-home-platform-is-best-for-you-and-why\" target=\"_blank\">not the cloud.</a></p>",
+            "text": "<p>Hubitat is a local smart home platform. The <strong>required </strong><a href=\"https://hubitat.com/products\" target=\"_blank\">Hubitat hub</a> is connected directly to your router (either by Wi-Fi or wired Ethernet), which creates a home-based network that works even without an internet connection. Thanks to the hub, there’s also less latency due to data processing within your network and <a href=\"https://konnected.io/blogs/smart-home-security/cloud-vs-local-what-smart-home-platform-is-best-for-you-and-why\" target=\"_blank\">not the cloud.</a></p>",
             "width": "100%",
             "max_width": "none",
             "alignment": "left",
