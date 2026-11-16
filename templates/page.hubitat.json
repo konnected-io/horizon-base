@@ -3031,7 +3031,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>One of the most rewarding moments of developing Konnected is integrating our products with other excellent brands within the industry. We’ve been following Hubitat’s growth very closely and love the customizable automation experience they provide for its <a href=\"https://community.hubitat.com/\">dedicated community</a> of smart home enthusiasts.</p>",
+                "text": "<p>One of the most rewarding moments of developing Konnected is integrating our products with other excellent brands within the industry. We’ve been following Hubitat’s growth very closely and love the customizable automation experience it provides for its <a href=\"https://community.hubitat.com/\">dedicated community</a> of smart home enthusiasts.</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
