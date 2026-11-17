@@ -1,7 +1,6 @@
 {%- doc -%}
   Renders a block's icon or uploaded image, optionally wrapped in a fixed-height
-  box driven by the block's `use_height` / `height` / `custom_mobile_height` /
-  `mobile-height` settings.
+  box driven by the block's `use_height` / `height` settings.
 
   Shared by the three blocks that render an icon + text row:
   blocks/text-icon.liquid, blocks/_online-reseller-item.liquid and
@@ -27,7 +26,7 @@
 {%- enddoc -%}
 
 {% if settings.use_height != blank %}
-  <div class="use-height-icon" style="--height: {{ settings.height }}px;{% if settings.custom_mobile_height == true %}--mobile-height: {{ settings['mobile-height'] }}px;{% endif %}">
+  <div class="use-height-icon" style="--height: {{ settings.height }}px;">
 {% endif %}
     {% render 'icon-or-image',
         icon: settings.icon,

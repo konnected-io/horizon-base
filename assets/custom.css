@@ -364,29 +364,12 @@ product-price [ref="priceContainer"]:has(.product-badges__badge) .product-badges
         flex-direction: column-reverse !important;
     }
 
-    .spacing-style[style*="--mobile-padding-block-start"] {
-        padding-block: calc(var(--mobile-padding-block-start) + var(--section-top-offset, 0px)) var(--mobile-padding-block-end) !important;
-    }
-
-    .spacing-style[style*="--mobile-padding-inline-start"] {
-        padding-inline: var(--mobile-padding-inline-start) var(--mobile-padding-inline-end) !important;
-    }
-
     .spacing-style[style*="--mobile-margin-block-start"] {
         margin-inline: var(--mobile-margin-block-start) var(--mobile-margin-block-end) !important;
     }
 
     .spacing-style[style*="--mobile-margin-block-start"] {
         margin-inline: var(--mobile-margin-block-start) var(--mobile-margin-block-end) !important;
-    }
-
-    [style*="--mobile-font-size"],
-    [style*="--mobile-font-size"] > * {
-        font-size: var(--mobile-font-size) !important;
-    }
-
-    [style*="--mobile-border-radius"] {
-        border-radius: var(--mobile-border-radius) !important;
     }
 
     .mobile-column[style*="--horizontal-mobile-alignment"] {
@@ -405,16 +388,8 @@ product-price [ref="priceContainer"]:has(.product-badges__badge) .product-badges
         }
     }
 
-    [style*="--mobile-gap"] {
-        gap: var(--mobile-gap) !important;
-    }
-
     [style*="--mobile-ratio"] > img,  [style*="--mobile-ratio"] > video {
        aspect-ratio: var(--mobile-ratio) !important;
-    }
-
-    .use-height-icon[style*="--mobile-height"] img, .use-height-icon[style*="--mobile-height"] svg {
-        height: var(--mobile-height) !important;
     }
 
     .full-width-mobile {
