@@ -215,23 +215,6 @@
       "default": 12
     },
     {
-      "type": "checkbox",
-      "id": "enable_mobile_gap",
-      "label": "Custom mobile gap",
-      "default": false
-    },
-    {
-      "type": "range",
-      "id": "mobile_gap",
-      "label": "Mobile gap",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "px",
-      "default": 12,
-      "visible_if": "{{ block.settings.enable_mobile_gap == true }}"
-    },
-    {
       "type": "header",
       "content": "t:content.size"
     },
@@ -406,23 +389,6 @@
       "visible_if": "{{ block.settings.background_media == 'image' }}"
     },
     {
-      "type": "checkbox",
-      "id": "enable_mobile_radius",
-      "label": "Custom mobile radius",
-      "default": false
-    },
-    {
-      "type": "range",
-      "id": "mobile_border_radius",
-      "label": "Mobile corner radius",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "px",
-      "default": 0,
-      "visible_if": "{{ block.settings.enable_mobile_radius == true }}"
-    },
-    {
       "type": "text",
       "id": "placeholder",
       "label": "t:settings.image",
@@ -577,56 +543,6 @@
       "step": 1,
       "unit": "px",
       "default": 0
-    },
-    {
-      "type": "checkbox",
-      "id": "custom_mobile_padding",
-      "label": "Custom Mobile Padding",
-      "default": false
-    },
-    {
-      "type": "range",
-      "id": "mobile-padding-block-start",
-      "label": "t:settings.top",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "px",
-      "default": 0,
-      "visible_if": "{{ block.settings.custom_mobile_padding == true }}"
-    },
-    {
-      "type": "range",
-      "id": "mobile-padding-block-end",
-      "label": "t:settings.bottom",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "px",
-      "default": 0,
-      "visible_if": "{{ block.settings.custom_mobile_padding == true }}"
-    },
-    {
-      "type": "range",
-      "id": "mobile-padding-inline-start",
-      "label": "t:settings.left",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "px",
-      "default": 0,
-      "visible_if": "{{ block.settings.custom_mobile_padding == true }}"
-    },
-    {
-      "type": "range",
-      "id": "mobile-padding-inline-end",
-      "label": "t:settings.right",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "px",
-      "default": 0,
-      "visible_if": "{{ block.settings.custom_mobile_padding == true }}"
     },
     {
       "type": "text",

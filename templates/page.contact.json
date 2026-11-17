@@ -23,8 +23,6 @@
             "type_preset": "h2",
             "font": "var(--font-body--family)",
             "font_size": "",
-            "enable_mobile_size": false,
-            "mobile_font_size": "1rem",
             "line_height": "normal",
             "letter_spacing": "normal",
             "case": "none",
@@ -35,12 +33,7 @@
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0,
-            "custom_mobile_padding": false,
-            "mobile-padding-block-start": 0,
-            "mobile-padding-block-end": 0,
-            "mobile-padding-inline-start": 0,
-            "mobile-padding-inline-end": 0
+            "padding-inline-end": 0
           },
           "blocks": {}
         },
@@ -55,8 +48,6 @@
             "type_preset": "rte",
             "font": "var(--font-body--family)",
             "font_size": "",
-            "enable_mobile_size": false,
-            "mobile_font_size": "1rem",
             "line_height": "normal",
             "letter_spacing": "normal",
             "case": "none",
@@ -67,12 +58,7 @@
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0,
-            "custom_mobile_padding": false,
-            "mobile-padding-block-start": 0,
-            "mobile-padding-block-end": 0,
-            "mobile-padding-inline-start": 0,
-            "mobile-padding-inline-end": 0
+            "padding-inline-end": 0
           },
           "blocks": {}
         }
@@ -141,8 +127,6 @@
         "horizontal_alignment_flex_direction_column": "center",
         "vertical_alignment_flex_direction_column": "center",
         "gap": 32,
-        "enable_mobile_gap": false,
-        "mobile_gap": 12,
         "section_width": "page-width",
         "full_width_on_mobile": false,
         "section_height": "",
@@ -161,11 +145,6 @@
         "gradient_direction": "to top",
         "padding-block-start": 32,
         "padding-block-end": 84,
-        "custom_mobile_padding": false,
-        "mobile-padding-block-start": 0,
-        "mobile-padding-block-end": 0,
-        "mobile-padding-inline-start": 0,
-        "mobile-padding-inline-end": 0,
         "css_class": "",
         "add_section_id": false,
         "section_id": ""
