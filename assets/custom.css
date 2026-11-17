@@ -372,21 +372,8 @@ product-price [ref="priceContainer"]:has(.product-badges__badge) .product-badges
         margin-inline: var(--mobile-margin-block-start) var(--mobile-margin-block-end) !important;
     }
 
-    .mobile-column[style*="--horizontal-mobile-alignment"] {
-        align-items: var(--horizontal-mobile-alignment) !important;
-    }
 
-    .mobile-column[style*="--horizontal-mobile-alignment: flex-start"] {
-        > .text-block {
-            text-align: left;
-        }
-    }
 
-    .mobile-column[style*="--horizontal-mobile-alignment: center"] {
-        > .text-block, .text-block > * {
-            text-align: center;
-        }
-    }
 
     [style*="--mobile-ratio"] > img,  [style*="--mobile-ratio"] > video {
        aspect-ratio: var(--mobile-ratio) !important;
