@@ -137,7 +137,7 @@
           -%}
           <article class="k-line-card k-reveal" {{ block.shopify_attributes }}>
             {%- if settings.seasonal_sale_enabled and has_proof -%}
-              <p class="k-line-card__sale">Fall sale · {{ settings.seasonal_sale_percent }}% off</p>
+              <p class="k-line-card__sale">{{ section.settings.sale_badge_label }} · {{ settings.seasonal_sale_percent }}% off</p>
             {%- endif -%}
             {%- if card.image != blank -%}
               {%- capture card_img -%}
@@ -232,6 +232,12 @@
       "id": "sale_subheading",
       "label": "Sale subheading",
       "default": "Upgrade the wired alarm system and garage opener you already own with local, subscription-free smart control. Your discount will be applied automatically at checkout."
+    },
+    {
+      "type": "text",
+      "id": "sale_badge_label",
+      "label": "Sale card badge",
+      "default": "Seasonal sale"
     },
     {
       "type": "text",
