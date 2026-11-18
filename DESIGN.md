@@ -115,7 +115,7 @@ Grid areas `media/head/fits` collapse to `head → media → fits` under 900px. 
 Stock AI-gen table block restyled **via its own settings** (template JSON): midnight header, white text, blue ✓, slate ✗.
 
 ### 3.9 `k-sale-offers` — temporary promotion banner
-Compact, light-surface sale banner used immediately below the global header. Live HTML carries the headline, offer tiers, CTA, and cart reminder; the visual treatment uses the existing ring texture, midnight-tinted elevation, and circuit-green threshold pills. Content and thresholds are section settings and blocks so a future promotion can reuse the layout without editing Liquid.
+Compact, light-surface sale banner used immediately below the global header. It spans the same page-width column as the navbar and stays only slightly taller than the 60px header; desktop copy and CTA sit side by side, while mobile reduces to the headline and CTA so the hero remains above the fold. Live HTML carries the headline, offer tiers, CTA, and cart reminder; the visual treatment uses the approved right-weighted artwork, midnight-tinted elevation, and circuit-green threshold pills.
 
 ---
 
