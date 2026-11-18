@@ -5,6 +5,7 @@
     {% capture discount_label %}
       {% render 'discount-label', product: product %}
     {% endcapture %}
+    {% assign discount_label = discount_label | strip %}
 
     {%- if discount_label != blank or product.available == false or product.compare_at_price > product.price -%}
       <div

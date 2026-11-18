@@ -67,6 +67,7 @@
         },
         "announcement_CnmdUR": {
           "type": "_announcement",
+          "disabled": true,
           "settings": {
             "text": "Sign up for our Newsletter and get 10% Off",
             "link": "",
