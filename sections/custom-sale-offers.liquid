@@ -1,3 +1,13 @@
+{% liquid
+  assign image_loading = 'lazy'
+  assign image_fetchpriority = 'auto'
+
+  if section.index <= 2
+    assign image_loading = 'eager'
+    assign image_fetchpriority = 'high'
+  endif
+%}
+
 <div class="section-background"></div>
 <section
   id="{{ section.settings.anchor_id | escape }}"
@@ -5,6 +15,21 @@
   style="{% render 'spacing-padding', settings: section.settings %}"
 >
   <div class="k-sale-offers">
+    {%- if section.settings.background_image != blank -%}
+      <div class="k-sale-offers__media" aria-hidden="true">
+        {{
+          section.settings.background_image
+          | image_url: width: 1600
+          | image_tag:
+            widths: '480, 720, 960, 1200, 1600',
+            sizes: '(min-width: 990px) 960px, 100vw',
+            loading: image_loading,
+            fetchpriority: image_fetchpriority,
+            alt: ''
+        }}
+      </div>
+    {%- endif -%}
+
     <div class="k-sale-offers__intro">
       {%- if section.settings.heading != blank -%}
         <h2 class="k-sale-offers__heading">{{ section.settings.heading }}</h2>
@@ -19,53 +44,41 @@
         <p class="k-sale-offers__reminder">{{ section.settings.reminder }}</p>
       {%- endif -%}
     </div>
-
-    {%- if section.blocks.size > 0 -%}
-      <ul class="k-sale-offers__tiers" role="list">
-        {%- for block in section.blocks -%}
-          <li class="k-sale-offers__tier" {{ block.shopify_attributes }}>
-            <span class="k-sale-offers__threshold">{{ block.settings.threshold }}</span>
-            <div>
-              <h3 class="k-sale-offers__tier-title">{{ block.settings.title }}</h3>
-              {%- if block.settings.text != blank -%}
-                <p class="k-sale-offers__tier-text">{{ block.settings.text }}</p>
-              {%- endif -%}
-            </div>
-          </li>
-        {%- endfor -%}
-      </ul>
-    {%- endif -%}
   </div>
 </section>
 
 {% schema %}
 {
-  "name": "Sale bonus offers",
-  "max_blocks": 3,
+  "name": "Sale gift banner",
   "settings": [
     {
       "type": "text",
       "id": "anchor_id",
       "label": "Anchor ID",
-      "default": "sale-bonus"
+      "default": "sale-gift"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background image"
     },
     {
       "type": "inline_richtext",
       "id": "heading",
       "label": "Heading",
-      "default": "More cart. More bonus."
+      "default": "Spend $150. Pick a free gift."
     },
     {
       "type": "richtext",
       "id": "text",
       "label": "Text",
-      "default": "<p>Bonus choices unlock as your cart grows.</p>"
+      "default": "<p>More gift choices unlock at $200 and $250.</p>"
     },
     {
       "type": "text",
       "id": "button_label",
       "label": "Button label",
-      "default": "Shop the sale"
+      "default": "Choose a free gift"
     },
     {
       "type": "url",
@@ -76,7 +89,7 @@
       "type": "text",
       "id": "reminder",
       "label": "Cart reminder",
-      "default": "Add an eligible bonus item to your cart before checkout. The discount applies automatically."
+      "default": "Add your choice to cart before checkout. The discount applies automatically."
     },
     {
       "type": "select",
@@ -96,7 +109,7 @@
       "max": 80,
       "step": 4,
       "unit": "px",
-      "default": 24
+      "default": 12
     },
     {
       "type": "range",
@@ -106,42 +119,12 @@
       "max": 80,
       "step": 4,
       "unit": "px",
-      "default": 24
-    }
-  ],
-  "blocks": [
-    {
-      "type": "offer",
-      "name": "Bonus tier",
-      "settings": [
-        {
-          "type": "text",
-          "id": "threshold",
-          "label": "Threshold",
-          "default": "$150+"
-        },
-        {
-          "type": "text",
-          "id": "title",
-          "label": "Title",
-          "default": "Free bonus"
-        },
-        {
-          "type": "textarea",
-          "id": "text",
-          "label": "Description"
-        }
-      ]
+      "default": 12
     }
   ],
   "presets": [
     {
-      "name": "Sale bonus offers",
-      "blocks": [
-        { "type": "offer" },
-        { "type": "offer" },
-        { "type": "offer" }
-      ]
+      "name": "Sale gift banner"
     }
   ]
 }

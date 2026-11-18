@@ -159,12 +159,19 @@
                     "text_color": "{{ settings.color_palette.konnected_blue }}"
                   },
                   "blocks": {}
+                },
+                "free_gift_badge": {
+                  "type": "custom-free-gift-badge",
+                  "name": "BFCM free gift callout",
+                  "settings": {},
+                  "blocks": {}
                 }
               },
               "block_order": [
                 "text_xpVMaM",
                 "okendo_star_rating_frdY8L",
-                "price_tVjtKg"
+                "price_tVjtKg",
+                "free_gift_badge"
               ]
             },
             "variant_picker_R3rGDr": {

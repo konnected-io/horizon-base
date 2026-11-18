@@ -11,47 +11,17 @@
   "sections": {
     "bfcm_bonus": {
       "type": "custom-sale-offers",
-      "name": "BFCM bonus offers",
-      "blocks": {
-        "tier_150": {
-          "type": "offer",
-          "settings": {
-            "threshold": "$150+",
-            "title": "Contact sensor or magnetic standoffs",
-            "text": "Choose from selected wired contact sensors or a set of four magnetic standoffs."
-          }
-        },
-        "tier_200": {
-          "type": "offer",
-          "settings": {
-            "threshold": "$200+",
-            "title": "Select siren or 5V power converter",
-            "text": "Choose a DSC indoor siren or an eligible 12V-to-5V USB power converter."
-          }
-        },
-        "tier_250": {
-          "type": "offer",
-          "settings": {
-            "threshold": "$250+",
-            "title": "Premium siren, motion sensor, or USB-PD converter",
-            "text": "Choose a WAVE2 siren, IS335 motion sensor, or eligible USB-PD converter."
-          }
-        }
-      },
-      "block_order": [
-        "tier_150",
-        "tier_200",
-        "tier_250"
-      ],
+      "name": "BFCM free gift banner",
       "settings": {
-        "anchor_id": "bfcm-bonus",
-        "heading": "Black Friday savings, <strong>plus a free bonus.</strong>",
-        "text": "<p>Save 20% on everything, then unlock a free bonus choice when your cart reaches $150, $200, or $250.</p>",
-        "button_label": "Shop the sale",
-        "button_link": "shopify://collections/shop-now",
-        "reminder": "Add an eligible bonus item to your cart before checkout. The free-item discount applies automatically.",
+        "anchor_id": "bfcm-free-gift",
+        "background_image": "shopify://shop_images/bfcm-free-gift-37841b16-93d6-4263-b304-77095ad52154.jpg",
+        "heading": "Spend $150. Pick a free gift.",
+        "text": "<p>Save 20% on everything, with even more free-gift choices unlocked at $200 and $250.</p>",
+        "button_label": "Choose a free gift",
+        "button_link": "shopify://collections/bfcm-free-gifts",
+        "reminder": "Add your choice to cart before checkout. The free-item discount applies automatically.",
         "section_width": "page-width",
-        "padding-block-start": 24,
+        "padding-block-start": 12,
         "padding-block-end": 12
       }
     },
