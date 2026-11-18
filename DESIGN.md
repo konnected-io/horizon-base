@@ -114,6 +114,9 @@ Grid areas `media/head/fits` collapse to `head → media → fits` under 900px. 
 ### 3.8 Compare tables
 Stock AI-gen table block restyled **via its own settings** (template JSON): midnight header, white text, blue ✓, slate ✗.
 
+### 3.9 `k-sale-offers` — temporary promotion banner
+Compact, light-surface sale banner used immediately below the global header. Live HTML carries the headline, offer tiers, CTA, and cart reminder; the visual treatment uses the existing ring texture, midnight-tinted elevation, and circuit-green threshold pills. Content and thresholds are section settings and blocks so a future promotion can reuse the layout without editing Liquid.
+
 ---
 
 ## 4. Motion principles
@@ -141,7 +144,7 @@ Stock AI-gen table block restyled **via its own settings** (template JSON): midn
 
 | Concern | Where it lives |
 |---|---|
-| Hero/intro/quiz/stats/notice markup | `sections/custom-hero.liquid`, `custom-intro.liquid`, `custom-quiz-cta.liquid`, `custom-stats.liquid`, `custom-notice.liquid`. Content is in the template JSON (`custom_hero_duo`, `custom_what_lines`, `custom_intro_gdo`, `custom_quiz`, `custom_stats`, `custom_hero_collection`, `custom_safety_notice`) and editable in the theme editor |
+| Hero/intro/quiz/stats/notice/promotion markup | `sections/custom-hero.liquid`, `custom-intro.liquid`, `custom-quiz-cta.liquid`, `custom-stats.liquid`, `custom-notice.liquid`, `custom-sale-offers.liquid`. Content is in the template JSON (`custom_hero_duo`, `custom_what_lines`, `custom_intro_gdo`, `custom_quiz`, `custom_stats`, `custom_hero_collection`, `custom_safety_notice`, temporary sale sections) and editable in the theme editor |
 | Platform logo strips | stock `marquee` section, id `logo_marquee` on index + both collections; styles keyed on `[id$='__logo_marquee']` |
 | `k-*` styles | end of `assets/custom.css` (banner-commented block) |
 | Rotator + reveal JS | end of `assets/custom.js` (module, loads `fetchpriority=low`) |
