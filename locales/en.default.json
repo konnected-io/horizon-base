@@ -9,8 +9,8 @@
  */
 {
   "bfcm": {
-    "free_gift_heading": "Spend $150. Pick a free gift.",
-    "free_gift_text_html": "<p>Save 20% on everything, with even more free-gift choices unlocked at $200 and $250.</p>",
+    "free_gift_heading": "Spend $150 or more and pick a free gift.",
+    "free_gift_text_html": "<p>20% off everything plus a free bonus on orders over $150.</p>",
     "free_gift_button": "Choose a free gift",
     "free_gift_reminder": "Add your choice to cart before checkout. The free-item discount applies automatically."
   },
