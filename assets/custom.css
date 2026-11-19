@@ -1333,7 +1333,7 @@ product-price [ref="priceContainer"]:has(.product-badges__badge) .product-badges
     right: 0;
     width: auto;
     max-width: none;
-    height: 320%;
+    height: 250%;
     object-fit: contain;
     transform: translateY(-50%);
 }
