@@ -9,6 +9,17 @@
  */
 {
   "sections": {
+    "bfcm_free_gifts": {
+      "type": "custom-liquid",
+      "name": "BFCM free gift collection intro",
+      "settings": {
+        "custom_liquid": "{% if collection.handle == 'bfcm-free-gifts' %}\n  {% liquid\n    assign free_gift_banner_image = images['bfcm-free-gift-37841b16-93d6-4263-b304-77095ad52154.jpg']\n    assign free_gift_banner_heading = 'bfcm.free_gift_heading' | t\n    assign free_gift_banner_text = 'bfcm.free_gift_text_html' | t\n    assign free_gift_banner_button = 'bfcm.free_gift_button' | t\n    assign free_gift_banner_reminder = 'bfcm.free_gift_reminder' | t\n  %}\n  <div class=\"k-free-gift-collection-marker\">\n    {% render 'custom-free-gift-banner', background_image: free_gift_banner_image, heading: free_gift_banner_heading, text: free_gift_banner_text, button_label: free_gift_banner_button, button_link: '#ResultsList', reminder: free_gift_banner_reminder, image_loading: 'eager', image_fetchpriority: 'high' %}\n    <header class=\"k-free-gift-collection-intro\">\n      <h1>{{ collection.title }}</h1>\n      {% if collection.description != blank %}<div class=\"rte\">{{ collection.description }}</div>{% endif %}\n    </header>\n  </div>\n{% endif %}",
+        "background_color": "",
+        "section_width": "page-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
     "section": {
       "type": "section",
       "blocks": {
@@ -411,6 +422,14 @@
               },
               "blocks": {}
             },
+            "bfcm-free-gift-badge": {
+              "type": "custom-liquid",
+              "name": "BFCM free gift card badge",
+              "settings": {
+                "custom_liquid": "<div class=\"k-free-gift-card-slot\">{% if collection.handle == 'bfcm-free-gifts' %}{% capture gift_threshold %}{% render 'custom-free-gift-threshold', product: closest.product %}{% endcapture %}{% assign gift_threshold = gift_threshold | strip %}{% if gift_threshold != blank %}<div class=\"k-free-gift-card-badge product-badges__badge product-badges__badge--rectangle color-custom-badge-sale\">{{ 'products.product.free_gift_with_order' | t: amount: gift_threshold }}</div>{% endif %}{% endif %}</div>"
+              },
+              "blocks": {}
+            },
             "product_card_group_bPJTH8": {
               "type": "_product-card-group",
               "name": "t:names.group",
@@ -528,6 +547,7 @@
           },
           "block_order": [
             "card-gallery",
+            "bfcm-free-gift-badge",
             "product_card_group_bPJTH8"
           ]
         }
@@ -552,6 +572,7 @@
   },
   "order": [
     "section",
+    "bfcm_free_gifts",
     "hero_BxTY4Q",
     "main"
   ]
