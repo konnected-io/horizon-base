@@ -99,7 +99,7 @@
         "announcement_bfcm_2026": {
           "type": "_announcement",
           "settings": {
-            "text": "BFCM: 20% off everything and <a href=\"/collections/bfcm-free-gifts\">free gift</a> with orders over $150",
+            "text": "Black Friday: 20% off everything and <a href=\"/collections/bfcm-free-gifts\">free gift</a> with orders over $150",
             "link": "",
             "font": "var(--font-accent--family)",
             "font_size": "0.875rem",
