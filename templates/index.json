@@ -9,6 +9,22 @@
  */
 {
   "sections": {
+    "bfcm_bonus": {
+      "type": "custom-sale-offers",
+      "name": "BFCM free gift banner",
+      "settings": {
+        "anchor_id": "bfcm-free-gift",
+        "background_image": "shopify://shop_images/bfcm-free-gift-37841b16-93d6-4263-b304-77095ad52154.jpg",
+        "heading": "Spend $150 or more and pick a free gift.",
+        "text": "<p>20% off everything plus a free bonus on orders over $150.</p>",
+        "button_label": "Choose a free gift",
+        "button_link": "shopify://collections/bfcm-free-gifts",
+        "reminder": "Add your choice to cart before checkout.",
+        "section_width": "page-width",
+        "padding-block-start": 8,
+        "padding-block-end": 8
+      }
+    },
     "logo_marquee": {
       "type": "marquee",
       "name": "Platform logos",
@@ -4551,8 +4567,9 @@
         "show_breadcrumbs": false,
         "heading": "Breathe new life into the wiring your home <em>already has</em>.",
         "subheading": "Konnected retrofits your home’s <strong>wired alarm system</strong> and <strong>garage door opener</strong> and makes them smart. No subscriptions, no cloud lock-in. Works locally and integrates with tons of apps.",
-        "sale_heading_prefix": "This fall, make your home smarter —",
-        "sale_subheading": "Upgrade the wired alarm system and garage opener you already own with local, subscription-free smart control. Your discount will be applied automatically at checkout.",
+        "sale_heading_prefix": "Black Friday, the smart-home way.",
+        "sale_subheading": "Upgrade the wired alarm system and garage opener you already own with local, subscription-free smart control. Your 20% discount applies automatically at checkout.",
+        "sale_badge_label": "Black Friday",
         "rating_label": "Rated 5 out of 5 stars",
         "section_width": "page-width",
         "padding-block-start": 0,
@@ -4740,6 +4757,7 @@
     }
   },
   "order": [
+    "bfcm_bonus",
     "custom_hero_duo",
     "logo_marquee",
     "custom_what_lines",

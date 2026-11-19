@@ -1,0 +1,110 @@
+{% liquid
+  assign image_loading = 'lazy'
+  assign image_fetchpriority = 'auto'
+
+  if section.index <= 2
+    assign image_loading = 'eager'
+    assign image_fetchpriority = 'high'
+  endif
+%}
+
+<div class="section-background"></div>
+<section
+  id="{{ section.settings.anchor_id | escape }}"
+  class="section section--{{ section.settings.section_width }} spacing-style"
+  style="{% render 'spacing-padding', settings: section.settings %}"
+>
+  {% render 'custom-free-gift-banner',
+    background_image: section.settings.background_image,
+    heading: section.settings.heading,
+    text: section.settings.text,
+    button_label: section.settings.button_label,
+    button_link: section.settings.button_link,
+    reminder: section.settings.reminder,
+    image_loading: image_loading,
+    image_fetchpriority: image_fetchpriority
+  %}
+</section>
+
+{% schema %}
+{
+  "name": "Sale gift banner",
+  "settings": [
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor ID",
+      "default": "sale-gift"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background image"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Spend $150 or more and pick a free gift."
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>More gift choices unlock at $200 and $250.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Choose a free gift"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "text",
+      "id": "reminder",
+      "label": "Cart reminder",
+      "default": "Add your choice to cart before checkout. The discount applies automatically."
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Width",
+      "options": [
+        { "value": "page-width", "label": "Page" },
+        { "value": "full-width", "label": "Full" }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Top padding",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 12
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sale gift banner"
+    }
+  ]
+}
+{% endschema %}

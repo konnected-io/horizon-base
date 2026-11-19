@@ -1,0 +1,29 @@
+{% doc %}
+Renders the BFCM free-gift threshold for eligible products.
+{% enddoc %}
+
+{% liquid
+  capture gift_threshold
+    render 'custom-free-gift-threshold', product: closest.product
+  endcapture
+
+  assign gift_threshold = gift_threshold | strip
+%}
+
+{%- if gift_threshold != blank -%}
+  <p class="k-free-gift-badge" {{ block.shopify_attributes }}>
+    {{ 'products.product.free_gift_with_order' | t: amount: gift_threshold }}
+  </p>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Free gift badge",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Free gift badge"
+    }
+  ]
+}
+{% endschema %}
