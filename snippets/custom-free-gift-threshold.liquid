@@ -1,0 +1,27 @@
+{% doc %}
+  Returns the lowest BFCM free-gift order threshold that includes a product.
+
+  @param {product} product - Product whose variants are checked by SKU.
+{% enddoc %}
+
+{% liquid
+  assign gift_threshold = blank
+
+  for variant in product.variants
+    case variant.sku
+      when 'STOFF-MAG-4', 'SENSOR-VIP94-2-WHT', 'SENSOR-VIP94-2T-WHT', 'SENSOR-VIP100-WHT', 'SENSOR-VIP100-1-WHT'
+        assign gift_threshold = '$150'
+        break
+      when 'SIREN-SD15W', 'USB-CONV-TYPEC-R', 'USB-CONV-MICRO-R', 'USB-CONV-MICRO-S', 'USB-CONV-F'
+        if gift_threshold == blank or gift_threshold == '$250'
+          assign gift_threshold = '$200'
+        endif
+      when 'SIREN-WAVE2', 'USB-CONV-PD-TYPEC-R', 'USB-CONV-PD-TYPEC-S', 'PIR-IS335'
+        if gift_threshold == blank
+          assign gift_threshold = '$250'
+        endif
+    endcase
+  endfor
+
+  echo gift_threshold
+%}

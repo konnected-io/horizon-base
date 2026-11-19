@@ -1328,10 +1328,14 @@ product-price [ref="priceContainer"]:has(.product-badges__badge) .product-badges
 }
 
 .k-sale-offers__media img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: right center;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: auto;
+    max-width: none;
+    height: 320%;
+    object-fit: contain;
+    transform: translateY(-50%);
 }
 
 .k-sale-offers__intro {
@@ -1401,6 +1405,61 @@ product-price [ref="priceContainer"]:has(.product-badges__badge) .product-badges
     font-weight: 700;
     letter-spacing: 0.035em;
     line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.k-free-gift-collection-intro {
+    padding-block: clamp(0.5rem, 1vw, 1rem) clamp(1.25rem, 2.5vw, 2rem);
+}
+
+.k-free-gift-collection-marker {
+    padding-top: 8px;
+}
+
+.k-free-gift-collection-intro h1 {
+    margin: 0 0 0.5rem;
+    font-size: clamp(1.8rem, 1.4rem + 1.5vw, 2.75rem);
+}
+
+.k-free-gift-collection-intro .rte {
+    max-width: 76ch;
+    color: rgb(var(--color-foreground-rgb) / 0.76);
+}
+
+.k-free-gift-collection-intro .rte > :first-child {
+    margin-top: 0;
+}
+
+.k-free-gift-collection-intro .rte > :last-child {
+    margin-bottom: 0;
+}
+
+body:has(.k-free-gift-collection-marker) [id$='__hero_BxTY4Q'] {
+    display: none;
+}
+
+body:has(.k-free-gift-collection-marker) .product-grid .product-badges {
+    display: none;
+}
+
+.product-card__content > div:has(> .k-free-gift-card-slot) {
+    display: none;
+}
+
+body:has(.k-free-gift-collection-marker) .product-card__content > div:has(> .k-free-gift-card-slot) {
+    display: block;
+    position: absolute;
+    inset-block-start: 0.75rem;
+    inset-inline-start: 0.75rem;
+    z-index: 3;
+    max-width: calc(100% - 1.5rem);
+    pointer-events: none;
+}
+
+.k-free-gift-card-badge {
+    max-width: 100%;
+    line-height: 1.2;
+    text-wrap: balance;
     text-transform: uppercase;
 }
 

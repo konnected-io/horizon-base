@@ -14,37 +14,16 @@
   class="section section--{{ section.settings.section_width }} spacing-style"
   style="{% render 'spacing-padding', settings: section.settings %}"
 >
-  <div class="k-sale-offers">
-    {%- if section.settings.background_image != blank -%}
-      <div class="k-sale-offers__media" aria-hidden="true">
-        {{
-          section.settings.background_image
-          | image_url: width: 1600
-          | image_tag:
-            widths: '480, 720, 960, 1200, 1600',
-            sizes: '(min-width: 750px) calc(100vw - 80px), calc(100vw - 32px)',
-            loading: image_loading,
-            fetchpriority: image_fetchpriority,
-            alt: ''
-        }}
-      </div>
-    {%- endif -%}
-
-    <div class="k-sale-offers__intro">
-      {%- if section.settings.heading != blank -%}
-        <h2 class="k-sale-offers__heading">{{ section.settings.heading }}</h2>
-      {%- endif -%}
-      {%- if section.settings.text != blank -%}
-        <div class="k-sale-offers__text rte">{{ section.settings.text }}</div>
-      {%- endif -%}
-      {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}
-        <a class="button" href="{{ section.settings.button_link }}">{{ section.settings.button_label }}</a>
-      {%- endif -%}
-      {%- if section.settings.reminder != blank -%}
-        <p class="k-sale-offers__reminder">{{ section.settings.reminder }}</p>
-      {%- endif -%}
-    </div>
-  </div>
+  {% render 'custom-free-gift-banner',
+    background_image: section.settings.background_image,
+    heading: section.settings.heading,
+    text: section.settings.text,
+    button_label: section.settings.button_label,
+    button_link: section.settings.button_link,
+    reminder: section.settings.reminder,
+    image_loading: image_loading,
+    image_fetchpriority: image_fetchpriority
+  %}
 </section>
 
 {% schema %}
