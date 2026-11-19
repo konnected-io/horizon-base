@@ -1456,7 +1456,7 @@ body:has(.k-free-gift-collection-marker) .product-card__content > div:has(> .k-f
     pointer-events: none;
 }
 
-.k-free-gift-card-badge {
+.product-badges__badge.k-free-gift-card-badge {
     max-width: 100%;
     line-height: 1.2;
     text-wrap: balance;
