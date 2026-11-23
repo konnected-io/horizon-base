@@ -192,7 +192,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<p>Find the right Konnected device for you!</p>",
+                    "text": "<h1>{{ closest.collection.title }}</h1>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "left",
