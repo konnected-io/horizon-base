@@ -59,7 +59,7 @@ Single source of truth: the theme editor's **color palette** (`config/settings_d
 - Card resting: `0 20px 44px rgb(var(--color-midnight-rgb) / .07)`
 - Card hover: `translateY(-4px)` + `0 30px 60px rgb(... / .12)`
 - Product cutout images: `filter: drop-shadow(0 14px 22px rgb(... / .14))`
-- Shadows are always midnight-tinted. No pure-black shadows, no glows.
+- Shadows are always midnight-tinted. No pure-black shadows, no glows. One exception: the amber halo on `k-backorder` (3.10), which has to be noticed before purchase.
 
 ### 2.5 The ring texture (signature backdrop)
 
@@ -113,6 +113,9 @@ Grid areas `media/head/fits` collapse to `head → media → fits` under 900px. 
 
 ### 3.8 Compare tables
 Stock AI-gen table block restyled **via its own settings** (template JSON): midnight header, white text, blue ✓, slate ✗.
+
+### 3.10 `k-backorder` — backorder notice (product pages)
+Block `custom-backorder-notice`, directly under the add-to-cart buttons in every product template. Driven only by the `custom.backorder_text` product metafield ("Backorder text"): filled in = shown, empty = nothing renders. It is the single source for stock-delay messaging; never hardcode shipping promises in a template. Shares the sunrise caution palette with `k-notice`, and the compact footprint of the Shop Promise card it replaces (12px radius and padding, 14px type, 20px below the buttons). While shown, CSS hides Shop Promise so shoppers never see two dates. Bold or italic in the metafield renders as a semibold key phrase; use it for the date. Static, no motion.
 
 ---
 

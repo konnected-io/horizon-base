@@ -1145,9 +1145,14 @@ product-price [ref="priceContainer"]:has(.product-badges__badge) .product-badges
 }
 
 /* safety notice (GDO collection): sunrise-yellow caution card */
-.k-notice {
+.k-notice,
+.k-backorder {
     --k-sunrise: #f5b423;
     --k-sunrise-rgb: 245 180 35;
+    --k-sunrise-ink: #8a5a00;
+}
+
+.k-notice {
     display: flex;
     align-items: center;
     gap: 0.9rem;
@@ -1169,7 +1174,7 @@ product-price [ref="priceContainer"]:has(.product-badges__badge) .product-badges
     width: 2.25rem;
     height: 2.25rem;
     border-radius: 50%;
-    color: #8a5a00;
+    color: var(--k-sunrise-ink);
     background: rgb(var(--k-sunrise-rgb) / 0.28);
 }
 
@@ -1188,7 +1193,7 @@ product-price [ref="priceContainer"]:has(.product-badges__badge) .product-badges
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #8a5a00;
+    color: var(--k-sunrise-ink);
 }
 
 @media (max-width: 749px) {
@@ -1199,6 +1204,75 @@ product-price [ref="priceContainer"]:has(.product-badges__badge) .product-badges
     .k-notice__text {
         font-size: 0.875rem;
     }
+}
+
+/* backorder notice (product pages): same compact footprint as the Shop Promise
+   card it replaces (12px radius, 12px padding, 14px type) in the sunrise caution
+   palette. The amber halo is a deliberate exception to "no glows", DESIGN.md 3.10. */
+.k-backorder {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    width: 100%;
+    /* 20px below the buttons, matching Shop Promise, whatever the parent's flex gap */
+    margin-block-start: calc(20px - var(--gap, 20px));
+    padding: 12px;
+    border: 1px solid rgb(var(--k-sunrise-rgb) / 0.7);
+    border-radius: 12px;
+    background:
+        radial-gradient(120% 180% at 0% 50%, rgb(var(--k-sunrise-rgb) / 0.22) 0%, transparent 60%),
+        #fffaf0;
+    box-shadow:
+        0 0 0 4px rgb(var(--k-sunrise-rgb) / 0.12),
+        0 6px 24px rgb(var(--k-sunrise-rgb) / 0.28);
+}
+
+.k-backorder__icon {
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    color: var(--k-sunrise-ink);
+    background: rgb(var(--k-sunrise-rgb) / 0.3);
+}
+
+.k-backorder__body {
+    flex: 1;
+    min-width: 0;
+    font-size: 0.875rem;
+    line-height: 1.45;
+    letter-spacing: normal;
+    text-wrap: pretty;
+    color: var(--color-foreground);
+}
+
+.k-backorder__label {
+    margin: 0;
+    font-weight: 700;
+    color: var(--k-sunrise-ink);
+}
+
+.k-backorder__text p {
+    margin: 0;
+}
+
+.k-backorder__text p + p {
+    margin-block-start: 0.35rem;
+}
+
+/* bold or italic in the metafield both read as the key phrase, like the
+   delivery date in Shop Promise */
+.k-backorder__text :is(strong, em) {
+    font-style: normal;
+    font-weight: 600;
+}
+
+/* A backorder notice replaces Shop Promise, so shoppers never see two dates.
+   !important is required: Shopify's script sets inline display:block. */
+.shopify-section:has(.k-backorder) delivery-promise-wc {
+    display: none !important;
 }
 
 /* platform logo marquee: the stock Horizon marquee section, keyed by the

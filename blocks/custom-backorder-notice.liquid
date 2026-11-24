@@ -1,0 +1,51 @@
+{%- comment -%}
+  Backorder notice (k-backorder): amber card under the add-to-cart buttons that
+  tells shoppers when a delayed product is expected to ship.
+
+  Content comes from the `custom.backorder_text` product metafield. When the
+  metafield is empty nothing renders. When it is filled in, custom.css also hides
+  Shopify's Shop Promise card so the page never shows two conflicting dates.
+
+  Konnected-owned block; styles live in assets/custom.css.
+{%- endcomment -%}
+
+{%- liquid
+  assign backorder_text = closest.product.metafields.custom.backorder_text | metafield_tag
+  assign backorder_plain_text = backorder_text | strip_html | strip
+-%}
+
+{%- if backorder_plain_text != blank -%}
+  <div
+    class="k-backorder"
+    role="note"
+    aria-labelledby="BackorderNotice-{{ block.id }}"
+    {{ block.shopify_attributes }}
+  >
+    <span class="k-backorder__icon" aria-hidden="true">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="9"/>
+        <path d="M12 7v5l3 2"/>
+      </svg>
+    </span>
+    <div class="k-backorder__body">
+      <p class="k-backorder__label" id="BackorderNotice-{{ block.id }}">
+        {{ 'products.product.backorder_notice' | t }}
+      </p>
+      <div class="k-backorder__text">{{ backorder_text }}</div>
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Backorder notice",
+  "tag": null,
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Shows the product's \"Backorder text\" metafield. Hidden when the metafield is empty. When shown, the Shop Promise delivery estimate is hidden."
+    }
+  ],
+  "presets": [{ "name": "Backorder notice" }]
+}
+{% endschema %}

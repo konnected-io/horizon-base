@@ -220,6 +220,12 @@
               },
               "block_order": []
             },
+            "backorder_notice": {
+              "type": "custom-backorder-notice",
+              "name": "Backorder notice",
+              "settings": {},
+              "blocks": {}
+            },
             "text_aEtTtq": {
               "type": "text",
               "name": "Product description",
@@ -333,6 +339,7 @@
             "group_icgrde",
             "variant_picker_R3rGDr",
             "buy_buttons_eYQEYi",
+            "backorder_notice",
             "text_aEtTtq",
             "accordion_33MKVF"
           ]
