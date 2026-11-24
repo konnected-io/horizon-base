@@ -184,7 +184,7 @@
               "type": "text",
               "name": "Product description",
               "settings": {
-                "text": "{{ closest.product.description }}",
+                "text": "<p><strong>Upgrade a compatible garage door opener with GDO White.</strong> It works with openers triggered to open or close by a simple wired push button or dry-contact closure, and adds open/closed status to your smart home.</p>{{ closest.product.description }}",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",

@@ -1392,7 +1392,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p><em>for all other Garage Door Openers</em></p>",
+                        "text": "<p><em>for garage door openers triggered by a simple wired push button or dry-contact closure</em></p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "center",
