@@ -241,6 +241,12 @@
               },
               "block_order": []
             },
+            "backorder_notice": {
+              "type": "custom-backorder-notice",
+              "name": "Backorder notice",
+              "settings": {},
+              "blocks": {}
+            },
             "custom_liquid_93LYaA": {
               "type": "custom-liquid",
               "name": "t:names.custom_liquid",
@@ -354,6 +360,7 @@
             "variant_picker_R3rGDr",
             "text_aEtTtq",
             "buy_buttons_eYQEYi",
+            "backorder_notice",
             "custom_liquid_93LYaA",
             "accordion_XkV7wa"
           ]
